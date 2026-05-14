@@ -5,12 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Anayaluxee</title>
+<meta name="description" content="Anayaluxee offers luxury jewelry, designer suits, and elegant abayas with timeless fashion and premium craftsmanship.">
 
+<meta name="keywords" content="luxury jewelry, designer suits, abayas, fashion brand, Pakistani suits, premium jewelry, Anayaluxee">
+
+<meta name="author" content="Anayaluxee">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Anayaluxee">
+
+<meta property="og:description" content="Luxury Jewelry • Designer Suits • Elegant Abayas">
+
+<meta property="og:image" content="logo.png">
+
+<meta property="og:type" content="website">
+
+<meta property="og:url" content="https://anayaluxee.com">
   <link rel="icon" type="image/png" href="logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+.fade{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 1s ease;
+}
 
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
   <style>
 
     *{
@@ -245,11 +270,11 @@
     <h1>Launching Soon</h1>
   </section>
 
-  <section class="philosophy">
+  <section class="philosophy fade">
     <img src="Our Philosophy.png" alt="">
   </section>
 
-  <section class="collection">
+  <section class="collection fade">
 
     <h2>The Anayaluxee Collection</h2>
 
@@ -278,7 +303,7 @@
     <img class="section-image" src="Our Promise.png" alt="">
   </section>
 
-  <section class="promise">
+  <section class="promise fade">
 
     <h2>Our Promise</h2>
 
@@ -344,6 +369,24 @@
     </div>
 
   </footer>
+<script>
 
+const fades = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+
+  fades.forEach(fade => {
+
+    const top = fade.getBoundingClientRect().top;
+
+    if(top < window.innerHeight - 100){
+      fade.classList.add('show');
+    }
+
+  });
+
+});
+
+</script>
 </body>
 </html>
