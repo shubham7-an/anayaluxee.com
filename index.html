@@ -9,7 +9,7 @@
 
 <link rel="icon" type="image/png" href="logo.jpg">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -37,8 +37,8 @@ padding:18px 5%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(255,255,255,0.35);
-backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.28);
+backdrop-filter:blur(12px);
 z-index:999;
 }
 
@@ -56,7 +56,7 @@ width:auto;
 .logo h1{
 font-family:'Cormorant Garamond',serif;
 font-size:42px;
-font-weight:500;
+font-weight:600;
 letter-spacing:2px;
 color:#3d0d0d;
 }
@@ -72,6 +72,7 @@ color:#3d0d0d;
 font-size:12px;
 letter-spacing:3px;
 text-transform:uppercase;
+font-weight:500;
 }
 
 /* HOME */
@@ -91,44 +92,51 @@ display:block;
 
 .hero-overlay{
 position:absolute;
-top:50%;
+top:52%;
 left:50%;
 transform:translate(-50%,-50%);
 text-align:center;
-color:white;
-width:90%;
+width:92%;
 z-index:5;
 }
 
 .launching{
-font-size:14px;
-letter-spacing:6px;
-margin-bottom:18px;
+font-size:18px;
+letter-spacing:8px;
+margin-bottom:24px;
+color:#fff7f0;
+font-weight:500;
+text-shadow:0 2px 10px rgba(0,0,0,0.35);
 }
 
 .hero-overlay h2{
 font-family:'Cormorant Garamond',serif;
-font-size:130px;
-font-weight:500;
+font-size:145px;
+font-weight:600;
 line-height:1;
-margin-bottom:20px;
+margin-bottom:22px;
+color:#fff8f2;
+text-shadow:0 4px 20px rgba(0,0,0,0.45);
 }
 
 .hero-sub{
-font-size:15px;
+font-size:16px;
 letter-spacing:5px;
-margin-bottom:35px;
+margin-bottom:38px;
+color:#fffaf5;
+text-shadow:0 2px 10px rgba(0,0,0,0.35);
 }
 
 .hero-overlay a{
 display:inline-block;
-padding:16px 45px;
+padding:17px 48px;
 border:1px solid rgba(255,255,255,0.9);
 color:white;
 text-decoration:none;
 letter-spacing:3px;
 font-size:13px;
 transition:.4s;
+backdrop-filter:blur(4px);
 }
 
 .hero-overlay a:hover{
@@ -185,6 +193,7 @@ color:white;
 font-family:'Cormorant Garamond',serif;
 font-size:42px;
 margin-bottom:10px;
+text-shadow:0 3px 10px rgba(0,0,0,0.4);
 }
 
 .collection-content p{
@@ -247,11 +256,15 @@ opacity:.8;
 @media(max-width:900px){
 
 header{
-padding:14px 18px;
+padding:14px 16px;
+}
+
+.logo{
+gap:10px;
 }
 
 .logo img{
-height:42px;
+height:40px;
 }
 
 .logo h1{
@@ -259,11 +272,11 @@ font-size:24px;
 }
 
 nav{
-gap:18px;
+gap:16px;
 }
 
 nav a{
-font-size:10px;
+font-size:9px;
 letter-spacing:2px;
 }
 
@@ -278,28 +291,32 @@ object-position:center;
 
 .hero-overlay{
 width:95%;
-padding:0 10px;
+top:55%;
 }
 
 .launching{
-font-size:11px;
-letter-spacing:4px;
+font-size:12px;
+letter-spacing:5px;
+margin-bottom:16px;
 }
 
 .hero-overlay h2{
 font-size:58px;
 line-height:1;
+margin-bottom:16px;
 }
 
 .hero-sub{
-font-size:11px;
+font-size:10px;
 letter-spacing:2px;
 line-height:1.8;
+margin-bottom:28px;
 }
 
 .hero-overlay a{
-padding:14px 28px;
-font-size:11px;
+padding:13px 26px;
+font-size:10px;
+letter-spacing:2px;
 }
 
 .collection{
@@ -307,7 +324,7 @@ padding:80px 20px;
 }
 
 .collection-title{
-font-size:48px;
+font-size:50px;
 }
 
 .collection-grid{
