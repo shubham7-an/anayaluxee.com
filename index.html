@@ -2,18 +2,16 @@
 <html lang="en">
 <head>
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Anayaluxee | Luxury Jewelry, Designer Suits & Elegant Abayas</title>
 
-<meta name="description" content="Anayaluxee offers luxury jewelry, elegant abayas and designer suits with premium timeless fashion." />
+<meta name="description" content="Luxury jewelry, elegant abayas and designer suits by Anayaluxee.">
+<meta name="keywords" content="Anayaluxee, luxury jewelry, designer suits, abayas, fashion">
+<meta name="author" content="Anayaluxee">
 
-<meta name="keywords" content="Anayaluxee, luxury jewelry, designer suits, abayas, premium fashion, elegant wear" />
-
-<meta name="author" content="Anayaluxee" />
-
-<link rel="icon" href="logo-brown.png" />
+<link rel="icon" href="logo-brown.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -28,9 +26,9 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Montserrat',sans-serif;
-background:#f6f1ec;
-color:#2a1b18;
+background:#f5f0eb;
 overflow-x:hidden;
+color:#2a1b18;
 }
 
 /* HEADER */
@@ -44,7 +42,7 @@ padding:18px 5%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(245,240,235,0.9);
+background:rgba(245,240,235,0.88);
 backdrop-filter:blur(10px);
 z-index:999;
 animation:fadeDown 1s ease;
@@ -68,7 +66,7 @@ gap:14px;
 }
 
 .logo img{
-width:52px;
+width:50px;
 }
 
 .logo h1{
@@ -105,22 +103,21 @@ display:flex;
 justify-content:center;
 align-items:center;
 position:relative;
-overflow:hidden;
 }
 
 .hero::before{
 content:"";
 position:absolute;
 inset:0;
-background:rgba(0,0,0,0.20);
+background:rgba(0,0,0,0.22);
 }
 
-.hero-overlay{
+.hero-content{
 position:relative;
 z-index:2;
 text-align:center;
 padding:20px;
-animation:fadeUp 1.2s ease;
+animation:fadeUp 1.4s ease;
 }
 
 @keyframes fadeUp{
@@ -135,49 +132,87 @@ transform:translateY(0);
 }
 
 .hero h4{
-color:#fff;
+color:white;
 font-size:18px;
 letter-spacing:7px;
-margin-bottom:20px;
+margin-bottom:22px;
 }
 
 .hero h2{
 font-family:'Cormorant Garamond',serif;
 font-size:8rem;
-font-weight:400;
 line-height:0.9;
-color:#fff;
-text-shadow:0 6px 18px rgba(0,0,0,0.35);
+font-weight:400;
+color:white;
+text-shadow:0 6px 20px rgba(0,0,0,0.35);
 margin-bottom:25px;
 }
 
 .hero p{
-color:#fff;
+color:white;
 font-size:14px;
 letter-spacing:5px;
-margin-bottom:35px;
+margin-bottom:38px;
 }
 
-.hero-btn{
+.hero a{
 display:inline-block;
 padding:16px 42px;
-border:1px solid #fff;
-color:#fff;
+border:1px solid white;
+color:white;
 text-decoration:none;
 font-size:12px;
 letter-spacing:3px;
 transition:0.4s;
 }
 
-.hero-btn:hover{
-background:#fff;
+.hero a:hover{
+background:white;
 color:#2a1b18;
+}
+
+/* IMAGE SECTIONS */
+
+.full-image img{
+width:100%;
+display:block;
 }
 
 /* COLLECTION */
 
-.collection{
-padding:0;
+.collection-section{
+padding:120px 0 0;
+background:#f5f0eb;
+}
+
+.section-heading{
+text-align:center;
+max-width:760px;
+margin:auto;
+padding:0 20px 70px;
+animation:fadeUp 1.2s ease;
+}
+
+.section-heading h5{
+font-size:13px;
+letter-spacing:6px;
+color:#8b5e57;
+margin-bottom:18px;
+}
+
+.section-heading h2{
+font-family:'Cormorant Garamond',serif;
+font-size:4rem;
+font-weight:500;
+color:#3d1a16;
+margin-bottom:18px;
+}
+
+.section-heading p{
+font-size:14px;
+line-height:1.9;
+letter-spacing:1px;
+color:#6d5a56;
 }
 
 .collection-grid{
@@ -195,41 +230,43 @@ overflow:hidden;
 width:100%;
 height:100%;
 object-fit:cover;
-transition:1s;
+transition:1.4s ease;
+filter:brightness(0.92);
 }
 
 .collection-item:hover img{
 transform:scale(1.08);
+filter:brightness(1);
 }
 
 .collection-overlay{
 position:absolute;
 inset:0;
-background:rgba(0,0,0,0.18);
+background:linear-gradient(
+to top,
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.05)
+);
 display:flex;
-justify-content:center;
-align-items:center;
+flex-direction:column;
+justify-content:flex-end;
+padding:60px 40px;
+}
+
+.collection-overlay span{
+color:#e7d7d2;
+font-size:11px;
+letter-spacing:4px;
+margin-bottom:14px;
+text-transform:uppercase;
 }
 
 .collection-overlay h3{
 font-family:'Cormorant Garamond',serif;
-font-size:3rem;
-color:#fff;
-letter-spacing:4px;
-}
-
-/* PHILOSOPHY */
-
-.philosophy img{
-width:100%;
-display:block;
-}
-
-/* PROMISE */
-
-.promise img{
-width:100%;
-display:block;
+font-size:4rem;
+font-weight:400;
+color:white;
+letter-spacing:2px;
 }
 
 /* FOOTER */
@@ -237,32 +274,31 @@ display:block;
 footer{
 background:#4a0904;
 padding:90px 8% 40px;
-color:#fff;
+color:white;
 }
 
 .footer-grid{
 display:grid;
 grid-template-columns:1fr 1fr 1fr;
 gap:50px;
-align-items:flex-start;
 }
 
 .footer-logo img{
 width:110px;
-margin-bottom:22px;
+margin-bottom:20px;
 }
 
 .footer-title{
 font-family:'Cormorant Garamond',serif;
-font-size:2.2rem;
-margin-bottom:18px;
+font-size:2rem;
+margin-bottom:20px;
 }
 
 .footer-links a{
 display:block;
+color:white;
 text-decoration:none;
-color:#fff;
-margin-bottom:14px;
+margin-bottom:12px;
 transition:0.3s;
 }
 
@@ -291,7 +327,7 @@ width:38px;
 }
 
 .logo h1{
-font-size:1.5rem;
+font-size:1.4rem;
 }
 
 nav{
@@ -303,21 +339,19 @@ font-size:10px;
 letter-spacing:2px;
 }
 
-/* HERO */
-
 .hero{
 height:100vh;
 background-position:center;
 }
 
-.hero-overlay{
-padding:0 18px;
+.hero-content{
+padding:0 20px;
 }
 
 .hero h4{
 font-size:13px;
-letter-spacing:5px;
-margin-bottom:16px;
+letter-spacing:4px;
+margin-bottom:15px;
 }
 
 .hero h2{
@@ -333,25 +367,48 @@ line-height:1.8;
 margin-bottom:25px;
 }
 
-.hero-btn{
+.hero a{
 padding:13px 26px;
 font-size:10px;
 }
 
-/* COLLECTION */
+.section-heading{
+padding:0 24px 45px;
+}
+
+.section-heading h5{
+font-size:11px;
+letter-spacing:4px;
+}
+
+.section-heading h2{
+font-size:2.5rem;
+line-height:1.1;
+}
+
+.section-heading p{
+font-size:12px;
+line-height:1.8;
+}
 
 .collection-grid{
 grid-template-columns:1fr;
 }
 
 .collection-item{
-height:85vh;
+height:78vh;
 }
 
-/* FOOTER */
+.collection-overlay{
+padding:35px 25px;
+}
+
+.collection-overlay h3{
+font-size:3rem;
+}
 
 footer{
-padding:70px 24px 40px;
+padding:70px 25px 35px;
 }
 
 .footer-grid{
@@ -362,11 +419,11 @@ gap:45px;
 
 .footer-logo img{
 margin:auto;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 .footer-title{
-font-size:2rem;
+font-size:1.8rem;
 }
 
 .footer-links a,
@@ -392,7 +449,7 @@ font-size:11px;
 <header>
 
 <div class="logo">
-<img src="logo-brown.png" alt="Anayaluxee Logo">
+<img src="logo-brown.png">
 <h1>ANAYALUXEE</h1>
 </div>
 
@@ -407,7 +464,7 @@ font-size:11px;
 
 <section class="hero">
 
-<div class="hero-overlay">
+<div class="hero-content">
 
 <h4>LAUNCHING SOON</h4>
 
@@ -415,59 +472,78 @@ font-size:11px;
 
 <p>LUXURY JEWELRY · DESIGNER SUITS · ELEGANT ABAYAS</p>
 
-<a href="#collection" class="hero-btn">
-EXPLORE COLLECTION
-</a>
+<a href="#collection">EXPLORE COLLECTION</a>
 
 </div>
 
+</section>
+
+<!-- OUR PHILOSOPHY -->
+
+<section class="full-image">
+<img src="Our Philosophy.png">
 </section>
 
 <!-- COLLECTION -->
 
-<section class="collection" id="collection">
+<section id="collection" class="collection-section">
+
+<div class="section-heading">
+
+<h5>THE COLLECTION</h5>
+
+<h2>Luxury Crafted For Modern Elegance</h2>
+
+<p>
+Discover timeless jewelry, couture suits and graceful abayas
+designed to elevate every moment with sophistication.
+</p>
+
+</div>
 
 <div class="collection-grid">
 
 <div class="collection-item">
-<img src="jewelry.jpg" alt="Luxury Jewelry">
+
+<img src="jewelry.jpg">
+
 <div class="collection-overlay">
+<span>Luxury Essentials</span>
 <h3>Jewelry</h3>
 </div>
+
 </div>
 
 <div class="collection-item">
-<img src="suits.jpg" alt="Designer Suits">
+
+<img src="suits.jpg">
+
 <div class="collection-overlay">
+<span>Refined Couture</span>
 <h3>Suits</h3>
 </div>
+
 </div>
 
 <div class="collection-item">
-<img src="abayas.jpg" alt="Elegant Abayas">
+
+<img src="abayas.jpg">
+
 <div class="collection-overlay">
+<span>Elegant Modesty</span>
 <h3>Abayas</h3>
 </div>
+
 </div>
 
 </div>
 
 </section>
 
-<!-- PHILOSOPHY -->
+<!-- OUR PROMISE -->
 
-<section class="philosophy">
-
-<img src="Our Philosophy.png" alt="Our Philosophy">
-
-</section>
-
-<!-- PROMISE -->
-
-<section class="promise">
-
-<img src="Our Promise.png" alt="Our Promise">
-
+<section class="full-image">
+<img src="Our Promise.png">
 </section>
 
 <!-- FOOTER -->
@@ -477,7 +553,7 @@ EXPLORE COLLECTION
 <div class="footer-grid">
 
 <div class="footer-logo">
-<img src="logo.jpg" alt="">
+<img src="logo.jpg">
 <p>Own The Moment, Wear Anaya</p>
 </div>
 
@@ -500,7 +576,7 @@ anayaluxee@gmail.com
 Instagram
 </a>
 
-<a href="https://www.facebook.com/people/Anayaluxee/61563226442227/?mibextid=wwXIfr&rdid=x6p6aneqKvJylyh1&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1KmKPTUaRw%2F%3Fmibextid%3DwwXIfr" target="_blank">
+<a href="https://www.facebook.com/people/Anayaluxee/61563226442227/" target="_blank">
 Facebook
 </a>
 
