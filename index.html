@@ -339,9 +339,20 @@ font-size:10px;
 letter-spacing:2px;
 }
 
+/* HERO FIXED */
+
 .hero{
-height:100vh;
-background-position:center;
+height:115vh;
+background:url('Home.png') top center/contain no-repeat;
+background-color:#d9d0c8;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+}
+
+.hero::before{
+background:rgba(0,0,0,0.10);
 }
 
 .hero-content{
@@ -349,7 +360,7 @@ padding:0 20px;
 }
 
 .hero h4{
-font-size:13px;
+font-size:14px;
 letter-spacing:4px;
 margin-bottom:15px;
 }
@@ -371,6 +382,8 @@ margin-bottom:25px;
 padding:13px 26px;
 font-size:10px;
 }
+
+/* COLLECTION */
 
 .section-heading{
 padding:0 24px 45px;
@@ -406,6 +419,8 @@ padding:35px 25px;
 .collection-overlay h3{
 font-size:3rem;
 }
+
+/* FOOTER */
 
 footer{
 padding:70px 25px 35px;
@@ -444,8 +459,6 @@ font-size:11px;
 
 <body>
 
-<!-- HEADER -->
-
 <header>
 
 <div class="logo">
@@ -459,8 +472,6 @@ font-size:11px;
 </nav>
 
 </header>
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -478,13 +489,9 @@ font-size:11px;
 
 </section>
 
-<!-- OUR PHILOSOPHY -->
-
 <section class="full-image">
 <img src="Our Philosophy.png">
 </section>
-
-<!-- COLLECTION -->
 
 <section id="collection" class="collection-section">
 
@@ -540,13 +547,9 @@ designed to elevate every moment with sophistication.
 
 </section>
 
-<!-- OUR PROMISE -->
-
 <section class="full-image">
 <img src="Our Promise.png">
 </section>
-
-<!-- FOOTER -->
 
 <footer id="social">
 
