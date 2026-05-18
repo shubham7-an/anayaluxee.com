@@ -26,7 +26,7 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Montserrat',sans-serif;
-background:#f5f0eb;
+background:#f7efec;
 overflow-x:hidden;
 color:#2a1b18;
 }
@@ -42,21 +42,9 @@ padding:18px 5%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(245,240,235,0.88);
-backdrop-filter:blur(10px);
+background:rgba(247,239,236,0.88);
+backdrop-filter:blur(12px);
 z-index:999;
-animation:fadeDown 1s ease;
-}
-
-@keyframes fadeDown{
-from{
-opacity:0;
-transform:translateY(-30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
 }
 
 .logo{
@@ -94,7 +82,7 @@ nav a:hover{
 opacity:0.6;
 }
 
-/* HERO */
+/* HERO DESKTOP */
 
 .hero{
 height:100vh;
@@ -110,29 +98,25 @@ overflow:hidden;
 content:"";
 position:absolute;
 inset:0;
-background:rgba(0,0,0,0.22);
+background:rgba(0,0,0,0.18);
 }
 
 .hero-content{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-width:100%;
-padding:20px;
-text-align:center;
+position:relative;
 z-index:2;
-animation:fadeUp 1.4s ease;
+text-align:center;
+padding:20px;
+animation:fadeUp 1.3s ease;
 }
 
 @keyframes fadeUp{
 from{
 opacity:0;
-transform:translate(-50%,-40%);
+transform:translateY(40px);
 }
 to{
 opacity:1;
-transform:translate(-50%,-50%);
+transform:translateY(0);
 }
 }
 
@@ -187,7 +171,7 @@ display:block;
 
 .collection-section{
 padding:120px 0 0;
-background:#f5f0eb;
+background:#f7efec;
 }
 
 .section-heading{
@@ -238,7 +222,7 @@ transition:1.4s ease;
 }
 
 .collection-item:hover img{
-transform:scale(1.08);
+transform:scale(1.07);
 }
 
 .collection-overlay{
@@ -256,7 +240,7 @@ padding:60px 40px;
 }
 
 .collection-overlay span{
-color:#e7d7d2;
+color:#ead9d3;
 font-size:11px;
 letter-spacing:4px;
 margin-bottom:14px;
@@ -323,16 +307,12 @@ header{
 padding:14px 4%;
 }
 
-.logo{
-gap:10px;
-}
-
 .logo img{
 width:38px;
 }
 
 .logo h1{
-font-size:1.3rem;
+font-size:1.4rem;
 }
 
 nav{
@@ -348,18 +328,26 @@ letter-spacing:2px;
 
 .hero{
 height:100vh;
-background:url('Home.png') center center/cover no-repeat;
+background:url('mobile-home.png') center top/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
 position:relative;
-overflow:hidden;
+padding-top:60px;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.20);
 }
 
 .hero-content{
-position:absolute;
-top:52%;
-left:50%;
-transform:translate(-50%,-50%);
+position:relative;
+z-index:2;
 width:100%;
-padding:0 18px;
+padding:0 20px;
 text-align:center;
 }
 
@@ -370,24 +358,22 @@ margin-bottom:14px;
 }
 
 .hero h2{
-font-size:4.3rem;
-line-height:0.88;
+font-size:4rem;
+line-height:0.9;
 margin-bottom:18px;
 }
 
 .hero p{
-font-size:10px;
+font-size:11px;
 letter-spacing:2px;
 line-height:1.8;
-margin-bottom:26px;
+margin-bottom:25px;
 }
 
 .hero a{
 padding:13px 26px;
 font-size:10px;
 }
-
-/* COLLECTION */
 
 .section-heading{
 padding:0 24px 45px;
@@ -423,8 +409,6 @@ padding:35px 25px;
 .collection-overlay h3{
 font-size:3rem;
 }
-
-/* FOOTER */
 
 footer{
 padding:70px 25px 35px;
@@ -495,7 +479,7 @@ font-size:11px;
 
 </section>
 
-<!-- PHILOSOPHY -->
+<!-- OUR PHILOSOPHY -->
 
 <section class="full-image">
 <img src="Our Philosophy.png">
@@ -557,7 +541,7 @@ designed to elevate every moment with sophistication.
 
 </section>
 
-<!-- PROMISE -->
+<!-- OUR PROMISE -->
 
 <section class="full-image">
 <img src="Our Promise.png">
