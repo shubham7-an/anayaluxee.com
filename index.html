@@ -52,6 +52,7 @@ z-index:9999;
 display:flex;
 align-items:center;
 gap:14px;
+text-decoration:none;
 }
 
 .logo img{
@@ -83,6 +84,13 @@ nav a:hover{
 opacity:0.6;
 }
 
+.menu-toggle{
+display:none;
+font-size:1.8rem;
+color:#4a120d;
+cursor:pointer;
+}
+
 /* HERO SLIDER */
 
 .hero-slider{
@@ -99,7 +107,7 @@ height:100%;
 top:0;
 left:0;
 opacity:0;
-animation:slider 18s infinite;
+animation:slider 9s infinite;
 }
 
 .slide:nth-child(1){
@@ -107,11 +115,11 @@ animation-delay:0s;
 }
 
 .slide:nth-child(2){
-animation-delay:6s;
+animation-delay:3s;
 }
 
 .slide:nth-child(3){
-animation-delay:12s;
+animation-delay:6s;
 }
 
 .slide img{
@@ -124,7 +132,7 @@ object-fit:cover;
 content:"";
 position:absolute;
 inset:0;
-background:rgba(0,0,0,0.28);
+background:rgba(0,0,0,0.30);
 }
 
 .hero-content{
@@ -179,13 +187,13 @@ background:white;
 color:#2d1d1a;
 }
 
-/* ANIMATION */
+/* ANIMATIONS */
 
 @keyframes slider{
 0%{opacity:0;}
-8%{opacity:1;}
+10%{opacity:1;}
 30%{opacity:1;}
-38%{opacity:0;}
+40%{opacity:0;}
 100%{opacity:0;}
 }
 
@@ -238,25 +246,12 @@ font-family:'Cormorant Garamond',serif;
 font-size:5rem;
 font-weight:400;
 margin-bottom:30px;
-animation:fadeText 1.8s ease;
 }
 
 .philosophy p{
 font-size:18px;
 line-height:2;
 letter-spacing:1px;
-animation:fadeText 2.2s ease;
-}
-
-@keyframes fadeText{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
 }
 
 /* PROMISE */
@@ -402,56 +397,6 @@ color:#5f504c;
 margin-bottom:20px;
 }
 
-/* SUBSCRIBE */
-
-.subscribe{
-padding:110px 8%;
-background:#4a0904;
-text-align:center;
-color:white;
-}
-
-.subscribe h2{
-font-family:'Cormorant Garamond',serif;
-font-size:4rem;
-margin-bottom:20px;
-}
-
-.subscribe p{
-margin-bottom:35px;
-letter-spacing:1px;
-}
-
-.subscribe form{
-display:flex;
-justify-content:center;
-gap:10px;
-flex-wrap:wrap;
-}
-
-.subscribe input{
-padding:17px;
-width:320px;
-border:none;
-outline:none;
-font-size:14px;
-}
-
-.subscribe button{
-padding:17px 35px;
-border:none;
-background:white;
-color:#4a0904;
-font-size:12px;
-letter-spacing:3px;
-cursor:pointer;
-transition:0.4s;
-}
-
-.subscribe button:hover{
-opacity:0.8;
-}
-
 /* FOOTER */
 
 footer{
@@ -501,8 +446,27 @@ opacity:0.7;
 
 @media(max-width:768px){
 
-header{
-padding:14px 4%;
+.menu-toggle{
+display:block;
+z-index:10001;
+}
+
+nav{
+position:fixed;
+top:0;
+right:-100%;
+width:250px;
+height:100vh;
+background:#f7efec;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+transition:0.5s;
+box-shadow:-10px 0 30px rgba(0,0,0,0.1);
+}
+
+nav.active{
+right:0;
 }
 
 .logo img{
@@ -511,15 +475,6 @@ width:38px;
 
 .logo h1{
 font-size:1.4rem;
-}
-
-nav{
-gap:14px;
-}
-
-nav a{
-font-size:10px;
-letter-spacing:2px;
 }
 
 .slide:nth-child(1) img{
@@ -540,7 +495,7 @@ letter-spacing:4px;
 }
 
 .hero-content h1{
-font-size:3.6rem;
+font-size:3.5rem;
 }
 
 .hero-content p{
@@ -560,7 +515,6 @@ padding:90px 25px;
 
 .philosophy h2{
 font-size:3rem;
-line-height:1.1;
 }
 
 .philosophy p{
@@ -574,23 +528,10 @@ padding:90px 25px;
 
 .promise h2{
 font-size:3rem;
-margin-bottom:50px;
 }
 
 .promise-grid{
 grid-template-columns:1fr;
-}
-
-.promise-box i{
-font-size:3rem;
-}
-
-.promise-box h3{
-font-size:1.8rem;
-}
-
-.section-title h2{
-font-size:3rem;
 }
 
 .collection-grid{
@@ -599,10 +540,6 @@ grid-template-columns:1fr;
 
 .collection-item{
 height:85vh;
-}
-
-.collection-overlay{
-padding:35px;
 }
 
 .collection-overlay h3{
@@ -622,18 +559,6 @@ font-size:13px;
 line-height:2;
 }
 
-.subscribe{
-padding:80px 25px;
-}
-
-.subscribe h2{
-font-size:3rem;
-}
-
-.subscribe input{
-width:100%;
-}
-
 .footer-grid{
 grid-template-columns:1fr;
 text-align:center;
@@ -648,15 +573,26 @@ text-align:center;
 
 <header>
 
-<div class="logo">
+<a href="#" class="logo">
+
 <img src="logo-brown.png">
+
 <h1>ANAYALUXEE</h1>
+
+</a>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+<i class="fa-solid fa-bars"></i>
 </div>
 
-<nav>
+<nav id="navMenu">
+
 <a href="#collection">COLLECTION</a>
+
 <a href="#founder">FOUNDER</a>
+
 <a href="#social">SOCIAL</a>
+
 </nav>
 
 </header>
@@ -809,20 +745,11 @@ in her own unique style.
 
 <p>
 What began as a dream soon evolved into a journey of creating
-pieces that blend luxury with grace — from statement jewelry
-to elegant abayas and designer ensembles crafted for the modern woman.
+pieces that blend luxury with grace.
 </p>
 
 <p>
-At Anayaluxee, we believe fashion is more than just clothing;
-it is an expression of confidence, individuality, and beauty.
-Every collection is thoughtfully curated with attention to detail,
-fine craftsmanship, and sophistication.
-</p>
-
-<p>
-Thank you for being a part of the Anayaluxee family
-and for allowing us to grow through your trust and love.
+Thank you for being a part of the Anayaluxee family.
 </p>
 
 <p>
@@ -889,6 +816,16 @@ Pinterest
 </div>
 
 </footer>
+
+<script>
+
+function toggleMenu(){
+
+document.getElementById("navMenu").classList.toggle("active");
+
+}
+
+</script>
 
 </body>
 </html>
