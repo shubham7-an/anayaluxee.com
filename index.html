@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Anayaluxee | Luxury Jewelry, Designer Suits & Elegant Abayas</title>
+<title>Anayaluxee</title>
 
-<meta name="description" content="Luxury jewelry, elegant abayas and designer suits by Anayaluxee.">
-
-<link rel="icon" href="logo-brown.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
@@ -28,8 +25,8 @@ scroll-behavior:smooth;
 body{
 font-family:'Montserrat',sans-serif;
 background:#f7efec;
+color:#3d2b28;
 overflow-x:hidden;
-color:#2d1d1a;
 }
 
 /* HEADER */
@@ -52,6 +49,7 @@ z-index:9999;
 display:flex;
 align-items:center;
 gap:14px;
+text-decoration:none;
 }
 
 .logo img{
@@ -64,6 +62,13 @@ font-size:2rem;
 font-weight:500;
 letter-spacing:2px;
 color:#4a120d;
+}
+
+.menu-bar{
+background:#f2e9e5;
+padding:16px 28px;
+border-radius:50px;
+box-shadow:0 5px 20px rgba(0,0,0,0.06);
 }
 
 nav{
@@ -90,6 +95,7 @@ position:relative;
 width:100%;
 height:100vh;
 overflow:hidden;
+margin-top:90px;
 }
 
 .slide{
@@ -98,77 +104,95 @@ width:100%;
 height:100%;
 top:0;
 left:0;
+background-size:cover;
+background-position:center;
 opacity:0;
-animation:slider 18s infinite;
+animation:slideShow 10s infinite;
+transition:opacity 1s ease-in-out;
 }
 
 .slide:nth-child(1){
+background-image:url('hero1.png');
 animation-delay:0s;
 }
 
 .slide:nth-child(2){
-animation-delay:6s;
+background-image:url('hero2.png');
+animation-delay:3s;
 }
 
 .slide:nth-child(3){
-animation-delay:12s;
+background-image:url('hero3.png');
+animation-delay:6s;
 }
 
-.slide img{
+@keyframes slideShow{
+
+0%{
+opacity:0;
+}
+
+10%{
+opacity:1;
+}
+
+30%{
+opacity:1;
+}
+
+40%{
+opacity:0;
+}
+
+100%{
+opacity:0;
+}
+
+}
+
+.hero-overlay{
+position:absolute;
+top:0;
+left:0;
 width:100%;
 height:100%;
-object-fit:cover;
-}
-
-.slide::before{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.28);
+background:rgba(0,0,0,0.18);
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
 .hero-content{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-z-index:2;
-text-align:center;
-width:90%;
+color:white;
 animation:fadeUp 1.5s ease;
 }
 
-.hero-content h4{
-color:white;
+.hero-content h2{
 font-size:18px;
-letter-spacing:8px;
+letter-spacing:6px;
 margin-bottom:20px;
 }
 
 .hero-content h1{
 font-family:'Cormorant Garamond',serif;
 font-size:8rem;
-font-weight:400;
-color:white;
-line-height:0.9;
-margin-bottom:24px;
-text-shadow:0 10px 25px rgba(0,0,0,0.35);
-animation:glow 4s infinite alternate;
+font-weight:500;
+margin-bottom:20px;
 }
 
 .hero-content p{
-color:white;
-font-size:14px;
+font-size:15px;
 letter-spacing:5px;
-margin-bottom:35px;
+margin-bottom:30px;
 }
 
 .hero-content a{
-display:inline-block;
 padding:16px 40px;
 border:1px solid white;
-color:white;
 text-decoration:none;
+color:white;
 letter-spacing:3px;
 font-size:12px;
 transition:0.4s;
@@ -176,102 +200,110 @@ transition:0.4s;
 
 .hero-content a:hover{
 background:white;
-color:#2d1d1a;
-}
-
-/* ANIMATION */
-
-@keyframes slider{
-0%{opacity:0;}
-8%{opacity:1;}
-30%{opacity:1;}
-38%{opacity:0;}
-100%{opacity:0;}
+color:black;
 }
 
 @keyframes fadeUp{
+
 from{
 opacity:0;
-transform:translate(-50%,-40%);
-}
-to{
-opacity:1;
-transform:translate(-50%,-50%);
-}
+transform:translateY(40px);
 }
 
-@keyframes glow{
-from{
-text-shadow:0 0 10px rgba(255,255,255,0.2);
-}
 to{
-text-shadow:0 0 30px rgba(255,255,255,0.5);
+opacity:1;
+transform:translateY(0);
 }
+
 }
 
 /* PHILOSOPHY */
 
 .philosophy{
-padding:130px 8%;
-background:url('Our Philosophy.png') center center/cover no-repeat;
-position:relative;
+padding:100px 8%;
 }
 
-.philosophy::before{
+.philosophy-box{
+position:relative;
+background:#e8dfda;
+padding:120px 80px;
+overflow:hidden;
+border:1px solid #bcaea9;
+}
+
+.philosophy-box::before{
 content:"";
 position:absolute;
-inset:0;
-background:rgba(0,0,0,0.35);
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,0.4),
+transparent
+);
+animation:shine 6s infinite;
+}
+
+@keyframes shine{
+100%{
+left:100%;
+}
 }
 
 .philosophy-content{
 position:relative;
 z-index:2;
-max-width:950px;
-margin:auto;
 text-align:center;
-color:white;
 }
 
-.philosophy h2{
+.philosophy-content h2{
 font-family:'Cormorant Garamond',serif;
 font-size:5rem;
 font-weight:400;
 margin-bottom:30px;
-animation:fadeText 1.8s ease;
+color:white;
+animation:fadeText 2s ease;
 }
 
-.philosophy p{
-font-size:18px;
+.philosophy-content p{
+font-size:20px;
 line-height:2;
-letter-spacing:1px;
-animation:fadeText 2.2s ease;
+max-width:1000px;
+margin:auto;
+color:white;
+animation:fadeText 3s ease;
 }
 
 @keyframes fadeText{
+
 from{
 opacity:0;
-transform:translateY(40px);
+transform:translateY(30px);
 }
+
 to{
 opacity:1;
 transform:translateY(0);
 }
+
 }
 
 /* PROMISE */
 
 .promise{
-padding:120px 8%;
-background:#f2ece7;
+padding:80px 8%;
 text-align:center;
 }
 
 .promise h2{
 font-family:'Cormorant Garamond',serif;
 font-size:5rem;
+font-weight:400;
 margin-bottom:70px;
-color:#31413d;
+color:#3f4a45;
 }
 
 .promise-grid{
@@ -282,227 +314,88 @@ gap:40px;
 
 .promise-box{
 padding:30px;
-transition:0.5s;
+border-bottom:2px solid #55635d;
+transition:0.4s;
 }
 
 .promise-box:hover{
 transform:translateY(-10px);
 }
 
-.promise-box i{
-font-size:4rem;
+.promise-box img{
+width:90px;
 margin-bottom:25px;
-color:#31413d;
 }
 
 .promise-box h3{
 font-family:'Cormorant Garamond',serif;
 font-size:2rem;
 font-weight:500;
-line-height:1.5;
-color:#31413d;
-}
-
-/* COLLECTION */
-
-.collection{
-padding:120px 0;
-background:white;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:80px;
-}
-
-.section-title h5{
-font-size:12px;
-letter-spacing:5px;
-margin-bottom:18px;
-color:#8b5e57;
-}
-
-.section-title h2{
-font-family:'Cormorant Garamond',serif;
-font-size:4.5rem;
-font-weight:400;
-color:#2d1d1a;
-}
-
-.collection-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-}
-
-.collection-item{
-height:100vh;
-position:relative;
-overflow:hidden;
-}
-
-.collection-item img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:1.2s;
-}
-
-.collection-item:hover img{
-transform:scale(1.08);
-}
-
-.collection-overlay{
-position:absolute;
-inset:0;
-background:linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-display:flex;
-flex-direction:column;
-justify-content:flex-end;
-padding:50px;
-}
-
-.collection-overlay span{
-color:#e7d4ce;
-font-size:12px;
-letter-spacing:4px;
-margin-bottom:14px;
-}
-
-.collection-overlay h3{
-font-family:'Cormorant Garamond',serif;
-font-size:4rem;
-font-weight:400;
-color:white;
+line-height:1.4;
 }
 
 /* FOUNDER */
 
 .founder{
-padding:130px 8%;
-background:#f7efec;
-}
-
-.founder-box{
-max-width:1000px;
-margin:auto;
+padding:100px 10%;
+background:#efe7e3;
 text-align:center;
 }
 
-.founder-box h2{
+.founder h2{
 font-family:'Cormorant Garamond',serif;
 font-size:5rem;
-margin-bottom:35px;
-color:#2d1d1a;
+font-weight:400;
+margin-bottom:40px;
 }
 
-.founder-box p{
-font-size:16px;
-line-height:2.1;
-color:#5f504c;
+.founder p{
+font-size:18px;
+line-height:2;
+max-width:1000px;
+margin:auto;
 margin-bottom:20px;
-}
-
-/* SUBSCRIBE */
-
-.subscribe{
-padding:110px 8%;
-background:#4a0904;
-text-align:center;
-color:white;
-}
-
-.subscribe h2{
-font-family:'Cormorant Garamond',serif;
-font-size:4rem;
-margin-bottom:20px;
-}
-
-.subscribe p{
-margin-bottom:35px;
-letter-spacing:1px;
-}
-
-.subscribe form{
-display:flex;
-justify-content:center;
-gap:10px;
-flex-wrap:wrap;
-}
-
-.subscribe input{
-padding:17px;
-width:320px;
-border:none;
-outline:none;
-font-size:14px;
-}
-
-.subscribe button{
-padding:17px 35px;
-border:none;
-background:white;
-color:#4a0904;
-font-size:12px;
-letter-spacing:3px;
-cursor:pointer;
-transition:0.4s;
-}
-
-.subscribe button:hover{
-opacity:0.8;
 }
 
 /* FOOTER */
 
 footer{
-background:#2b0a07;
-padding:90px 8% 40px;
-color:white;
-}
-
-.footer-grid{
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:50px;
-}
-
-.footer-logo img{
-width:110px;
-margin-bottom:20px;
-}
-
-.footer-title{
-font-family:'Cormorant Garamond',serif;
-font-size:2rem;
-margin-bottom:22px;
-}
-
-.footer-links a{
-display:block;
-text-decoration:none;
-color:white;
-margin-bottom:14px;
-transition:0.3s;
-}
-
-.footer-links a:hover{
-opacity:0.7;
-transform:translateX(4px);
-}
-
-.copyright{
+padding:60px 8%;
+background:#e9dfda;
 text-align:center;
-margin-top:60px;
-font-size:13px;
-opacity:0.7;
+}
+
+footer h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2.5rem;
+margin-bottom:15px;
+}
+
+footer p{
+margin-bottom:15px;
+letter-spacing:2px;
+}
+
+footer a{
+text-decoration:none;
+color:#4a120d;
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
-header{
-padding:14px 4%;
+.menu-bar{
+padding:12px 18px;
+}
+
+nav{
+gap:16px;
+}
+
+nav a{
+font-size:9px;
+letter-spacing:2px;
 }
 
 .logo img{
@@ -510,154 +403,97 @@ width:38px;
 }
 
 .logo h1{
-font-size:1.4rem;
+font-size:1.3rem;
 }
 
-nav{
-gap:14px;
+.slide:nth-child(1){
+background-image:url('hero1-mobile.png');
 }
 
-nav a{
-font-size:10px;
-letter-spacing:2px;
+.slide:nth-child(2){
+background-image:url('hero2-mobile.png');
 }
 
-.slide:nth-child(1) img{
-content:url('hero1-mobile.png');
-}
-
-.slide:nth-child(2) img{
-content:url('hero2-mobile.png');
-}
-
-.slide:nth-child(3) img{
-content:url('hero3-mobile.png');
-}
-
-.hero-content h4{
-font-size:11px;
-letter-spacing:4px;
+.slide:nth-child(3){
+background-image:url('hero3-mobile.png');
 }
 
 .hero-content h1{
-font-size:3.6rem;
+font-size:3.7rem;
 }
 
 .hero-content p{
-font-size:10px;
-letter-spacing:2px;
-line-height:1.8;
+font-size:11px;
+letter-spacing:3px;
 }
 
-.hero-content a{
-padding:13px 24px;
-font-size:10px;
+.hero-content h2{
+font-size:12px;
+letter-spacing:4px;
 }
 
-.philosophy{
-padding:90px 25px;
+.philosophy-box{
+padding:80px 30px;
 }
 
-.philosophy h2{
+.philosophy-content h2{
 font-size:3rem;
-line-height:1.1;
 }
 
-.philosophy p{
-font-size:13px;
-line-height:2;
-}
-
-.promise{
-padding:90px 25px;
+.philosophy-content p{
+font-size:16px;
+line-height:1.8;
 }
 
 .promise h2{
 font-size:3rem;
-margin-bottom:50px;
 }
 
 .promise-grid{
 grid-template-columns:1fr;
 }
 
-.promise-box i{
+.founder h2{
 font-size:3rem;
 }
 
-.promise-box h3{
-font-size:1.8rem;
-}
-
-.section-title h2{
-font-size:3rem;
-}
-
-.collection-grid{
-grid-template-columns:1fr;
-}
-
-.collection-item{
-height:85vh;
-}
-
-.collection-overlay{
-padding:35px;
-}
-
-.collection-overlay h3{
-font-size:3rem;
-}
-
-.founder{
-padding:90px 25px;
-}
-
-.founder-box h2{
-font-size:3rem;
-}
-
-.founder-box p{
-font-size:13px;
-line-height:2;
-}
-
-.subscribe{
-padding:80px 25px;
-}
-
-.subscribe h2{
-font-size:3rem;
-}
-
-.subscribe input{
-width:100%;
-}
-
-.footer-grid{
-grid-template-columns:1fr;
-text-align:center;
+.founder p{
+font-size:16px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 
-<div class="logo">
+<a href="#" class="logo">
+
 <img src="logo-brown.png">
+
 <h1>ANAYALUXEE</h1>
-</div>
+
+</a>
+
+<div class="menu-bar">
 
 <nav>
+
 <a href="#collection">COLLECTION</a>
+
 <a href="#founder">FOUNDER</a>
+
 <a href="#social">SOCIAL</a>
+
 </nav>
+
+</div>
 
 </header>
 
@@ -665,21 +501,15 @@ text-align:center;
 
 <section class="hero-slider">
 
-<div class="slide">
-<img src="hero1.png">
-</div>
+<div class="slide"></div>
+<div class="slide"></div>
+<div class="slide"></div>
 
-<div class="slide">
-<img src="hero2.png">
-</div>
-
-<div class="slide">
-<img src="hero3.png">
-</div>
+<div class="hero-overlay">
 
 <div class="hero-content">
 
-<h4>LAUNCHING SOON</h4>
+<h2>LAUNCHING SOON</h2>
 
 <h1>ANAYALUXEE</h1>
 
@@ -689,22 +519,30 @@ text-align:center;
 
 </div>
 
+</div>
+
 </section>
 
 <!-- PHILOSOPHY -->
 
 <section class="philosophy">
 
+<div class="philosophy-box">
+
 <div class="philosophy-content">
 
 <h2>Own the moment, wear Anaya</h2>
 
 <p>
+
 Premium fabrics, handpicked designs, and jewelry that tells a story.
 Anayaluxee brings you an exclusive range of Pakistani suits,
 elegant abayas, and luxury accessories — all under one roof.
 Quality you can trust, style you will love.
+
 </p>
+
+</div>
 
 </div>
 
@@ -712,80 +550,41 @@ Quality you can trust, style you will love.
 
 <!-- PROMISE -->
 
-<section class="promise">
+<section class="promise" id="collection">
 
 <h2>Our Promise</h2>
 
 <div class="promise-grid">
 
 <div class="promise-box">
-<i class="fa-solid fa-truck"></i>
+
+<img src="https://cdn-icons-png.flaticon.com/512/3082/3082037.png">
+
 <h3>Pan India Shipping</h3>
+
 </div>
 
 <div class="promise-box">
-<i class="fa-solid fa-gem"></i>
+
+<img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png">
+
 <h3>Premium Skin Friendly Jewelry</h3>
+
 </div>
 
 <div class="promise-box">
-<i class="fa-solid fa-shirt"></i>
+
+<img src="https://cdn-icons-png.flaticon.com/512/892/892458.png">
+
 <h3>High Quality Designer Suits & Abayas</h3>
+
 </div>
 
 <div class="promise-box">
-<i class="fa-solid fa-headset"></i>
+
+<img src="https://cdn-icons-png.flaticon.com/512/3059/3059446.png">
+
 <h3>24/7 Customer Support</h3>
-</div>
-
-</div>
-
-</section>
-
-<!-- COLLECTION -->
-
-<section class="collection" id="collection">
-
-<div class="section-title">
-
-<h5>THE COLLECTION</h5>
-
-<h2>Luxury Crafted For Modern Elegance</h2>
-
-</div>
-
-<div class="collection-grid">
-
-<div class="collection-item">
-
-<img src="jewelry.jpg">
-
-<div class="collection-overlay">
-<span>LUXURY ESSENTIALS</span>
-<h3>Jewelry</h3>
-</div>
-
-</div>
-
-<div class="collection-item">
-
-<img src="suits.jpg">
-
-<div class="collection-overlay">
-<span>REFINED COUTURE</span>
-<h3>Suits</h3>
-</div>
-
-</div>
-
-<div class="collection-item">
-
-<img src="abayas.jpg">
-
-<div class="collection-overlay">
-<span>ELEGANT MODESTY</span>
-<h3>Abayas</h3>
-</div>
 
 </div>
 
@@ -797,40 +596,51 @@ Quality you can trust, style you will love.
 
 <section class="founder" id="founder">
 
-<div class="founder-box">
-
 <h2>From Our Founder</h2>
 
 <p>
+
 Anayaluxee was born from a passion for timeless elegance,
 femininity, and the desire to make every woman feel confident
 in her own unique style.
+
 </p>
 
 <p>
+
 What began as a dream soon evolved into a journey of creating
 pieces that blend luxury with grace — from statement jewelry
 to elegant abayas and designer ensembles crafted for the modern woman.
+
 </p>
 
 <p>
+
 At Anayaluxee, we believe fashion is more than just clothing;
 it is an expression of confidence, individuality, and beauty.
+
+</p>
+
+<p>
+
 Every collection is thoughtfully curated with attention to detail,
 fine craftsmanship, and sophistication.
+
 </p>
 
 <p>
+
 Thank you for being a part of the Anayaluxee family
 and for allowing us to grow through your trust and love.
+
 </p>
 
 <p>
+
 With Love & Duas,<br>
 — Anaya Imran
-</p>
 
-</div>
+</p>
 
 </section>
 
@@ -838,57 +648,22 @@ With Love & Duas,<br>
 
 <footer id="social">
 
-<div class="footer-grid">
+<h3>ANAYALUXEE</h3>
 
-<div class="footer-logo">
-
-<img src="logo.jpg">
-
-<p>Own The Moment, Wear Anaya</p>
-
-</div>
-
-<div>
-
-<h3 class="footer-title">Location</h3>
+<p>Luxury Jewelry · Elegant Abayas · Pakistani Suits</p>
 
 <p>Lucknow, Uttar Pradesh</p>
 
-</div>
+<p>
 
-<div>
-
-<h3 class="footer-title">Connect With Us</h3>
-
-<div class="footer-links">
-
-<a href="mailto:anayaluxee@gmail.com">
-anayaluxee@gmail.com
-</a>
-
-<a href="https://www.instagram.com/anayaluxee/" target="_blank">
+<a href="https://instagram.com/" target="_blank">
 Instagram
 </a>
 
-<a href="https://www.facebook.com/" target="_blank">
-Facebook
-</a>
-
-<a href="https://www.pinterest.com/" target="_blank">
-Pinterest
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="copyright">
-© 2026 ANAYALUXEE · All Rights Reserved
-</div>
+</p>
 
 </footer>
 
 </body>
+
 </html>
