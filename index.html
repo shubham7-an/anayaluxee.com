@@ -1,27 +1,55 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Anayaluxee | Luxury Jewelry, Designer Suits & Elegant Abayas</title>
 
-<link rel="icon" type="image/png" sizes="32x32" href="logo-brown.png">
-<link rel="icon" type="image/png" sizes="16x16" href="logo-brown.png">
-<link rel="apple-touch-icon" href="logo-brown.png">
-<link rel="shortcut icon" href="logo-brown.png"> 
+<meta name="description"
+content="Luxury jewelry, elegant abayas and designer suits by Anayaluxee.">
 
-<meta name="description" content="Luxury jewelry, elegant abayas and designer suits by Anayaluxee.">
+<!-- FAVICON -->
 
-<link rel="icon" href="logo-brown.png">
+<link rel="icon"
+type="image/png"
+sizes="32x32"
+href="logo-brown.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon"
+type="image/png"
+sizes="16x16"
+href="logo-brown.png">
+
+<link rel="apple-touch-icon"
+href="logo-brown.png">
+
+<link rel="shortcut icon"
+href="logo-brown.png">
+
+
+<!-- GOOGLE FONTS -->
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+rel="stylesheet">
+
+
+<!-- FONT AWESOME -->
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+
 <style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
 
 *{
 margin:0;
@@ -37,7 +65,10 @@ overflow-x:hidden;
 color:#2d1d1a;
 }
 
-/* HEADER */
+
+/* =====================================================
+   HEADER
+===================================================== */
 
 header{
 position:fixed;
@@ -50,6 +81,7 @@ justify-content:space-between;
 align-items:center;
 background:rgba(247,239,236,0.92);
 backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
 z-index:9999;
 }
 
@@ -62,6 +94,7 @@ text-decoration:none;
 
 .logo img{
 width:50px;
+height:auto;
 }
 
 .logo h1{
@@ -96,66 +129,80 @@ color:#4a120d;
 cursor:pointer;
 }
 
-/* HERO SLIDER */
+
+/* =====================================================
+   HERO VIDEO SLIDER
+===================================================== */
 
 .hero-slider{
 position:relative;
 width:100%;
 height:100vh;
+height:100svh;
+min-height:600px;
 overflow:hidden;
+background:#000;
 }
+
+
+/* VIDEO SLIDES */
 
 .slide{
 position:absolute;
+inset:0;
 width:100%;
 height:100%;
-top:0;
-left:0;
 opacity:0;
-animation:slider 9s infinite;
+visibility:hidden;
+transition:opacity 1.2s ease;
+z-index:1;
 }
 
-.slide:nth-child(1){
-animation-delay:0s;
+.slide.active{
+opacity:1;
+visibility:visible;
+z-index:2;
 }
 
-.slide:nth-child(2){
-animation-delay:3s;
-}
 
-.slide:nth-child(3){
-animation-delay:6s;
-}
+/* VIDEO */
 
-.slide img{
+.slide video{
+position:absolute;
+inset:0;
 width:100%;
 height:100%;
 object-fit:cover;
+object-position:center center;
+display:block;
 }
 
-.slide::before{
+
+/* DARK OVERLAY */
+
+.slide::after{
 content:"";
 position:absolute;
 inset:0;
 background:rgba(0,0,0,0.30);
+z-index:1;
+pointer-events:none;
 }
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
 
 .hero-content{
 position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-z-index:2;
+z-index:10;
 text-align:center;
 width:90%;
-animation:fadeUp 1.5s ease;
-}
-
-.hero-content h4{
-color:white;
-font-size:18px;
-letter-spacing:8px;
-margin-bottom:20px;
+max-width:1200px;
 }
 
 .hero-content h1{
@@ -192,37 +239,25 @@ background:white;
 color:#2d1d1a;
 }
 
-/* ANIMATIONS */
 
-@keyframes slider{
-0%{opacity:0;}
-10%{opacity:1;}
-30%{opacity:1;}
-40%{opacity:0;}
-100%{opacity:0;}
-}
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translate(-50%,-40%);
-}
-to{
-opacity:1;
-transform:translate(-50%,-50%);
-}
-}
+/* HERO GLOW */
 
 @keyframes glow{
+
 from{
 text-shadow:0 0 10px rgba(255,255,255,0.2);
 }
+
 to{
 text-shadow:0 0 30px rgba(255,255,255,0.5);
 }
+
 }
 
-/* PHILOSOPHY */
+
+/* =====================================================
+   PHILOSOPHY
+===================================================== */
 
 .philosophy{
 padding:130px 8%;
@@ -259,7 +294,10 @@ line-height:2;
 letter-spacing:1px;
 }
 
-/* PROMISE */
+
+/* =====================================================
+   PROMISE
+===================================================== */
 
 .promise{
 padding:120px 8%;
@@ -303,7 +341,10 @@ line-height:1.5;
 color:#31413d;
 }
 
-/* COLLECTION */
+
+/* =====================================================
+   COLLECTION
+===================================================== */
 
 .collection{
 padding:120px 0;
@@ -313,6 +354,7 @@ background:white;
 .section-title{
 text-align:center;
 margin-bottom:80px;
+padding:0 20px;
 }
 
 .section-title h5{
@@ -354,7 +396,12 @@ transform:scale(1.08);
 .collection-overlay{
 position:absolute;
 inset:0;
-background:linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+background:linear-gradient(
+to top,
+rgba(0,0,0,0.6),
+transparent
+);
+
 display:flex;
 flex-direction:column;
 justify-content:flex-end;
@@ -375,7 +422,10 @@ font-weight:400;
 color:white;
 }
 
-/* FOUNDER */
+
+/* =====================================================
+   FOUNDER
+===================================================== */
 
 .founder{
 padding:130px 8%;
@@ -402,7 +452,10 @@ color:#5f504c;
 margin-bottom:20px;
 }
 
-/* FOOTER */
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
 background:#2b0a07;
@@ -418,6 +471,7 @@ gap:50px;
 
 .footer-logo img{
 width:110px;
+height:auto;
 margin-bottom:20px;
 }
 
@@ -447,9 +501,40 @@ font-size:13px;
 opacity:0.7;
 }
 
-/* MOBILE */
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:1024px){
+
+.hero-content h1{
+font-size:6rem;
+}
+
+.hero-content p{
+font-size:12px;
+letter-spacing:3px;
+}
+
+.promise-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.collection-overlay h3{
+font-size:3.5rem;
+}
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:768px){
+
+/* HEADER */
 
 .menu-toggle{
 display:block;
@@ -463,15 +548,24 @@ right:-100%;
 width:250px;
 height:100vh;
 background:#f7efec;
+
+display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
+
 transition:0.5s;
+
 box-shadow:-10px 0 30px rgba(0,0,0,0.1);
 }
 
 nav.active{
 right:0;
+}
+
+nav a{
+font-size:12px;
+margin:12px 0;
 }
 
 .logo img{
@@ -482,37 +576,43 @@ width:38px;
 font-size:1.4rem;
 }
 
-.slide:nth-child(1) img{
-content:url('hero1-mobile.png');
+
+/* HERO */
+
+.hero-slider{
+height:100svh;
+min-height:600px;
 }
 
-.slide:nth-child(2) img{
-content:url('hero2-mobile.png');
+.slide video{
+object-position:center center;
 }
 
-.slide:nth-child(3) img{
-content:url('hero3-mobile.png');
-}
-
-.hero-content h4{
-font-size:11px;
-letter-spacing:4px;
+.hero-content{
+width:92%;
 }
 
 .hero-content h1{
 font-size:3.5rem;
+line-height:.95;
+margin-bottom:20px;
 }
 
 .hero-content p{
-font-size:10px;
+font-size:9px;
 letter-spacing:2px;
 line-height:1.8;
+margin-bottom:28px;
 }
 
 .hero-content a{
 padding:13px 24px;
 font-size:10px;
+letter-spacing:2px;
 }
+
+
+/* PHILOSOPHY */
 
 .philosophy{
 padding:90px 25px;
@@ -527,16 +627,49 @@ font-size:13px;
 line-height:2;
 }
 
+
+/* PROMISE */
+
 .promise{
 padding:90px 25px;
 }
 
 .promise h2{
 font-size:3rem;
+margin-bottom:50px;
 }
 
 .promise-grid{
 grid-template-columns:1fr;
+gap:10px;
+}
+
+.promise-box{
+padding:25px 10px;
+}
+
+.promise-box i{
+font-size:3rem;
+}
+
+.promise-box h3{
+font-size:1.8rem;
+}
+
+
+/* COLLECTION */
+
+.collection{
+padding:90px 0;
+}
+
+.section-title{
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:3rem;
+line-height:1.1;
 }
 
 .collection-grid{
@@ -547,9 +680,16 @@ grid-template-columns:1fr;
 height:85vh;
 }
 
+.collection-overlay{
+padding:35px;
+}
+
 .collection-overlay h3{
 font-size:3rem;
 }
+
+
+/* FOUNDER */
 
 .founder{
 padding:90px 25px;
@@ -564,31 +704,70 @@ font-size:13px;
 line-height:2;
 }
 
+
+/* FOOTER */
+
 .footer-grid{
 grid-template-columns:1fr;
 text-align:center;
+gap:40px;
+}
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:400px){
+
+.hero-content h1{
+font-size:3rem;
+}
+
+.hero-content p{
+font-size:8px;
+letter-spacing:1.5px;
+}
+
+.hero-content a{
+padding:12px 20px;
 }
 
 }
 
 </style>
+
 </head>
 
+
 <body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
 <a href="#" class="logo">
 
-<img src="logo-brown.png">
+<img src="logo-brown.png"
+alt="Anayaluxee Logo">
 
 <h1>ANAYALUXEE</h1>
 
 </a>
 
-<div class="menu-toggle" onclick="toggleMenu()">
+
+<div class="menu-toggle"
+onclick="toggleMenu()">
+
 <i class="fa-solid fa-bars"></i>
+
 </div>
+
 
 <nav id="navMenu">
 
@@ -602,44 +781,212 @@ text-align:center;
 
 </header>
 
-<!-- HERO -->
+
+
+<!-- =====================================================
+     HERO VIDEO SLIDER
+===================================================== -->
 
 <section class="hero-slider">
 
-<div class="slide">
-<img src="hero1.png">
+
+<!-- VIDEO 1 -->
+
+<div class="slide active">
+
+<video
+autoplay
+muted
+playsinline
+preload="auto">
+
+<source
+src="hero1.mp4"
+type="video/mp4">
+
+</video>
+
 </div>
 
-<div class="slide">
-<img src="hero2.png">
-</div>
+
+<!-- VIDEO 2 -->
 
 <div class="slide">
-<img src="hero3.png">
+
+<video
+muted
+playsinline
+preload="metadata">
+
+<source
+src="hero2.mp4"
+type="video/mp4">
+
+</video>
+
 </div>
+
+
+<!-- VIDEO 3 -->
+
+<div class="slide">
+
+<video
+muted
+playsinline
+preload="metadata">
+
+<source
+src="hero3.mp4"
+type="video/mp4">
+
+</video>
+
+</div>
+
+
+<!-- VIDEO 4 -->
+
+<div class="slide">
+
+<video
+muted
+playsinline
+preload="metadata">
+
+<source
+src="hero4.mp4"
+type="video/mp4">
+
+</video>
+
+</div>
+
+
+<!-- VIDEO 5 -->
+
+<div class="slide">
+
+<video
+muted
+playsinline
+preload="metadata">
+
+<source
+src="hero5.mp4"
+type="video/mp4">
+
+</video>
+
+</div>
+
+
+<!-- VIDEO 6 -->
+
+<div class="slide">
+
+<video
+muted
+playsinline
+preload="metadata">
+
+<source
+src="hero6.mp4"
+type="video/mp4">
+
+</video>
+
+</div>
+
+
+<!-- VIDEO 7 -->
+
+<div class="slide">
+
+<video
+muted
+playsinline
+preload="metadata">
+
+<source
+src="hero7.mp4"
+type="video/mp4">
+
+</video>
+
+</div>
+
+
+<!-- VIDEO 8 -->
+
+<div class="slide">
+
+<video
+muted
+playsinline
+preload="metadata">
+
+<source
+src="hero8.mp4"
+type="video/mp4">
+
+</video>
+
+</div>
+
+
+<!-- VIDEO 9 -->
+
+<div class="slide">
+
+<video
+muted
+playsinline
+preload="metadata">
+
+<source
+src="hero9.mp4"
+type="video/mp4">
+
+</video>
+
+</div>
+
+
+
+<!-- HERO TEXT -->
 
 <div class="hero-content">
 
-<h4>LAUNCHING SOON</h4>
-
 <h1>ANAYALUXEE</h1>
 
-<p>LUXURY JEWELRY · DESIGNER SUITS · ELEGANT ABAYAS</p>
+<p>
+LUXURY JEWELRY · DESIGNER SUITS · ELEGANT ABAYAS
+</p>
 
-<a href="#collection">EXPLORE COLLECTION</a>
+<a href="#collection">
+EXPLORE COLLECTION
+</a>
 
 </div>
 
+
 </section>
 
-<!-- PHILOSOPHY -->
+
+
+<!-- =====================================================
+     PHILOSOPHY
+===================================================== -->
 
 <section class="philosophy">
 
 <div class="philosophy-content">
 
-<h2>Own the moment, 
-      wear Anaya</h2>
+<h2>
+Own the moment,
+wear Anaya
+</h2>
 
 <p>
 Premium fabrics, handpicked designs, and jewelry that tells a story.
@@ -652,96 +999,186 @@ Quality you can trust, style you will love.
 
 </section>
 
-<!-- PROMISE -->
+
+
+<!-- =====================================================
+     PROMISE
+===================================================== -->
 
 <section class="promise">
 
 <h2>Our Promise</h2>
 
+
 <div class="promise-grid">
 
+
 <div class="promise-box">
+
 <i class="fa-solid fa-truck"></i>
-<h3>Pan India Shipping</h3>
+
+<h3>
+Pan India Shipping
+</h3>
+
 </div>
 
+
 <div class="promise-box">
+
 <i class="fa-solid fa-gem"></i>
-<h3>Premium Skin Friendly Jewelry</h3>
+
+<h3>
+Premium Skin Friendly Jewelry
+</h3>
+
 </div>
 
+
 <div class="promise-box">
+
 <i class="fa-solid fa-shirt"></i>
-<h3>High Quality Designer Suits & Abayas</h3>
+
+<h3>
+High Quality Designer Suits & Abayas
+</h3>
+
 </div>
 
+
 <div class="promise-box">
+
 <i class="fa-solid fa-headset"></i>
-<h3>24/7 Customer Support</h3>
+
+<h3>
+24/7 Customer Support
+</h3>
+
 </div>
+
 
 </div>
 
 </section>
 
-<!-- COLLECTION -->
 
-<section class="collection" id="collection">
+
+<!-- =====================================================
+     COLLECTION
+===================================================== -->
+
+<section
+class="collection"
+id="collection">
+
 
 <div class="section-title">
 
-<h5>THE COLLECTION</h5>
+<h5>
+THE COLLECTION
+</h5>
 
-<h2>Luxury Crafted For Modern Elegance</h2>
+<h2>
+Luxury Crafted For Modern Elegance
+</h2>
 
 </div>
+
 
 <div class="collection-grid">
 
-<div class="collection-item">
 
-<img src="jewelry.jpg">
-
-<div class="collection-overlay">
-<span>LUXURY ESSENTIALS</span>
-<h3>Jewelry</h3>
-</div>
-
-</div>
+<!-- JEWELRY -->
 
 <div class="collection-item">
 
-<img src="suits.jpg">
+<img
+src="jewelry.jpg"
+alt="Anayaluxee Jewelry">
 
 <div class="collection-overlay">
-<span>REFINED COUTURE</span>
-<h3>Suits</h3>
+
+<span>
+LUXURY ESSENTIALS
+</span>
+
+<h3>
+Jewelry
+</h3>
+
 </div>
 
 </div>
+
+
+<!-- SUITS -->
 
 <div class="collection-item">
 
-<img src="abayas.jpg">
+<img
+src="suits.jpg"
+alt="Anayaluxee Designer Suits">
 
 <div class="collection-overlay">
-<span>ELEGANT MODESTY</span>
-<h3>Abayas</h3>
+
+<span>
+REFINED COUTURE
+</span>
+
+<h3>
+Suits
+</h3>
+
 </div>
 
 </div>
+
+
+<!-- ABAYAS -->
+
+<div class="collection-item">
+
+<img
+src="abayas.jpg"
+alt="Anayaluxee Abayas">
+
+<div class="collection-overlay">
+
+<span>
+ELEGANT MODESTY
+</span>
+
+<h3>
+Abayas
+</h3>
+
+</div>
+
+</div>
+
 
 </div>
 
 </section>
 
-<!-- FOUNDER -->
 
-<section class="founder" id="founder">
+
+<!-- =====================================================
+     FOUNDER
+===================================================== -->
+
+<section
+class="founder"
+id="founder">
+
 
 <div class="founder-box">
 
-<h2>From Our Founder</h2>
+
+<h2>
+From Our Founder
+</h2>
+
 
 <p>
 Anayaluxee was born from a passion for timeless elegance,
@@ -749,111 +1186,440 @@ femininity, and the desire to make every woman feel confident
 in her own unique style.
 </p>
 
-<p>
-What began as a dream soon evolved into a journey of creating
-pieces that blend luxury with grace— from statement jewelry to elegant abayas and designer ensembles crafted for the modern woman.
-</p>
-  
-<p>
- At Anayaluxee, we believe fashion is more than just clothing; it is an expression of confidence, individuality, and beauty. 
-Every collection is thoughtfully curated with attention to detail, fine craftsmanship, and a vision to bring sophistication into everyday style.
-</p>
 
 <p>
- This journey has been filled with learning, dedication, faith, and hard work.
-None of it would have been possible without the love and trust of our customers, who continue to inspire and support us every day.
+What began as a dream soon evolved into a journey of creating
+pieces that blend luxury with grace— from statement jewelry
+to elegant abayas and designer ensembles crafted for the
+modern woman.
 </p>
-  
+
+
+<p>
+At Anayaluxee, we believe fashion is more than just clothing;
+it is an expression of confidence, individuality, and beauty.
+Every collection is thoughtfully curated with attention to
+detail, fine craftsmanship, and a vision to bring
+sophistication into everyday style.
+</p>
+
+
+<p>
+This journey has been filled with learning, dedication, faith,
+and hard work. None of it would have been possible without
+the love and trust of our customers, who continue to inspire
+and support us every day.
+</p>
+
+
 <p>
 Thank you for being a part of the Anayaluxee family.
 </p>
+
 
 <p>
 With Love & Duas,<br>
 — Anaya
 </p>
 
+
 </div>
 
 </section>
 
-<!-- FOOTER -->
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer id="social">
 
+
 <div class="footer-grid">
+
+
+<!-- LOGO -->
 
 <div class="footer-logo">
 
-<img src="logo.jpg">
+<img
+src="logo.jpg"
+alt="Anayaluxee">
 
-<p>Own The Moment, Wear Anaya</p>
-
-</div>
-
-<div>
-
-<h3 class="footer-title">Location</h3>
-
-<p>Lucknow, Uttar Pradesh</p>
+<p>
+Own The Moment, Wear Anaya
+</p>
 
 </div>
 
+
+<!-- LOCATION -->
+
 <div>
 
-<h3 class="footer-title">Connect With Us</h3>
+<h3 class="footer-title">
+Location
+</h3>
+
+<p>
+Lucknow, Uttar Pradesh
+</p>
+
+</div>
+
+
+<!-- SOCIAL -->
+
+<div>
+
+<h3 class="footer-title">
+Connect With Us
+</h3>
+
 
 <div class="footer-links">
 
+
 <a href="mailto:anayaluxee@gmail.com">
+
 anayaluxee@gmail.com
+
 </a>
 
-<a href="https://www.instagram.com/anayaluxee/" target="_blank">
+
+<a
+href="https://www.instagram.com/anayaluxee/"
+target="_blank"
+rel="noopener noreferrer">
+
 Instagram
+
 </a>
 
-<a href="https://www.instagram.com/anayaluxeestudio/" target="_blank">
+
+<a
+href="https://www.instagram.com/anayaluxeestudio/"
+target="_blank"
+rel="noopener noreferrer">
+
 Instagram For Suits
-</a>      
 
-<a href="https://www.facebook.com/share/1AVvTNDU7D/?mibextid=wwXIfr" target="_blank">
-Facebook
 </a>
 
-<a href="https://www.facebook.com/people/Anayaluxeestudio/61591221075082/" target="_blank">
+
+<a
+href="https://www.facebook.com/share/1AVvTNDU7D/?mibextid=wwXIfr"
+target="_blank"
+rel="noopener noreferrer">
+
+Facebook
+
+</a>
+
+
+<a
+href="https://www.facebook.com/people/Anayaluxeestudio/61591221075082/"
+target="_blank"
+rel="noopener noreferrer">
+
 Facebook For Suits
-</a>      
 
-<a href="https://www.pinterest.com/anayaluxee/" target="_blank">
+</a>
+
+
+<a
+href="https://www.pinterest.com/anayaluxee/"
+target="_blank"
+rel="noopener noreferrer">
+
 Pinterest
-</a> 
 
-<a href="https://www.youtube.com/@Anayaluxee/" target="_blank">
+</a>
+
+
+<a
+href="https://www.youtube.com/@Anayaluxee/"
+target="_blank"
+rel="noopener noreferrer">
+
 Youtube
-</a>     
+
+</a>
+
 
 </div>
 
 </div>
 
+
 </div>
+
 
 <div class="copyright">
+
 © 2026 ANAYALUXEE · All Rights Reserved
+
 </div>
+
 
 </footer>
 
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script>
+
+/* ============================================
+   MOBILE MENU
+============================================ */
 
 function toggleMenu(){
 
-document.getElementById("navMenu").classList.toggle("active");
+document
+.getElementById("navMenu")
+.classList
+.toggle("active");
 
 }
 
+
+/* Close mobile menu after clicking link */
+
+document
+.querySelectorAll("#navMenu a")
+.forEach(function(link){
+
+link.addEventListener("click",function(){
+
+document
+.getElementById("navMenu")
+.classList
+.remove("active");
+
+});
+
+});
+
+
+
+/* ============================================
+   VIDEO HERO SLIDER
+============================================ */
+
+const slides =
+document.querySelectorAll(
+".hero-slider .slide"
+);
+
+let currentSlide = 0;
+
+let isChanging = false;
+
+
+
+/* ============================================
+   START VIDEO
+============================================ */
+
+function startVideo(index){
+
+const slide = slides[index];
+
+const video =
+slide.querySelector("video");
+
+
+slide.classList.add("active");
+
+
+video.currentTime = 0;
+
+
+const playPromise =
+video.play();
+
+
+if(playPromise !== undefined){
+
+playPromise.catch(function(){
+
+console.log(
+"Video autoplay was blocked."
+);
+
+});
+
+}
+
+}
+
+
+
+/* ============================================
+   NEXT VIDEO
+============================================ */
+
+function nextVideo(){
+
+if(isChanging){
+return;
+}
+
+
+isChanging = true;
+
+
+const current =
+slides[currentSlide];
+
+const currentVideo =
+current.querySelector("video");
+
+
+current.classList.remove("active");
+
+
+currentVideo.pause();
+
+
+currentSlide++;
+
+
+if(
+currentSlide >= slides.length
+){
+
+currentSlide = 0;
+
+}
+
+
+const next =
+slides[currentSlide];
+
+const nextVideo =
+next.querySelector("video");
+
+
+next.classList.add("active");
+
+
+nextVideo.currentTime = 0;
+
+
+const playPromise =
+nextVideo.play();
+
+
+if(playPromise !== undefined){
+
+playPromise.catch(function(){
+
+console.log(
+"Next video autoplay blocked."
+);
+
+});
+
+}
+
+
+/* PRELOAD NEXT VIDEO */
+
+const preloadIndex =
+(currentSlide + 1) %
+slides.length;
+
+
+const preloadVideo =
+slides[preloadIndex]
+.querySelector("video");
+
+
+preloadVideo.load();
+
+
+setTimeout(function(){
+
+isChanging = false;
+
+},1200);
+
+}
+
+
+
+/* ============================================
+   WHEN VIDEO ENDS
+============================================ */
+
+slides.forEach(
+function(slide,index){
+
+const video =
+slide.querySelector("video");
+
+
+video.addEventListener(
+"ended",
+function(){
+
+if(
+index === currentSlide
+){
+
+nextVideo();
+
+}
+
+});
+
+});
+
+
+
+/* ============================================
+   START FIRST VIDEO
+============================================ */
+
+startVideo(0);
+
+
+
+/* ============================================
+   PAGE VISIBILITY
+============================================ */
+
+document.addEventListener(
+"visibilitychange",
+function(){
+
+const video =
+slides[currentSlide]
+.querySelector("video");
+
+
+if(document.hidden){
+
+video.pause();
+
+}else{
+
+video.play()
+.catch(function(){});
+
+}
+
+});
+
 </script>
 
+
 </body>
+
 </html>
+```
