@@ -85,9 +85,12 @@ color:#2d1d1a;
 ===================================================== */
 
 header{
+
 position:fixed;
+
 top:0;
 left:0;
+
 width:100%;
 
 height:82px;
@@ -95,73 +98,98 @@ height:82px;
 padding:12px 5%;
 
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
 
 background:rgba(247,239,236,0.92);
 
 backdrop-filter:blur(10px);
+
 -webkit-backdrop-filter:blur(10px);
 
 z-index:9999;
+
 }
 
 
 /* LOGO */
 
 .logo{
+
 display:flex;
+
 align-items:center;
+
 gap:14px;
 
 text-decoration:none;
+
 }
 
 .logo img{
+
 width:50px;
+
 height:auto;
+
 display:block;
+
 }
 
 .logo h1{
+
 font-family:'Cormorant Garamond',serif;
 
 font-size:2rem;
+
 font-weight:500;
 
 letter-spacing:2px;
 
 color:#4a120d;
+
 }
 
 
 /* NAVIGATION */
 
 nav{
+
 display:flex;
+
 align-items:center;
+
 gap:30px;
+
 }
 
 nav a{
+
 text-decoration:none;
 
 font-size:12px;
+
 letter-spacing:3px;
 
 color:#5c211a;
 
 transition:0.4s;
+
 }
 
 nav a:hover{
+
 opacity:0.6;
+
 }
 
 
-/* MENU BUTTON */
+/* MENU */
 
 .menu-toggle{
+
 display:none;
 
 font-size:1.8rem;
@@ -169,6 +197,7 @@ font-size:1.8rem;
 color:#4a120d;
 
 cursor:pointer;
+
 }
 
 
@@ -182,11 +211,8 @@ position:relative;
 
 width:100%;
 
-/*
-   Header ke neeche exact full screen
-*/
-
 height:100vh;
+
 height:100svh;
 
 min-height:600px;
@@ -194,6 +220,7 @@ min-height:600px;
 overflow:hidden;
 
 background:#000;
+
 }
 
 
@@ -212,15 +239,19 @@ width:100%;
 height:100%;
 
 opacity:0;
+
 visibility:hidden;
 
 transition:
+
 opacity 1.2s ease,
+
 visibility 1.2s ease;
 
 z-index:1;
 
 background:#000;
+
 }
 
 .slide.active{
@@ -230,6 +261,7 @@ opacity:1;
 visibility:visible;
 
 z-index:2;
+
 }
 
 
@@ -237,32 +269,37 @@ z-index:2;
    VIDEO
 ===================================================== */
 
+/*
+   PC:
+   Full video visible.
+   No unwanted zoom/crop.
+*/
+
 .slide video{
 
 position:absolute;
 
 top:0;
+
 left:0;
 
 width:100%;
+
 height:100%;
 
-/*
-   COVER = PC + MOBILE FULL SCREEN
-*/
-
-object-fit:cover;
+object-fit:contain;
 
 object-position:center center;
 
 display:block;
 
 background:#000;
+
 }
 
 
 /* =====================================================
-   VIDEO OVERLAY
+   DARK OVERLAY
 ===================================================== */
 
 .slide::after{
@@ -282,6 +319,7 @@ background:rgba(0,0,0,0.28);
 z-index:1;
 
 pointer-events:none;
+
 }
 
 
@@ -305,8 +343,8 @@ width:90%;
 max-width:1200px;
 
 text-align:center;
-}
 
+}
 
 .hero-content h1{
 
@@ -325,9 +363,10 @@ letter-spacing:2px;
 margin-bottom:25px;
 
 text-shadow:
-0 10px 25px rgba(0,0,0,0.4);
-}
 
+0 10px 25px rgba(0,0,0,0.4);
+
+}
 
 .hero-content p{
 
@@ -344,9 +383,10 @@ color:white;
 margin-bottom:35px;
 
 text-shadow:
-0 5px 15px rgba(0,0,0,0.5);
-}
 
+0 5px 15px rgba(0,0,0,0.5);
+
+}
 
 .hero-content a{
 
@@ -365,6 +405,7 @@ font-size:12px;
 letter-spacing:3px;
 
 transition:0.4s;
+
 }
 
 .hero-content a:hover{
@@ -372,11 +413,12 @@ transition:0.4s;
 background:white;
 
 color:#2d1d1a;
+
 }
 
 
 /* =====================================================
-   HERO TEXT GLOW
+   HERO GLOW
 ===================================================== */
 
 @keyframes glow{
@@ -384,6 +426,7 @@ color:#2d1d1a;
 from{
 
 text-shadow:
+
 0 0 10px rgba(255,255,255,0.2);
 
 }
@@ -391,6 +434,7 @@ text-shadow:
 to{
 
 text-shadow:
+
 0 0 30px rgba(255,255,255,0.5);
 
 }
@@ -400,6 +444,7 @@ text-shadow:
 .hero-content h1{
 
 animation:glow 4s infinite alternate;
+
 }
 
 
@@ -412,10 +457,13 @@ animation:glow 4s infinite alternate;
 padding:130px 8%;
 
 background:
+
 url('Our Philosophy.png')
+
 center center/cover no-repeat;
 
 position:relative;
+
 }
 
 .philosophy::before{
@@ -427,6 +475,7 @@ position:absolute;
 inset:0;
 
 background:rgba(0,0,0,0.35);
+
 }
 
 .philosophy-content{
@@ -442,6 +491,7 @@ margin:auto;
 text-align:center;
 
 color:white;
+
 }
 
 .philosophy h2{
@@ -453,6 +503,7 @@ font-size:5rem;
 font-weight:400;
 
 margin-bottom:30px;
+
 }
 
 .philosophy p{
@@ -462,6 +513,7 @@ font-size:18px;
 line-height:2;
 
 letter-spacing:1px;
+
 }
 
 
@@ -476,6 +528,7 @@ padding:120px 8%;
 background:#f2ece7;
 
 text-align:center;
+
 }
 
 .promise h2{
@@ -487,6 +540,7 @@ font-size:5rem;
 margin-bottom:70px;
 
 color:#31413d;
+
 }
 
 .promise-grid{
@@ -494,9 +548,11 @@ color:#31413d;
 display:grid;
 
 grid-template-columns:
+
 repeat(4,1fr);
 
 gap:40px;
+
 }
 
 .promise-box{
@@ -504,11 +560,13 @@ gap:40px;
 padding:30px;
 
 transition:0.5s;
+
 }
 
 .promise-box:hover{
 
 transform:translateY(-10px);
+
 }
 
 .promise-box i{
@@ -518,6 +576,7 @@ font-size:4rem;
 margin-bottom:25px;
 
 color:#31413d;
+
 }
 
 .promise-box h3{
@@ -531,6 +590,7 @@ font-weight:500;
 line-height:1.5;
 
 color:#31413d;
+
 }
 
 
@@ -543,6 +603,7 @@ color:#31413d;
 padding:120px 0;
 
 background:white;
+
 }
 
 .section-title{
@@ -552,6 +613,7 @@ text-align:center;
 margin-bottom:80px;
 
 padding:0 20px;
+
 }
 
 .section-title h5{
@@ -563,6 +625,7 @@ letter-spacing:5px;
 margin-bottom:18px;
 
 color:#8b5e57;
+
 }
 
 .section-title h2{
@@ -574,6 +637,7 @@ font-size:4.5rem;
 font-weight:400;
 
 color:#2d1d1a;
+
 }
 
 .collection-grid{
@@ -581,7 +645,9 @@ color:#2d1d1a;
 display:grid;
 
 grid-template-columns:
+
 repeat(3,1fr);
+
 }
 
 .collection-item{
@@ -591,21 +657,25 @@ height:100vh;
 position:relative;
 
 overflow:hidden;
+
 }
 
 .collection-item img{
 
 width:100%;
+
 height:100%;
 
 object-fit:cover;
 
 transition:1.2s;
+
 }
 
 .collection-item:hover img{
 
 transform:scale(1.08);
+
 }
 
 .collection-overlay{
@@ -615,10 +685,15 @@ position:absolute;
 inset:0;
 
 background:
+
 linear-gradient(
+
 to top,
+
 rgba(0,0,0,0.6),
+
 transparent
+
 );
 
 display:flex;
@@ -628,6 +703,7 @@ flex-direction:column;
 justify-content:flex-end;
 
 padding:50px;
+
 }
 
 .collection-overlay span{
@@ -639,6 +715,7 @@ font-size:12px;
 letter-spacing:4px;
 
 margin-bottom:14px;
+
 }
 
 .collection-overlay h3{
@@ -650,6 +727,7 @@ font-size:4rem;
 font-weight:400;
 
 color:white;
+
 }
 
 
@@ -662,6 +740,7 @@ color:white;
 padding:130px 8%;
 
 background:#f7efec;
+
 }
 
 .founder-box{
@@ -671,6 +750,7 @@ max-width:1000px;
 margin:auto;
 
 text-align:center;
+
 }
 
 .founder-box h2{
@@ -682,6 +762,7 @@ font-size:5rem;
 margin-bottom:35px;
 
 color:#2d1d1a;
+
 }
 
 .founder-box p{
@@ -693,6 +774,7 @@ line-height:2.1;
 color:#5f504c;
 
 margin-bottom:20px;
+
 }
 
 
@@ -707,6 +789,7 @@ background:#2b0a07;
 padding:90px 8% 40px;
 
 color:white;
+
 }
 
 .footer-grid{
@@ -714,9 +797,11 @@ color:white;
 display:grid;
 
 grid-template-columns:
+
 1fr 1fr 1fr;
 
 gap:50px;
+
 }
 
 .footer-logo img{
@@ -726,6 +811,7 @@ width:110px;
 height:auto;
 
 margin-bottom:20px;
+
 }
 
 .footer-title{
@@ -735,6 +821,7 @@ font-family:'Cormorant Garamond',serif;
 font-size:2rem;
 
 margin-bottom:22px;
+
 }
 
 .footer-links a{
@@ -748,6 +835,7 @@ color:white;
 margin-bottom:14px;
 
 transition:0.3s;
+
 }
 
 .footer-links a:hover{
@@ -755,6 +843,7 @@ transition:0.3s;
 opacity:0.7;
 
 transform:translateX(4px);
+
 }
 
 .copyright{
@@ -766,6 +855,7 @@ margin-top:60px;
 font-size:13px;
 
 opacity:0.7;
+
 }
 
 
@@ -778,6 +868,7 @@ opacity:0.7;
 .hero-content h1{
 
 font-size:6rem;
+
 }
 
 .hero-content p{
@@ -785,17 +876,21 @@ font-size:6rem;
 font-size:12px;
 
 letter-spacing:3px;
+
 }
 
 .promise-grid{
 
 grid-template-columns:
+
 repeat(2,1fr);
+
 }
 
 .collection-overlay h3{
 
 font-size:3.5rem;
+
 }
 
 }
@@ -814,13 +909,18 @@ header{
 height:70px;
 
 padding:10px 5%;
+
 }
+
+
+/* MENU */
 
 .menu-toggle{
 
 display:block;
 
 z-index:10001;
+
 }
 
 
@@ -853,12 +953,15 @@ gap:0;
 transition:0.5s;
 
 box-shadow:
+
 -10px 0 30px rgba(0,0,0,0.1);
+
 }
 
 nav.active{
 
 right:0;
+
 }
 
 nav a{
@@ -866,11 +969,16 @@ nav a{
 font-size:12px;
 
 margin:15px 0;
+
 }
+
+
+/* LOGO */
 
 .logo img{
 
 width:38px;
+
 }
 
 .logo h1{
@@ -878,6 +986,7 @@ width:38px;
 font-size:1.45rem;
 
 letter-spacing:1.5px;
+
 }
 
 
@@ -894,8 +1003,13 @@ height:100svh;
 min-height:600px;
 
 overflow:hidden;
+
 }
 
+
+/*
+   Mobile screen fill
+*/
 
 .slide video{
 
@@ -905,21 +1019,19 @@ height:100%;
 
 object-fit:cover;
 
-/*
-   Mobile video centre
-*/
-
 object-position:center center;
+
 }
 
 
-/* MOBILE HERO TEXT */
+/* HERO CONTENT */
 
 .hero-content{
 
 width:92%;
 
 padding:0 10px;
+
 }
 
 .hero-content h1{
@@ -931,6 +1043,7 @@ line-height:0.95;
 letter-spacing:1px;
 
 margin-bottom:20px;
+
 }
 
 .hero-content p{
@@ -942,6 +1055,7 @@ line-height:1.8;
 letter-spacing:2px;
 
 margin-bottom:28px;
+
 }
 
 .hero-content a{
@@ -951,6 +1065,7 @@ padding:13px 24px;
 font-size:10px;
 
 letter-spacing:2px;
+
 }
 
 
@@ -961,11 +1076,13 @@ letter-spacing:2px;
 .philosophy{
 
 padding:90px 25px;
+
 }
 
 .philosophy h2{
 
 font-size:3rem;
+
 }
 
 .philosophy p{
@@ -973,6 +1090,7 @@ font-size:3rem;
 font-size:13px;
 
 line-height:2;
+
 }
 
 
@@ -983,6 +1101,7 @@ line-height:2;
 .promise{
 
 padding:90px 25px;
+
 }
 
 .promise h2{
@@ -990,6 +1109,7 @@ padding:90px 25px;
 font-size:3rem;
 
 margin-bottom:50px;
+
 }
 
 .promise-grid{
@@ -997,21 +1117,25 @@ margin-bottom:50px;
 grid-template-columns:1fr;
 
 gap:10px;
+
 }
 
 .promise-box{
 
 padding:25px 10px;
+
 }
 
 .promise-box i{
 
 font-size:3rem;
+
 }
 
 .promise-box h3{
 
 font-size:1.8rem;
+
 }
 
 
@@ -1022,11 +1146,13 @@ font-size:1.8rem;
 .collection{
 
 padding:90px 0;
+
 }
 
 .section-title{
 
 margin-bottom:50px;
+
 }
 
 .section-title h2{
@@ -1034,26 +1160,31 @@ margin-bottom:50px;
 font-size:3rem;
 
 line-height:1.1;
+
 }
 
 .collection-grid{
 
 grid-template-columns:1fr;
+
 }
 
 .collection-item{
 
 height:85vh;
+
 }
 
 .collection-overlay{
 
 padding:35px;
+
 }
 
 .collection-overlay h3{
 
 font-size:3rem;
+
 }
 
 
@@ -1064,11 +1195,13 @@ font-size:3rem;
 .founder{
 
 padding:90px 25px;
+
 }
 
 .founder-box h2{
 
 font-size:3rem;
+
 }
 
 .founder-box p{
@@ -1076,6 +1209,7 @@ font-size:3rem;
 font-size:13px;
 
 line-height:2;
+
 }
 
 
@@ -1090,6 +1224,7 @@ grid-template-columns:1fr;
 text-align:center;
 
 gap:40px;
+
 }
 
 }
@@ -1104,6 +1239,7 @@ gap:40px;
 .hero-content h1{
 
 font-size:3rem;
+
 }
 
 .hero-content p{
@@ -1111,35 +1247,41 @@ font-size:3rem;
 font-size:8px;
 
 letter-spacing:1.5px;
+
 }
 
 .hero-content a{
 
 padding:12px 20px;
+
 }
 
 }
 
 
 /* =====================================================
-   VERY SHORT MOBILE SCREEN
+   SHORT MOBILE
 ===================================================== */
 
-@media(max-width:768px) and (max-height:650px){
+@media(max-width:768px)
+and (max-height:650px){
 
 .hero-content h1{
 
 font-size:3rem;
+
 }
 
 .hero-content p{
 
 margin-bottom:18px;
+
 }
 
 .hero-content a{
 
 padding:11px 22px;
+
 }
 
 }
@@ -1164,7 +1306,9 @@ padding:11px 22px;
 src="logo-brown.png"
 alt="Anayaluxee Logo">
 
-<h1>ANAYALUXEE</h1>
+<h1>
+ANAYALUXEE
+</h1>
 
 </a>
 
@@ -1207,14 +1351,13 @@ SOCIAL
 
 <!-- VIDEO 1 -->
 
-<div class="slide active">
+<div class="slide">
 
 <video
-autoplay
 muted
 playsinline
 webkit-playsinline
-preload="auto">
+preload="metadata">
 
 <source
 src="hero1.mp4"
@@ -1378,9 +1521,7 @@ type="video/mp4">
 
 
 
-<!-- =====================================================
-     HERO TEXT
-===================================================== -->
+<!-- HERO TEXT -->
 
 <div class="hero-content">
 
@@ -1397,6 +1538,7 @@ EXPLORE COLLECTION
 </a>
 
 </div>
+
 
 </section>
 
@@ -1700,8 +1842,6 @@ With Love & Duas,<br>
 <div class="footer-grid">
 
 
-<!-- LOGO -->
-
 <div class="footer-logo">
 
 <img
@@ -1714,8 +1854,6 @@ Own The Moment, Wear Anaya
 
 </div>
 
-
-<!-- LOCATION -->
 
 <div>
 
@@ -1730,8 +1868,6 @@ Lucknow, Uttar Pradesh
 </div>
 
 
-<!-- SOCIAL -->
-
 <div>
 
 <h3 class="footer-title">
@@ -1743,9 +1879,7 @@ Connect With Us
 
 
 <a href="mailto:anayaluxee@gmail.com">
-
 anayaluxee@gmail.com
-
 </a>
 
 
@@ -1849,8 +1983,6 @@ document
 }
 
 
-/* CLOSE MENU AFTER CLICK */
-
 document
 .querySelectorAll("#navMenu a")
 .forEach(function(link){
@@ -1871,7 +2003,7 @@ document
 
 
 /* =====================================================
-   VIDEO SLIDER
+   RANDOM VIDEO SLIDER
 ===================================================== */
 
 const slides =
@@ -1879,9 +2011,62 @@ document.querySelectorAll(
 ".hero-slider .slide"
 );
 
-let currentSlide = 0;
+
+/*
+   RANDOM FIRST VIDEO
+
+   Website open hote hi
+   1 se 9 mein se koi bhi
+   random video select hoga.
+*/
+
+let currentSlide =
+Math.floor(
+Math.random() * slides.length
+);
+
+
+/*
+   Previous video ko remember
+   karne ke liye
+*/
+
+let previousSlide = -1;
 
 let isChanging = false;
+
+
+
+/* =====================================================
+   RANDOM VIDEO NUMBER
+===================================================== */
+
+function getRandomVideo(){
+
+let randomIndex;
+
+
+/*
+   Same video immediately
+   repeat na ho
+*/
+
+do{
+
+randomIndex =
+Math.floor(
+Math.random() * slides.length
+);
+
+}
+while(
+randomIndex === currentSlide &&
+slides.length > 1
+);
+
+return randomIndex;
+
+}
 
 
 
@@ -1892,11 +2077,15 @@ let isChanging = false;
 function playVideo(video){
 
 if(!video){
+
 return;
+
 }
 
 
-/* FORCE MUTED */
+/*
+   FORCE MUTED
+*/
 
 video.muted = true;
 
@@ -1905,9 +2094,21 @@ video.defaultMuted = true;
 video.volume = 0;
 
 
-/* MOBILE SUPPORT */
+/*
+   MOBILE
+*/
 
 video.playsInline = true;
+
+video.setAttribute(
+"autoplay",
+""
+);
+
+video.setAttribute(
+"muted",
+""
+);
 
 video.setAttribute(
 "playsinline",
@@ -1919,24 +2120,24 @@ video.setAttribute(
 ""
 );
 
-video.setAttribute(
-"muted",
-""
-);
 
-
-/* PLAY */
+/*
+   PLAY
+*/
 
 const promise =
 video.play();
 
 
-if(promise !== undefined){
+if(
+promise !== undefined
+){
 
-promise.catch(function(){
+promise.catch(
+function(){
 
 console.log(
-"Autoplay waiting for interaction..."
+"Autoplay blocked. Waiting for interaction."
 );
 
 });
@@ -1948,131 +2149,255 @@ console.log(
 
 
 /* =====================================================
-   START VIDEO
+   START RANDOM VIDEO
 ===================================================== */
 
-function startVideo(index){
+function startRandomVideo(){
 
-const slide =
-slides[index];
+/*
+   Sab slides inactive
+*/
 
-const video =
-slide.querySelector("video");
+slides.forEach(
+function(slide){
+
+slide.classList.remove(
+"active"
+);
+
+});
 
 
-slide.classList.add("active");
+/*
+   Random slide active
+*/
+
+const firstSlide =
+slides[currentSlide];
 
 
-playVideo(video);
+const firstVideo =
+firstSlide.querySelector(
+"video"
+);
+
+
+firstSlide.classList.add(
+"active"
+);
+
+
+/*
+   Start video
+*/
+
+playVideo(
+firstVideo
+);
+
+
+/*
+   Retry after loading
+*/
+
+setTimeout(
+function(){
+
+if(firstVideo.paused){
+
+playVideo(
+firstVideo
+);
+
+}
+
+},
+300
+);
+
+
+/*
+   Another retry
+*/
+
+setTimeout(
+function(){
+
+if(firstVideo.paused){
+
+playVideo(
+firstVideo
+);
+
+}
+
+},
+1000
+);
 
 }
 
 
 
 /* =====================================================
-   NEXT VIDEO
+   NEXT RANDOM VIDEO
 ===================================================== */
 
 function nextVideo(){
 
 if(isChanging){
+
 return;
+
 }
 
 isChanging = true;
 
 
-/* CURRENT */
+/*
+   CURRENT VIDEO
+*/
 
 const current =
 slides[currentSlide];
 
+
 const currentVideo =
-current.querySelector("video");
+current.querySelector(
+"video"
+);
 
 
-current.classList.remove("active");
+current.classList.remove(
+"active"
+);
+
 
 currentVideo.pause();
 
 
-/* NEXT */
+/*
+   RANDOM NEXT
+*/
 
-currentSlide++;
+previousSlide =
+currentSlide;
 
 
-if(currentSlide >= slides.length){
+currentSlide =
+getRandomVideo();
 
-currentSlide = 0;
 
-}
-
+/*
+   NEXT SLIDE
+*/
 
 const next =
 slides[currentSlide];
 
+
 const nextVideoElement =
-next.querySelector("video");
+next.querySelector(
+"video"
+);
 
 
-next.classList.add("active");
+next.classList.add(
+"active"
+);
 
 
-/* PLAY NEXT */
+/*
+   RESET
+*/
 
-playVideo(nextVideoElement);
+try{
+
+nextVideoElement.currentTime = 0;
+
+}
+catch(error){
+
+}
 
 
-/* PRELOAD FOLLOWING VIDEO */
+/*
+   PLAY NEXT
+*/
 
-const preloadIndex =
-(currentSlide + 1)
+playVideo(
+nextVideoElement
+);
+
+
+/*
+   PRELOAD ANOTHER RANDOM VIDEO
+*/
+
+let preloadIndex =
+Math.floor(
+Math.random() * slides.length
+);
+
+
+if(
+preloadIndex === currentSlide
+){
+
+preloadIndex =
+(preloadIndex + 1)
 % slides.length;
+
+}
 
 
 const preloadVideo =
 slides[preloadIndex]
-.querySelector("video");
+.querySelector(
+"video"
+);
 
 
-preloadVideo.preload = "auto";
+preloadVideo.preload =
+"auto";
 
-
-/*
-   Browser ko next video
-   prepare karne do
-*/
 
 try{
 
 preloadVideo.load();
 
-}catch(error){
+}
+catch(error){
 
 console.log(error);
 
 }
 
 
-setTimeout(function(){
+setTimeout(
+function(){
 
 isChanging = false;
 
-},1000);
+},
+1000
+);
 
 }
 
 
 
 /* =====================================================
-   VIDEO END EVENT
+   VIDEO END
 ===================================================== */
 
 slides.forEach(
 function(slide,index){
 
 const video =
-slide.querySelector("video");
+slide.querySelector(
+"video"
+);
 
 
 video.addEventListener(
@@ -2094,10 +2419,28 @@ nextVideo();
 
 
 /* =====================================================
-   FIRST VIDEO
+   PAGE LOAD
 ===================================================== */
 
-startVideo(0);
+if(
+document.readyState ===
+"loading"
+){
+
+document.addEventListener(
+"DOMContentLoaded",
+function(){
+
+startRandomVideo();
+
+});
+
+}
+else{
+
+startRandomVideo();
+
+}
 
 
 
@@ -2105,38 +2448,49 @@ startVideo(0);
    MOBILE AUTOPLAY FALLBACK
 ===================================================== */
 
-function startCurrentVideo(){
+function resumeCurrentVideo(){
 
 const video =
 slides[currentSlide]
-.querySelector("video");
+.querySelector(
+"video"
+);
 
-playVideo(video);
+
+if(
+video.paused
+){
+
+playVideo(
+video
+);
+
+}
 
 }
 
 
 /*
-   FIRST TOUCH
+   TOUCH
 */
 
 document.addEventListener(
 "touchstart",
-startCurrentVideo,
+resumeCurrentVideo,
 {
-once:true,
-passive:true
+passive:true,
+once:true
 }
 );
 
 
 /*
-   FIRST CLICK
+   CLICK
 */
 
 document.addEventListener(
 "click",
-startCurrentVideo,
+resumeCurrentVideo,
 {
 once:true
 }
@@ -2144,18 +2498,17 @@ once:true
 
 
 /*
-   FIRST SCROLL
+   POINTER
 */
 
 document.addEventListener(
-"scroll",
-startCurrentVideo,
+"pointerdown",
+resumeCurrentVideo,
 {
-once:true,
-passive:true
+passive:true,
+once:true
 }
 );
-
 
 
 /* =====================================================
@@ -2168,7 +2521,9 @@ function(){
 
 const video =
 slides[currentSlide]
-.querySelector("video");
+.querySelector(
+"video"
+);
 
 
 if(
@@ -2177,9 +2532,12 @@ document.hidden
 
 video.pause();
 
-}else{
+}
+else{
 
-playVideo(video);
+playVideo(
+video
+);
 
 }
 
