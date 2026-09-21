@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jewelry | Anayaluxee</title>
+
+<meta name="description" content="Explore Anayaluxee's luxury jewelry collection.">
+
+<link rel="icon" type="image/png" href="logo-brown.png">
+<link rel="shortcut icon" type="image/png" href="logo-brown.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#f7efec;
+    color:#2d1d1a;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    width:100%;
+    padding:18px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:rgba(247,239,236,.96);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(74,18,13,.08);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:#4a120d;
+}
+
+.logo img{
+    width:48px;
+    height:48px;
+    object-fit:contain;
+}
+
+.logo span{
+    font-family:'Cormorant Garamond',serif;
+    font-size:29px;
+    letter-spacing:2px;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+nav a{
+    color:#4a120d;
+    text-decoration:none;
+    font-size:11px;
+    letter-spacing:2px;
+    transition:.3s;
+}
+
+nav a:hover{
+    opacity:.55;
+}
+
+/* MENU BUTTON */
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    cursor:pointer;
+}
+
+.menu-btn span{
+    display:block;
+    width:27px;
+    height:2px;
+    margin:6px 0;
+    background:#4a120d;
+}
+
+/* HERO */
+
+.jewelry-hero{
+    min-height:55vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:100px 25px;
+    background:
+        linear-gradient(rgba(45,29,26,.30),rgba(45,29,26,.30)),
+        url('images/jewelry.jpg') center/cover no-repeat;
+}
+
+.hero-content{
+    color:white;
+}
+
+.hero-small{
+    font-size:11px;
+    letter-spacing:6px;
+    margin-bottom:18px;
+}
+
+.hero-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(55px,8vw,110px);
+    font-weight:400;
+    line-height:.9;
+}
+
+.hero-text{
+    margin-top:25px;
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+/* INTRO */
+
+.intro{
+    text-align:center;
+    padding:90px 20px 70px;
+}
+
+.intro h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:55px;
+    font-weight:400;
+    margin-bottom:15px;
+}
+
+.intro p{
+    max-width:650px;
+    margin:auto;
+    color:#6b5955;
+    line-height:1.9;
+    font-size:14px;
+}
+
+/* PRODUCT GRID */
+
+.products{
+    max-width:1500px;
+    margin:auto;
+    padding:20px 5% 120px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+}
+
+.product-card{
+    background:white;
+    overflow:hidden;
+    cursor:pointer;
+    transition:.45s;
+}
+
+.product-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 20px 50px rgba(45,29,26,.12);
+}
+
+.product-media{
+    position:relative;
+    width:100%;
+    aspect-ratio:4/5;
+    overflow:hidden;
+    background:#eee5e0;
+}
+
+.product-media img,
+.product-media video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.product-media video{
+    pointer-events:none;
+}
+
+.product-info{
+    padding:20px 18px 24px;
+    text-align:center;
+}
+
+.product-number{
+    font-size:9px;
+    letter-spacing:3px;
+    color:#a17b72;
+    margin-bottom:8px;
+}
+
+.product-name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:25px;
+    font-weight:500;
+    color:#3a2420;
+}
+
+/* VIEW BUTTON */
+
+.view-btn{
+    display:inline-block;
+    margin-top:13px;
+    padding:10px 20px;
+    border:1px solid #5a2018;
+    color:#5a2018;
+    font-size:9px;
+    letter-spacing:2px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.view-btn:hover{
+    background:#5a2018;
+    color:white;
+}
+
+/* NOTE */
+
+.catalog-note{
+    text-align:center;
+    margin-top:50px;
+    color:#8a7069;
+    font-size:12px;
+    letter-spacing:1px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#2b0a07;
+    color:white;
+    text-align:center;
+    padding:70px 20px 35px;
+}
+
+.footer-logo{
+    display:flex;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.footer-logo img{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+}
+
+footer h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:32px;
+    font-weight:400;
+    margin-bottom:15px;
+}
+
+footer p{
+    font-size:12px;
+    opacity:.8;
+    line-height:1.8;
+}
+
+.instagram-link{
+    display:inline-block;
+    margin-top:22px;
+    color:white;
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,.5);
+    padding:12px 22px;
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+.copyright{
+    margin-top:50px;
+    font-size:10px;
+    opacity:.5;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .product-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    header{
+        padding:13px 5%;
+    }
+
+    .logo img{
+        width:40px;
+        height:40px;
+    }
+
+    .logo span{
+        font-size:22px;
+    }
+
+    nav{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        display:none;
+        flex-direction:column;
+        gap:0;
+        background:#f7efec;
+        border-top:1px solid rgba(74,18,13,.1);
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    nav a{
+        width:100%;
+        text-align:center;
+        padding:18px;
+        border-bottom:1px solid rgba(74,18,13,.08);
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .jewelry-hero{
+        min-height:50vh;
+    }
+
+    .hero-small{
+        font-size:9px;
+        letter-spacing:4px;
+    }
+
+    .hero-title{
+        font-size:62px;
+    }
+
+    .hero-text{
+        font-size:10px;
+        line-height:1.8;
+    }
+
+    .intro{
+        padding:70px 22px 50px;
+    }
+
+    .intro h2{
+        font-size:42px;
+    }
+
+    .intro p{
+        font-size:12px;
+    }
+
+    .products{
+        padding:10px 14px 80px;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+
+    .product-info{
+        padding:14px 8px 18px;
+    }
+
+    .product-name{
+        font-size:20px;
+    }
+
+    .view-btn{
+        font-size:8px;
+        padding:9px 12px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a class="logo" href="index.html">
+
+<img src="logo-brown.png" alt="Anayaluxee">
+
+<span>ANAYALUXEE</span>
+
+</a>
+
+<nav id="mainNav">
+
+<a href="index.html">HOME</a>
+<a href="jewelry.html">JEWELRY</a>
+<a href="suits.html">SUITS</a>
+<a href="abayas.html">ABAYAS</a>
+<a href="#instagram">INSTAGRAM</a>
+
+</nav>
+
+<button class="menu-btn" onclick="toggleMenu()" aria-label="Open Menu">
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+</header>
+
+
+<section class="jewelry-hero">
+
+<div class="hero-content">
+
+<div class="hero-small">
+ANAYALUXEE · JEWELRY
+</div>
+
+<h1 class="hero-title">
+Jewelry
+</h1>
+
+<p class="hero-text">
+TIMELESS PIECES · MODERN ELEGANCE
+</p>
+
+</div>
+
+</section>
+
+
+<section class="intro">
+
+<h2>Jewelry Collection</h2>
+
+<p>
+Discover thoughtfully selected jewelry designed to add
+elegance, character and a touch of luxury to every moment.
+</p>
+
+</section>
+
+
+<section class="products">
+
+<div class="product-grid">
+
+
+<!-- 1 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Heart_Shape_Gold_Necklace_1.jpg"
+alt="Heart Shape Gold Necklace"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 01
+</div>
+
+<div class="product-name">
+Heart Shape Gold Necklace
+</div>
+
+<a
+class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank"
+>
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 2 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Gold_Rings_1.jpg"
+alt="Gold Rings"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 02
+</div>
+
+<div class="product-name">
+Gold Rings
+</div>
+
+<a
+class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank"
+>
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 3 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Gold_Necklace_1.jpg"
+alt="Gold Necklace"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 03
+</div>
+
+<div class="product-name">
+Gold Necklace
+</div>
+
+<a
+class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank"
+>
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 4 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Diamond_Gold_Necklace_1.jpg"
+alt="Diamond Gold Necklace"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 04
+</div>
+
+<div class="product-name">
+Diamond Gold Necklace
+</div>
+
+<a
+class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank"
+>
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 5 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Two_Heart_Gold_Necklace_1.jpg"
+alt="Two Heart Gold Necklace"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 05
+</div>
+
+<div class="product-name">
+Two Heart Gold Necklace
+</div>
+
+<a class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank">
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 6 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Gold_Bracelets_1.jpg"
+alt="Gold Bracelets"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 06
+</div>
+
+<div class="product-name">
+Gold Bracelets
+</div>
+
+<a class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank">
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 7 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Gold_Necklaces_Collection_1.jpg"
+alt="Gold Necklaces Collection"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 07
+</div>
+
+<div class="product-name">
+Gold Necklaces Collection
+</div>
+
+<a class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank">
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 8 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Heart_Shape_Gold_Earring_1.jpg"
+alt="Heart Shape Gold Earring"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 08
+</div>
+
+<div class="product-name">
+Heart Shape Gold Earring
+</div>
+
+<a class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank">
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 9 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Butterfly_Gold_Necklace_1.jpg"
+alt="Butterfly Gold Necklace"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 09
+</div>
+
+<div class="product-name">
+Butterfly Gold Necklace
+</div>
+
+<a class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank">
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 10 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Premium_Gold_Necklace_1.jpg"
+alt="Premium Gold Necklace"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 10
+</div>
+
+<div class="product-name">
+Premium Gold Necklace
+</div>
+
+<a class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank">
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 11 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Cute_Gold_Earring_1.jpg"
+alt="Cute Gold Earring"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 11
+</div>
+
+<div class="product-name">
+Cute Gold Earring
+</div>
+
+<a class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank">
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 12 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Ribbon_Gold_Ring_1.jpg"
+alt="Ribbon Gold Ring"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 12
+</div>
+
+<div class="product-name">
+Ribbon Gold Ring
+</div>
+
+<a class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank">
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 13 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Amour_Heart_Gold_Ring_1.jpg"
+alt="Amour Heart Gold Ring"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 13
+</div>
+
+<div class="product-name">
+Amour Heart Gold Ring
+</div>
+
+<a class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank">
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 14 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Butterfly_Band_Gold_Ring_1.jpg"
+alt="Butterfly Band Gold Ring"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 14
+</div>
+
+<div class="product-name">
+Butterfly Band Gold Ring
+</div>
+
+<a class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank">
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 15 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Ginkgo_Biloba_Leaf_Gold_Ring_1.jpg"
+alt="Ginkgo Biloba Leaf Gold Ring"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 15
+</div>
+
+<div class="product-name">
+Ginkgo Biloba Leaf Gold Ring
+</div>
+
+<a class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank">
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 16 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Cute_Bow_Heart_Gold_Earring_1.jpg"
+alt="Cute Bow Heart Gold Earring"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 16
+</div>
+
+<div class="product-name">
+Cute Bow Heart Gold Earring
+</div>
+
+<a class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank">
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 17 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Pearl_Nest_Pendant_Gold_Necklace_1.jpg"
+alt="Pearl Nest Pendant Gold Necklace"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 17
+</div>
+
+<div class="product-name">
+Pearl Nest Pendant Gold Necklace
+</div>
+
+<a class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank">
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 18 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Luxe_Loop_Gold_Ring_1.jpg"
+alt="Luxe Loop Gold Ring"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 18
+</div>
+
+<div class="product-name">
+Luxe Loop Gold Ring
+</div>
+
+<a class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank">
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 19 -->
+
+<div class="product-card">
+
+<div class="product-media">
+
+<img
+src="products/jewelry/Vibe_Gold_Ring_1.jpg"
+alt="Vibe Gold Ring"
+loading="lazy"
+>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-number">
+JEWELRY 19
+</div>
+
+<div class="product-name">
+Vibe Gold Ring
+</div>
+
+<a class="view-btn"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank">
+ORDER VIA INSTAGRAM DM
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+<div class="catalog-note">
+PRICES & PRODUCT DETAILS WILL BE ADDED SOON
+</div>
+
+</section>
+
+
+<footer id="instagram">
+
+<div class="footer-logo">
+
+<img src="logo-brown.png" alt="Anayaluxee">
+
+</div>
+
+<h3>ANAYALUXEE</h3>
+
+<p>
+Luxury Jewelry · Designer Suits · Elegant Abayas
+</p>
+
+<a
+class="instagram-link"
+href="https://www.instagram.com/anayaluxee/"
+target="_blank"
+>
+FOLLOW @ANAYALUXEE
+</a>
+
+<div class="copyright">
+© 2026 ANAYALUXEE · Lucknow, Uttar Pradesh
+</div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+
+    document
+    .getElementById("mainNav")
+    .classList
+    .toggle("active");
+
+}
+
+</script>
+
+</body>
+</html>
