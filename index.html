@@ -14,26 +14,34 @@ content="width=device-width, initial-scale=1.0">
 content="Luxury jewelry, elegant abayas and designer suits by Anayaluxee.">
 
 
-<!-- =========================
+<!-- =====================================================
      FAVICON
-========================= -->
+===================================================== -->
 
-<link rel="icon" type="image/png" href="./logo-brown.png?v=999">
-<link rel="shortcut icon" type="image/png" href="./logo-brown.png?v=999">
-<link rel="apple-touch-icon" href="./logo-brown.png?v=999">
+<link rel="icon"
+type="image/png"
+href="./logo-brown.png?v=999">
 
-<!-- =========================
+<link rel="shortcut icon"
+type="image/png"
+href="./logo-brown.png?v=999">
+
+<link rel="apple-touch-icon"
+href="./logo-brown.png?v=999">
+
+
+<!-- =====================================================
      GOOGLE FONTS
-========================= -->
+===================================================== -->
 
 <link
 href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap"
 rel="stylesheet">
 
 
-<!-- =========================
+<!-- =====================================================
      FONT AWESOME
-========================= -->
+===================================================== -->
 
 <link
 rel="stylesheet"
@@ -172,7 +180,7 @@ opacity:0.6;
 }
 
 
-/* MENU */
+/* MENU BUTTON */
 
 .menu-toggle{
 
@@ -188,7 +196,7 @@ cursor:pointer;
 
 
 /* =====================================================
-   HERO
+   HERO SECTION
 ===================================================== */
 
 .hero-slider{
@@ -211,98 +219,168 @@ background:#000;
 
 
 /* =====================================================
-   SLIDE
+   DESKTOP 3 VIDEO GRID
 ===================================================== */
 
-.slide{
+.desktop-video-grid{
 
 position:absolute;
 
-top:0;
-left:0;
+inset:0;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
 
 width:100%;
+
+height:100%;
+
+background:#000;
+
+}
+
+
+/* EACH VIDEO */
+
+.desktop-video-item{
+
+position:relative;
+
+width:100%;
+
+height:100%;
+
+overflow:hidden;
+
+background:#000;
+
+}
+
+
+/*
+   Dark overlay
+*/
+
+.desktop-video-item::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,0.22);
+
+z-index:2;
+
+pointer-events:none;
+
+}
+
+
+/*
+   Desktop video
+
+   CONTAIN = full video visible
+*/
+
+.desktop-video-item video{
+
+width:100%;
+
+height:100%;
+
+display:block;
+
+object-fit:contain;
+
+object-position:center center;
+
+background:#000;
+
+}
+
+
+/* =====================================================
+   MOBILE VIDEO
+===================================================== */
+
+.mobile-video-slider{
+
+display:none;
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+
+height:100%;
+
+background:#000;
+
+}
+
+
+.mobile-slide{
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+
 height:100%;
 
 opacity:0;
 
 visibility:hidden;
 
-transition:
-
-opacity 1.2s ease,
-
-visibility 1.2s ease;
-
-z-index:1;
-
-background:#000;
+transition:opacity 1s ease;
 
 }
 
-.slide.active{
+
+.mobile-slide.active{
 
 opacity:1;
 
 visibility:visible;
 
-z-index:2;
-
 }
 
 
-/* =====================================================
-   VIDEO
-===================================================== */
-
-/*
-   PC:
-   Full video visible.
-   No unwanted zoom/crop.
-*/
-
-.slide video{
-
-position:absolute;
-
-top:0;
-
-left:0;
+.mobile-slide video{
 
 width:100%;
 
 height:100%;
 
-object-fit:contain;
+display:block;
+
+object-fit:cover;
 
 object-position:center center;
-
-display:block;
 
 background:#000;
 
 }
 
 
-/* =====================================================
-   DARK OVERLAY
-===================================================== */
+/*
+   Mobile overlay
+*/
 
-.slide::after{
+.mobile-slide::after{
 
 content:"";
 
 position:absolute;
 
-top:0;
-left:0;
-
-width:100%;
-height:100%;
+inset:0;
 
 background:rgba(0,0,0,0.28);
-
-z-index:1;
 
 pointer-events:none;
 
@@ -318,6 +396,7 @@ pointer-events:none;
 position:absolute;
 
 top:50%;
+
 left:50%;
 
 transform:translate(-50%,-50%);
@@ -330,7 +409,10 @@ max-width:1200px;
 
 text-align:center;
 
+pointer-events:none;
+
 }
+
 
 .hero-content h1{
 
@@ -350,9 +432,12 @@ margin-bottom:25px;
 
 text-shadow:
 
-0 10px 25px rgba(0,0,0,0.4);
+0 10px 25px rgba(0,0,0,0.45);
+
+animation:heroGlow 4s infinite alternate;
 
 }
+
 
 .hero-content p{
 
@@ -374,6 +459,11 @@ text-shadow:
 
 }
 
+
+/*
+   Button needs pointer events
+*/
+
 .hero-content a{
 
 display:inline-block;
@@ -392,6 +482,8 @@ letter-spacing:3px;
 
 transition:0.4s;
 
+pointer-events:auto;
+
 }
 
 .hero-content a:hover{
@@ -404,10 +496,10 @@ color:#2d1d1a;
 
 
 /* =====================================================
-   HERO GLOW
+   HERO ANIMATION
 ===================================================== */
 
-@keyframes glow{
+@keyframes heroGlow{
 
 from{
 
@@ -427,12 +519,6 @@ text-shadow:
 
 }
 
-.hero-content h1{
-
-animation:glow 4s infinite alternate;
-
-}
-
 
 /* =====================================================
    PHILOSOPHY
@@ -442,10 +528,7 @@ animation:glow 4s infinite alternate;
 
 padding:130px 8%;
 
-background:
-
-url('Our Philosophy.png')
-
+background:url('Our Philosophy.png')
 center center/cover no-repeat;
 
 position:relative;
@@ -533,9 +616,7 @@ color:#31413d;
 
 display:grid;
 
-grid-template-columns:
-
-repeat(4,1fr);
+grid-template-columns:repeat(4,1fr);
 
 gap:40px;
 
@@ -630,9 +711,7 @@ color:#2d1d1a;
 
 display:grid;
 
-grid-template-columns:
-
-repeat(3,1fr);
+grid-template-columns:repeat(3,1fr);
 
 }
 
@@ -673,13 +752,9 @@ inset:0;
 background:
 
 linear-gradient(
-
 to top,
-
 rgba(0,0,0,0.6),
-
 transparent
-
 );
 
 display:flex;
@@ -782,9 +857,7 @@ color:white;
 
 display:grid;
 
-grid-template-columns:
-
-1fr 1fr 1fr;
+grid-template-columns:1fr 1fr 1fr;
 
 gap:50px;
 
@@ -849,7 +922,8 @@ opacity:0.7;
    TABLET
 ===================================================== */
 
-@media(max-width:1024px){
+@media(max-width:1024px)
+and (min-width:769px){
 
 .hero-content h1{
 
@@ -867,9 +941,7 @@ letter-spacing:3px;
 
 .promise-grid{
 
-grid-template-columns:
-
-repeat(2,1fr);
+grid-template-columns:repeat(2,1fr);
 
 }
 
@@ -938,9 +1010,7 @@ gap:0;
 
 transition:0.5s;
 
-box-shadow:
-
--10px 0 30px rgba(0,0,0,0.1);
+box-shadow:-10px 0 30px rgba(0,0,0,0.1);
 
 }
 
@@ -982,22 +1052,40 @@ letter-spacing:1.5px;
 
 .hero-slider{
 
-width:100%;
-
 height:100svh;
 
 min-height:600px;
-
-overflow:hidden;
 
 }
 
 
 /*
-   Mobile screen fill
+   Hide desktop 3-grid
 */
 
-.slide video{
+.desktop-video-grid{
+
+display:none;
+
+}
+
+
+/*
+   Show mobile slider
+*/
+
+.mobile-video-slider{
+
+display:block;
+
+}
+
+
+/*
+   Mobile video
+*/
+
+.mobile-slide video{
 
 width:100%;
 
@@ -1329,185 +1417,95 @@ SOCIAL
 
 
 <!-- =====================================================
-     HERO VIDEO SLIDER
+     HERO
 ===================================================== -->
 
-<section class="hero-slider">
+<section
+class="hero-slider"
+id="heroSlider">
 
 
-<!-- VIDEO 1 -->
+<!-- =================================================
+     DESKTOP 3 VIDEO GRID
+================================================= -->
 
-<div class="slide">
+<div
+class="desktop-video-grid"
+id="desktopVideoGrid">
+
+
+<div class="desktop-video-item">
 
 <video
 muted
 playsinline
 webkit-playsinline
-preload="metadata">
-
-<source
-src="hero1.mp4"
-type="video/mp4">
+preload="auto">
 
 </video>
 
 </div>
 
 
-<!-- VIDEO 2 -->
-
-<div class="slide">
+<div class="desktop-video-item">
 
 <video
 muted
 playsinline
 webkit-playsinline
-preload="metadata">
-
-<source
-src="hero2.mp4"
-type="video/mp4">
+preload="auto">
 
 </video>
 
 </div>
 
 
-<!-- VIDEO 3 -->
-
-<div class="slide">
+<div class="desktop-video-item">
 
 <video
 muted
 playsinline
 webkit-playsinline
-preload="metadata">
-
-<source
-src="hero3.mp4"
-type="video/mp4">
+preload="auto">
 
 </video>
 
 </div>
 
 
-<!-- VIDEO 4 -->
+</div>
 
-<div class="slide">
+
+
+<!-- =================================================
+     MOBILE SINGLE VIDEO
+================================================= -->
+
+<div
+class="mobile-video-slider"
+id="mobileVideoSlider">
+
+
+<div class="mobile-slide active">
 
 <video
 muted
 playsinline
 webkit-playsinline
-preload="metadata">
-
-<source
-src="hero4.mp4"
-type="video/mp4">
+preload="auto">
 
 </video>
 
 </div>
 
 
-<!-- VIDEO 5 -->
-
-<div class="slide">
-
-<video
-muted
-playsinline
-webkit-playsinline
-preload="metadata">
-
-<source
-src="hero5.mp4"
-type="video/mp4">
-
-</video>
-
-</div>
-
-
-<!-- VIDEO 6 -->
-
-<div class="slide">
-
-<video
-muted
-playsinline
-webkit-playsinline
-preload="metadata">
-
-<source
-src="hero6.mp4"
-type="video/mp4">
-
-</video>
-
-</div>
-
-
-<!-- VIDEO 7 -->
-
-<div class="slide">
-
-<video
-muted
-playsinline
-webkit-playsinline
-preload="metadata">
-
-<source
-src="hero7.mp4"
-type="video/mp4">
-
-</video>
-
-</div>
-
-
-<!-- VIDEO 8 -->
-
-<div class="slide">
-
-<video
-muted
-playsinline
-webkit-playsinline
-preload="metadata">
-
-<source
-src="hero8.mp4"
-type="video/mp4">
-
-</video>
-
-</div>
-
-
-<!-- VIDEO 9 -->
-
-<div class="slide">
-
-<video
-muted
-playsinline
-webkit-playsinline
-preload="metadata">
-
-<source
-src="hero9.mp4"
-type="video/mp4">
-
-</video>
-
 </div>
 
 
 
-<!-- HERO TEXT -->
+<!-- =================================================
+     HERO TEXT
+================================================= -->
 
 <div class="hero-content">
 
@@ -1651,8 +1649,6 @@ Luxury Crafted For Modern Elegance
 <div class="collection-grid">
 
 
-<!-- JEWELRY -->
-
 <div class="collection-item">
 
 <img
@@ -1674,8 +1670,6 @@ Jewelry
 </div>
 
 
-<!-- SUITS -->
-
 <div class="collection-item">
 
 <img
@@ -1696,8 +1690,6 @@ Suits
 
 </div>
 
-
-<!-- ABAYAS -->
 
 <div class="collection-item">
 
@@ -1865,7 +1857,9 @@ Connect With Us
 
 
 <a href="mailto:anayaluxee@gmail.com">
+
 anayaluxee@gmail.com
+
 </a>
 
 
@@ -1989,89 +1983,85 @@ document
 
 
 /* =====================================================
-   RANDOM VIDEO SLIDER
+   ALL HERO VIDEOS
 ===================================================== */
 
-const slides =
+const videoFiles = [
+
+"hero1.mp4",
+"hero2.mp4",
+"hero3.mp4",
+"hero4.mp4",
+"hero5.mp4",
+"hero6.mp4",
+"hero7.mp4",
+"hero8.mp4",
+"hero9.mp4"
+
+];
+
+
+
+/* =====================================================
+   DEVICE DETECTION
+===================================================== */
+
+function isMobileDevice(){
+
+return window.innerWidth <= 768;
+
+}
+
+
+
+/* =====================================================
+   DESKTOP
+   3 VIDEOS AT ONE TIME
+===================================================== */
+
+const desktopVideos =
 document.querySelectorAll(
-".hero-slider .slide"
+".desktop-video-item video"
 );
 
 
-/*
-   RANDOM FIRST VIDEO
-
-   Website open hote hi
-   1 se 9 mein se koi bhi
-   random video select hoga.
-*/
-
-let currentSlide =
-Math.floor(
-Math.random() * slides.length
-);
-
-
-/*
-   Previous video ko remember
-   karne ke liye
-*/
-
-let previousSlide = -1;
-
-let isChanging = false;
+let desktopStart = 0;
 
 
 
 /* =====================================================
-   RANDOM VIDEO NUMBER
+   LOAD DESKTOP VIDEOS
 ===================================================== */
 
-function getRandomVideo(){
+function loadDesktopVideos(){
 
-let randomIndex;
-
-
-/*
-   Same video immediately
-   repeat na ho
-*/
-
-do{
-
-randomIndex =
-Math.floor(
-Math.random() * slides.length
-);
-
-}
-while(
-randomIndex === currentSlide &&
-slides.length > 1
-);
-
-return randomIndex;
-
-}
-
-
-
-/* =====================================================
-   PLAY VIDEO
-===================================================== */
-
-function playVideo(video){
-
-if(!video){
+if(
+isMobileDevice()
+){
 
 return;
 
 }
 
 
-/*
-   FORCE MUTED
-*/
+for(
+let i = 0;
+i < 3;
+i++
+){
+
+const videoIndex =
+(desktopStart + i)
+% videoFiles.length;
+
+
+const video =
+desktopVideos[i];
+
+
+video.src =
+videoFiles[videoIndex];
+
 
 video.muted = true;
 
@@ -2079,17 +2069,8 @@ video.defaultMuted = true;
 
 video.volume = 0;
 
-
-/*
-   MOBILE
-*/
-
 video.playsInline = true;
 
-video.setAttribute(
-"autoplay",
-""
-);
 
 video.setAttribute(
 "muted",
@@ -2107,23 +2088,22 @@ video.setAttribute(
 );
 
 
-/*
-   PLAY
-*/
+video.load();
 
-const promise =
+
+const playPromise =
 video.play();
 
 
 if(
-promise !== undefined
+playPromise !== undefined
 ){
 
-promise.catch(
+playPromise.catch(
 function(){
 
 console.log(
-"Autoplay blocked. Waiting for interaction."
+"Desktop autoplay waiting"
 );
 
 });
@@ -2132,301 +2112,201 @@ console.log(
 
 }
 
-
-
-/* =====================================================
-   START RANDOM VIDEO
-===================================================== */
-
-function startRandomVideo(){
-
-/*
-   Sab slides inactive
-*/
-
-slides.forEach(
-function(slide){
-
-slide.classList.remove(
-"active"
-);
-
-});
-
-
-/*
-   Random slide active
-*/
-
-const firstSlide =
-slides[currentSlide];
-
-
-const firstVideo =
-firstSlide.querySelector(
-"video"
-);
-
-
-firstSlide.classList.add(
-"active"
-);
-
-
-/*
-   Start video
-*/
-
-playVideo(
-firstVideo
-);
-
-
-/*
-   Retry after loading
-*/
-
-setTimeout(
-function(){
-
-if(firstVideo.paused){
-
-playVideo(
-firstVideo
-);
-
-}
-
-},
-300
-);
-
-
-/*
-   Another retry
-*/
-
-setTimeout(
-function(){
-
-if(firstVideo.paused){
-
-playVideo(
-firstVideo
-);
-
-}
-
-},
-1000
-);
-
 }
 
 
 
 /* =====================================================
-   NEXT RANDOM VIDEO
+   DESKTOP NEXT 3
 ===================================================== */
 
-function nextVideo(){
+function nextDesktopVideos(){
 
-if(isChanging){
+if(
+isMobileDevice()
+){
 
 return;
 
 }
 
-isChanging = true;
+
+desktopStart =
+(desktopStart + 3)
+% videoFiles.length;
 
 
-/*
-   CURRENT VIDEO
-*/
-
-const current =
-slides[currentSlide];
-
-
-const currentVideo =
-current.querySelector(
-"video"
-);
-
-
-current.classList.remove(
-"active"
-);
-
-
-currentVideo.pause();
-
-
-/*
-   RANDOM NEXT
-*/
-
-previousSlide =
-currentSlide;
-
-
-currentSlide =
-getRandomVideo();
-
-
-/*
-   NEXT SLIDE
-*/
-
-const next =
-slides[currentSlide];
-
-
-const nextVideoElement =
-next.querySelector(
-"video"
-);
-
-
-next.classList.add(
-"active"
-);
-
-
-/*
-   RESET
-*/
-
-try{
-
-nextVideoElement.currentTime = 0;
-
-}
-catch(error){
-
-}
-
-
-/*
-   PLAY NEXT
-*/
-
-playVideo(
-nextVideoElement
-);
-
-
-/*
-   PRELOAD ANOTHER RANDOM VIDEO
-*/
-
-let preloadIndex =
-Math.floor(
-Math.random() * slides.length
-);
-
-
-if(
-preloadIndex === currentSlide
-){
-
-preloadIndex =
-(preloadIndex + 1)
-% slides.length;
-
-}
-
-
-const preloadVideo =
-slides[preloadIndex]
-.querySelector(
-"video"
-);
-
-
-preloadVideo.preload =
-"auto";
-
-
-try{
-
-preloadVideo.load();
-
-}
-catch(error){
-
-console.log(error);
-
-}
-
-
-setTimeout(
-function(){
-
-isChanging = false;
-
-},
-1000
-);
+loadDesktopVideos();
 
 }
 
 
 
 /* =====================================================
-   VIDEO END
+   START DESKTOP
 ===================================================== */
 
-slides.forEach(
-function(slide,index){
+loadDesktopVideos();
 
-const video =
-slide.querySelector(
-"video"
+
+/*
+   Every 6 seconds
+*/
+
+let desktopTimer =
+setInterval(
+nextDesktopVideos,
+6000
 );
 
 
-video.addEventListener(
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+const mobileVideo =
+document.querySelector(
+".mobile-slide video"
+);
+
+
+let mobileCurrent =
+Math.floor(
+Math.random() *
+videoFiles.length
+);
+
+
+
+/* =====================================================
+   LOAD MOBILE VIDEO
+===================================================== */
+
+function loadMobileVideo(){
+
+if(
+!isMobileDevice()
+){
+
+return;
+
+}
+
+
+mobileVideo.src =
+videoFiles[mobileCurrent];
+
+
+mobileVideo.muted = true;
+
+mobileVideo.defaultMuted = true;
+
+mobileVideo.volume = 0;
+
+mobileVideo.playsInline = true;
+
+
+mobileVideo.setAttribute(
+"muted",
+""
+);
+
+mobileVideo.setAttribute(
+"playsinline",
+""
+);
+
+mobileVideo.setAttribute(
+"webkit-playsinline",
+""
+);
+
+
+mobileVideo.load();
+
+
+const playPromise =
+mobileVideo.play();
+
+
+if(
+playPromise !== undefined
+){
+
+playPromise.catch(
+function(){
+
+console.log(
+"Mobile autoplay waiting for interaction"
+);
+
+});
+
+}
+
+}
+
+
+
+/* =====================================================
+   RANDOM NEXT MOBILE VIDEO
+===================================================== */
+
+function nextMobileVideo(){
+
+let nextIndex;
+
+
+do{
+
+nextIndex =
+Math.floor(
+Math.random() *
+videoFiles.length
+);
+
+}
+while(
+nextIndex === mobileCurrent
+);
+
+
+mobileCurrent =
+nextIndex;
+
+
+loadMobileVideo();
+
+}
+
+
+
+/* =====================================================
+   MOBILE VIDEO ENDED
+===================================================== */
+
+mobileVideo.addEventListener(
 "ended",
 function(){
 
 if(
-index === currentSlide
+isMobileDevice()
 ){
 
-nextVideo();
+nextMobileVideo();
 
 }
-
-});
 
 });
 
 
 
 /* =====================================================
-   PAGE LOAD
+   START MOBILE
 ===================================================== */
 
-if(
-document.readyState ===
-"loading"
-){
-
-document.addEventListener(
-"DOMContentLoaded",
-function(){
-
-startRandomVideo();
-
-});
-
-}
-else{
-
-startRandomVideo();
-
-}
+loadMobileVideo();
 
 
 
@@ -2434,22 +2314,27 @@ startRandomVideo();
    MOBILE AUTOPLAY FALLBACK
 ===================================================== */
 
-function resumeCurrentVideo(){
+function resumeMobileVideo(){
 
-const video =
-slides[currentSlide]
-.querySelector(
-"video"
-);
+if(
+isMobileDevice() &&
+mobileVideo.paused
+){
+
+const promise =
+mobileVideo.play();
 
 
 if(
-video.paused
+promise !== undefined
 ){
 
-playVideo(
-video
+promise.catch(
+function(){}
+
 );
+
+}
 
 }
 
@@ -2457,12 +2342,12 @@ video
 
 
 /*
-   TOUCH
+   Touch
 */
 
 document.addEventListener(
 "touchstart",
-resumeCurrentVideo,
+resumeMobileVideo,
 {
 passive:true,
 once:true
@@ -2471,25 +2356,12 @@ once:true
 
 
 /*
-   CLICK
-*/
-
-document.addEventListener(
-"click",
-resumeCurrentVideo,
-{
-once:true
-}
-);
-
-
-/*
-   POINTER
+   Pointer
 */
 
 document.addEventListener(
 "pointerdown",
-resumeCurrentVideo,
+resumeMobileVideo,
 {
 passive:true,
 once:true
@@ -2497,37 +2369,141 @@ once:true
 );
 
 
+/*
+   Click
+*/
+
+document.addEventListener(
+"click",
+resumeMobileVideo,
+{
+once:true
+}
+);
+
+
+
 /* =====================================================
-   VISIBILITY
+   PAGE VISIBILITY
 ===================================================== */
 
 document.addEventListener(
 "visibilitychange",
 function(){
 
-const video =
-slides[currentSlide]
-.querySelector(
-"video"
-);
-
-
 if(
 document.hidden
 ){
 
+desktopVideos.forEach(
+function(video){
+
 video.pause();
+
+});
+
+mobileVideo.pause();
 
 }
 else{
 
-playVideo(
-video
+if(
+isMobileDevice()
+){
+
+mobileVideo
+.play()
+.catch(
+function(){}
 );
+
+}
+else{
+
+desktopVideos.forEach(
+function(video){
+
+video
+.play()
+.catch(
+function(){}
+
+);
+
+});
+
+}
 
 }
 
 });
+
+
+
+/* =====================================================
+   WINDOW RESIZE
+===================================================== */
+
+let previousMobileState =
+isMobileDevice();
+
+
+window.addEventListener(
+"resize",
+function(){
+
+const currentMobileState =
+isMobileDevice();
+
+
+/*
+   Device layout changed
+*/
+
+if(
+currentMobileState !==
+previousMobileState
+){
+
+previousMobileState =
+currentMobileState;
+
+
+/*
+   Mobile
+*/
+
+if(
+currentMobileState
+){
+
+mobileCurrent =
+Math.floor(
+Math.random() *
+videoFiles.length
+);
+
+loadMobileVideo();
+
+}
+
+
+/*
+   Desktop
+*/
+
+else{
+
+desktopStart = 0;
+
+loadDesktopVideos();
+
+}
+
+}
+
+});
+
 
 </script>
 
