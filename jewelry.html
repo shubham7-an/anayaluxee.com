@@ -963,219 +963,143 @@ footer{
    ============================================================ */
 
 const products = [
-
-    {
-        name:"Heart Shape Gold Necklace",
-        base:"Heart_Shape_Gold_Necklace"
-    },
-
-    {
-        name:"Gold Rings",
-        base:"Gold_Rings"
-    },
-
-    {
-        name:"Gold Necklace",
-        base:"Gold_Necklace"
-    },
-
-    {
-        name:"Diamond Gold Necklace",
-        base:"Diamond_Gold_Necklace"
-    },
-
-    {
-        name:"Two Heart Gold Necklace",
-        base:"Two_Heart_Gold_Necklace"
-    },
-
-    {
-        name:"Gold Bracelets",
-        base:"Gold_Bracelets"
-    },
-
-    {
-        name:"Gold Necklaces Collection",
-        base:"Gold_Necklaces_Collection"
-    },
-
-    {
-        name:"Heart Shape Gold Earring",
-        base:"Heart_Shape_Gold_Earring"
-    },
-
-    {
-        name:"Butterfly Gold Necklace",
-        base:"Butterfly_Gold_Necklace"
-    },
-
-    {
-        name:"Premium Gold Necklace",
-        base:"Premium_Gold_necklace"
-    },
-
-    {
-        name:"Cute Gold Earring",
-        base:"Cute_Gold_Earring"
-    },
-
-    {
-        name:"Ribbon Gold Ring",
-        base:"Ribbon_Gold_Ring"
-    },
-
-    {
-        name:"Amour Heart Gold Ring",
-        base:"Amour_Heart_Gold_Ring"
-    },
-
-    {
-        name:"Butterfly Band Gold Ring",
-        base:"Butterfly_Band_Gold_Ring"
-    },
-
-    {
-        name:"Ginkgo Biloba Leaf Gold Ring",
-        base:"Ginkgo_Biloba_Leaf_Gold_Ring"
-    },
-
-    {
-        name:"Cute Bow Heart Gold Earring",
-        base:"Cute_Bow_Heart_Gold_Earring"
-    },
-
-    {
-        name:"Pearl Nest Pendant Gold Necklace",
-        base:"Pearl_Nest_Pendant_Gold_Necklace"
-    },
-
-    {
-        name:"Luxe Loop Gold Ring",
-        base:"Luxe_Loop_Gold_Ring"
-    },
-
-    {
-        name:"Vibe Gold Ring",
-        base:"Vibe_Gold_Ring"
-    },
-
-    {
-        name:"Jewelry Packing",
-        base:"Jewelry_Packing_Video"
-    }
-
+    {name:"Heart Shape Gold Necklace", base:"Heart_Shape_Gold_Necklace"},
+    {name:"Gold Rings", base:"Gold_Rings"},
+    {name:"Gold Necklace", base:"Gold_Necklace"},
+    {name:"Diamond Gold Necklace", base:"Diamond_Gold_Necklace"},
+    {name:"Two Heart Gold Necklace", base:"Two_Heart_Gold_Necklace"},
+    {name:"Gold Bracelets", base:"Gold_Bracelets"},
+    {name:"Gold Necklaces Collection", base:"Gold_Necklaces_Collection"},
+    {name:"Heart Shape Gold Earring", base:"Heart_Shape_Gold_Earring"},
+    {name:"Butterfly Gold Necklace", base:"Butterfly_Gold_Necklace"},
+    {name:"Premium Gold Necklace", base:"Premium_Gold_Necklace"},
+    {name:"Cute Gold Earring", base:"Cute_Gold_Earring"},
+    {name:"Ribbon Gold Ring", base:"Ribbon_Gold_Ring"},
+    {name:"Amour Heart Gold Ring", base:"Amour_Heart_Gold_Ring"},
+    {name:"Butterfly Band Gold Ring", base:"Butterfly_Band_Gold_Ring"},
+    {name:"Ginkgo Biloba Leaf Gold Ring", base:"Ginkgo_Biloba_Leaf_Gold_Ring"},
+    {name:"Cute Bow Heart Gold Earring", base:"Cute_Bow_Heart_Gold_Earring"},
+    {name:"Pearl Nest Pendant Gold Necklace", base:"Pearl_Nest_Pendant_Gold_Necklace"},
+    {name:"Luxe Loop Gold Ring", base:"Luxe_Loop_Gold_Ring"},
+    {name:"Vibe Gold Ring", base:"Vibe_Gold_Ring"},
+    {name:"Jewelry Packing", base:"Jewelry_Packing_Video"}
 ];
 
+/*
+   IMPORTANT:
+   GitHub Pages cannot directly "scan" a folder.
+   This version reads the PUBLIC GitHub repository folder through
+   GitHub's Contents API, so every JPG/PNG/WEBP/MP4/WEBM in
+   products/jewelry is detected automatically.
 
-/* ============================================================
-   MEDIA DETECTION
-   Automatically checks files inside products/jewelry/
-   ============================================================ */
+   Repository:
+   shubham7-an/anayaluxee.com
+*/
 
-const mediaExtensions = [
-    "jpg",
-    "jpeg",
-    "png",
-    "webp",
-    "mp4",
-    "webm"
-];
+const GITHUB_API =
+    "https://api.github.com/repos/shubham7-an/anayaluxee.com/contents/products/jewelry?ref=main";
 
-async function fileExists(url){
+const MEDIA_TYPES = ["jpg","jpeg","png","webp","mp4","webm"];
 
-    try{
-
-        const response = await fetch(url,{
-            method:"HEAD",
-            cache:"no-store"
-        });
-
-        return response.ok;
-
-    }catch(error){
-
-        return false;
-
-    }
-
+function normalizeName(value){
+    return value
+        .toLowerCase()
+        .replace(/\.[^/.]+$/,"")
+        .replace(/[^a-z0-9]/g,"");
 }
 
+function isMediaFile(name){
+    const ext = name.split(".").pop().toLowerCase();
+    return MEDIA_TYPES.includes(ext);
+}
+
+function mediaTypeFromName(name){
+    const ext = name.split(".").pop().toLowerCase();
+    return ["mp4","webm"].includes(ext) ? "video" : "image";
+}
 
 /* ============================================================
-   FIND ALL MEDIA FOR EACH PRODUCT
+   GET ALL FILES FROM products/jewelry
    ============================================================ */
 
-async function getProductMedia(base){
+async function getJewelryFiles(){
 
-    const folder = "products/jewelry/";
+    const response = await fetch(GITHUB_API,{
+        method:"GET",
+        headers:{
+            "Accept":"application/vnd.github+json"
+        },
+        cache:"no-store"
+    });
 
-    const found = [];
+    if(!response.ok){
+        throw new Error("GitHub folder could not be read. Status: " + response.status);
+    }
 
-    /*
-       First look for numbered files:
-       Product_1.jpg
-       Product_2.jpg
-       Product_3.jpg
-       Product_1.mp4
-       etc.
-    */
+    const files = await response.json();
 
-    for(let number = 1; number <= 15; number++){
+    return files
+        .filter(item => item.type === "file" && isMediaFile(item.name))
+        .map(item => ({
+            name:item.name,
+            url:"products/jewelry/" + encodeURIComponent(item.name).replace(/%2F/g,"/"),
+            type:mediaTypeFromName(item.name)
+        }));
+}
 
-        for(const ext of mediaExtensions){
+/* ============================================================
+   FIND ALL MEDIA FOR ONE PRODUCT
+   ============================================================ */
 
-            const file =
-                `${folder}${base}_${number}.${ext}`;
+function getProductMedia(product, allFiles){
 
-            if(await fileExists(file)){
+    const wanted = normalizeName(product.base);
 
-                found.push({
-                    type:
-                        ["mp4","webm"].includes(ext)
-                        ? "video"
-                        : "image",
+    const matches = allFiles
+        .filter(file => {
 
-                    src:file
-                });
+            const fileBase = normalizeName(file.name);
 
+            /*
+              Matches:
+              Product.jpg
+              Product_1.jpg
+              Product_2.mp4
+              Product 1.jpg
+              Product-1.jpg
+            */
+
+            if(fileBase === wanted){
+                return true;
             }
 
-        }
+            if(fileBase.startsWith(wanted)){
+                const remainder = fileBase.slice(wanted.length);
+                return /^\d+$/.test(remainder);
+            }
 
-    }
+            return false;
+        })
+        .sort((a,b) => {
 
+            const aName = normalizeName(a.name);
+            const bName = normalizeName(b.name);
 
-    /*
-       Also check direct file:
-       Product.jpg
-       Product.mp4
-    */
+            const aNumber =
+                aName === wanted
+                ? 0
+                : parseInt(aName.slice(wanted.length)) || 999;
 
-    for(const ext of mediaExtensions){
+            const bNumber =
+                bName === wanted
+                ? 0
+                : parseInt(bName.slice(wanted.length)) || 999;
 
-        const file =
-            `${folder}${base}.${ext}`;
+            return aNumber - bNumber || a.name.localeCompare(b.name);
+        });
 
-        if(await fileExists(file)){
-
-            found.push({
-                type:
-                    ["mp4","webm"].includes(ext)
-                    ? "video"
-                    : "image",
-
-                src:file
-            });
-
-        }
-
-    }
-
-
-    return found;
-
+    return matches;
 }
-
 
 /* ============================================================
    BUILD PRODUCT CATALOG
@@ -1183,162 +1107,163 @@ async function getProductMedia(base){
 
 async function loadProducts(){
 
-    const grid =
-        document.getElementById("productsGrid");
+    const grid = document.getElementById("productsGrid");
 
-    grid.innerHTML = "";
+    grid.innerHTML = `
+        <div class="loading">
+            <i class="fa-regular fa-gem"></i>
+            <p>CURATING YOUR COLLECTION...</p>
+        </div>
+    `;
 
-    for(let i=0;i<products.length;i++){
+    try{
 
-        const product = products[i];
+        const allFiles = await getJewelryFiles();
 
-        const media =
-            await getProductMedia(product.base);
+        console.log("Jewelry files found:",allFiles);
 
-        /*
-           If no media is found, don't break the whole catalog.
-        */
+        grid.innerHTML = "";
 
-        if(media.length === 0){
+        let loadedCount = 0;
 
-            console.warn(
-                "No media found for:",
-                product.base
-            );
+        for(let i=0;i<products.length;i++){
 
-            continue;
+            const product = products[i];
 
-        }
+            const media =
+                getProductMedia(product,allFiles);
 
+            if(media.length === 0){
 
-        const card =
-            document.createElement("div");
+                console.warn(
+                    "No media found for:",
+                    product.base
+                );
 
-        card.className =
-            "product-card";
+                continue;
+            }
 
+            loadedCount++;
 
-        /* First media */
+            const card =
+                document.createElement("div");
 
-        const first =
-            media[0];
+            card.className = "product-card";
 
+            const first = media[0];
 
-        let mediaHTML = "";
+            let mediaHTML = "";
 
-        if(first.type === "video"){
+            if(first.type === "video"){
 
-            mediaHTML = `
-                <video
-                    src="${first.src}"
-                    muted
-                    autoplay
-                    loop
-                    playsinline
-                    preload="metadata"
-                ></video>
+                mediaHTML = `
+                    <video
+                        src="${first.url}"
+                        muted
+                        autoplay
+                        loop
+                        playsinline
+                        preload="metadata"
+                    ></video>
 
-                <div class="video-badge">
-                    <i class="fa-solid fa-play"></i>
+                    <div class="video-badge">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                `;
+
+            }else{
+
+                mediaHTML = `
+                    <img
+                        src="${first.url}"
+                        alt="${product.name}"
+                        loading="lazy"
+                    >
+                `;
+            }
+
+            let countHTML = "";
+
+            if(media.length > 1){
+
+                countHTML = `
+                    <div class="media-count">
+                        ${media.length} MEDIA
+                    </div>
+                `;
+            }
+
+            card.innerHTML = `
+                <div class="product-media">
+                    ${mediaHTML}
+                    ${countHTML}
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-number">
+                        JEWELRY ${String(i+1).padStart(2,"0")}
+                    </span>
+
+                    <h3 class="product-name">
+                        ${product.name}
+                    </h3>
+
+                    <span class="product-action">
+                        VIEW PIECE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+
                 </div>
             `;
 
-        }else{
+            card.addEventListener("click",()=>{
 
-            mediaHTML = `
-                <img
-                    src="${first.src}"
-                    alt="${product.name}"
-                    loading="lazy"
-                >
-            `;
+                openProduct(
+                    product,
+                    media,
+                    i
+                );
 
+            });
+
+            grid.appendChild(card);
         }
 
+        if(loadedCount === 0){
 
-        let countHTML = "";
-
-        if(media.length > 1){
-
-            countHTML = `
-                <div class="media-count">
-                    ${media.length} MEDIA
+            grid.innerHTML = `
+                <div class="loading">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                    <p>PRODUCT MEDIA COULD NOT BE FOUND</p>
+                    <small>
+                        Please check the products/jewelry folder on GitHub.
+                    </small>
                 </div>
             `;
 
         }
 
+        console.log(
+            "Anayaluxee jewelry products loaded:",
+            loadedCount
+        );
 
-        card.innerHTML = `
+    }catch(error){
 
-            <div class="product-media">
-
-                ${mediaHTML}
-
-                ${countHTML}
-
-            </div>
-
-            <div class="product-info">
-
-                <span class="product-number">
-                    JEWELRY ${String(i+1).padStart(2,"0")}
-                </span>
-
-                <h3 class="product-name">
-                    ${product.name}
-                </h3>
-
-                <span class="product-action">
-                    VIEW PIECE
-                    <i class="fa-solid fa-arrow-right"></i>
-                </span>
-
-            </div>
-
-        `;
-
-
-        card.addEventListener("click",()=>{
-
-            openProduct(
-                product,
-                media,
-                i
-            );
-
-        });
-
-
-        grid.appendChild(card);
-
-    }
-
-
-    /*
-       If nothing loaded
-    */
-
-    if(grid.children.length === 0){
+        console.error("Jewelry catalog error:",error);
 
         grid.innerHTML = `
-
             <div class="loading">
-
                 <i class="fa-regular fa-circle-xmark"></i>
-
-                <p>
-                    PRODUCT MEDIA COULD NOT BE FOUND
-                </p>
-
+                <p>CATALOG COULD NOT BE LOADED</p>
+                <small>
+                    Please refresh the page after GitHub Pages finishes deploying.
+                </small>
             </div>
-
         `;
-
     }
-
 }
-
 
 /* ============================================================
    MODAL VARIABLES
