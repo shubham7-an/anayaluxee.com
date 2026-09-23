@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Jewelry | Anayaluxee</title>
+<title>Anayaluxee | Luxury Jewelry Collection</title>
 
-<meta name="description" content="Explore Anayaluxee's luxury jewelry collection.">
+<link rel="icon" type="image/png" sizes="32x32" href="logo-brown.png">
+<link rel="icon" type="image/png" sizes="16x16" href="logo-brown.png">
+<link rel="apple-touch-icon" href="logo-brown.png">
 
-<link rel="icon" type="image/png" href="logo-brown.png">
-<link rel="shortcut icon" type="image/png" href="logo-brown.png">
+<meta name="description" content="Discover the Anayaluxee luxury jewelry collection.">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
@@ -20,9 +23,6 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-html{
     scroll-behavior:smooth;
 }
 
@@ -30,162 +30,171 @@ body{
     font-family:'Montserrat',sans-serif;
     background:#f7efec;
     color:#2d1d1a;
+    overflow-x:hidden;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
-    position:sticky;
+    position:fixed;
     top:0;
-    z-index:999;
+    left:0;
     width:100%;
     padding:18px 5%;
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    background:rgba(247,239,236,.96);
+    align-items:center;
+    background:rgba(247,239,236,0.94);
     backdrop-filter:blur(12px);
-    border-bottom:1px solid rgba(74,18,13,.08);
+    z-index:9999;
+    border-bottom:1px solid rgba(74,18,13,0.08);
 }
 
 .logo{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:14px;
     text-decoration:none;
-    color:#4a120d;
 }
 
 .logo img{
-    width:48px;
-    height:48px;
-    object-fit:contain;
+    width:50px;
+    height:auto;
 }
 
-.logo span{
+.logo h1{
     font-family:'Cormorant Garamond',serif;
-    font-size:29px;
+    font-size:2rem;
+    font-weight:500;
     letter-spacing:2px;
+    color:#4a120d;
 }
 
 nav{
     display:flex;
-    align-items:center;
     gap:30px;
 }
 
 nav a{
-    color:#4a120d;
     text-decoration:none;
-    font-size:11px;
-    letter-spacing:2px;
-    transition:.3s;
+    font-size:12px;
+    letter-spacing:3px;
+    color:#5c211a;
+    transition:.4s;
 }
 
 nav a:hover{
     opacity:.55;
 }
 
-/* MENU BUTTON */
-
-.menu-btn{
+.menu-toggle{
     display:none;
-    border:0;
-    background:none;
+    font-size:1.8rem;
+    color:#4a120d;
     cursor:pointer;
 }
 
-.menu-btn span{
-    display:block;
-    width:27px;
-    height:2px;
-    margin:6px 0;
-    background:#4a120d;
-}
+/* ================= PAGE HERO ================= */
 
-/* HERO */
-
-.jewelry-hero{
-    min-height:55vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.page-hero{
+    padding:170px 7% 90px;
     text-align:center;
-    padding:100px 25px;
     background:
-        linear-gradient(rgba(45,29,26,.30),rgba(45,29,26,.30)),
-        url('images/jewelry.jpg') center/cover no-repeat;
+        radial-gradient(circle at 20% 20%,rgba(255,255,255,.8),transparent 30%),
+        radial-gradient(circle at 80% 70%,rgba(225,192,184,.25),transparent 35%),
+        #f7efec;
 }
 
-.hero-content{
-    color:white;
-}
-
-.hero-small{
+.page-hero small{
+    display:block;
+    color:#8b5e57;
     font-size:11px;
     letter-spacing:6px;
     margin-bottom:18px;
 }
 
-.hero-title{
+.page-hero h2{
     font-family:'Cormorant Garamond',serif;
-    font-size:clamp(55px,8vw,110px);
+    font-size:6rem;
     font-weight:400;
     line-height:.9;
+    color:#2d1d1a;
 }
 
-.hero-text{
-    margin-top:25px;
-    font-size:13px;
-    letter-spacing:2px;
-}
-
-/* INTRO */
-
-.intro{
-    text-align:center;
-    padding:90px 20px 70px;
-}
-
-.intro h2{
-    font-family:'Cormorant Garamond',serif;
-    font-size:55px;
-    font-weight:400;
-    margin-bottom:15px;
-}
-
-.intro p{
+.page-hero p{
     max-width:650px;
-    margin:auto;
-    color:#6b5955;
-    line-height:1.9;
-    font-size:14px;
+    margin:28px auto 0;
+    font-size:13px;
+    line-height:2;
+    letter-spacing:1px;
+    color:#6c5752;
 }
 
-/* PRODUCT GRID */
+/* decorative divider */
 
-.products{
-    max-width:1500px;
-    margin:auto;
-    padding:20px 5% 120px;
+.divider{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:14px;
+    margin-top:30px;
 }
 
-.product-grid{
+.divider span{
+    width:55px;
+    height:1px;
+    background:#b9938b;
+}
+
+.divider i{
+    font-size:9px;
+    color:#8b5e57;
+}
+
+/* ================= CATALOG ================= */
+
+.catalog{
+    background:#fff;
+    padding:90px 5% 130px;
+}
+
+.catalog-top{
+    max-width:1400px;
+    margin:0 auto 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    border-bottom:1px solid rgba(45,29,26,.12);
+    padding-bottom:22px;
+}
+
+.catalog-top h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.7rem;
+    font-weight:400;
+}
+
+.catalog-top span{
+    font-size:10px;
+    letter-spacing:3px;
+    color:#8b5e57;
+}
+
+/* product grid */
+
+.products-grid{
+    max-width:1400px;
+    margin:auto;
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:24px;
+    gap:55px 24px;
 }
+
+/* ================= PRODUCT CARD ================= */
 
 .product-card{
-    background:white;
-    overflow:hidden;
     cursor:pointer;
-    transition:.45s;
-}
-
-.product-card:hover{
-    transform:translateY(-7px);
-    box-shadow:0 20px 50px rgba(45,29,26,.12);
+    position:relative;
 }
 
 .product-media{
@@ -193,7 +202,7 @@ nav a:hover{
     width:100%;
     aspect-ratio:4/5;
     overflow:hidden;
-    background:#eee5e0;
+    background:#f5efec;
 }
 
 .product-media img,
@@ -202,1013 +211,1466 @@ nav a:hover{
     height:100%;
     object-fit:cover;
     display:block;
+    transition:1s ease;
 }
 
-.product-media video{
+.product-card:hover .product-media img,
+.product-card:hover .product-media video{
+    transform:scale(1.045);
+}
+
+/* soft overlay */
+
+.product-media::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(45,29,26,.25),
+        transparent 35%
+    );
+    opacity:0;
+    transition:.5s;
     pointer-events:none;
 }
 
+.product-card:hover .product-media::after{
+    opacity:1;
+}
+
+/* video badge */
+
+.video-badge{
+    position:absolute;
+    top:14px;
+    right:14px;
+    z-index:3;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:rgba(255,255,255,.9);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#4a120d;
+    font-size:11px;
+}
+
+/* multiple badge */
+
+.media-count{
+    position:absolute;
+    bottom:14px;
+    left:14px;
+    z-index:3;
+    padding:7px 11px;
+    background:rgba(255,255,255,.88);
+    color:#4a120d;
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+/* product information */
+
 .product-info{
-    padding:20px 18px 24px;
-    text-align:center;
+    padding:18px 4px 0;
 }
 
 .product-number{
+    display:block;
     font-size:9px;
     letter-spacing:3px;
-    color:#a17b72;
-    margin-bottom:8px;
+    color:#a07b73;
+    margin-bottom:7px;
 }
 
 .product-name{
     font-family:'Cormorant Garamond',serif;
-    font-size:25px;
+    font-size:1.55rem;
     font-weight:500;
-    color:#3a2420;
+    line-height:1.15;
+    color:#2d1d1a;
 }
 
-/* VIEW BUTTON */
-
-.view-btn{
-    display:inline-block;
-    margin-top:13px;
-    padding:10px 20px;
-    border:1px solid #5a2018;
-    color:#5a2018;
+.product-action{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:12px;
     font-size:9px;
     letter-spacing:2px;
-    text-decoration:none;
+    color:#8b5e57;
+}
+
+.product-action i{
+    font-size:8px;
     transition:.3s;
 }
 
-.view-btn:hover{
-    background:#5a2018;
-    color:white;
+.product-card:hover .product-action i{
+    transform:translateX(5px);
 }
 
-/* NOTE */
+/* ================= EMPTY / LOADING ================= */
 
-.catalog-note{
+.loading{
+    grid-column:1/-1;
     text-align:center;
-    margin-top:50px;
-    color:#8a7069;
-    font-size:12px;
-    letter-spacing:1px;
+    padding:100px 20px;
+    color:#8b5e57;
 }
 
-/* FOOTER */
-
-footer{
-    background:#2b0a07;
-    color:white;
-    text-align:center;
-    padding:70px 20px 35px;
-}
-
-.footer-logo{
-    display:flex;
-    justify-content:center;
+.loading i{
+    font-size:28px;
     margin-bottom:20px;
 }
 
-.footer-logo img{
-    width:80px;
-    height:80px;
+.loading p{
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+/* ================= PRODUCT POPUP ================= */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(35,18,15,.72);
+    backdrop-filter:blur(8px);
+    z-index:10000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:25px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    width:min(1150px,96vw);
+    max-height:92vh;
+    overflow:auto;
+    background:#fdf9f7;
+    position:relative;
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    box-shadow:0 30px 100px rgba(0,0,0,.3);
+}
+
+/* close */
+
+.modal-close{
+    position:absolute;
+    top:18px;
+    right:20px;
+    z-index:20;
+    width:40px;
+    height:40px;
+    border:0;
+    border-radius:50%;
+    background:rgba(255,255,255,.9);
+    color:#4a120d;
+    cursor:pointer;
+    font-size:17px;
+}
+
+/* gallery */
+
+.modal-gallery{
+    background:#f1e9e5;
+    min-height:650px;
+    display:flex;
+    flex-direction:column;
+}
+
+.main-media{
+    flex:1;
+    min-height:560px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.main-media img,
+.main-media video{
+    width:100%;
+    height:100%;
+    max-height:650px;
     object-fit:contain;
+    display:block;
 }
 
-footer h3{
+/* arrows */
+
+.gallery-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:42px;
+    height:42px;
+    border:0;
+    border-radius:50%;
+    background:rgba(255,255,255,.9);
+    color:#4a120d;
+    cursor:pointer;
+    z-index:5;
+}
+
+.gallery-arrow.prev{
+    left:18px;
+}
+
+.gallery-arrow.next{
+    right:18px;
+}
+
+/* thumbnails */
+
+.thumbnails{
+    height:105px;
+    padding:12px;
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    background:#fff;
+}
+
+.thumb{
+    min-width:78px;
+    height:80px;
+    border:1px solid transparent;
+    cursor:pointer;
+    overflow:hidden;
+    background:#eee;
+}
+
+.thumb.active{
+    border-color:#7c4b43;
+}
+
+.thumb img,
+.thumb video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* modal information */
+
+.modal-info{
+    padding:70px 55px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.modal-info small{
+    color:#9b746c;
+    font-size:9px;
+    letter-spacing:4px;
+    margin-bottom:18px;
+}
+
+.modal-info h2{
     font-family:'Cormorant Garamond',serif;
-    font-size:32px;
+    font-size:4rem;
     font-weight:400;
-    margin-bottom:15px;
+    line-height:1;
+    color:#2d1d1a;
+    margin-bottom:25px;
 }
 
-footer p{
-    font-size:12px;
-    opacity:.8;
-    line-height:1.8;
+.modal-divider{
+    width:65px;
+    height:1px;
+    background:#b9938b;
+    margin-bottom:25px;
 }
 
-.instagram-link{
-    display:inline-block;
-    margin-top:22px;
-    color:white;
+.modal-info p{
+    color:#6c5752;
+    font-size:13px;
+    line-height:2;
+    margin-bottom:30px;
+}
+
+.order-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    width:100%;
+    padding:17px 25px;
+    background:#4a120d;
+    color:#fff;
     text-decoration:none;
-    border:1px solid rgba(255,255,255,.5);
-    padding:12px 22px;
-    font-size:10px;
     letter-spacing:2px;
+    font-size:10px;
+    transition:.4s;
+}
+
+.order-btn:hover{
+    background:#6a2820;
+    transform:translateY(-2px);
+}
+
+.instagram-note{
+    margin-top:15px;
+    text-align:center;
+    font-size:9px;
+    letter-spacing:2px;
+    color:#8b5e57;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#2b0a07;
+    padding:90px 8% 40px;
+    color:white;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:50px;
+}
+
+.footer-logo img{
+    width:110px;
+    margin-bottom:20px;
+}
+
+.footer-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    margin-bottom:22px;
+}
+
+.footer-links a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    margin-bottom:14px;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    opacity:.7;
+    transform:translateX(4px);
 }
 
 .copyright{
-    margin-top:50px;
-    font-size:10px;
-    opacity:.5;
+    text-align:center;
+    margin-top:60px;
+    font-size:13px;
+    opacity:.7;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media(max-width:1000px){
 
-    .product-grid{
+    .products-grid{
         grid-template-columns:repeat(3,1fr);
     }
 
 }
 
-@media(max-width:700px){
+@media(max-width:768px){
 
     header{
-        padding:13px 5%;
+        padding:14px 5%;
     }
 
     .logo img{
-        width:40px;
-        height:40px;
+        width:38px;
     }
 
-    .logo span{
-        font-size:22px;
+    .logo h1{
+        font-size:1.4rem;
+    }
+
+    .menu-toggle{
+        display:block;
+        z-index:10001;
     }
 
     nav{
-        position:absolute;
-        top:100%;
-        left:0;
-        width:100%;
-        display:none;
-        flex-direction:column;
-        gap:0;
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:250px;
+        height:100vh;
         background:#f7efec;
-        border-top:1px solid rgba(74,18,13,.1);
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        transition:.5s;
+        box-shadow:-10px 0 30px rgba(0,0,0,.1);
     }
 
     nav.active{
-        display:flex;
+        right:0;
     }
 
-    nav a{
-        width:100%;
-        text-align:center;
-        padding:18px;
-        border-bottom:1px solid rgba(74,18,13,.08);
+    .page-hero{
+        padding:140px 25px 65px;
     }
 
-    .menu-btn{
-        display:block;
+    .page-hero h2{
+        font-size:4rem;
     }
 
-    .jewelry-hero{
-        min-height:50vh;
+    .page-hero p{
+        font-size:11px;
+        line-height:1.9;
     }
 
-    .hero-small{
-        font-size:9px;
-        letter-spacing:4px;
+    .catalog{
+        padding:60px 18px 90px;
     }
 
-    .hero-title{
-        font-size:62px;
+    .catalog-top{
+        margin-bottom:30px;
     }
 
-    .hero-text{
-        font-size:10px;
-        line-height:1.8;
+    .catalog-top h3{
+        font-size:2.2rem;
     }
 
-    .intro{
-        padding:70px 22px 50px;
+    .catalog-top span{
+        font-size:8px;
     }
 
-    .intro h2{
-        font-size:42px;
-    }
-
-    .intro p{
-        font-size:12px;
-    }
-
-    .products{
-        padding:10px 14px 80px;
-    }
-
-    .product-grid{
+    .products-grid{
         grid-template-columns:repeat(2,1fr);
-        gap:12px;
+        gap:38px 12px;
     }
 
-    .product-info{
-        padding:14px 8px 18px;
+    .product-media{
+        aspect-ratio:3/4;
     }
 
     .product-name{
-        font-size:20px;
+        font-size:1.25rem;
     }
 
-    .view-btn{
-        font-size:8px;
-        padding:9px 12px;
+    .product-number{
+        font-size:7px;
+    }
+
+    .product-action{
+        font-size:7px;
+        letter-spacing:1.5px;
+    }
+
+    .modal{
+        padding:10px;
+    }
+
+    .modal-box{
+        display:block;
+        max-height:95vh;
+    }
+
+    .modal-gallery{
+        min-height:auto;
+    }
+
+    .main-media{
+        min-height:55vh;
+        height:55vh;
+    }
+
+    .main-media img,
+    .main-media video{
+        max-height:55vh;
+    }
+
+    .thumbnails{
+        height:82px;
+    }
+
+    .thumb{
+        min-width:58px;
+        height:58px;
+    }
+
+    .modal-info{
+        padding:35px 25px 30px;
+    }
+
+    .modal-info h2{
+        font-size:3rem;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        text-align:center;
     }
 
 }
 
-</style>
+@media(max-width:430px){
 
+    .page-hero h2{
+        font-size:3.4rem;
+    }
+
+    .products-grid{
+        gap:32px 10px;
+    }
+
+    .product-name{
+        font-size:1.15rem;
+    }
+
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+    width:7px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f7efec;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#8b5e57;
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
 
-<a class="logo" href="index.html">
-
-<img src="logo-brown.png" alt="Anayaluxee">
-
-<span>ANAYALUXEE</span>
-
+<a href="index.html" class="logo">
+    <img src="logo-brown.png" alt="Anayaluxee">
+    <h1>ANAYALUXEE</h1>
 </a>
 
-<nav id="mainNav">
+<div class="menu-toggle" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+</div>
 
-<a href="index.html">HOME</a>
-<a href="jewelry.html">JEWELRY</a>
-<a href="suits.html">SUITS</a>
-<a href="abayas.html">ABAYAS</a>
-<a href="#instagram">INSTAGRAM</a>
-
+<nav id="navMenu">
+    <a href="index.html">HOME</a>
+    <a href="#catalog">JEWELRY</a>
+    <a href="index.html#founder">FOUNDER</a>
+    <a href="index.html#social">SOCIAL</a>
 </nav>
-
-<button class="menu-btn" onclick="toggleMenu()" aria-label="Open Menu">
-
-<span></span>
-<span></span>
-<span></span>
-
-</button>
 
 </header>
 
 
-<section class="jewelry-hero">
+<!-- ================= PAGE HERO ================= -->
 
-<div class="hero-content">
+<section class="page-hero">
 
-<div class="hero-small">
-ANAYALUXEE · JEWELRY
-</div>
+    <small>ANAYALUXEE COLLECTION</small>
 
-<h1 class="hero-title">
-Jewelry
-</h1>
+    <h2>Jewelry</h2>
 
-<p class="hero-text">
-TIMELESS PIECES · MODERN ELEGANCE
-</p>
+    <div class="divider">
+        <span></span>
+        <i class="fa-solid fa-gem"></i>
+        <span></span>
+    </div>
 
-</div>
-
-</section>
-
-
-<section class="intro">
-
-<h2>Jewelry Collection</h2>
-
-<p>
-Discover thoughtfully selected jewelry designed to add
-elegance, character and a touch of luxury to every moment.
-</p>
+    <p>
+        Timeless pieces created to add a touch of elegance,
+        femininity and effortless luxury to every moment.
+    </p>
 
 </section>
 
 
-<section class="products">
+<!-- ================= CATALOG ================= -->
 
-<div class="product-grid">
+<section class="catalog" id="catalog">
 
+    <div class="catalog-top">
+        <h3>The Jewelry Collection</h3>
+        <span>20 PIECES · ANAYALUXEE</span>
+    </div>
 
-<!-- 1 -->
+    <div class="products-grid" id="productsGrid">
 
-<div class="product-card">
+        <div class="loading">
+            <i class="fa-regular fa-gem"></i>
+            <p>CURATING YOUR COLLECTION...</p>
+        </div>
 
-<div class="product-media">
-
-<img
-src="products/jewelry/Heart_Shape_Gold_Necklace_1.jpg"
-alt="Heart Shape Gold Necklace"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 01
-</div>
-
-<div class="product-name">
-Heart Shape Gold Necklace
-</div>
-
-<a
-class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank"
->
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 2 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Gold_Rings_1.jpg"
-alt="Gold Rings"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 02
-</div>
-
-<div class="product-name">
-Gold Rings
-</div>
-
-<a
-class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank"
->
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 3 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Gold_Necklace_1.jpg"
-alt="Gold Necklace"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 03
-</div>
-
-<div class="product-name">
-Gold Necklace
-</div>
-
-<a
-class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank"
->
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 4 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Diamond_Gold_Necklace_1.jpg"
-alt="Diamond Gold Necklace"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 04
-</div>
-
-<div class="product-name">
-Diamond Gold Necklace
-</div>
-
-<a
-class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank"
->
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 5 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Two_Heart_Gold_Necklace_1.jpg"
-alt="Two Heart Gold Necklace"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 05
-</div>
-
-<div class="product-name">
-Two Heart Gold Necklace
-</div>
-
-<a class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank">
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 6 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Gold_Bracelets_1.jpg"
-alt="Gold Bracelets"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 06
-</div>
-
-<div class="product-name">
-Gold Bracelets
-</div>
-
-<a class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank">
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 7 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Gold_Necklaces_Collection_1.jpg"
-alt="Gold Necklaces Collection"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 07
-</div>
-
-<div class="product-name">
-Gold Necklaces Collection
-</div>
-
-<a class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank">
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 8 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Heart_Shape_Gold_Earring_1.jpg"
-alt="Heart Shape Gold Earring"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 08
-</div>
-
-<div class="product-name">
-Heart Shape Gold Earring
-</div>
-
-<a class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank">
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 9 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Butterfly_Gold_Necklace_1.jpg"
-alt="Butterfly Gold Necklace"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 09
-</div>
-
-<div class="product-name">
-Butterfly Gold Necklace
-</div>
-
-<a class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank">
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 10 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Premium_Gold_Necklace_1.jpg"
-alt="Premium Gold Necklace"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 10
-</div>
-
-<div class="product-name">
-Premium Gold Necklace
-</div>
-
-<a class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank">
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 11 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Cute_Gold_Earring_1.jpg"
-alt="Cute Gold Earring"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 11
-</div>
-
-<div class="product-name">
-Cute Gold Earring
-</div>
-
-<a class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank">
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 12 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Ribbon_Gold_Ring_1.jpg"
-alt="Ribbon Gold Ring"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 12
-</div>
-
-<div class="product-name">
-Ribbon Gold Ring
-</div>
-
-<a class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank">
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 13 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Amour_Heart_Gold_Ring_1.jpg"
-alt="Amour Heart Gold Ring"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 13
-</div>
-
-<div class="product-name">
-Amour Heart Gold Ring
-</div>
-
-<a class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank">
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 14 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Butterfly_Band_Gold_Ring_1.jpg"
-alt="Butterfly Band Gold Ring"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 14
-</div>
-
-<div class="product-name">
-Butterfly Band Gold Ring
-</div>
-
-<a class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank">
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 15 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Ginkgo_Biloba_Leaf_Gold_Ring_1.jpg"
-alt="Ginkgo Biloba Leaf Gold Ring"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 15
-</div>
-
-<div class="product-name">
-Ginkgo Biloba Leaf Gold Ring
-</div>
-
-<a class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank">
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 16 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Cute_Bow_Heart_Gold_Earring_1.jpg"
-alt="Cute Bow Heart Gold Earring"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 16
-</div>
-
-<div class="product-name">
-Cute Bow Heart Gold Earring
-</div>
-
-<a class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank">
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 17 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Pearl_Nest_Pendant_Gold_Necklace_1.jpg"
-alt="Pearl Nest Pendant Gold Necklace"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 17
-</div>
-
-<div class="product-name">
-Pearl Nest Pendant Gold Necklace
-</div>
-
-<a class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank">
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 18 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Luxe_Loop_Gold_Ring_1.jpg"
-alt="Luxe Loop Gold Ring"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 18
-</div>
-
-<div class="product-name">
-Luxe Loop Gold Ring
-</div>
-
-<a class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank">
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-<!-- 19 -->
-
-<div class="product-card">
-
-<div class="product-media">
-
-<img
-src="products/jewelry/Vibe_Gold_Ring_1.jpg"
-alt="Vibe Gold Ring"
-loading="lazy"
->
-
-</div>
-
-<div class="product-info">
-
-<div class="product-number">
-JEWELRY 19
-</div>
-
-<div class="product-name">
-Vibe Gold Ring
-</div>
-
-<a class="view-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank">
-ORDER VIA INSTAGRAM DM
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
-<div class="catalog-note">
-PRICES & PRODUCT DETAILS WILL BE ADDED SOON
-</div>
+    </div>
 
 </section>
 
 
-<footer id="instagram">
+<!-- ================= PRODUCT MODAL ================= -->
 
-<div class="footer-logo">
+<div class="modal" id="productModal">
 
-<img src="logo-brown.png" alt="Anayaluxee">
+    <div class="modal-box">
+
+        <button class="modal-close" onclick="closeModal()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-gallery">
+
+            <div class="main-media" id="mainMedia">
+
+                <button class="gallery-arrow prev"
+                        onclick="changeMedia(-1)">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button class="gallery-arrow next"
+                        onclick="changeMedia(1)">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+            <div class="thumbnails" id="thumbnails"></div>
+
+        </div>
+
+        <div class="modal-info">
+
+            <small id="modalNumber"></small>
+
+            <h2 id="modalTitle"></h2>
+
+            <div class="modal-divider"></div>
+
+            <p>
+                A thoughtfully selected piece from the
+                Anayaluxee jewelry collection.
+                For details and availability, connect with us directly.
+            </p>
+
+            <a
+                id="instagramOrder"
+                class="order-btn"
+                href="#"
+                target="_blank"
+            >
+                <i class="fa-brands fa-instagram"></i>
+                ORDER ON INSTAGRAM DM
+            </a>
+
+            <div class="instagram-note">
+                @ANAYALUXEE
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
-<h3>ANAYALUXEE</h3>
 
-<p>
-Luxury Jewelry · Designer Suits · Elegant Abayas
-</p>
+<!-- ================= FOOTER ================= -->
 
-<a
-class="instagram-link"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank"
->
-FOLLOW @ANAYALUXEE
-</a>
+<footer id="social">
 
-<div class="copyright">
-© 2026 ANAYALUXEE · Lucknow, Uttar Pradesh
-</div>
+    <div class="footer-grid">
+
+        <div class="footer-logo">
+
+            <img src="logo.jpg" alt="Anayaluxee">
+
+            <p>Own The Moment, Wear Anaya</p>
+
+        </div>
+
+        <div>
+
+            <h3 class="footer-title">Location</h3>
+
+            <p>Lucknow, Uttar Pradesh</p>
+
+        </div>
+
+        <div>
+
+            <h3 class="footer-title">Connect With Us</h3>
+
+            <div class="footer-links">
+
+                <a href="mailto:anayaluxee@gmail.com">
+                    anayaluxee@gmail.com
+                </a>
+
+                <a
+                    href="https://www.instagram.com/anayaluxee/"
+                    target="_blank"
+                >
+                    Jewelry Instagram
+                </a>
+
+                <a
+                    href="https://www.instagram.com/anayaluxeestudio/"
+                    target="_blank"
+                >
+                    Instagram For Suits
+                </a>
+
+                <a
+                    href="https://www.pinterest.com/anayaluxee/"
+                    target="_blank"
+                >
+                    Pinterest
+                </a>
+
+                <a
+                    href="https://www.youtube.com/@Anayaluxee/"
+                    target="_blank"
+                >
+                    YouTube
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 ANAYALUXEE · All Rights Reserved
+    </div>
 
 </footer>
 
 
 <script>
 
+/* ============================================================
+   JEWELRY PRODUCTS
+   ============================================================ */
+
+const products = [
+
+    {
+        name:"Heart Shape Gold Necklace",
+        base:"Heart_Shape_Gold_Necklace"
+    },
+
+    {
+        name:"Gold Rings",
+        base:"Gold_Rings"
+    },
+
+    {
+        name:"Gold Necklace",
+        base:"Gold_Necklace"
+    },
+
+    {
+        name:"Diamond Gold Necklace",
+        base:"Diamond_Gold_Necklace"
+    },
+
+    {
+        name:"Two Heart Gold Necklace",
+        base:"Two_Heart_Gold_Necklace"
+    },
+
+    {
+        name:"Gold Bracelets",
+        base:"Gold_Bracelets"
+    },
+
+    {
+        name:"Gold Necklaces Collection",
+        base:"Gold_Necklaces_Collection"
+    },
+
+    {
+        name:"Heart Shape Gold Earring",
+        base:"Heart_Shape_Gold_Earring"
+    },
+
+    {
+        name:"Butterfly Gold Necklace",
+        base:"Butterfly_Gold_Necklace"
+    },
+
+    {
+        name:"Premium Gold Necklace",
+        base:"Premium_Gold_necklace"
+    },
+
+    {
+        name:"Cute Gold Earring",
+        base:"Cute_Gold_Earring"
+    },
+
+    {
+        name:"Ribbon Gold Ring",
+        base:"Ribbon_Gold_Ring"
+    },
+
+    {
+        name:"Amour Heart Gold Ring",
+        base:"Amour_Heart_Gold_Ring"
+    },
+
+    {
+        name:"Butterfly Band Gold Ring",
+        base:"Butterfly_Band_Gold_Ring"
+    },
+
+    {
+        name:"Ginkgo Biloba Leaf Gold Ring",
+        base:"Ginkgo_Biloba_Leaf_Gold_Ring"
+    },
+
+    {
+        name:"Cute Bow Heart Gold Earring",
+        base:"Cute_Bow_Heart_Gold_Earring"
+    },
+
+    {
+        name:"Pearl Nest Pendant Gold Necklace",
+        base:"Pearl_Nest_Pendant_Gold_Necklace"
+    },
+
+    {
+        name:"Luxe Loop Gold Ring",
+        base:"Luxe_Loop_Gold_Ring"
+    },
+
+    {
+        name:"Vibe Gold Ring",
+        base:"Vibe_Gold_Ring"
+    },
+
+    {
+        name:"Jewelry Packing",
+        base:"Jewelry_Packing_Video"
+    }
+
+];
+
+
+/* ============================================================
+   MEDIA DETECTION
+   Automatically checks files inside products/jewelry/
+   ============================================================ */
+
+const mediaExtensions = [
+    "jpg",
+    "jpeg",
+    "png",
+    "webp",
+    "mp4",
+    "webm"
+];
+
+async function fileExists(url){
+
+    try{
+
+        const response = await fetch(url,{
+            method:"HEAD",
+            cache:"no-store"
+        });
+
+        return response.ok;
+
+    }catch(error){
+
+        return false;
+
+    }
+
+}
+
+
+/* ============================================================
+   FIND ALL MEDIA FOR EACH PRODUCT
+   ============================================================ */
+
+async function getProductMedia(base){
+
+    const folder = "products/jewelry/";
+
+    const found = [];
+
+    /*
+       First look for numbered files:
+       Product_1.jpg
+       Product_2.jpg
+       Product_3.jpg
+       Product_1.mp4
+       etc.
+    */
+
+    for(let number = 1; number <= 15; number++){
+
+        for(const ext of mediaExtensions){
+
+            const file =
+                `${folder}${base}_${number}.${ext}`;
+
+            if(await fileExists(file)){
+
+                found.push({
+                    type:
+                        ["mp4","webm"].includes(ext)
+                        ? "video"
+                        : "image",
+
+                    src:file
+                });
+
+            }
+
+        }
+
+    }
+
+
+    /*
+       Also check direct file:
+       Product.jpg
+       Product.mp4
+    */
+
+    for(const ext of mediaExtensions){
+
+        const file =
+            `${folder}${base}.${ext}`;
+
+        if(await fileExists(file)){
+
+            found.push({
+                type:
+                    ["mp4","webm"].includes(ext)
+                    ? "video"
+                    : "image",
+
+                src:file
+            });
+
+        }
+
+    }
+
+
+    return found;
+
+}
+
+
+/* ============================================================
+   BUILD PRODUCT CATALOG
+   ============================================================ */
+
+async function loadProducts(){
+
+    const grid =
+        document.getElementById("productsGrid");
+
+    grid.innerHTML = "";
+
+    for(let i=0;i<products.length;i++){
+
+        const product = products[i];
+
+        const media =
+            await getProductMedia(product.base);
+
+        /*
+           If no media is found, don't break the whole catalog.
+        */
+
+        if(media.length === 0){
+
+            console.warn(
+                "No media found for:",
+                product.base
+            );
+
+            continue;
+
+        }
+
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "product-card";
+
+
+        /* First media */
+
+        const first =
+            media[0];
+
+
+        let mediaHTML = "";
+
+        if(first.type === "video"){
+
+            mediaHTML = `
+                <video
+                    src="${first.src}"
+                    muted
+                    autoplay
+                    loop
+                    playsinline
+                    preload="metadata"
+                ></video>
+
+                <div class="video-badge">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+            `;
+
+        }else{
+
+            mediaHTML = `
+                <img
+                    src="${first.src}"
+                    alt="${product.name}"
+                    loading="lazy"
+                >
+            `;
+
+        }
+
+
+        let countHTML = "";
+
+        if(media.length > 1){
+
+            countHTML = `
+                <div class="media-count">
+                    ${media.length} MEDIA
+                </div>
+            `;
+
+        }
+
+
+        card.innerHTML = `
+
+            <div class="product-media">
+
+                ${mediaHTML}
+
+                ${countHTML}
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-number">
+                    JEWELRY ${String(i+1).padStart(2,"0")}
+                </span>
+
+                <h3 class="product-name">
+                    ${product.name}
+                </h3>
+
+                <span class="product-action">
+                    VIEW PIECE
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </div>
+
+        `;
+
+
+        card.addEventListener("click",()=>{
+
+            openProduct(
+                product,
+                media,
+                i
+            );
+
+        });
+
+
+        grid.appendChild(card);
+
+    }
+
+
+    /*
+       If nothing loaded
+    */
+
+    if(grid.children.length === 0){
+
+        grid.innerHTML = `
+
+            <div class="loading">
+
+                <i class="fa-regular fa-circle-xmark"></i>
+
+                <p>
+                    PRODUCT MEDIA COULD NOT BE FOUND
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+/* ============================================================
+   MODAL VARIABLES
+   ============================================================ */
+
+let currentMedia = [];
+let currentIndex = 0;
+
+
+/* ============================================================
+   OPEN PRODUCT
+   ============================================================ */
+
+function openProduct(product,media,index){
+
+    currentMedia = media;
+    currentIndex = 0;
+
+    document.getElementById("modalNumber")
+        .textContent =
+        `JEWELRY ${String(index+1).padStart(2,"0")}`;
+
+    document.getElementById("modalTitle")
+        .textContent =
+        product.name;
+
+
+    /*
+       Instagram DM link
+       Opens Anayaluxee Instagram profile.
+    */
+
+    document.getElementById("instagramOrder")
+        .href =
+        "https://www.instagram.com/anayaluxee/";
+
+
+    renderMainMedia();
+    renderThumbnails();
+
+
+    document
+        .getElementById("productModal")
+        .classList.add("active");
+
+
+    document.body.style.overflow="hidden";
+
+}
+
+
+/* ============================================================
+   CLOSE MODAL
+   ============================================================ */
+
+function closeModal(){
+
+    document
+        .getElementById("productModal")
+        .classList.remove("active");
+
+    document.body.style.overflow="";
+
+    const video =
+        document.querySelector(
+            "#mainMedia video"
+        );
+
+    if(video){
+
+        video.pause();
+
+    }
+
+}
+
+
+/* ============================================================
+   MAIN MEDIA
+   ============================================================ */
+
+function renderMainMedia(){
+
+    const container =
+        document.getElementById("mainMedia");
+
+    const item =
+        currentMedia[currentIndex];
+
+
+    let html = "";
+
+
+    if(item.type === "video"){
+
+        html = `
+
+            <video
+                src="${item.src}"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+            ></video>
+
+        `;
+
+    }else{
+
+        html = `
+
+            <img
+                src="${item.src}"
+                alt="Anayaluxee Jewelry"
+            >
+
+        `;
+
+    }
+
+
+    container.innerHTML = `
+
+        <button
+            class="gallery-arrow prev"
+            onclick="changeMedia(-1)"
+        >
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        ${html}
+
+        <button
+            class="gallery-arrow next"
+            onclick="changeMedia(1)"
+        >
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    `;
+
+}
+
+
+/* ============================================================
+   THUMBNAILS
+   ============================================================ */
+
+function renderThumbnails(){
+
+    const container =
+        document.getElementById("thumbnails");
+
+    container.innerHTML = "";
+
+
+    currentMedia.forEach((item,index)=>{
+
+        const thumb =
+            document.createElement("div");
+
+        thumb.className =
+            "thumb" +
+            (index === currentIndex
+                ? " active"
+                : "");
+
+
+        if(item.type === "video"){
+
+            thumb.innerHTML = `
+
+                <video
+                    src="${item.src}"
+                    muted
+                    preload="metadata"
+                ></video>
+
+            `;
+
+        }else{
+
+            thumb.innerHTML = `
+
+                <img
+                    src="${item.src}"
+                    alt=""
+                >
+
+            `;
+
+        }
+
+
+        thumb.onclick = ()=>{
+
+            currentIndex = index;
+
+            renderMainMedia();
+            renderThumbnails();
+
+        };
+
+
+        container.appendChild(thumb);
+
+    });
+
+}
+
+
+/* ============================================================
+   CHANGE MEDIA
+   ============================================================ */
+
+function changeMedia(direction){
+
+    if(!currentMedia.length)
+        return;
+
+
+    currentIndex += direction;
+
+
+    if(currentIndex < 0){
+
+        currentIndex =
+            currentMedia.length - 1;
+
+    }
+
+
+    if(currentIndex >= currentMedia.length){
+
+        currentIndex = 0;
+
+    }
+
+
+    renderMainMedia();
+    renderThumbnails();
+
+}
+
+
+/* ============================================================
+   MOBILE MENU
+   ============================================================ */
+
 function toggleMenu(){
 
     document
-    .getElementById("mainNav")
-    .classList
-    .toggle("active");
+        .getElementById("navMenu")
+        .classList.toggle("active");
 
 }
+
+
+/* Close menu after clicking link */
+
+document.querySelectorAll("nav a")
+.forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        document
+            .getElementById("navMenu")
+            .classList.remove("active");
+
+    });
+
+});
+
+
+/* ============================================================
+   CLOSE MODAL WHEN CLICKING OUTSIDE
+   ============================================================ */
+
+document
+.getElementById("productModal")
+.addEventListener("click",(event)=>{
+
+    if(event.target.id === "productModal"){
+
+        closeModal();
+
+    }
+
+});
+
+
+/* ESC KEY */
+
+document.addEventListener("keydown",(event)=>{
+
+    if(event.key === "Escape"){
+
+        closeModal();
+
+    }
+
+    if(
+        event.key === "ArrowRight" &&
+        document
+            .getElementById("productModal")
+            .classList.contains("active")
+    ){
+
+        changeMedia(1);
+
+    }
+
+    if(
+        event.key === "ArrowLeft" &&
+        document
+            .getElementById("productModal")
+            .classList.contains("active")
+    ){
+
+        changeMedia(-1);
+
+    }
+
+});
+
+
+/* ============================================================
+   START
+   ============================================================ */
+
+loadProducts();
 
 </script>
 
