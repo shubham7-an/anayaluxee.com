@@ -1,1359 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Anayaluxee | Luxury Jewelry Collection</title>
-
-<link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/shubham7-an/anayaluxee.com/main/logo-brown.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/shubham7-an/anayaluxee.com/main/logo-brown.png">
-<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/shubham7-an/anayaluxee.com/main/logo-brown.png">
-
-<meta name="description" content="Discover the Anayaluxee luxury jewelry collection.">
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Montserrat',sans-serif;
-    background:#f7efec;
-    color:#2d1d1a;
-    overflow-x:hidden;
-}
-
-/* ================= HEADER ================= */
-
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:18px 5%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(247,239,236,0.94);
-    backdrop-filter:blur(12px);
-    z-index:9999;
-    border-bottom:1px solid rgba(74,18,13,0.08);
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    text-decoration:none;
-}
-
-.logo img{
-    width:50px;
-    height:auto;
-}
-
-.logo h1{
-    font-family:'Cormorant Garamond',serif;
-    font-size:2rem;
-    font-weight:500;
-    letter-spacing:2px;
-    color:#4a120d;
-}
-
-nav{
-    display:flex;
-    gap:30px;
-}
-
-nav a{
-    text-decoration:none;
-    font-size:12px;
-    letter-spacing:3px;
-    color:#5c211a;
-    transition:.4s;
-}
-
-nav a:hover{
-    opacity:.55;
-}
-
-.menu-toggle{
-    display:none;
-    font-size:1.8rem;
-    color:#4a120d;
-    cursor:pointer;
-}
-
-/* ================= PAGE HERO ================= */
-
-.page-hero{
-    padding:170px 7% 90px;
-    text-align:center;
-    background:
-        radial-gradient(circle at 20% 20%,rgba(255,255,255,.8),transparent 30%),
-        radial-gradient(circle at 80% 70%,rgba(225,192,184,.25),transparent 35%),
-        #f7efec;
-}
-
-.page-hero small{
-    display:block;
-    color:#8b5e57;
-    font-size:11px;
-    letter-spacing:6px;
-    margin-bottom:18px;
-}
-
-.page-hero h2{
-    font-family:'Cormorant Garamond',serif;
-    font-size:6rem;
-    font-weight:400;
-    line-height:.9;
-    color:#2d1d1a;
-}
-
-.page-hero p{
-    max-width:650px;
-    margin:28px auto 0;
-    font-size:13px;
-    line-height:2;
-    letter-spacing:1px;
-    color:#6c5752;
-}
-
-/* decorative divider */
-
-.divider{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:14px;
-    margin-top:30px;
-}
-
-.divider span{
-    width:55px;
-    height:1px;
-    background:#b9938b;
-}
-
-.divider i{
-    font-size:9px;
-    color:#8b5e57;
-}
-
-/* ================= CATALOG ================= */
-
-.catalog{
-    background:#fff;
-    padding:90px 5% 130px;
-}
-
-.catalog-top{
-    max-width:1400px;
-    margin:0 auto 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:end;
-    border-bottom:1px solid rgba(45,29,26,.12);
-    padding-bottom:22px;
-}
-
-.catalog-top h3{
-    font-family:'Cormorant Garamond',serif;
-    font-size:2.7rem;
-    font-weight:400;
-}
-
-.catalog-top span{
-    font-size:10px;
-    letter-spacing:3px;
-    color:#8b5e57;
-}
-
-/* product grid */
-
-.products-grid{
-    max-width:1400px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:55px 24px;
-}
-
-/* ================= PRODUCT CARD ================= */
-
-.product-card{
-    cursor:pointer;
-    position:relative;
-}
-
-.product-media{
-    position:relative;
-    width:100%;
-    aspect-ratio:4/5;
-    overflow:hidden;
-    background:#f5efec;
-}
-
-.product-media img,
-.product-media video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-    transition:1s ease;
-}
-
-.product-card:hover .product-media img,
-.product-card:hover .product-media video{
-    transform:scale(1.045);
-}
-
-/* soft overlay */
-
-.product-media::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        to top,
-        rgba(45,29,26,.25),
-        transparent 35%
-    );
-    opacity:0;
-    transition:.5s;
-    pointer-events:none;
-}
-
-.product-card:hover .product-media::after{
-    opacity:1;
-}
-
-/* video badge */
-
-.video-badge{
-    position:absolute;
-    top:14px;
-    right:14px;
-    z-index:3;
-    width:34px;
-    height:34px;
-    border-radius:50%;
-    background:rgba(255,255,255,.9);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#4a120d;
-    font-size:11px;
-}
-
-/* multiple badge */
-
-.media-count{
-    position:absolute;
-    bottom:14px;
-    left:14px;
-    z-index:3;
-    padding:7px 11px;
-    background:rgba(255,255,255,.88);
-    color:#4a120d;
-    font-size:9px;
-    letter-spacing:2px;
-}
-
-/* product information */
-
-.product-info{
-    padding:18px 4px 0;
-}
-
-.product-number{
-    display:block;
-    font-size:9px;
-    letter-spacing:3px;
-    color:#a07b73;
-    margin-bottom:7px;
-}
-
-.product-name{
-    font-family:'Cormorant Garamond',serif;
-    font-size:1.55rem;
-    font-weight:500;
-    line-height:1.15;
-    color:#2d1d1a;
-}
-
-.product-action{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    margin-top:12px;
-    font-size:9px;
-    letter-spacing:2px;
-    color:#8b5e57;
-}
-
-.product-action i{
-    font-size:8px;
-    transition:.3s;
-}
-
-.product-card:hover .product-action i{
-    transform:translateX(5px);
-}
-
-/* ================= EMPTY / LOADING ================= */
-
-.loading{
-    grid-column:1/-1;
-    text-align:center;
-    padding:100px 20px;
-    color:#8b5e57;
-}
-
-.loading i{
-    font-size:28px;
-    margin-bottom:20px;
-}
-
-.loading p{
-    font-size:11px;
-    letter-spacing:3px;
-}
-
-/* ================= PRODUCT POPUP ================= */
-
-.modal{
-    position:fixed;
-    inset:0;
-    background:rgba(35,18,15,.72);
-    backdrop-filter:blur(8px);
-    z-index:10000;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:25px;
-}
-
-.modal.active{
-    display:flex;
-}
-
-.modal-box{
-    width:min(1150px,96vw);
-    max-height:92vh;
-    overflow:auto;
-    background:#fdf9f7;
-    position:relative;
-    display:grid;
-    grid-template-columns:1.15fr .85fr;
-    box-shadow:0 30px 100px rgba(0,0,0,.3);
-}
-
-/* close */
-
-.modal-close{
-    position:absolute;
-    top:18px;
-    right:20px;
-    z-index:20;
-    width:40px;
-    height:40px;
-    border:0;
-    border-radius:50%;
-    background:rgba(255,255,255,.9);
-    color:#4a120d;
-    cursor:pointer;
-    font-size:17px;
-}
-
-/* gallery */
-
-.modal-gallery{
-    background:#f1e9e5;
-    min-height:650px;
-    display:flex;
-    flex-direction:column;
-}
-
-.main-media{
-    flex:1;
-    min-height:560px;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-}
-
-.main-media img,
-.main-media video{
-    width:100%;
-    height:100%;
-    max-height:650px;
-    object-fit:contain;
-    display:block;
-}
-
-/* arrows */
-
-.gallery-arrow{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    width:42px;
-    height:42px;
-    border:0;
-    border-radius:50%;
-    background:rgba(255,255,255,.9);
-    color:#4a120d;
-    cursor:pointer;
-    z-index:5;
-}
-
-.gallery-arrow.prev{
-    left:18px;
-}
-
-.gallery-arrow.next{
-    right:18px;
-}
-
-/* thumbnails */
-
-.thumbnails{
-    height:105px;
-    padding:12px;
-    display:flex;
-    gap:10px;
-    overflow-x:auto;
-    background:#fff;
-}
-
-.thumb{
-    min-width:78px;
-    height:80px;
-    border:1px solid transparent;
-    cursor:pointer;
-    overflow:hidden;
-    background:#eee;
-}
-
-.thumb.active{
-    border-color:#7c4b43;
-}
-
-.thumb img,
-.thumb video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-/* modal information */
-
-.modal-info{
-    padding:70px 55px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-
-.modal-info small{
-    color:#9b746c;
-    font-size:9px;
-    letter-spacing:4px;
-    margin-bottom:18px;
-}
-
-.modal-info h2{
-    font-family:'Cormorant Garamond',serif;
-    font-size:4rem;
-    font-weight:400;
-    line-height:1;
-    color:#2d1d1a;
-    margin-bottom:25px;
-}
-
-.modal-divider{
-    width:65px;
-    height:1px;
-    background:#b9938b;
-    margin-bottom:25px;
-}
-
-.modal-info p{
-    color:#6c5752;
-    font-size:13px;
-    line-height:2;
-    margin-bottom:30px;
-}
-
-.order-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:12px;
-    width:100%;
-    padding:17px 25px;
-    background:#4a120d;
-    color:#fff;
-    text-decoration:none;
-    letter-spacing:2px;
-    font-size:10px;
-    transition:.4s;
-}
-
-.order-btn:hover{
-    background:#6a2820;
-    transform:translateY(-2px);
-}
-
-.instagram-note{
-    margin-top:15px;
-    text-align:center;
-    font-size:9px;
-    letter-spacing:2px;
-    color:#8b5e57;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-    background:#2b0a07;
-    padding:90px 8% 40px;
-    color:white;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:50px;
-}
-
-.footer-logo img{
-    width:110px;
-    margin-bottom:20px;
-}
-
-.footer-title{
-    font-family:'Cormorant Garamond',serif;
-    font-size:2rem;
-    margin-bottom:22px;
-}
-
-.footer-links a{
-    display:block;
-    text-decoration:none;
-    color:white;
-    margin-bottom:14px;
-    transition:.3s;
-}
-
-.footer-links a:hover{
-    opacity:.7;
-    transform:translateX(4px);
-}
-
-.copyright{
-    text-align:center;
-    margin-top:60px;
-    font-size:13px;
-    opacity:.7;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:1000px){
-
-    .products-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-}
-
-@media(max-width:768px){
-
-    header{
-        padding:14px 5%;
-    }
-
-    .logo img{
-        width:38px;
-    }
-
-    .logo h1{
-        font-size:1.4rem;
-    }
-
-    .menu-toggle{
-        display:block;
-        z-index:10001;
-    }
-
-    nav{
-        position:fixed;
-        top:0;
-        right:-100%;
-        width:250px;
-        height:100vh;
-        background:#f7efec;
-        flex-direction:column;
-        justify-content:center;
-        align-items:center;
-        transition:.5s;
-        box-shadow:-10px 0 30px rgba(0,0,0,.1);
-    }
-
-    nav.active{
-        right:0;
-    }
-
-    .page-hero{
-        padding:140px 25px 65px;
-    }
-
-    .page-hero h2{
-        font-size:4rem;
-    }
-
-    .page-hero p{
-        font-size:11px;
-        line-height:1.9;
-    }
-
-    .catalog{
-        padding:60px 18px 90px;
-    }
-
-    .catalog-top{
-        margin-bottom:30px;
-    }
-
-    .catalog-top h3{
-        font-size:2.2rem;
-    }
-
-    .catalog-top span{
-        font-size:8px;
-    }
-
-    .products-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:38px 12px;
-    }
-
-    .product-media{
-        aspect-ratio:3/4;
-    }
-
-    .product-name{
-        font-size:1.25rem;
-    }
-
-    .product-number{
-        font-size:7px;
-    }
-
-    .product-action{
-        font-size:7px;
-        letter-spacing:1.5px;
-    }
-
-    .modal{
-        padding:10px;
-    }
-
-    .modal-box{
-        display:block;
-        max-height:95vh;
-    }
-
-    .modal-gallery{
-        min-height:auto;
-    }
-
-    .main-media{
-        min-height:55vh;
-        height:55vh;
-    }
-
-    .main-media img,
-    .main-media video{
-        max-height:55vh;
-    }
-
-    .thumbnails{
-        height:82px;
-    }
-
-    .thumb{
-        min-width:58px;
-        height:58px;
-    }
-
-    .modal-info{
-        padding:35px 25px 30px;
-    }
-
-    .modal-info h2{
-        font-size:3rem;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-}
-
-@media(max-width:430px){
-
-    .page-hero h2{
-        font-size:3.4rem;
-    }
-
-    .products-grid{
-        gap:32px 10px;
-    }
-
-    .product-name{
-        font-size:1.15rem;
-    }
-
-}
-
-/* ================= SCROLLBAR ================= */
-
-::-webkit-scrollbar{
-    width:7px;
-}
-
-::-webkit-scrollbar-track{
-    background:#f7efec;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#8b5e57;
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- ================= HEADER ================= -->
-
-<header>
-
-<a href="index.html" class="logo">
-    <img src="https://raw.githubusercontent.com/shubham7-an/anayaluxee.com/main/logo-brown.png" alt="Anayaluxee">
-    <h1>ANAYALUXEE</h1>
-</a>
-
-<div class="menu-toggle" onclick="toggleMenu()">
-    <i class="fa-solid fa-bars"></i>
-</div>
-
-<nav id="navMenu">
-    <a href="index.html">HOME</a>
-    <a href="#catalog">JEWELRY</a>
-    <a href="index.html#founder">FOUNDER</a>
-    <a href="index.html#social">SOCIAL</a>
-</nav>
-
-</header>
-
-
-<!-- ================= PAGE HERO ================= -->
-
-<section class="page-hero">
-
-    <small>ANAYALUXEE COLLECTION</small>
-
-    <h2>Jewelry</h2>
-
-    <div class="divider">
-        <span></span>
-        <i class="fa-solid fa-gem"></i>
-        <span></span>
-    </div>
-
-    <p>
-        Timeless pieces created to add a touch of elegance,
-        femininity and effortless luxury to every moment.
-    </p>
-
-</section>
-
-
-<!-- ================= CATALOG ================= -->
-
-<section class="catalog" id="catalog">
-
-    <div class="catalog-top">
-        <h3>The Jewelry Collection</h3>
-        <span>20 PIECES · ANAYALUXEE</span>
-    </div>
-
-    <div class="products-grid" id="productsGrid">
-
-        <div class="loading">
-            <i class="fa-regular fa-gem"></i>
-            <p>CURATING YOUR COLLECTION...</p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= PRODUCT MODAL ================= -->
-
-<div class="modal" id="productModal">
-
-    <div class="modal-box">
-
-        <button class="modal-close" onclick="closeModal()">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-
-        <div class="modal-gallery">
-
-            <div class="main-media" id="mainMedia">
-
-                <button class="gallery-arrow prev"
-                        onclick="changeMedia(-1)">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
-
-                <button class="gallery-arrow next"
-                        onclick="changeMedia(1)">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-
-            </div>
-
-            <div class="thumbnails" id="thumbnails"></div>
-
-        </div>
-
-        <div class="modal-info">
-
-            <small id="modalNumber"></small>
-
-            <h2 id="modalTitle"></h2>
-
-            <div class="modal-divider"></div>
-
-            <p>
-                A thoughtfully selected piece from the
-                Anayaluxee jewelry collection.
-                For details and availability, connect with us directly.
-            </p>
-
-            <a
-                id="instagramOrder"
-                class="order-btn"
-                href="#"
-                target="_blank"
-            >
-                <i class="fa-brands fa-instagram"></i>
-                ORDER ON INSTAGRAM DM
-            </a>
-
-            <div class="instagram-note">
-                @ANAYALUXEE
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer id="social">
-
-    <div class="footer-grid">
-
-        <div class="footer-logo">
-
-            <img src="logo.jpg" alt="Anayaluxee">
-
-            <p>Own The Moment, Wear Anaya</p>
-
-        </div>
-
-        <div>
-
-            <h3 class="footer-title">Location</h3>
-
-            <p>Lucknow, Uttar Pradesh</p>
-
-        </div>
-
-        <div>
-
-            <h3 class="footer-title">Connect With Us</h3>
-
-            <div class="footer-links">
-
-                <a href="mailto:anayaluxee@gmail.com">
-                    anayaluxee@gmail.com
-                </a>
-
-                <a
-                    href="https://www.instagram.com/anayaluxee/"
-                    target="_blank"
-                >
-                    Jewelry Instagram
-                </a>
-
-                <a
-                    href="https://www.instagram.com/anayaluxeestudio/"
-                    target="_blank"
-                >
-                    Instagram For Suits
-                </a>
-
-                <a
-                    href="https://www.pinterest.com/anayaluxee/"
-                    target="_blank"
-                >
-                    Pinterest
-                </a>
-
-                <a
-                    href="https://www.youtube.com/@Anayaluxee/"
-                    target="_blank"
-                >
-                    YouTube
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="copyright">
-        © 2026 ANAYALUXEE · All Rights Reserved
-    </div>
-
-</footer>
-
-
 <script>
 
 /* ============================================================
-   JEWELRY PRODUCTS
+   ANAYALUXEE - AUTOMATIC JEWELRY PRODUCT SYSTEM
+   ============================================================
+
+   PRODUCT ADD KARNE KA RULE:
+
+   products/jewelry/
+
+   Example:
+
+   Gold_Necklace_1.jpg
+   Gold_Necklace_2.jpg
+   Gold_Necklace_3.mp4
+
+   Website automatically:
+
+   GOLD NECKLACE
+
+   ko ONE product banayegi.
+
+   New product ke liye sirf GitHub folder mein files upload karo.
+   CODE CHANGE KARNE KI ZARURAT NAHI HAI.
+
    ============================================================ */
-
-const products = [
-
-    {
-        name:"Heart Shape Gold Necklace",
-        base:"Heart_Shape_Gold_Necklace"
-    },
-
-    {
-        name:"Gold Rings",
-        base:"Gold_Rings"
-    },
-
-    {
-        name:"Gold Necklace",
-        base:"Gold_Necklace"
-    },
-
-    {
-        name:"Diamond Gold Necklace",
-        base:"Diamond_Gold_Necklace"
-    },
-
-    {
-        name:"Two Heart Gold Necklace",
-        base:"Two_Heart_Gold_Necklace"
-    },
-
-    {
-        name:"Gold Bracelets",
-        base:"Gold_Bracelets"
-    },
-
-    {
-        name:"Gold Necklaces Collection",
-        base:"Gold_Necklaces_Collection"
-    },
-
-    {
-        name:"Heart Shape Gold Earring",
-        base:"Heart_Shape_Gold_Earring"
-    },
-
-    {
-        name:"Butterfly Gold Necklace",
-        base:"Butterfly_Gold_Necklace"
-    },
-
-    {
-        name:"Premium Gold Necklace",
-        base:"Premium_Gold_necklace"
-    },
-
-    {
-        name:"Cute Gold Earring",
-        base:"Cute_Gold_Earring"
-    },
-
-    {
-        name:"Ribbon Gold Ring",
-        base:"Ribbon_Gold_Ring"
-    },
-
-    {
-        name:"Amour Heart Gold Ring",
-        base:"Amour_Heart_Gold_Ring"
-    },
-
-    {
-        name:"Butterfly Band Gold Ring",
-        base:"Butterfly_Band_Gold_Ring"
-    },
-
-    {
-        name:"Ginkgo Biloba Leaf Gold Ring",
-        base:"Ginkgo_Biloba_Leaf_Gold_Ring"
-    },
-
-    {
-        name:"Cute Bow Heart Gold Earring",
-        base:"Cute_Bow_Heart_Gold_Earring"
-    },
-
-    {
-        name:"Pearl Nest Pendant Gold Necklace",
-        base:"Pearl_Nest_Pendant_Gold_Necklace"
-    },
-
-    {
-        name:"Luxe Loop Gold Ring",
-        base:"Luxe_Loop_Gold_Ring"
-    },
-
-    {
-        name:"Vibe Gold Ring",
-        base:"Vibe_Gold_Ring"
-    },
-
-    {
-        name:"Jewelry Packing",
-        base:"Jewelry_Packing_Video"
-    }
-
-];
 
 
 /* ============================================================
-   MEDIA DETECTION — GITHUB FOLDER
+   GITHUB SETTINGS
    ============================================================ */
 
 const GITHUB_FOLDER_API =
     "https://api.github.com/repos/shubham7-an/anayaluxee.com/contents/products/jewelry?ref=main";
 
 const GITHUB_RAW_ROOT =
-    "https://raw.githubusercontent.com/shubham7-an/anayaluxee.com/main/";
+    "https://raw.githubusercontent.com/shubham7-an/anayaluxee.com/main/products/jewelry/";
+
+
+/* ============================================================
+   SUPPORTED MEDIA
+   ============================================================ */
 
 const mediaExtensions = [
-    "jpg","jpeg","png","webp","mp4","webm"
+    "jpg",
+    "jpeg",
+    "png",
+    "webp",
+    "mp4",
+    "webm"
 ];
 
-function mediaTypeFromFile(name){
-    const ext = name.split(".").pop().toLowerCase();
-    return ["mp4","webm"].includes(ext) ? "video" : "image";
-}
-
-function normalizeFileName(name){
-    return name
-        .toLowerCase()
-        .replace(/\.[^/.]+$/,"")
-        .replace(/[^a-z0-9]/g,"");
-}
-
-async function getAllJewelryFiles(){
-
-    const response = await fetch(GITHUB_FOLDER_API,{
-        headers:{
-            "Accept":"application/vnd.github+json"
-        },
-        cache:"no-store"
-    });
-
-    if(!response.ok){
-        throw new Error("GitHub folder API error: " + response.status);
-    }
-
-    const data = await response.json();
-
-    return data
-        .filter(item =>
-            item.type === "file" &&
-            mediaExtensions.includes(
-                item.name.split(".").pop().toLowerCase()
-            )
-        )
-        .map(item => ({
-            name:item.name,
-            src:GITHUB_RAW_ROOT +
-                "products/jewelry/" +
-                item.name,
-            type:mediaTypeFromFile(item.name)
-        }));
-}
-
 
 /* ============================================================
-   FIND ALL MEDIA FOR ONE PRODUCT
-   ============================================================ */
-
-function getProductMedia(base,allFiles){
-
-    const wanted = normalizeFileName(base);
-
-    return allFiles
-        .filter(file => {
-
-            const current =
-                normalizeFileName(file.name);
-
-            if(current === wanted){
-                return true;
-            }
-
-            if(current.startsWith(wanted)){
-
-                const ending =
-                    current.slice(wanted.length);
-
-                return /^\d+$/.test(ending);
-            }
-
-            return false;
-        })
-        .sort((a,b)=>{
-
-            const aName =
-                normalizeFileName(a.name);
-
-            const bName =
-                normalizeFileName(b.name);
-
-            const aNumber =
-                aName === wanted
-                    ? 0
-                    : parseInt(
-                        aName.slice(wanted.length)
-                      ) || 999;
-
-            const bNumber =
-                bName === wanted
-                    ? 0
-                    : parseInt(
-                        bName.slice(wanted.length)
-                      ) || 999;
-
-            return aNumber - bNumber ||
-                   a.name.localeCompare(b.name);
-        });
-}
-
-
-/* ============================================================
-   BUILD PRODUCT CATALOG
-   ============================================================ */
-
-async function loadProducts(){
-
-    const grid =
-        document.getElementById("productsGrid");
-
-    grid.innerHTML = `
-        <div class="loading">
-            <i class="fa-regular fa-gem"></i>
-            <p>CURATING YOUR COLLECTION...</p>
-        </div>
-    `;
-
-    try{
-
-        const allFiles =
-            await getAllJewelryFiles();
-
-        console.log(
-            "GitHub jewelry files:",
-            allFiles
-        );
-
-        grid.innerHTML = "";
-
-        let loadedCount = 0;
-
-        for(let i=0;i<products.length;i++){
-
-            const product =
-                products[i];
-
-            const media =
-                getProductMedia(
-                    product.base,
-                    allFiles
-                );
-
-            if(!media.length){
-
-                console.warn(
-                    "No media found:",
-                    product.base
-                );
-
-                continue;
-            }
-
-            loadedCount++;
-
-            const card =
-                document.createElement("div");
-
-            card.className =
-                "product-card";
-
-            const first =
-                media[0];
-
-            let mediaHTML = "";
-
-            if(first.type === "video"){
-
-                mediaHTML = `
-                    <video
-                        src="${first.src}"
-                        muted
-                        autoplay
-                        loop
-                        playsinline
-                        preload="metadata"
-                    ></video>
-
-                    <div class="video-badge">
-                        <i class="fa-solid fa-play"></i>
-                    </div>
-                `;
-
-            }else{
-
-                mediaHTML = `
-                    <img
-                        src="${first.src}"
-                        alt="${product.name}"
-                        loading="lazy"
-                    >
-                `;
-            }
-
-            const countHTML =
-                media.length > 1
-                ? `
-                    <div class="media-count">
-                        ${media.length} MEDIA
-                    </div>
-                  `
-                : "";
-
-            card.innerHTML = `
-                <div class="product-media">
-                    ${mediaHTML}
-                    ${countHTML}
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-number">
-                        JEWELRY ${String(i+1).padStart(2,"0")}
-                    </span>
-
-                    <h3 class="product-name">
-                        ${product.name}
-                    </h3>
-
-                    <span class="product-action">
-                        VIEW PIECE
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </div>
-            `;
-
-            card.addEventListener("click",()=>{
-                openProduct(
-                    product,
-                    media,
-                    i
-                );
-            });
-
-            grid.appendChild(card);
-        }
-
-        if(loadedCount === 0){
-
-            grid.innerHTML = `
-                <div class="loading">
-                    <i class="fa-regular fa-circle-xmark"></i>
-                    <p>PRODUCT MEDIA COULD NOT BE FOUND</p>
-                </div>
-            `;
-
-        }
-
-        console.log(
-            "Anayaluxee products loaded:",
-            loadedCount
-        );
-
-    }catch(error){
-
-        console.error(
-            "Jewelry catalog error:",
-            error
-        );
-
-        grid.innerHTML = `
-            <div class="loading">
-                <i class="fa-regular fa-circle-xmark"></i>
-                <p>CATALOG COULD NOT BE LOADED</p>
-                <small>
-                    GitHub Pages may still be deploying.
-                </small>
-            </div>
-        `;
-    }
-}
-
-/* ============================================================
-   MODAL VARIABLES
+   CURRENT PRODUCT / MODAL DATA
    ============================================================ */
 
 let currentMedia = [];
@@ -1361,63 +60,825 @@ let currentIndex = 0;
 
 
 /* ============================================================
-   OPEN PRODUCT
+   GET MEDIA TYPE
    ============================================================ */
 
-function openProduct(product,media,index){
+function getMediaType(filename){
 
-    currentMedia = media;
-    currentIndex = 0;
+    const extension =
+        filename
+            .split(".")
+            .pop()
+            .toLowerCase();
 
-    document.getElementById("modalNumber")
-        .textContent =
-        `JEWELRY ${String(index+1).padStart(2,"0")}`;
+    if(
+        extension === "mp4" ||
+        extension === "webm"
+    ){
 
-    document.getElementById("modalTitle")
-        .textContent =
-        product.name;
+        return "video";
 
+    }
 
-    /*
-       Instagram DM link
-       Opens Anayaluxee Instagram profile.
-    */
-
-    document.getElementById("instagramOrder")
-        .href =
-        "https://www.instagram.com/anayaluxee/";
-
-
-    renderMainMedia();
-    renderThumbnails();
-
-
-    document
-        .getElementById("productModal")
-        .classList.add("active");
-
-
-    document.body.style.overflow="hidden";
+    return "image";
 
 }
 
 
 /* ============================================================
-   CLOSE MODAL
+   GET FILE EXTENSION
+   ============================================================ */
+
+function getFileExtension(filename){
+
+    return filename
+        .split(".")
+        .pop()
+        .toLowerCase();
+
+}
+
+
+/* ============================================================
+   GET PRODUCT BASE NAME
+   ============================================================
+
+   Gold_Necklace_1.jpg
+   Gold_Necklace_2.jpg
+   Gold_Necklace_3.mp4
+
+   becomes:
+
+   Gold_Necklace
+
+   Also:
+
+   Pearl_Bracelet.jpg
+
+   becomes:
+
+   Pearl_Bracelet
+
+   ============================================================ */
+
+function getProductBase(filename){
+
+    const withoutExtension =
+        filename.replace(
+            /\.[^/.]+$/,
+            ""
+        );
+
+
+    /*
+       Only remove the FINAL _number.
+
+       Example:
+
+       Gold_Necklace_1
+       Gold_Necklace_2
+
+       -> Gold_Necklace
+    */
+
+    return withoutExtension
+        .replace(/_\d+$/,"");
+
+}
+
+
+/* ============================================================
+   PRODUCT NAME
+   ============================================================
+
+   Gold_Necklace
+   ->
+   Gold Necklace
+
+   designer_necklace
+   ->
+   Designer Necklace
+
+   ============================================================ */
+
+function createProductName(base){
+
+    return base
+        .replace(/_/g," ")
+        .replace(/\s+/g," ")
+        .trim()
+        .replace(/\b\w/g,letter =>
+            letter.toUpperCase()
+        );
+
+}
+
+
+/* ============================================================
+   FILE NUMBER
+   ============================================================
+
+   Product.jpg       -> 0
+   Product_1.jpg     -> 1
+   Product_2.jpg     -> 2
+   Product_10.jpg    -> 10
+
+   ============================================================ */
+
+function getMediaNumber(filename){
+
+    const withoutExtension =
+        filename.replace(
+            /\.[^/.]+$/,
+            ""
+        );
+
+
+    const match =
+        withoutExtension.match(
+            /_(\d+)$/
+        );
+
+
+    if(match){
+
+        return Number(
+            match[1]
+        );
+
+    }
+
+
+    return 0;
+
+}
+
+
+/* ============================================================
+   GET ALL FILES FROM GITHUB
+   ============================================================ */
+
+async function getAllJewelryFiles(){
+
+    const cacheBust =
+        Date.now();
+
+
+    const response =
+        await fetch(
+            GITHUB_FOLDER_API +
+            "&cacheBust=" +
+            cacheBust,
+            {
+                method:"GET",
+
+                headers:{
+                    "Accept":
+                    "application/vnd.github+json"
+                },
+
+                cache:"no-store"
+            }
+        );
+
+
+    if(!response.ok){
+
+        throw new Error(
+            "GitHub API Error: " +
+            response.status
+        );
+
+    }
+
+
+    const data =
+        await response.json();
+
+
+    if(!Array.isArray(data)){
+
+        throw new Error(
+            "Invalid GitHub folder response."
+        );
+
+    }
+
+
+    return data
+
+        .filter(item => {
+
+            return (
+                item.type === "file" &&
+                mediaExtensions.includes(
+                    getFileExtension(
+                        item.name
+                    )
+                )
+            );
+
+        })
+
+        .map(item => ({
+
+            name:
+                item.name,
+
+            src:
+                GITHUB_RAW_ROOT +
+                encodeURIComponent(
+                    item.name
+                ),
+
+            type:
+                getMediaType(
+                    item.name
+                )
+
+        }));
+
+}
+
+
+/* ============================================================
+   CREATE PRODUCTS AUTOMATICALLY
+   ============================================================ */
+
+function createAutomaticProducts(allFiles){
+
+    const productMap =
+        new Map();
+
+
+    /*
+       GROUP FILES BY PRODUCT NAME
+    */
+
+    allFiles.forEach(file => {
+
+        const base =
+            getProductBase(
+                file.name
+            );
+
+
+        if(!productMap.has(base)){
+
+            productMap.set(
+                base,
+                []
+            );
+
+        }
+
+
+        productMap
+            .get(base)
+            .push(file);
+
+    });
+
+
+    const products = [];
+
+
+    /*
+       CREATE PRODUCT OBJECT
+    */
+
+    productMap.forEach(
+        (media,base) => {
+
+
+            /*
+               Sort media:
+
+               Product.jpg
+               Product_1.jpg
+               Product_2.jpg
+               Product_3.mp4
+            */
+
+            media.sort(
+                (a,b) => {
+
+                    return (
+                        getMediaNumber(
+                            a.name
+                        ) -
+                        getMediaNumber(
+                            b.name
+                        )
+                    );
+
+                }
+            );
+
+
+            products.push({
+
+                base:base,
+
+                name:
+                    createProductName(
+                        base
+                    ),
+
+                media:media
+
+            });
+
+        }
+    );
+
+
+    /*
+       SORT PRODUCTS ALPHABETICALLY
+    */
+
+    products.sort(
+        (a,b) =>
+            a.name.localeCompare(
+                b.name
+            )
+    );
+
+
+    return products;
+
+}
+
+
+/* ============================================================
+   LOAD PRODUCTS
+   ============================================================ */
+
+async function loadProducts(){
+
+    const grid =
+        document.getElementById(
+            "productsGrid"
+        );
+
+
+    /*
+       LOADING
+    */
+
+    grid.innerHTML = `
+
+        <div class="loading">
+
+            <i class="fa-regular fa-gem"></i>
+
+            <p>
+                CURATING YOUR COLLECTION...
+            </p>
+
+        </div>
+
+    `;
+
+
+    try{
+
+        /*
+           GET ALL GITHUB FILES
+        */
+
+        const allFiles =
+            await getAllJewelryFiles();
+
+
+        console.log(
+            "ANAYALUXEE FILES:",
+            allFiles
+        );
+
+
+        /*
+           AUTOMATICALLY CREATE PRODUCTS
+        */
+
+        const products =
+            createAutomaticProducts(
+                allFiles
+            );
+
+
+        console.log(
+            "ANAYALUXEE PRODUCTS:",
+            products
+        );
+
+
+        /*
+           UPDATE PRODUCT COUNT
+        */
+
+        const countElement =
+            document.querySelector(
+                ".catalog-top span"
+            );
+
+
+        if(countElement){
+
+            countElement.textContent =
+                `${products.length} PIECES · ANAYALUXEE`;
+
+        }
+
+
+        /*
+           CLEAR LOADING
+        */
+
+        grid.innerHTML = "";
+
+
+        /*
+           NO PRODUCTS
+        */
+
+        if(!products.length){
+
+            grid.innerHTML = `
+
+                <div class="loading">
+
+                    <i class="fa-regular fa-circle-xmark"></i>
+
+                    <p>
+                        NO JEWELRY FOUND
+                    </p>
+
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+
+        /*
+           CREATE EVERY PRODUCT CARD
+        */
+
+        products.forEach(
+            (product,index) => {
+
+
+                const media =
+                    product.media;
+
+
+                const first =
+                    media[0];
+
+
+                const card =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                card.className =
+                    "product-card";
+
+
+                /* =================================================
+                   FIRST MEDIA
+                   ================================================= */
+
+                let mediaHTML = "";
+
+
+                if(
+                    first.type === "video"
+                ){
+
+                    mediaHTML = `
+
+                        <video
+
+                            src="${first.src}"
+
+                            muted
+
+                            autoplay
+
+                            loop
+
+                            playsinline
+
+                            preload="metadata"
+
+                        ></video>
+
+
+                        <div class="video-badge">
+
+                            <i
+                                class="fa-solid fa-play"
+                            ></i>
+
+                        </div>
+
+                    `;
+
+                }
+
+                else{
+
+                    mediaHTML = `
+
+                        <img
+
+                            src="${first.src}"
+
+                            alt="${product.name}"
+
+                            loading="lazy"
+
+                        >
+
+                    `;
+
+                }
+
+
+                /* =================================================
+                   MEDIA COUNT
+                   ================================================= */
+
+                const countHTML =
+                    media.length > 1
+
+                    ? `
+
+                        <div class="media-count">
+
+                            ${media.length} MEDIA
+
+                        </div>
+
+                      `
+
+                    : "";
+
+
+                /* =================================================
+                   PRODUCT CARD HTML
+                   ================================================= */
+
+                card.innerHTML = `
+
+                    <div class="product-media">
+
+                        ${mediaHTML}
+
+                        ${countHTML}
+
+                    </div>
+
+
+                    <div class="product-info">
+
+
+                        <span
+                            class="product-number"
+                        >
+
+                            JEWELRY
+                            ${String(index + 1)
+                                .padStart(2,"0")}
+
+                        </span>
+
+
+                        <h3
+                            class="product-name"
+                        >
+
+                            ${product.name}
+
+                        </h3>
+
+
+                        <span
+                            class="product-action"
+                        >
+
+                            VIEW PIECE
+
+                            <i
+                                class="fa-solid
+                                fa-arrow-right"
+                            ></i>
+
+                        </span>
+
+
+                    </div>
+
+                `;
+
+
+                /* =================================================
+                   OPEN PRODUCT
+                   ================================================= */
+
+                card.addEventListener(
+                    "click",
+                    () => {
+
+                        openProduct(
+                            product,
+                            media,
+                            index
+                        );
+
+                    }
+                );
+
+
+                /*
+                   ADD CARD TO GRID
+                */
+
+                grid.appendChild(
+                    card
+                );
+
+            }
+        );
+
+
+        console.log(
+            "ANAYALUXEE:",
+            products.length,
+            "PRODUCTS LOADED"
+        );
+
+    }
+
+
+    catch(error){
+
+        console.error(
+            "Jewelry catalog error:",
+            error
+        );
+
+
+        grid.innerHTML = `
+
+            <div class="loading">
+
+                <i
+                    class="fa-regular
+                    fa-circle-xmark"
+                ></i>
+
+
+                <p>
+                    CATALOG COULD NOT BE LOADED
+                </p>
+
+
+                <small>
+
+                    Please refresh after
+                    GitHub Pages deployment.
+
+                </small>
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+/* ============================================================
+   OPEN PRODUCT MODAL
+   ============================================================ */
+
+function openProduct(
+    product,
+    media,
+    index
+){
+
+    currentMedia =
+        media;
+
+    currentIndex =
+        0;
+
+
+    /*
+       PRODUCT NUMBER
+    */
+
+    document
+        .getElementById(
+            "modalNumber"
+        )
+        .textContent =
+        `JEWELRY ${String(index + 1)
+            .padStart(2,"0")}`;
+
+
+    /*
+       PRODUCT NAME
+    */
+
+    document
+        .getElementById(
+            "modalTitle"
+        )
+        .textContent =
+        product.name;
+
+
+    /*
+       INSTAGRAM
+    */
+
+    document
+        .getElementById(
+            "instagramOrder"
+        )
+        .href =
+        "https://www.instagram.com/anayaluxee/";
+
+
+    /*
+       SHOW MEDIA
+    */
+
+    renderMainMedia();
+
+    renderThumbnails();
+
+
+    /*
+       OPEN MODAL
+    */
+
+    document
+        .getElementById(
+            "productModal"
+        )
+        .classList.add(
+            "active"
+        );
+
+
+    /*
+       STOP PAGE SCROLL
+    */
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+/* ============================================================
+   CLOSE PRODUCT MODAL
    ============================================================ */
 
 function closeModal(){
 
     document
-        .getElementById("productModal")
-        .classList.remove("active");
+        .getElementById(
+            "productModal"
+        )
+        .classList.remove(
+            "active"
+        );
 
-    document.body.style.overflow="";
+
+    document.body.style.overflow =
+        "";
+
+
+    /*
+       STOP VIDEO
+    */
 
     const video =
         document.querySelector(
             "#mainMedia video"
         );
+
 
     if(video){
 
@@ -1429,43 +890,78 @@ function closeModal(){
 
 
 /* ============================================================
-   MAIN MEDIA
+   RENDER MAIN MEDIA
    ============================================================ */
 
 function renderMainMedia(){
 
     const container =
-        document.getElementById("mainMedia");
+        document.getElementById(
+            "mainMedia"
+        );
+
+
+    if(!currentMedia.length){
+
+        return;
+
+    }
+
 
     const item =
-        currentMedia[currentIndex];
+        currentMedia[
+            currentIndex
+        ];
 
 
     let html = "";
 
 
-    if(item.type === "video"){
+    /*
+       VIDEO
+    */
+
+    if(
+        item.type === "video"
+    ){
 
         html = `
 
             <video
+
                 src="${item.src}"
+
                 autoplay
+
                 muted
+
                 loop
+
                 playsinline
+
                 controls
+
             ></video>
 
         `;
 
-    }else{
+    }
+
+
+    /*
+       IMAGE
+    */
+
+    else{
 
         html = `
 
             <img
+
                 src="${item.src}"
+
                 alt="Anayaluxee Jewelry"
+
             >
 
         `;
@@ -1473,22 +969,44 @@ function renderMainMedia(){
     }
 
 
+    /*
+       MAIN MEDIA HTML
+    */
+
     container.innerHTML = `
 
         <button
+
             class="gallery-arrow prev"
+
             onclick="changeMedia(-1)"
+
         >
-            <i class="fa-solid fa-chevron-left"></i>
+
+            <i
+                class="fa-solid
+                fa-chevron-left"
+            ></i>
+
         </button>
+
 
         ${html}
 
+
         <button
+
             class="gallery-arrow next"
+
             onclick="changeMedia(1)"
+
         >
-            <i class="fa-solid fa-chevron-right"></i>
+
+            <i
+                class="fa-solid
+                fa-chevron-right"
+            ></i>
+
         </button>
 
     `;
@@ -1497,68 +1015,110 @@ function renderMainMedia(){
 
 
 /* ============================================================
-   THUMBNAILS
+   RENDER THUMBNAILS
    ============================================================ */
 
 function renderThumbnails(){
 
     const container =
-        document.getElementById("thumbnails");
-
-    container.innerHTML = "";
-
-
-    currentMedia.forEach((item,index)=>{
-
-        const thumb =
-            document.createElement("div");
-
-        thumb.className =
-            "thumb" +
-            (index === currentIndex
-                ? " active"
-                : "");
+        document.getElementById(
+            "thumbnails"
+        );
 
 
-        if(item.type === "video"){
+    container.innerHTML =
+        "";
 
-            thumb.innerHTML = `
 
-                <video
-                    src="${item.src}"
-                    muted
-                    preload="metadata"
-                ></video>
+    currentMedia.forEach(
+        (item,index) => {
 
-            `;
 
-        }else{
+            const thumb =
+                document.createElement(
+                    "div"
+                );
 
-            thumb.innerHTML = `
 
-                <img
-                    src="${item.src}"
-                    alt=""
-                >
+            thumb.className =
+                "thumb" +
+                (
+                    index === currentIndex
+                    ? " active"
+                    : ""
+                );
 
-            `;
+
+            /*
+               VIDEO THUMB
+            */
+
+            if(
+                item.type === "video"
+            ){
+
+                thumb.innerHTML = `
+
+                    <video
+
+                        src="${item.src}"
+
+                        muted
+
+                        preload="metadata"
+
+                    ></video>
+
+                `;
+
+            }
+
+
+            /*
+               IMAGE THUMB
+            */
+
+            else{
+
+                thumb.innerHTML = `
+
+                    <img
+
+                        src="${item.src}"
+
+                        alt=""
+
+                    >
+
+                `;
+
+            }
+
+
+            /*
+               THUMBNAIL CLICK
+            */
+
+            thumb.onclick =
+                () => {
+
+                    currentIndex =
+                        index;
+
+
+                    renderMainMedia();
+
+                    renderThumbnails();
+
+                };
+
+
+            container.appendChild(
+                thumb
+            );
 
         }
-
-
-        thumb.onclick = ()=>{
-
-            currentIndex = index;
-
-            renderMainMedia();
-            renderThumbnails();
-
-        };
-
-
-        container.appendChild(thumb);
-
-    });
+    );
 
 }
 
@@ -1569,14 +1129,39 @@ function renderThumbnails(){
 
 function changeMedia(direction){
 
-    if(!currentMedia.length)
+    if(!currentMedia.length){
+
         return;
 
+    }
 
-    currentIndex += direction;
+
+    currentIndex +=
+        direction;
 
 
-    if(currentIndex < 0){
+    /*
+       LAST -> FIRST
+    */
+
+    if(
+        currentIndex >=
+        currentMedia.length
+    ){
+
+        currentIndex =
+            0;
+
+    }
+
+
+    /*
+       FIRST -> LAST
+    */
+
+    if(
+        currentIndex < 0
+    ){
 
         currentIndex =
             currentMedia.length - 1;
@@ -1584,14 +1169,8 @@ function changeMedia(direction){
     }
 
 
-    if(currentIndex >= currentMedia.length){
-
-        currentIndex = 0;
-
-    }
-
-
     renderMainMedia();
+
     renderThumbnails();
 
 }
@@ -1604,87 +1183,142 @@ function changeMedia(direction){
 function toggleMenu(){
 
     document
-        .getElementById("navMenu")
-        .classList.toggle("active");
+        .getElementById(
+            "navMenu"
+        )
+        .classList.toggle(
+            "active"
+        );
 
 }
 
 
-/* Close menu after clicking link */
-
-document.querySelectorAll("nav a")
-.forEach(link=>{
-
-    link.addEventListener("click",()=>{
-
-        document
-            .getElementById("navMenu")
-            .classList.remove("active");
-
-    });
-
-});
-
-
 /* ============================================================
-   CLOSE MODAL WHEN CLICKING OUTSIDE
+   CLOSE MOBILE MENU AFTER LINK CLICK
    ============================================================ */
 
 document
-.getElementById("productModal")
-.addEventListener("click",(event)=>{
+    .querySelectorAll(
+        "nav a"
+    )
+    .forEach(
+        link => {
 
-    if(event.target.id === "productModal"){
+            link.addEventListener(
+                "click",
+                () => {
 
-        closeModal();
+                    document
+                        .getElementById(
+                            "navMenu"
+                        )
+                        .classList.remove(
+                            "active"
+                        );
 
-    }
+                }
+            );
 
-});
-
-
-/* ESC KEY */
-
-document.addEventListener("keydown",(event)=>{
-
-    if(event.key === "Escape"){
-
-        closeModal();
-
-    }
-
-    if(
-        event.key === "ArrowRight" &&
-        document
-            .getElementById("productModal")
-            .classList.contains("active")
-    ){
-
-        changeMedia(1);
-
-    }
-
-    if(
-        event.key === "ArrowLeft" &&
-        document
-            .getElementById("productModal")
-            .classList.contains("active")
-    ){
-
-        changeMedia(-1);
-
-    }
-
-});
+        }
+    );
 
 
 /* ============================================================
-   START
+   CLOSE MODAL OUTSIDE
+   ============================================================ */
+
+document
+    .getElementById(
+        "productModal"
+    )
+    .addEventListener(
+        "click",
+        event => {
+
+            if(
+                event.target.id ===
+                "productModal"
+            ){
+
+                closeModal();
+
+            }
+
+        }
+    );
+
+
+/* ============================================================
+   KEYBOARD CONTROLS
+   ============================================================ */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+
+        /*
+           ESC
+        */
+
+        if(
+            event.key === "Escape"
+        ){
+
+            closeModal();
+
+        }
+
+
+        /*
+           RIGHT ARROW
+        */
+
+        if(
+            event.key === "ArrowRight" &&
+            document
+                .getElementById(
+                    "productModal"
+                )
+                .classList
+                .contains(
+                    "active"
+                )
+        ){
+
+            changeMedia(1);
+
+        }
+
+
+        /*
+           LEFT ARROW
+        */
+
+        if(
+            event.key === "ArrowLeft" &&
+            document
+                .getElementById(
+                    "productModal"
+                )
+                .classList
+                .contains(
+                    "active"
+                )
+        ){
+
+            changeMedia(-1);
+
+        }
+
+    }
+);
+
+
+/* ============================================================
+   START AUTOMATIC CATALOG
    ============================================================ */
 
 loadProducts();
 
 </script>
-
-</body>
-</html>
