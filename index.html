@@ -4,25 +4,16 @@
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Anayaluxee | Luxury Jewelry, Designer Suits & Elegant Abayas</title>
 
 <meta name="description"
 content="Luxury jewelry, elegant abayas and designer suits by Anayaluxee.">
 
-<link rel="icon"
-type="image/png"
-href="./logo-brown.png?v=999">
-
-<link rel="shortcut icon"
-type="image/png"
-href="./logo-brown.png?v=999">
-
-<link rel="apple-touch-icon"
-href="./logo-brown.png?v=999">
+<link rel="icon" type="image/png" href="./logo-brown.png?v=999">
+<link rel="shortcut icon" type="image/png" href="./logo-brown.png?v=999">
+<link rel="apple-touch-icon" href="./logo-brown.png?v=999">
 
 <link
 href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap"
@@ -34,1138 +25,1203 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <style>
 
-/* =====================================================
+/* =========================================================
    GLOBAL
-===================================================== */
+========================================================= */
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 html,
 body{
-width:100%;
-overflow-x:hidden;
+    width:100%;
+    overflow-x:hidden;
 }
 
 body{
-font-family:'Montserrat',sans-serif;
-background:#f7efec;
-color:#2d1d1a;
+    font-family:'Montserrat',sans-serif;
+    background:#f7efec;
+    color:#2d1d1a;
+}
+
+button,
+a{
+    -webkit-tap-highlight-color:transparent;
 }
 
 
-/* =====================================================
+/* =========================================================
    HEADER
-===================================================== */
+========================================================= */
 
 header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:82px;
-padding:12px 5%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(247,239,236,0.92);
-backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);
-z-index:9999;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:82px;
+    padding:12px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(247,239,236,.92);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    z-index:9999;
+    border-bottom:1px solid rgba(74,18,13,.08);
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:14px;
-text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-decoration:none;
 }
 
 .logo img{
-width:50px;
-height:auto;
-display:block;
+    width:50px;
+    height:auto;
+    display:block;
 }
 
 .logo h1{
-font-family:'Cormorant Garamond',serif;
-font-size:2rem;
-font-weight:500;
-letter-spacing:2px;
-color:#4a120d;
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    font-weight:500;
+    letter-spacing:2px;
+    color:#4a120d;
 }
 
 nav{
-display:flex;
-align-items:center;
-gap:30px;
+    display:flex;
+    align-items:center;
+    gap:30px;
 }
 
 nav a{
-text-decoration:none;
-font-size:12px;
-letter-spacing:3px;
-color:#5c211a;
-transition:.4s;
+    text-decoration:none;
+    font-size:11px;
+    letter-spacing:2.5px;
+    color:#5c211a;
+    transition:.35s;
 }
 
 nav a:hover{
-opacity:.6;
+    opacity:.55;
 }
 
 .menu-toggle{
-display:none;
-font-size:1.8rem;
-color:#4a120d;
-cursor:pointer;
+    display:none;
+    font-size:1.8rem;
+    color:#4a120d;
+    cursor:pointer;
 }
 
 
-/* =====================================================
+/* =========================================================
    HERO
-===================================================== */
+========================================================= */
 
 .hero-slider{
-position:relative;
-width:100%;
-height:100vh;
-height:100svh;
-min-height:600px;
-overflow:hidden;
-background:#000;
+    position:relative;
+    width:100%;
+    height:100vh;
+    height:100svh;
+    min-height:600px;
+    overflow:hidden;
+    background:#000;
 }
 
 .desktop-video-grid{
-position:absolute;
-inset:0;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-width:100%;
-height:100%;
-background:#000;
+    position:absolute;
+    inset:0;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    width:100%;
+    height:100%;
+    background:#000;
 }
 
 .desktop-video-item{
-position:relative;
-width:100%;
-height:100%;
-overflow:hidden;
-background:#000;
+    position:relative;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#000;
 }
 
 .desktop-video-item::after{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,.22);
-z-index:2;
-pointer-events:none;
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.22);
+    z-index:2;
+    pointer-events:none;
 }
 
 .desktop-video-item video{
-width:100%;
-height:100%;
-display:block;
-object-fit:contain;
-object-position:center;
-background:#000;
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:contain;
+    object-position:center;
+    background:#000;
 }
 
 .mobile-video-slider{
-display:none;
-position:absolute;
-inset:0;
-width:100%;
-height:100%;
-background:#000;
+    display:none;
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    background:#000;
 }
 
 .mobile-slide{
-position:absolute;
-inset:0;
-width:100%;
-height:100%;
-opacity:0;
-visibility:hidden;
-transition:opacity 1s ease;
-}
-
-.mobile-slide.active{
-opacity:1;
-visibility:visible;
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
 }
 
 .mobile-slide video{
-width:100%;
-height:100%;
-display:block;
-object-fit:cover;
-object-position:center;
-background:#000;
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center;
 }
 
 .mobile-slide::after{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,.28);
-pointer-events:none;
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.28);
+    pointer-events:none;
 }
 
 .hero-content{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-z-index:10;
-width:90%;
-max-width:1200px;
-text-align:center;
-pointer-events:none;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:10;
+    width:90%;
+    max-width:1200px;
+    text-align:center;
+    pointer-events:none;
 }
 
 .hero-content h1{
-font-family:'Cormorant Garamond',serif;
-font-size:8rem;
-font-weight:400;
-line-height:.9;
-color:white;
-letter-spacing:2px;
-margin-bottom:25px;
-text-shadow:0 10px 25px rgba(0,0,0,.45);
-animation:heroGlow 4s infinite alternate;
+    font-family:'Cormorant Garamond',serif;
+    font-size:8rem;
+    font-weight:400;
+    line-height:.9;
+    color:white;
+    letter-spacing:2px;
+    margin-bottom:25px;
+    text-shadow:0 10px 25px rgba(0,0,0,.45);
 }
 
 .hero-content p{
-font-size:14px;
-font-weight:400;
-letter-spacing:5px;
-line-height:1.8;
-color:white;
-margin-bottom:35px;
-text-shadow:0 5px 15px rgba(0,0,0,.5);
+    font-size:14px;
+    letter-spacing:5px;
+    line-height:1.8;
+    color:white;
+    margin-bottom:35px;
+    text-shadow:0 5px 15px rgba(0,0,0,.5);
 }
 
 .hero-content a{
-display:inline-block;
-padding:16px 40px;
-border:1px solid white;
-color:white;
-text-decoration:none;
-font-size:12px;
-letter-spacing:3px;
-transition:.4s;
-pointer-events:auto;
+    display:inline-block;
+    padding:16px 40px;
+    border:1px solid white;
+    color:white;
+    text-decoration:none;
+    font-size:11px;
+    letter-spacing:3px;
+    transition:.4s;
+    pointer-events:auto;
 }
 
 .hero-content a:hover{
-background:white;
-color:#2d1d1a;
-}
-
-@keyframes heroGlow{
-from{
-text-shadow:0 0 10px rgba(255,255,255,.2);
-}
-to{
-text-shadow:0 0 30px rgba(255,255,255,.5);
-}
+    background:white;
+    color:#2d1d1a;
 }
 
 
-/* =====================================================
-   PHILOSOPHY
-===================================================== */
-
-.philosophy{
-padding:130px 8%;
-background:url('Our Philosophy.png') center center/cover no-repeat;
-position:relative;
-}
-
-.philosophy::before{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,.35);
-}
-
-.philosophy-content{
-position:relative;
-z-index:2;
-max-width:950px;
-margin:auto;
-text-align:center;
-color:white;
-}
-
-.philosophy h2{
-font-family:'Cormorant Garamond',serif;
-font-size:5rem;
-font-weight:400;
-margin-bottom:30px;
-}
-
-.philosophy p{
-font-size:18px;
-line-height:2;
-letter-spacing:1px;
-}
-
-
-/* =====================================================
-   PROMISE
-===================================================== */
-
-.promise{
-padding:120px 8%;
-background:#f2ece7;
-text-align:center;
-}
-
-.promise h2{
-font-family:'Cormorant Garamond',serif;
-font-size:5rem;
-margin-bottom:70px;
-color:#31413d;
-}
-
-.promise-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:40px;
-}
-
-.promise-box{
-padding:30px;
-transition:.5s;
-}
-
-.promise-box:hover{
-transform:translateY(-10px);
-}
-
-.promise-box i{
-font-size:4rem;
-margin-bottom:25px;
-color:#31413d;
-}
-
-.promise-box h3{
-font-family:'Cormorant Garamond',serif;
-font-size:2rem;
-font-weight:500;
-line-height:1.5;
-color:#31413d;
-}
-
-
-/* =====================================================
-   COLLECTION
-===================================================== */
-
-.collection{
-padding:120px 5%;
-background:white;
-}
+/* =========================================================
+   COMMON SECTION
+========================================================= */
 
 .section-title{
-text-align:center;
-margin-bottom:70px;
+    text-align:center;
+    padding:0 20px;
+    margin-bottom:55px;
 }
 
 .section-title h5{
-font-size:12px;
-letter-spacing:5px;
-margin-bottom:18px;
-color:#8b5e57;
+    font-size:10px;
+    letter-spacing:5px;
+    margin-bottom:15px;
+    color:#8b5e57;
 }
 
 .section-title h2{
-font-family:'Cormorant Garamond',serif;
-font-size:4.5rem;
-font-weight:400;
-color:#2d1d1a;
+    font-family:'Cormorant Garamond',serif;
+    font-size:4.3rem;
+    font-weight:400;
+    line-height:1;
+    color:#2d1d1a;
 }
 
-.collection-category{
-margin-bottom:110px;
+
+/* =========================================================
+   PACKING VIDEOS
+========================================================= */
+
+.packing-section{
+    padding:105px 5% 110px;
+    background:#f7efec;
+}
+
+.packing-grid{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.packing-card{
+    position:relative;
+    aspect-ratio:16/10;
+    overflow:hidden;
+    background:#eee4df;
+    cursor:pointer;
+}
+
+.packing-card video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.8s;
+}
+
+.packing-card:hover video{
+    transform:scale(1.04);
+}
+
+.packing-label{
+    position:absolute;
+    left:18px;
+    bottom:18px;
+    padding:8px 13px;
+    background:rgba(255,255,255,.9);
+    color:#4a120d;
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+
+/* =========================================================
+   REVIEWS
+========================================================= */
+
+.reviews-section{
+    padding:110px 5%;
+    background:white;
+}
+
+.reviews-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.review-card{
+    background:#f8f1ee;
+    padding:35px 30px;
+    text-align:center;
+    border:1px solid rgba(74,18,13,.08);
+    transition:.4s;
+}
+
+.review-card:hover{
+    transform:translateY(-6px);
+}
+
+.review-stars{
+    color:#9a6b28;
+    font-size:15px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.review-text{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.45rem;
+    line-height:1.45;
+    color:#3d2925;
+    margin-bottom:22px;
+}
+
+.review-name{
+    font-size:10px;
+    letter-spacing:3px;
+    color:#8b5e57;
+    text-transform:uppercase;
+}
+
+.no-data{
+    grid-column:1/-1;
+    text-align:center;
+    padding:45px;
+    color:#8b5e57;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+
+/* =========================================================
+   PROMISE
+========================================================= */
+
+.promise{
+    padding:115px 8%;
+    background:#f2ece7;
+    text-align:center;
+}
+
+.promise h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:4.8rem;
+    margin-bottom:65px;
+    color:#31413d;
+    font-weight:400;
+}
+
+.promise-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:35px;
+}
+
+.promise-box{
+    padding:25px;
+    transition:.4s;
+}
+
+.promise-box:hover{
+    transform:translateY(-8px);
+}
+
+.promise-box i{
+    font-size:3.5rem;
+    margin-bottom:22px;
+    color:#31413d;
+}
+
+.promise-box h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.8rem;
+    font-weight:500;
+    line-height:1.4;
+    color:#31413d;
+}
+
+
+/* =========================================================
+   COLLECTION
+========================================================= */
+
+.collection{
+    padding:115px 0 130px;
+    background:white;
+}
+
+.collection-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+}
+
+.collection-item{
+    height:75vh;
+    min-height:550px;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.collection-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:1s;
+}
+
+.collection-item:hover img{
+    transform:scale(1.06);
+}
+
+.collection-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.65),
+        transparent 55%
+    );
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:45px;
+}
+
+.collection-overlay span{
+    color:#e7d4ce;
+    font-size:10px;
+    letter-spacing:4px;
+    margin-bottom:12px;
+}
+
+.collection-overlay h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:3.8rem;
+    font-weight:400;
+    color:white;
+}
+
+
+/* =========================================================
+   PRODUCT CATALOG
+========================================================= */
+
+.catalog-section{
+    padding:110px 5% 130px;
+    background:#fff;
+}
+
+.catalog-container{
+    max-width:1400px;
+    margin:auto;
+}
+
+.category-block{
+    margin-bottom:100px;
 }
 
 .category-heading{
-max-width:1400px;
-margin:0 auto 35px;
-display:flex;
-justify-content:space-between;
-align-items:end;
-border-bottom:1px solid rgba(45,29,26,.12);
-padding-bottom:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    border-bottom:1px solid rgba(45,29,26,.12);
+    padding-bottom:18px;
+    margin-bottom:38px;
 }
 
 .category-heading h3{
-font-family:'Cormorant Garamond',serif;
-font-size:3rem;
-font-weight:400;
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.8rem;
+    font-weight:400;
 }
 
 .category-heading span{
-font-size:10px;
-letter-spacing:3px;
-color:#8b5e57;
+    font-size:9px;
+    letter-spacing:3px;
+    color:#8b5e57;
 }
 
 .products-grid{
-max-width:1400px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:55px 24px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:45px 22px;
 }
 
 .product-card{
-cursor:pointer;
-position:relative;
+    position:relative;
+    cursor:pointer;
 }
 
 .product-media{
-position:relative;
-width:100%;
-aspect-ratio:4/5;
-overflow:hidden;
-background:#f5efec;
+    position:relative;
+    width:100%;
+    aspect-ratio:4/5;
+    overflow:hidden;
+    background:#f5efec;
 }
 
-.product-media img,
-.product-media video{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-transition:1s ease;
+.product-media > img,
+.product-media > video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.8s;
 }
 
-.product-card:hover .product-media img,
-.product-card:hover .product-media video{
-transform:scale(1.045);
-}
-
-.product-media::after{
-content:"";
-position:absolute;
-inset:0;
-background:linear-gradient(
-to top,
-rgba(45,29,26,.25),
-transparent 35%
-);
-opacity:0;
-transition:.5s;
-pointer-events:none;
-}
-
-.product-card:hover .product-media::after{
-opacity:1;
-}
-
-.video-badge{
-position:absolute;
-top:14px;
-right:14px;
-z-index:3;
-width:34px;
-height:34px;
-border-radius:50%;
-background:rgba(255,255,255,.9);
-display:flex;
-align-items:center;
-justify-content:center;
-color:#4a120d;
-font-size:11px;
-}
-
-.media-count{
-position:absolute;
-bottom:14px;
-left:14px;
-z-index:3;
-padding:7px 11px;
-background:rgba(255,255,255,.88);
-color:#4a120d;
-font-size:9px;
-letter-spacing:2px;
+.product-card:hover .product-media > img,
+.product-card:hover .product-media > video{
+    transform:scale(1.04);
 }
 
 .product-info{
-padding:18px 4px 0;
+    padding:15px 3px 0;
 }
 
 .product-number{
-display:block;
-font-size:9px;
-letter-spacing:3px;
-color:#a07b73;
-margin-bottom:7px;
+    display:block;
+    font-size:8px;
+    letter-spacing:3px;
+    color:#a07b73;
+    margin-bottom:7px;
 }
 
 .product-name{
-font-family:'Cormorant Garamond',serif;
-font-size:1.55rem;
-font-weight:500;
-line-height:1.15;
-color:#2d1d1a;
-}
-
-.product-action{
-display:inline-flex;
-align-items:center;
-gap:8px;
-margin-top:12px;
-font-size:9px;
-letter-spacing:2px;
-color:#8b5e57;
-}
-
-.product-action i{
-font-size:8px;
-transition:.3s;
-}
-
-.product-card:hover .product-action i{
-transform:translateX(5px);
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.5rem;
+    font-weight:500;
+    color:#2d1d1a;
+    line-height:1.1;
 }
 
 
-/* =====================================================
-   LOADING
-===================================================== */
+/* SMALL MEDIA THUMBNAILS */
 
-.loading{
-grid-column:1/-1;
-text-align:center;
-padding:80px 20px;
-color:#8b5e57;
+.product-thumbnails{
+    display:flex;
+    gap:6px;
+    margin-top:11px;
+    overflow-x:auto;
+    scrollbar-width:none;
 }
 
-.loading i{
-font-size:28px;
-margin-bottom:20px;
+.product-thumbnails::-webkit-scrollbar{
+    display:none;
 }
 
-.loading p{
-font-size:11px;
-letter-spacing:3px;
+.product-thumb{
+    flex:0 0 42px;
+    width:42px;
+    height:42px;
+    overflow:hidden;
+    border:1px solid rgba(74,18,13,.12);
+    background:#eee;
+}
+
+.product-thumb img,
+.product-thumb video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
 
-/* =====================================================
+/* BUY BUTTON */
+
+.buy-now{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    margin-top:12px;
+    padding:12px 15px;
+    background:#4a120d;
+    color:white;
+    text-decoration:none;
+    border:0;
+    cursor:pointer;
+    font-family:'Montserrat',sans-serif;
+    font-size:9px;
+    letter-spacing:2px;
+    transition:.35s;
+}
+
+.buy-now:hover{
+    background:#6a2820;
+    transform:translateY(-2px);
+}
+
+
+/* =========================================================
    PRODUCT MODAL
-===================================================== */
+========================================================= */
 
 .modal{
-position:fixed;
-inset:0;
-background:rgba(35,18,15,.72);
-backdrop-filter:blur(8px);
-z-index:10000;
-display:none;
-align-items:center;
-justify-content:center;
-padding:25px;
+    position:fixed;
+    inset:0;
+    background:rgba(35,18,15,.75);
+    backdrop-filter:blur(8px);
+    z-index:20000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
 }
 
 .modal.active{
-display:flex;
+    display:flex;
 }
 
 .modal-box{
-width:min(1150px,96vw);
-max-height:92vh;
-overflow:auto;
-background:#fdf9f7;
-position:relative;
-display:grid;
-grid-template-columns:1.15fr .85fr;
-box-shadow:0 30px 100px rgba(0,0,0,.3);
+    width:min(1150px,96vw);
+    max-height:94vh;
+    overflow:auto;
+    background:#fdf9f7;
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    position:relative;
 }
 
 .modal-close{
-position:absolute;
-top:18px;
-right:20px;
-z-index:20;
-width:40px;
-height:40px;
-border:0;
-border-radius:50%;
-background:rgba(255,255,255,.9);
-color:#4a120d;
-cursor:pointer;
-font-size:17px;
+    position:absolute;
+    top:16px;
+    right:16px;
+    z-index:20;
+    width:40px;
+    height:40px;
+    border:0;
+    border-radius:50%;
+    background:rgba(255,255,255,.92);
+    color:#4a120d;
+    cursor:pointer;
+    font-size:16px;
 }
 
 .modal-gallery{
-background:#f1e9e5;
-min-height:650px;
-display:flex;
-flex-direction:column;
+    background:#f1e9e5;
+    min-height:650px;
+    display:flex;
+    flex-direction:column;
 }
 
 .main-media{
-flex:1;
-min-height:560px;
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
+    flex:1;
+    min-height:560px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
 }
 
 .main-media img,
 .main-media video{
-width:100%;
-height:100%;
-max-height:650px;
-object-fit:contain;
-display:block;
+    width:100%;
+    height:100%;
+    max-height:650px;
+    object-fit:contain;
+    display:block;
 }
 
 .gallery-arrow{
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-width:42px;
-height:42px;
-border:0;
-border-radius:50%;
-background:rgba(255,255,255,.9);
-color:#4a120d;
-cursor:pointer;
-z-index:5;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:42px;
+    height:42px;
+    border:0;
+    border-radius:50%;
+    background:rgba(255,255,255,.9);
+    color:#4a120d;
+    cursor:pointer;
+    z-index:5;
 }
 
 .gallery-arrow.prev{
-left:18px;
+    left:18px;
 }
 
 .gallery-arrow.next{
-right:18px;
+    right:18px;
 }
 
 .thumbnails{
-height:105px;
-padding:12px;
-display:flex;
-gap:10px;
-overflow-x:auto;
-background:#fff;
+    height:95px;
+    padding:10px;
+    display:flex;
+    gap:9px;
+    overflow-x:auto;
+    background:#fff;
 }
 
 .thumb{
-min-width:78px;
-height:80px;
-border:1px solid transparent;
-cursor:pointer;
-overflow:hidden;
-background:#eee;
+    flex:0 0 72px;
+    height:72px;
+    border:1px solid transparent;
+    cursor:pointer;
+    overflow:hidden;
+    background:#eee;
 }
 
 .thumb.active{
-border-color:#7c4b43;
+    border-color:#7c4b43;
 }
 
 .thumb img,
 .thumb video{
-width:100%;
-height:100%;
-object-fit:cover;
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
 .modal-info{
-padding:70px 55px;
-display:flex;
-flex-direction:column;
-justify-content:center;
+    padding:70px 50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
 .modal-info small{
-color:#9b746c;
-font-size:9px;
-letter-spacing:4px;
-margin-bottom:18px;
+    color:#9b746c;
+    font-size:9px;
+    letter-spacing:4px;
+    margin-bottom:18px;
 }
 
 .modal-info h2{
-font-family:'Cormorant Garamond',serif;
-font-size:4rem;
-font-weight:400;
-line-height:1;
-color:#2d1d1a;
-margin-bottom:25px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:4rem;
+    font-weight:400;
+    line-height:1;
+    color:#2d1d1a;
+    margin-bottom:25px;
 }
 
 .modal-divider{
-width:65px;
-height:1px;
-background:#b9938b;
-margin-bottom:25px;
+    width:65px;
+    height:1px;
+    background:#b9938b;
+    margin-bottom:25px;
 }
 
 .modal-info p{
-color:#6c5752;
-font-size:13px;
-line-height:2;
-margin-bottom:30px;
+    color:#6c5752;
+    font-size:13px;
+    line-height:2;
+    margin-bottom:30px;
 }
 
-.order-btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-gap:12px;
-width:100%;
-padding:17px 25px;
-background:#4a120d;
-color:#fff;
-text-decoration:none;
-letter-spacing:2px;
-font-size:10px;
-transition:.4s;
-}
-
-.order-btn:hover{
-background:#6a2820;
-transform:translateY(-2px);
+.modal-buy{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:17px 20px;
+    background:#4a120d;
+    color:white;
+    text-decoration:none;
+    font-size:10px;
+    letter-spacing:2px;
 }
 
 .instagram-note{
-margin-top:15px;
-text-align:center;
-font-size:9px;
-letter-spacing:2px;
-color:#8b5e57;
+    margin-top:14px;
+    text-align:center;
+    font-size:9px;
+    letter-spacing:2px;
+    color:#8b5e57;
 }
 
 
-/* =====================================================
+/* =========================================================
    FOUNDER
-===================================================== */
+========================================================= */
 
 .founder{
-padding:130px 8%;
-background:#f7efec;
+    padding:125px 8%;
+    background:#f7efec;
 }
 
 .founder-box{
-max-width:1000px;
-margin:auto;
-text-align:center;
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
 }
 
 .founder-box h2{
-font-family:'Cormorant Garamond',serif;
-font-size:5rem;
-margin-bottom:35px;
-color:#2d1d1a;
+    font-family:'Cormorant Garamond',serif;
+    font-size:4.8rem;
+    font-weight:400;
+    margin-bottom:35px;
 }
 
 .founder-box p{
-font-size:16px;
-line-height:2.1;
-color:#5f504c;
-margin-bottom:20px;
+    font-size:15px;
+    line-height:2.1;
+    color:#5f504c;
+    margin-bottom:20px;
 }
 
 
-/* =====================================================
-   FOOTER
-===================================================== */
+/* =========================================================
+   CONTACT / FOOTER
+========================================================= */
 
 footer{
-background:#2b0a07;
-padding:90px 8% 40px;
-color:white;
+    background:#2b0a07;
+    padding:90px 8% 40px;
+    color:white;
 }
 
 .footer-grid{
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:50px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:50px;
 }
 
 .footer-logo img{
-width:110px;
-height:auto;
-margin-bottom:20px;
+    width:110px;
+    height:auto;
+    margin-bottom:20px;
 }
 
 .footer-title{
-font-family:'Cormorant Garamond',serif;
-font-size:2rem;
-margin-bottom:22px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    margin-bottom:22px;
 }
 
 .footer-links a{
-display:block;
-text-decoration:none;
-color:white;
-margin-bottom:14px;
-transition:.3s;
+    display:block;
+    text-decoration:none;
+    color:white;
+    margin-bottom:13px;
+    transition:.3s;
+    font-size:14px;
 }
 
 .footer-links a:hover{
-opacity:.7;
-transform:translateX(4px);
+    opacity:.7;
+    transform:translateX(4px);
 }
 
 .copyright{
-text-align:center;
-margin-top:60px;
-font-size:13px;
-opacity:.7;
+    text-align:center;
+    margin-top:60px;
+    font-size:12px;
+    opacity:.7;
 }
 
 
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media(max-width:1024px)
-and (min-width:769px){
-
-.hero-content h1{
-font-size:6rem;
-}
-
-.hero-content p{
-font-size:12px;
-letter-spacing:3px;
-}
-
-.promise-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.products-grid{
-grid-template-columns:repeat(3,1fr);
-}
-
-}
-
-
-/* =====================================================
+/* =========================================================
    MOBILE
-===================================================== */
+========================================================= */
+
+@media(max-width:1024px){
+
+    .products-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .promise-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .reviews-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
 
 @media(max-width:768px){
 
-header{
-height:70px;
-padding:10px 5%;
-}
+    header{
+        height:70px;
+        padding:10px 5%;
+    }
 
-.menu-toggle{
-display:block;
-z-index:10001;
-}
+    .logo img{
+        width:38px;
+    }
 
-nav{
-position:fixed;
-top:0;
-right:-100%;
-width:260px;
-height:100svh;
-background:#f7efec;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-gap:0;
-transition:.5s;
-box-shadow:-10px 0 30px rgba(0,0,0,.1);
-}
+    .logo h1{
+        font-size:1.45rem;
+        letter-spacing:1.5px;
+    }
 
-nav.active{
-right:0;
-}
+    .menu-toggle{
+        display:block;
+        z-index:10001;
+    }
 
-nav a{
-font-size:12px;
-margin:15px 0;
-}
+    nav{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:260px;
+        height:100svh;
+        background:#f7efec;
+        flex-direction:column;
+        justify-content:center;
+        gap:0;
+        transition:.5s;
+        box-shadow:-10px 0 30px rgba(0,0,0,.1);
+    }
 
-.logo img{
-width:38px;
-}
+    nav.active{
+        right:0;
+    }
 
-.logo h1{
-font-size:1.45rem;
-letter-spacing:1.5px;
-}
+    nav a{
+        margin:16px 0;
+        font-size:11px;
+    }
 
-.hero-slider{
-height:100svh;
-min-height:600px;
-}
+    .desktop-video-grid{
+        display:none;
+    }
 
-.desktop-video-grid{
-display:none;
-}
+    .mobile-video-slider{
+        display:block;
+    }
 
-.mobile-video-slider{
-display:block;
-}
+    .hero-slider{
+        min-height:600px;
+    }
 
-.mobile-slide video{
-width:100%;
-height:100%;
-object-fit:cover;
-object-position:center;
-}
+    .hero-content{
+        width:92%;
+    }
 
-.hero-content{
-width:92%;
-padding:0 10px;
-}
+    .hero-content h1{
+        font-size:3.7rem;
+        line-height:.95;
+        margin-bottom:20px;
+    }
 
-.hero-content h1{
-font-size:3.7rem;
-line-height:.95;
-letter-spacing:1px;
-margin-bottom:20px;
-}
+    .hero-content p{
+        font-size:9px;
+        letter-spacing:2px;
+        line-height:1.8;
+        margin-bottom:28px;
+    }
 
-.hero-content p{
-font-size:9px;
-line-height:1.8;
-letter-spacing:2px;
-margin-bottom:28px;
-}
+    .hero-content a{
+        padding:13px 24px;
+        font-size:10px;
+        letter-spacing:2px;
+    }
 
-.hero-content a{
-padding:13px 24px;
-font-size:10px;
-letter-spacing:2px;
-}
+    .section-title h2{
+        font-size:3rem;
+    }
 
-.philosophy{
-padding:90px 25px;
-}
+    .packing-section,
+    .reviews-section,
+    .catalog-section{
+        padding:80px 18px;
+    }
 
-.philosophy h2{
-font-size:3rem;
-}
+    .packing-grid{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
 
-.philosophy p{
-font-size:13px;
-line-height:2;
-}
+    .reviews-grid{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
 
-.promise{
-padding:90px 25px;
-}
+    .review-card{
+        padding:30px 24px;
+    }
 
-.promise h2{
-font-size:3rem;
-margin-bottom:50px;
-}
+    .promise{
+        padding:85px 25px;
+    }
 
-.promise-grid{
-grid-template-columns:1fr;
-gap:10px;
-}
+    .promise h2{
+        font-size:3rem;
+        margin-bottom:50px;
+    }
 
-.promise-box{
-padding:25px 10px;
-}
+    .promise-grid{
+        grid-template-columns:1fr;
+        gap:5px;
+    }
 
-.promise-box i{
-font-size:3rem;
-}
+    .collection{
+        padding:80px 0;
+    }
 
-.promise-box h3{
-font-size:1.8rem;
-}
+    .collection-grid{
+        grid-template-columns:1fr;
+    }
 
-.collection{
-padding:90px 18px;
-}
+    .collection-item{
+        height:75vh;
+        min-height:450px;
+    }
 
-.section-title{
-margin-bottom:55px;
-}
+    .collection-overlay{
+        padding:35px;
+    }
 
-.section-title h2{
-font-size:3rem;
-line-height:1.1;
-}
+    .collection-overlay h3{
+        font-size:3rem;
+    }
 
-.collection-category{
-margin-bottom:80px;
-}
+    .category-heading{
+        align-items:center;
+    }
 
-.category-heading{
-margin-bottom:25px;
-}
+    .category-heading h3{
+        font-size:2.3rem;
+    }
 
-.category-heading h3{
-font-size:2.3rem;
-}
+    .category-heading span{
+        font-size:7px;
+    }
 
-.category-heading span{
-font-size:8px;
-letter-spacing:2px;
-}
+    .products-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:35px 12px;
+    }
 
-.products-grid{
-grid-template-columns:repeat(2,1fr);
-gap:38px 12px;
-}
+    .product-media{
+        aspect-ratio:3/4;
+    }
 
-.product-media{
-aspect-ratio:3/4;
-}
+    .product-name{
+        font-size:1.25rem;
+    }
 
-.product-name{
-font-size:1.25rem;
-}
+    .product-thumb{
+        width:36px;
+        height:36px;
+        flex-basis:36px;
+    }
 
-.product-number{
-font-size:7px;
-}
+    .buy-now{
+        padding:11px 8px;
+        font-size:8px;
+    }
 
-.product-action{
-font-size:7px;
-letter-spacing:1.5px;
-}
+    .modal{
+        padding:8px;
+    }
 
-.modal{
-padding:10px;
-}
+    .modal-box{
+        display:block;
+        max-height:96vh;
+    }
 
-.modal-box{
-display:block;
-max-height:95vh;
-}
+    .modal-gallery{
+        min-height:auto;
+    }
 
-.modal-gallery{
-min-height:auto;
-}
+    .main-media{
+        min-height:52vh;
+        height:52vh;
+    }
 
-.main-media{
-min-height:55vh;
-height:55vh;
-}
+    .main-media img,
+    .main-media video{
+        max-height:52vh;
+    }
 
-.main-media img,
-.main-media video{
-max-height:55vh;
-}
+    .thumbnails{
+        height:78px;
+    }
 
-.thumbnails{
-height:82px;
-}
+    .thumb{
+        width:58px;
+        height:58px;
+        flex-basis:58px;
+    }
 
-.thumb{
-min-width:58px;
-height:58px;
-}
+    .modal-info{
+        padding:32px 24px 28px;
+    }
 
-.modal-info{
-padding:35px 25px 30px;
-}
+    .modal-info h2{
+        font-size:3rem;
+    }
 
-.modal-info h2{
-font-size:3rem;
-}
+    .founder{
+        padding:85px 25px;
+    }
 
-.founder{
-padding:90px 25px;
-}
+    .founder-box h2{
+        font-size:3rem;
+    }
 
-.founder-box h2{
-font-size:3rem;
-}
+    .founder-box p{
+        font-size:13px;
+        line-height:2;
+    }
 
-.founder-box p{
-font-size:13px;
-line-height:2;
-}
-
-.footer-grid{
-grid-template-columns:1fr;
-text-align:center;
-gap:40px;
-}
+    .footer-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:40px;
+    }
 
 }
-
-
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
 
 @media(max-width:400px){
 
-.hero-content h1{
-font-size:3rem;
+    .hero-content h1{
+        font-size:3rem;
+    }
+
+    .products-grid{
+        gap:30px 9px;
+    }
+
+    .product-name{
+        font-size:1.1rem;
+    }
+
 }
 
-.hero-content p{
-font-size:8px;
-letter-spacing:1.5px;
-}
 
-.hero-content a{
-padding:12px 20px;
-}
-
-}
-
-
-/* =====================================================
+/* =========================================================
    SCROLLBAR
-===================================================== */
+========================================================= */
 
 ::-webkit-scrollbar{
-width:7px;
+    width:7px;
 }
 
 ::-webkit-scrollbar-track{
-background:#f7efec;
+    background:#f7efec;
 }
 
 ::-webkit-scrollbar-thumb{
-background:#8b5e57;
+    background:#8b5e57;
 }
 
 </style>
 
 </head>
 
-
 <body>
 
 
-<!-- =====================================================
+<!-- =========================================================
      HEADER
-===================================================== -->
+========================================================= -->
 
 <header>
 
-<a href="#" class="logo">
+<a href="#home" class="logo">
 
-<img
-src="logo-brown.png"
-alt="Anayaluxee Logo">
+<img src="logo-brown.png" alt="Anayaluxee">
 
 <h1>ANAYALUXEE</h1>
 
 </a>
-
 
 <div
 class="menu-toggle"
@@ -1175,34 +1231,27 @@ onclick="toggleMenu()">
 
 </div>
 
-
 <nav id="navMenu">
 
-<a href="#collection">
-COLLECTION
-</a>
-
-<a href="#founder">
-FOUNDER
-</a>
-
-<a href="#social">
-SOCIAL
-</a>
+<a href="#home">HOME</a>
+<a href="#jewelry">JEWELRY</a>
+<a href="#suits">SUITS</a>
+<a href="#abayas">ABAYAS</a>
+<a href="#founder">FOUNDER</a>
+<a href="#contact">CONTACT</a>
 
 </nav>
 
 </header>
 
 
-<!-- =====================================================
+<!-- =========================================================
      HERO
-===================================================== -->
+========================================================= -->
 
 <section
 class="hero-slider"
-id="heroSlider">
-
+id="home">
 
 <div
 class="desktop-video-grid"
@@ -1227,7 +1276,7 @@ id="desktopVideoGrid">
 class="mobile-video-slider"
 id="mobileVideoSlider">
 
-<div class="mobile-slide active">
+<div class="mobile-slide">
 
 <video
 muted
@@ -1249,7 +1298,7 @@ preload="auto">
 LUXURY JEWELRY · DESIGNER SUITS · ELEGANT ABAYAS
 </p>
 
-<a href="#collection">
+<a href="#jewelry">
 EXPLORE COLLECTION
 </a>
 
@@ -1258,38 +1307,68 @@ EXPLORE COLLECTION
 </section>
 
 
-<!-- =====================================================
-     PHILOSOPHY
-===================================================== -->
+<!-- =========================================================
+     PACKING VIDEOS
+     AUTOMATIC FROM products/packing/
+========================================================= -->
 
-<section class="philosophy">
+<section
+class="packing-section"
+id="packing">
 
-<div class="philosophy-content">
+<div class="section-title">
 
-<h2>
-Own the moment,
-wear Anaya
-</h2>
+<h5>BEHIND THE BEAUTY</h5>
 
-<p>
-Premium fabrics, handpicked designs,
-and jewelry that tells a story.
+<h2>Our Packing</h2>
 
-Anayaluxee brings you an exclusive range
-of Pakistani suits, elegant abayas,
-and luxury accessories — all under one roof.
+</div>
 
-Quality you can trust, style you will love.
-</p>
+<div
+class="packing-grid"
+id="packingGrid">
+
+<div class="no-data">
+LOADING PACKING VIDEOS...
+</div>
 
 </div>
 
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
+     CUSTOMER REVIEWS
+========================================================= -->
+
+<section
+class="reviews-section"
+id="reviews">
+
+<div class="section-title">
+
+<h5>OUR CUSTOMERS</h5>
+
+<h2>Customer Reviews</h2>
+
+</div>
+
+<div
+class="reviews-grid"
+id="reviewsGrid">
+
+<div class="no-data">
+LOADING REVIEWS...
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
      PROMISE
-===================================================== -->
+========================================================= -->
 
 <section class="promise">
 
@@ -1301,42 +1380,31 @@ Quality you can trust, style you will love.
 
 <i class="fa-solid fa-truck"></i>
 
-<h3>
-Pan India Shipping
-</h3>
+<h3>Pan India Shipping</h3>
 
 </div>
-
 
 <div class="promise-box">
 
 <i class="fa-solid fa-gem"></i>
 
-<h3>
-Premium Skin Friendly Jewelry
-</h3>
+<h3>Premium Skin Friendly Jewelry</h3>
 
 </div>
-
 
 <div class="promise-box">
 
 <i class="fa-solid fa-shirt"></i>
 
-<h3>
-High Quality Designer Suits & Abayas
-</h3>
+<h3>High Quality Designer Suits & Abayas</h3>
 
 </div>
-
 
 <div class="promise-box">
 
 <i class="fa-solid fa-headset"></i>
 
-<h3>
-24/7 Customer Support
-</h3>
+<h3>24/7 Customer Support</h3>
 
 </div>
 
@@ -1345,185 +1413,104 @@ High Quality Designer Suits & Abayas
 </section>
 
 
-<!-- =====================================================
-     AUTOMATIC COLLECTION
-===================================================== -->
+<!-- =========================================================
+     COLLECTION VISUAL
+========================================================= -->
 
-<section
-class="collection"
-id="collection">
-
+<section class="collection">
 
 <div class="section-title">
 
 <h5>THE COLLECTION</h5>
 
-<h2>
-Luxury Crafted For Modern Elegance
-</h2>
+<h2>Luxury Crafted For Modern Elegance</h2>
 
 </div>
 
-
-<!-- ================= JEWELRY ================= -->
-
-<div class="collection-category">
-
-<div class="category-heading">
-
-<h3>
-Jewelry
-</h3>
-
-<span id="jewelryCount">
-LOADING...
-</span>
-
-</div>
-
-
-<div
-class="products-grid"
-id="jewelryGrid">
-
-<div class="loading">
-
-<i class="fa-regular fa-gem"></i>
-
-<p>
-CURATING JEWELRY COLLECTION...
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- ================= SUITS ================= -->
-
-<div class="collection-category">
-
-<div class="category-heading">
-
-<h3>
-Designer Suits
-</h3>
-
-<span id="suitsCount">
-LOADING...
-</span>
-
-</div>
-
-
-<div
-class="products-grid"
-id="suitsGrid">
-
-<div class="loading">
-
-<i class="fa-solid fa-shirt"></i>
-
-<p>
-CURATING SUIT COLLECTION...
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-</section>
-
-
-<!-- =====================================================
-     PRODUCT MODAL
-===================================================== -->
-
-<div
-class="modal"
-id="productModal">
-
-<div class="modal-box">
-
-
-<button
-class="modal-close"
-onclick="closeModal()">
-
-<i class="fa-solid fa-xmark"></i>
-
-</button>
-
-
-<div class="modal-gallery">
-
-
-<div
-class="main-media"
-id="mainMedia">
-
-</div>
-
-
-<div
-class="thumbnails"
-id="thumbnails">
-</div>
-
-
-</div>
-
-
-<div class="modal-info">
-
-<small id="modalNumber"></small>
-
-<h2 id="modalTitle"></h2>
-
-<div class="modal-divider"></div>
-
-<p id="modalDescription">
-A thoughtfully selected piece from the
-Anayaluxee collection.
-
-For details, pricing and availability,
-connect with us directly.
-</p>
-
+<div class="collection-grid">
 
 <a
-id="instagramOrder"
-class="order-btn"
-href="https://www.instagram.com/anayaluxee/"
-target="_blank"
-rel="noopener noreferrer">
+href="#jewelry"
+class="collection-item">
 
-<i class="fa-brands fa-instagram"></i>
+<img src="jewelry.jpg"
+alt="Anayaluxee Jewelry">
 
-ORDER ON INSTAGRAM DM
+<div class="collection-overlay">
+
+<span>LUXURY ESSENTIALS</span>
+
+<h3>Jewelry</h3>
+
+</div>
 
 </a>
 
 
-<div class="instagram-note">
-@ANAYALUXEE
+<a
+href="#suits"
+class="collection-item">
+
+<img src="suits.jpg"
+alt="Anayaluxee Designer Suits">
+
+<div class="collection-overlay">
+
+<span>REFINED COUTURE</span>
+
+<h3>Suits</h3>
+
+</div>
+
+</a>
+
+
+<a
+href="#abayas"
+class="collection-item">
+
+<img src="abayas.jpg"
+alt="Anayaluxee Abayas">
+
+<div class="collection-overlay">
+
+<span>ELEGANT MODESTY</span>
+
+<h3>Abayas</h3>
+
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     AUTOMATIC PRODUCT CATALOGS
+========================================================= -->
+
+<section
+class="catalog-section"
+id="catalog">
+
+<div
+class="catalog-container"
+id="catalogContainer">
+
+<div class="no-data">
+CURATING YOUR COLLECTION...
 </div>
 
 </div>
 
-</div>
-
-</div>
+</section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      FOUNDER
-===================================================== -->
+========================================================= -->
 
 <section
 class="founder"
@@ -1531,9 +1518,7 @@ id="founder">
 
 <div class="founder-box">
 
-<h2>
-From Our Founder
-</h2>
+<h2>From Our Founder</h2>
 
 <p>
 Anayaluxee was born from a passion
@@ -1545,7 +1530,7 @@ feel confident in her own unique style.
 <p>
 What began as a dream soon evolved
 into a journey of creating pieces
-that blend luxury with grace—
+that blend luxury with grace —
 from statement jewelry to elegant
 abayas and designer ensembles crafted
 for the modern woman.
@@ -1556,7 +1541,6 @@ At Anayaluxee, we believe fashion
 is more than just clothing;
 it is an expression of confidence,
 individuality, and beauty.
-
 Every collection is thoughtfully
 curated with attention to detail,
 fine craftsmanship, and a vision
@@ -1568,7 +1552,6 @@ everyday style.
 This journey has been filled with
 learning, dedication, faith,
 and hard work.
-
 None of it would have been possible
 without the love and trust of our
 customers, who continue to inspire
@@ -1590,18 +1573,17 @@ With Love & Duas,<br>
 </section>
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- =========================================================
+     CONTACT
+========================================================= -->
 
-<footer id="social">
+<footer id="contact">
 
 <div class="footer-grid">
 
 <div class="footer-logo">
 
-<img
-src="logo.jpg"
+<img src="logo.jpg"
 alt="Anayaluxee">
 
 <p>
@@ -1621,6 +1603,15 @@ Location
 Lucknow, Uttar Pradesh
 </p>
 
+<br>
+
+<p>
+For orders, collaborations
+and customer support,
+connect with us through
+Instagram or email.
+</p>
+
 </div>
 
 
@@ -1630,71 +1621,53 @@ Lucknow, Uttar Pradesh
 Connect With Us
 </h3>
 
-
 <div class="footer-links">
 
 <a href="mailto:anayaluxee@gmail.com">
-anayaluxee@gmail.com
+<i class="fa-regular fa-envelope"></i>
+&nbsp; anayaluxee@gmail.com
 </a>
-
 
 <a
 href="https://www.instagram.com/anayaluxee/"
 target="_blank"
 rel="noopener noreferrer">
-
 Instagram
-
 </a>
-
 
 <a
 href="https://www.instagram.com/anayaluxeestudio/"
 target="_blank"
 rel="noopener noreferrer">
-
 Instagram For Suits
-
 </a>
-
 
 <a
 href="https://www.facebook.com/share/1AVvTNDU7D/?mibextid=wwXIfr"
 target="_blank"
 rel="noopener noreferrer">
-
 Facebook
-
 </a>
-
 
 <a
 href="https://www.facebook.com/people/Anayaluxeestudio/61591221075082/"
 target="_blank"
 rel="noopener noreferrer">
-
 Facebook For Suits
-
 </a>
-
 
 <a
 href="https://www.pinterest.com/anayaluxee/"
 target="_blank"
 rel="noopener noreferrer">
-
 Pinterest
-
 </a>
-
 
 <a
 href="https://www.youtube.com/@Anayaluxee/"
 target="_blank"
 rel="noopener noreferrer">
-
-Youtube
-
+YouTube
 </a>
 
 </div>
@@ -1702,7 +1675,6 @@ Youtube
 </div>
 
 </div>
-
 
 <div class="copyright">
 
@@ -1713,1397 +1685,1970 @@ Youtube
 </footer>
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+<!-- =========================================================
+     PRODUCT MODAL
+========================================================= -->
+
+<div
+class="modal"
+id="productModal">
+
+<div class="modal-box">
+
+<button
+class="modal-close"
+onclick="closeProductModal()">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+
+<div class="modal-gallery">
+
+<div
+class="main-media"
+id="mainMedia">
+
+</div>
+
+<div
+class="thumbnails"
+id="modalThumbnails">
+
+</div>
+
+</div>
+
+
+<div class="modal-info">
+
+<small id="modalNumber"></small>
+
+<h2 id="modalTitle"></h2>
+
+<div class="modal-divider"></div>
+
+<p>
+A thoughtfully selected piece from
+the Anayaluxee collection.
+For details, availability and
+ordering, connect with us directly.
+</p>
+
+<a
+href="#"
+id="modalBuyButton"
+class="modal-buy"
+target="_blank"
+rel="noopener noreferrer">
+
+<i class="fa-brands fa-instagram"></i>
+
+BUY NOW ON INSTAGRAM
+
+</a>
+
+<div class="instagram-note">
+@ANAYALUXEE
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 
 <script>
 
-/* =====================================================
-   MOBILE MENU
-===================================================== */
+/* =========================================================
+   CONFIGURATION
+========================================================= */
+
+const GITHUB_RAW_BASE =
+"https://raw.githubusercontent.com/shubham7-an/anayaluxee.com/main/";
+
+const GITHUB_API_BASE =
+"https://api.github.com/repos/shubham7-an/anayaluxee.com/contents/";
+
+
+const MEDIA_EXTENSIONS = [
+    "jpg",
+    "jpeg",
+    "png",
+    "webp",
+    "mp4",
+    "webm"
+];
+
+const VIDEO_EXTENSIONS = [
+    "mp4",
+    "webm"
+];
+
+
+/*
+   IMPORTANT
+
+   Instagram username
+*/
+const INSTAGRAM_USERNAME =
+"anayaluxee";
+
+
+/* =========================================================
+   HERO VIDEOS
+========================================================= */
+
+const heroVideos = [
+
+    "hero1.mp4",
+    "hero2.mp4",
+    "hero3.mp4",
+    "hero4.mp4",
+    "hero5.mp4",
+    "hero6.mp4",
+    "hero8.mp4",
+    "hero7.mp4",
+    "hero9.mp4"
+
+];
+
+
+/* =========================================================
+   MENU
+========================================================= */
 
 function toggleMenu(){
 
-document
-.getElementById("navMenu")
-.classList
-.toggle("active");
+    document
+    .getElementById("navMenu")
+    .classList
+    .toggle("active");
 
 }
 
 
 document
 .querySelectorAll("#navMenu a")
-.forEach(function(link){
+.forEach(link => {
 
-link.addEventListener("click",function(){
+    link.addEventListener(
+        "click",
+        () => {
 
-document
-.getElementById("navMenu")
-.classList
-.remove("active");
+            document
+            .getElementById("navMenu")
+            .classList
+            .remove("active");
+
+        }
+    );
 
 });
 
-});
 
+/* =========================================================
+   DEVICE
+========================================================= */
 
-/* =====================================================
-   HERO VIDEOS
-===================================================== */
+function isMobile(){
 
-const videoFiles = [
-
-"hero1.mp4",
-"hero2.mp4",
-"hero3.mp4",
-"hero4.mp4",
-"hero5.mp4",
-"hero6.mp4",
-"hero9.mp4",
-"hero7.mp4",
-"hero8.mp4"
-
-];
-
-
-function isMobileDevice(){
-
-return window.innerWidth <= 768;
+    return window.innerWidth <= 768;
 
 }
 
 
-/* =====================================================
-   DESKTOP HERO
-===================================================== */
+/* =========================================================
+   HERO DESKTOP
+========================================================= */
 
 const desktopVideos =
 document.querySelectorAll(
-".desktop-video-item video"
+    ".desktop-video-item video"
 );
 
 let desktopStart = 0;
 
 
-function loadDesktopVideos(){
+function loadDesktopHero(){
 
-if(isMobileDevice())
-return;
-
-
-for(let i=0;i<3;i++){
-
-const videoIndex =
-(desktopStart+i)%videoFiles.length;
-
-const video =
-desktopVideos[i];
-
-video.src =
-videoFiles[videoIndex];
-
-video.muted=true;
-video.defaultMuted=true;
-video.volume=0;
-video.playsInline=true;
-
-video.setAttribute("muted","");
-video.setAttribute("playsinline","");
-video.setAttribute("webkit-playsinline","");
-
-video.load();
-
-const promise=video.play();
-
-if(promise!==undefined){
-
-promise.catch(function(){});
-
-}
-
-}
-
-}
+    if(isMobile()){
+        return;
+    }
 
 
-function nextDesktopVideos(){
+    desktopVideos.forEach(
+        (video,index) => {
 
-if(isMobileDevice())
-return;
+            const fileIndex =
+                (desktopStart + index)
+                % heroVideos.length;
 
-desktopStart=
-(desktopStart+3)%videoFiles.length;
+            video.src =
+                heroVideos[fileIndex];
 
-loadDesktopVideos();
+            video.muted = true;
+            video.defaultMuted = true;
+            video.volume = 0;
+            video.playsInline = true;
+
+            video.setAttribute(
+                "muted",
+                ""
+            );
+
+            video.setAttribute(
+                "playsinline",
+                ""
+            );
+
+            video.setAttribute(
+                "webkit-playsinline",
+                ""
+            );
+
+            video.load();
+
+            video.play()
+            .catch(() => {});
+
+        }
+    );
 
 }
 
 
-loadDesktopVideos();
+function nextDesktopHero(){
+
+    if(isMobile()){
+        return;
+    }
+
+    desktopStart =
+        (desktopStart + 3)
+        % heroVideos.length;
+
+    loadDesktopHero();
+
+}
 
 
-let desktopTimer=
+loadDesktopHero();
+
+
 setInterval(
-nextDesktopVideos,
-6000
+    nextDesktopHero,
+    6000
 );
 
 
-/* =====================================================
-   MOBILE HERO
-===================================================== */
+/* =========================================================
+   HERO MOBILE
+========================================================= */
 
 const mobileVideo =
 document.querySelector(
-".mobile-slide video"
+    ".mobile-slide video"
 );
 
 let mobileCurrent =
 Math.floor(
-Math.random()*videoFiles.length
+    Math.random() *
+    heroVideos.length
 );
 
 
-function loadMobileVideo(){
+function loadMobileHero(){
 
-if(!isMobileDevice())
-return;
+    if(!isMobile()){
+        return;
+    }
 
-mobileVideo.src=
-videoFiles[mobileCurrent];
+    mobileVideo.src =
+        heroVideos[mobileCurrent];
 
-mobileVideo.muted=true;
-mobileVideo.defaultMuted=true;
-mobileVideo.volume=0;
-mobileVideo.playsInline=true;
+    mobileVideo.muted = true;
+    mobileVideo.defaultMuted = true;
+    mobileVideo.volume = 0;
+    mobileVideo.playsInline = true;
 
-mobileVideo.setAttribute("muted","");
-mobileVideo.setAttribute("playsinline","");
-mobileVideo.setAttribute("webkit-playsinline","");
+    mobileVideo.setAttribute(
+        "muted",
+        ""
+    );
 
-mobileVideo.load();
+    mobileVideo.setAttribute(
+        "playsinline",
+        ""
+    );
 
-const promise=
-mobileVideo.play();
+    mobileVideo.setAttribute(
+        "webkit-playsinline",
+        ""
+    );
 
-if(promise!==undefined){
+    mobileVideo.load();
 
-promise.catch(function(){});
-
-}
-
-}
-
-
-function nextMobileVideo(){
-
-let nextIndex;
-
-do{
-
-nextIndex=
-Math.floor(
-Math.random()*videoFiles.length
-);
-
-}
-while(
-nextIndex===mobileCurrent
-);
-
-mobileCurrent=nextIndex;
-
-loadMobileVideo();
+    mobileVideo.play()
+    .catch(() => {});
 
 }
 
 
 mobileVideo.addEventListener(
-"ended",
-function(){
+    "ended",
+    () => {
 
-if(isMobileDevice()){
-nextMobileVideo();
-}
+        if(!isMobile()){
+            return;
+        }
 
-}
+        let next;
+
+        do{
+
+            next =
+                Math.floor(
+                    Math.random() *
+                    heroVideos.length
+                );
+
+        }
+        while(
+            next === mobileCurrent
+        );
+
+        mobileCurrent = next;
+
+        loadMobileHero();
+
+    }
 );
 
 
-loadMobileVideo();
+loadMobileHero();
 
 
-function resumeMobileVideo(){
+/* autoplay fallback */
 
-if(
-isMobileDevice() &&
-mobileVideo.paused
-){
+document.addEventListener(
+    "touchstart",
+    () => {
 
-mobileVideo.play()
-.catch(function(){});
+        if(
+            isMobile() &&
+            mobileVideo.paused
+        ){
 
-}
+            mobileVideo
+            .play()
+            .catch(() => {});
 
-}
+        }
+
+    },
+    {
+        passive:true
+    }
+);
 
 
 document.addEventListener(
-"touchstart",
-resumeMobileVideo,
-{
-passive:true,
-once:true
-}
+    "pointerdown",
+    () => {
+
+        if(
+            isMobile() &&
+            mobileVideo.paused
+        ){
+
+            mobileVideo
+            .play()
+            .catch(() => {});
+
+        }
+
+    },
+    {
+        passive:true
+    }
 );
 
 
-document.addEventListener(
-"pointerdown",
-resumeMobileVideo,
-{
-passive:true,
-once:true
+/* =========================================================
+   GITHUB HELPERS
+========================================================= */
+
+function extensionOf(name){
+
+    return name
+        .split(".")
+        .pop()
+        .toLowerCase();
+
 }
-);
 
 
-/* =====================================================
-   AUTOMATIC PRODUCT SYSTEM
-===================================================== */
+function isMediaFile(name){
+
+    return MEDIA_EXTENSIONS
+        .includes(
+            extensionOf(name)
+        );
+
+}
 
 
-/*
-   GITHUB SETTINGS
+function isVideoFile(name){
 
-   Jewelry:
-   products/jewelry/
+    return VIDEO_EXTENSIONS
+        .includes(
+            extensionOf(name)
+        );
 
-   Suits:
-   products/suits/
-*/
-
-
-const GITHUB_BASE =
-"https://raw.githubusercontent.com/shubham7-an/anayaluxee.com/main/products/";
+}
 
 
-const GITHUB_API_BASE =
-"https://api.github.com/repos/shubham7-an/anayaluxee.com/contents/products/";
+function mediaType(name){
+
+    return isVideoFile(name)
+        ? "video"
+        : "image";
+
+}
 
 
-const mediaExtensions=[
-
-"jpg",
-"jpeg",
-"png",
-"webp",
-"mp4",
-"webm"
-
-];
-
-
-/* =====================================================
-   MEDIA TYPE
-===================================================== */
-
-function getMediaType(filename){
-
-const extension=
-filename
-.split(".")
-.pop()
-.toLowerCase();
-
-if(
-extension==="mp4" ||
-extension==="webm"
+function rawUrl(
+    folder,
+    filename
 ){
 
-return "video";
+    return (
+        GITHUB_RAW_BASE +
+        folder +
+        "/" +
+        encodeURIComponent(filename)
+    );
 
 }
 
-return "image";
+
+/* =========================================================
+   GET GITHUB FOLDER
+========================================================= */
+
+async function getFolderFiles(
+    folder
+){
+
+    const response =
+        await fetch(
+            GITHUB_API_BASE +
+            folder +
+            "?ref=main&cacheBust=" +
+            Date.now(),
+            {
+                headers:{
+                    "Accept":
+                    "application/vnd.github+json"
+                },
+                cache:"no-store"
+            }
+        );
+
+
+    if(!response.ok){
+
+        throw new Error(
+            folder +
+            " folder error: " +
+            response.status
+        );
+
+    }
+
+
+    const data =
+        await response.json();
+
+
+    return data
+
+        .filter(
+            item =>
+                item.type === "file"
+        )
+
+        .filter(
+            item =>
+                isMediaFile(
+                    item.name
+                )
+        )
+
+        .map(
+            item => ({
+
+                name:item.name,
+
+                src:
+                    rawUrl(
+                        folder,
+                        item.name
+                    ),
+
+                type:
+                    mediaType(
+                        item.name
+                    )
+
+            })
+        );
 
 }
 
 
-/* =====================================================
+/* =========================================================
    PRODUCT BASE NAME
-===================================================== */
+========================================================= */
 
-
-/*
-   Gold_Necklace_1.jpg
-   Gold_Necklace_2.jpg
-
-   becomes:
-
-   Gold_Necklace
-
-
-   Gold_Necklace.jpg
-   also works.
-*/
-
-
-function getProductBase(filename){
-
-const withoutExtension=
-filename.replace(
-/\.[^/.]+$/,
-""
-);
-
-return withoutExtension
-.replace(
-/_\d+$/,
-""
-);
-
-}
-
-
-/* =====================================================
-   BEAUTIFUL NAME
-===================================================== */
-
-function createProductName(base){
-
-return base
-.replace(/_/g," ")
-.replace(/\s+/g," ")
-.trim()
-.replace(
-/\b\w/g,
-letter=>letter.toUpperCase()
-);
-
-}
-
-
-/* =====================================================
-   GET FILES FROM GITHUB
-===================================================== */
-
-async function getCategoryFiles(category){
-
-const url=
-GITHUB_API_BASE+
-category+
-"?ref=main&_="+
-Date.now();
-
-
-const response=
-await fetch(
-url,
-{
-headers:{
-"Accept":
-"application/vnd.github+json"
-},
-cache:"no-store"
-}
-);
-
-
-if(!response.ok){
-
-throw new Error(
-"GitHub API Error "+
-response.status+
-" for "+
-category
-);
-
-}
-
-
-const data=
-await response.json();
-
-
-if(!Array.isArray(data)){
-
-throw new Error(
-"Invalid GitHub response"
-);
-
-}
-
-
-return data
-
-.filter(function(item){
-
-return (
-item.type==="file" &&
-mediaExtensions.includes(
-item.name
-.split(".")
-.pop()
-.toLowerCase()
-)
-);
-
-})
-
-.map(function(item){
-
-return {
-
-name:item.name,
-
-src:
-GITHUB_BASE+
-category+
-"/"+
-encodeURIComponent(item.name),
-
-type:
-getMediaType(item.name)
-
-};
-
-});
-
-}
-
-
-/* =====================================================
-   CREATE PRODUCTS
-===================================================== */
-
-function createAutomaticProducts(files){
-
-const map=new Map();
-
-
-files.forEach(function(file){
-
-const base=
-getProductBase(
-file.name
-);
-
-
-if(!map.has(base)){
-
-map.set(
-base,
-[]
-);
-
-}
-
-
-map.get(base).push(file);
-
-});
-
-
-const products=[];
-
-
-map.forEach(function(media,base){
-
-media.sort(function(a,b){
-
-function getNumber(name){
-
-const match=
-name.match(
-/_(\d+)\.[^.]+$/
-);
-
-return match
-?Number(match[1])
-:0;
-
-}
-
-return (
-getNumber(a.name)-
-getNumber(b.name)
-);
-
-});
-
-
-products.push({
-
-base:base,
-
-name:
-createProductName(base),
-
-media:media
-
-});
-
-});
-
-
-/*
-   Alphabetical order
-*/
-
-products.sort(function(a,b){
-
-return a.name.localeCompare(
-b.name
-);
-
-});
-
-
-return products;
-
-}
-
-
-/* =====================================================
-   RENDER CATEGORY
-===================================================== */
-
-async function loadCategory(
-category,
-gridId,
-countId,
-label
+function getProductBase(
+    filename
 ){
 
-const grid=
-document.getElementById(
-gridId
-);
-
-const count=
-document.getElementById(
-countId
-);
+    const clean =
+        filename
+        .replace(
+            /\.[^/.]+$/,
+            ""
+        );
 
 
-try{
+    /*
+       Product_1
+       Product_2
 
-grid.innerHTML=`
+       become:
 
-<div class="loading">
+       Product
+    */
 
-<i class="${
-category==="jewelry"
-? "fa-regular fa-gem"
-: "fa-solid fa-shirt"
-}"></i>
-
-<p>
-CURATING ${label.toUpperCase()}...
-</p>
-
-</div>
-
-`;
-
-
-const files=
-await getCategoryFiles(
-category
-);
-
-
-console.log(
-category+
-" files:",
-files
-);
-
-
-const products=
-createAutomaticProducts(
-files
-);
-
-
-console.log(
-category+
-" products:",
-products
-);
-
-
-grid.innerHTML="";
-
-
-count.textContent=
-products.length+
-(
-products.length===1
-? " PIECE"
-: " PIECES"
-)+
-" · ANAYALUXEE";
-
-
-if(!products.length){
-
-grid.innerHTML=`
-
-<div class="loading">
-
-<i class="fa-regular fa-circle-xmark"></i>
-
-<p>
-NO ${label.toUpperCase()} FOUND
-</p>
-
-</div>
-
-`;
-
-return;
+    return clean
+        .replace(
+            /_\d+$/,
+            ""
+        );
 
 }
 
 
-products.forEach(
-function(product,index){
+/* =========================================================
+   PRODUCT DISPLAY NAME
+========================================================= */
 
-createProductCard(
-product,
-index,
-category,
-grid
-);
+function createProductName(
+    base
+){
 
-});
+    return base
 
+        .replace(
+            /[_-]+/g,
+            " "
+        )
 
-}
+        .replace(
+            /\s+/g,
+            " "
+        )
 
-catch(error){
+        .trim()
 
-console.error(
-"Category error:",
-category,
-error
-);
-
-
-count.textContent=
-"COMING SOON";
-
-
-grid.innerHTML=`
-
-<div class="loading">
-
-<i class="fa-regular fa-circle-xmark"></i>
-
-<p>
-${label.toUpperCase()} COLLECTION
-COULD NOT BE LOADED
-</p>
-
-</div>
-
-`;
-
-}
+        .replace(
+            /\b\w/g,
+            letter =>
+                letter.toUpperCase()
+        );
 
 }
 
 
-/* =====================================================
-   CREATE PRODUCT CARD
-===================================================== */
+/* =========================================================
+   SORT MEDIA
+========================================================= */
+
+function mediaNumber(
+    filename
+){
+
+    const match =
+        filename.match(
+            /_(\d+)\.[^.]+$/
+        );
+
+
+    return match
+        ? Number(match[1])
+        : 0;
+
+}
+
+
+/* =========================================================
+   CREATE PRODUCTS
+========================================================= */
+
+function createProducts(
+    files
+){
+
+    const map =
+        new Map();
+
+
+    files.forEach(
+        file => {
+
+            const base =
+                getProductBase(
+                    file.name
+                );
+
+
+            if(
+                !map.has(base)
+            ){
+
+                map.set(
+                    base,
+                    []
+                );
+
+            }
+
+
+            map
+            .get(base)
+            .push(file);
+
+        }
+    );
+
+
+    const products = [];
+
+
+    map.forEach(
+        (media,base) => {
+
+            media.sort(
+                (a,b) =>
+                    mediaNumber(a.name)
+                    -
+                    mediaNumber(b.name)
+            );
+
+
+            products.push({
+
+                base:base,
+
+                name:
+                    createProductName(
+                        base
+                    ),
+
+                media:media
+
+            });
+
+        }
+    );
+
+
+    products.sort(
+        (a,b) =>
+            a.name.localeCompare(
+                b.name
+            )
+    );
+
+
+    return products;
+
+}
+
+
+/* =========================================================
+   PRODUCT LINK
+========================================================= */
+
+function createProductLink(
+    category,
+    product
+){
+
+    const slug =
+        product.base
+        .toLowerCase()
+        .replace(
+            /[^a-z0-9]+/g,
+            "-"
+        )
+        .replace(
+            /^-+|-+$/g,
+            ""
+        );
+
+
+    return (
+        window.location.origin +
+        window.location.pathname +
+        "#" +
+        category +
+        "-" +
+        slug
+    );
+
+}
+
+
+/* =========================================================
+   INSTAGRAM DM LINK
+========================================================= */
+
+function createInstagramDM(
+    product,
+    category
+){
+
+    const productLink =
+        createProductLink(
+            category,
+            product
+        );
+
+
+    const message =
+        "Hi Anayaluxee, I want to buy " +
+        product.name +
+        ". Product link: " +
+        productLink;
+
+
+    return (
+        "https://ig.me/m/" +
+        INSTAGRAM_USERNAME +
+        "?text=" +
+        encodeURIComponent(
+            message
+        )
+    );
+
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
 
 function createProductCard(
-product,
-index,
-category,
-grid
+    product,
+    category,
+    index
 ){
 
-const media=
-product.media;
-
-const first=
-media[0];
-
-
-const card=
-document.createElement(
-"div"
-);
-
-card.className=
-"product-card";
+    const card =
+        document.createElement(
+            "article"
+        );
 
 
-let mediaHTML="";
+    card.className =
+        "product-card";
 
 
-if(first.type==="video"){
-
-mediaHTML=`
-
-<video
-
-src="${first.src}"
-
-muted
-
-autoplay
-
-loop
-
-playsinline
-
-preload="metadata"
-
-></video>
+    const first =
+        product.media[0];
 
 
-<div class="video-badge">
+    let mainHTML;
 
-<i class="fa-solid fa-play"></i>
 
-</div>
+    if(
+        first.type === "video"
+    ){
 
-`;
+        mainHTML = `
+
+            <video
+                src="${first.src}"
+                muted
+                autoplay
+                loop
+                playsinline
+                preload="metadata">
+            </video>
+
+        `;
+
+    }
+    else{
+
+        mainHTML = `
+
+            <img
+                src="${first.src}"
+                alt="${product.name}"
+                loading="lazy">
+
+        `;
+
+    }
+
+
+    /*
+       SMALL SQUARE MEDIA
+    */
+
+    const thumbsHTML =
+        product.media
+        .map(
+            item => {
+
+                if(
+                    item.type === "video"
+                ){
+
+                    return `
+
+                        <div class="product-thumb">
+
+                            <video
+                                src="${item.src}"
+                                muted
+                                preload="metadata">
+                            </video>
+
+                        </div>
+
+                    `;
+
+                }
+
+
+                return `
+
+                    <div class="product-thumb">
+
+                        <img
+                            src="${item.src}"
+                            alt="${product.name}">
+
+                    </div>
+
+                `;
+
+            }
+        )
+        .join("");
+
+
+    const buyLink =
+        createInstagramDM(
+            product,
+            category
+        );
+
+
+    card.innerHTML = `
+
+        <div class="product-media">
+
+            ${mainHTML}
+
+        </div>
+
+
+        <div class="product-info">
+
+            <span class="product-number">
+
+                ${category.toUpperCase()}
+                ${String(index + 1)
+                    .padStart(2,"0")}
+
+            </span>
+
+
+            <h3 class="product-name">
+
+                ${product.name}
+
+            </h3>
+
+
+            <div class="product-thumbnails">
+
+                ${thumbsHTML}
+
+            </div>
+
+
+            <a
+                class="buy-now"
+                href="${buyLink}"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <i class="fa-brands fa-instagram"></i>
+
+                BUY NOW
+
+            </a>
+
+        </div>
+
+    `;
+
+
+    /*
+       Clicking image opens product gallery
+    */
+
+    card
+    .querySelector(".product-media")
+    .addEventListener(
+        "click",
+        () => {
+
+            openProductModal(
+                product,
+                category,
+                index
+            );
+
+        }
+    );
+
+
+    /*
+       Thumbnail click
+       opens selected media
+    */
+
+    card
+    .querySelectorAll(".product-thumb")
+    .forEach(
+        (thumb,mediaIndex) => {
+
+            thumb.addEventListener(
+                "click",
+                event => {
+
+                    event.stopPropagation();
+
+                    openProductModal(
+                        product,
+                        category,
+                        index,
+                        mediaIndex
+                    );
+
+                }
+            );
+
+        }
+    );
+
+
+    return card;
 
 }
-else{
-
-mediaHTML=`
-
-<img
-
-src="${first.src}"
-
-alt="${product.name}"
-
-loading="lazy"
-
->
-
-`;
-
-}
 
 
-const countHTML=
-media.length>1
+/* =========================================================
+   RENDER CATEGORY
+========================================================= */
 
-?`
-
-<div class="media-count">
-
-${media.length} MEDIA
-
-</div>
-
-`
-
-:"";
-
-
-card.innerHTML=`
-
-<div class="product-media">
-
-${mediaHTML}
-
-${countHTML}
-
-</div>
-
-
-<div class="product-info">
-
-<span class="product-number">
-
-${
-category==="jewelry"
-? "JEWELRY"
-: "SUIT"
-}
-
- ${String(index+1).padStart(2,"0")}
-
-</span>
-
-
-<h3 class="product-name">
-
-${product.name}
-
-</h3>
-
-
-<span class="product-action">
-
-VIEW PIECE
-
-<i class="fa-solid fa-arrow-right"></i>
-
-</span>
-
-</div>
-
-`;
-
-
-card.addEventListener(
-"click",
-function(){
-
-openProduct(
-product,
-category,
-index
-);
-
-});
-
-
-grid.appendChild(card);
-
-}
-
-
-/* =====================================================
-   MODAL
-===================================================== */
-
-let currentMedia=[];
-let currentIndex=0;
-let currentCategory="jewelry";
-
-
-function openProduct(
-product,
-category,
-index
+function renderCategory(
+    category,
+    files
 ){
 
-currentMedia=
-product.media;
-
-currentIndex=0;
-
-currentCategory=
-category;
+    const products =
+        createProducts(
+            files
+        );
 
 
-document
-.getElementById(
-"modalNumber"
-)
-.textContent=
-
-(
-category==="jewelry"
-? "JEWELRY "
-: "SUIT "
-)+
-String(index+1)
-.padStart(2,"0");
+    const block =
+        document.createElement(
+            "section"
+        );
 
 
-document
-.getElementById(
-"modalTitle"
-)
-.textContent=
-product.name;
+    block.className =
+        "category-block";
+
+    block.id =
+        category;
 
 
-document
-.getElementById(
-"instagramOrder"
-)
-.href=
-category==="jewelry"
+    block.innerHTML = `
 
-? "https://www.instagram.com/anayaluxee/"
+        <div class="category-heading">
 
-: "https://www.instagram.com/anayaluxeestudio/";
+            <h3>
+                ${
+                    category === "jewelry"
+                    ? "Jewelry Collection"
+                    :
+                    category === "suits"
+                    ? "Designer Suits"
+                    :
+                    "Elegant Abayas"
+                }
+            </h3>
 
+            <span>
+                ${
+                    products.length
+                } PRODUCTS · ANAYALUXEE
+            </span>
 
-document
-.getElementById(
-"modalDescription"
-)
-.textContent=
-
-category==="jewelry"
-
-? "A thoughtfully selected piece from the Anayaluxee jewelry collection. For details, pricing and availability, connect with us directly."
-
-: "A thoughtfully selected designer suit from the Anayaluxee collection. For details, pricing, size and availability, connect with us directly.";
-
-
-renderMainMedia();
-
-renderThumbnails();
+        </div>
 
 
-document
-.getElementById(
-"productModal"
-)
-.classList
-.add("active");
+        <div class="products-grid"></div>
+
+    `;
 
 
-document.body.style.overflow="hidden";
-
-}
-
-
-/* =====================================================
-   CLOSE MODAL
-===================================================== */
-
-function closeModal(){
-
-document
-.getElementById(
-"productModal"
-)
-.classList
-.remove("active");
+    const grid =
+        block.querySelector(
+            ".products-grid"
+        );
 
 
-document.body.style.overflow="";
+    if(!products.length){
+
+        grid.innerHTML = `
+
+            <div class="no-data">
+
+                NO PRODUCTS FOUND
+
+            </div>
+
+        `;
+
+        return block;
+
+    }
 
 
-const video=
-document.querySelector(
-"#mainMedia video"
-);
+    products.forEach(
+        (product,index) => {
 
-if(video){
+            grid.appendChild(
+                createProductCard(
+                    product,
+                    category,
+                    index
+                )
+            );
 
-video.pause();
+        }
+    );
 
-}
+
+    return block;
 
 }
 
 
-/* =====================================================
-   MAIN MEDIA
-===================================================== */
+/* =========================================================
+   LOAD ALL PRODUCTS
+========================================================= */
 
-function renderMainMedia(){
+async function loadCatalog(){
 
-const container=
-document.getElementById(
-"mainMedia"
-);
+    const container =
+        document.getElementById(
+            "catalogContainer"
+        );
 
 
-const item=
-currentMedia[
-currentIndex
+    container.innerHTML = "";
+
+
+    const categories = [
+        "jewelry",
+        "suits",
+        "abayas"
+    ];
+
+
+    for(
+        const category
+        of categories
+    ){
+
+        try{
+
+            const files =
+                await getFolderFiles(
+                    "products/" +
+                    category
+                );
+
+
+            const block =
+                renderCategory(
+                    category,
+                    files
+                );
+
+
+            container.appendChild(
+                block
+            );
+
+
+        }
+        catch(error){
+
+            console.error(
+                category,
+                error
+            );
+
+
+            const block =
+                document.createElement(
+                    "section"
+                );
+
+
+            block.className =
+                "category-block";
+
+            block.id =
+                category;
+
+
+            block.innerHTML = `
+
+                <div class="category-heading">
+
+                    <h3>
+                        ${
+                            category === "jewelry"
+                            ? "Jewelry Collection"
+                            :
+                            category === "suits"
+                            ? "Designer Suits"
+                            :
+                            "Elegant Abayas"
+                        }
+                    </h3>
+
+                </div>
+
+
+                <div class="no-data">
+
+                    COLLECTION COULD NOT BE LOADED
+
+                </div>
+
+            `;
+
+
+            container.appendChild(
+                block
+            );
+
+        }
+
+    }
+
+}
+
+
+/* =========================================================
+   PACKING VIDEOS
+========================================================= */
+
+async function loadPackingVideos(){
+
+    const grid =
+        document.getElementById(
+            "packingGrid"
+        );
+
+
+    try{
+
+        const files =
+            await getFolderFiles(
+                "products/packing"
+            );
+
+
+        grid.innerHTML = "";
+
+
+        if(!files.length){
+
+            grid.innerHTML = `
+
+                <div class="no-data">
+
+                    NO PACKING VIDEOS YET
+
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+
+        files
+        .filter(
+            file =>
+                file.type === "video"
+        )
+        .forEach(
+            (file,index) => {
+
+                const card =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                card.className =
+                    "packing-card";
+
+
+                card.innerHTML = `
+
+                    <video
+                        src="${file.src}"
+                        muted
+                        autoplay
+                        loop
+                        playsinline
+                        preload="metadata">
+                    </video>
+
+                    <div class="packing-label">
+
+                        PACKING
+                        ${
+                            String(index+1)
+                            .padStart(2,"0")
+                        }
+
+                    </div>
+
+                `;
+
+
+                grid.appendChild(
+                    card
+                );
+
+            }
+        );
+
+
+    }
+    catch(error){
+
+        console.error(
+            "Packing videos:",
+            error
+        );
+
+
+        grid.innerHTML = `
+
+            <div class="no-data">
+
+                PACKING VIDEOS COULD NOT BE LOADED
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+/* =========================================================
+   CUSTOMER REVIEWS
+========================================================= */
+
+/*
+   Future reviews:
+
+   Just add a new object here.
+
+   Example:
+
+   {
+       name:"Priya Sharma",
+       review:"Beautiful jewelry!",
+       rating:5
+   }
+*/
+
+const customerReviews = [
+
+    {
+        name:"Priya Sharma",
+        review:
+        "Beautiful jewelry and amazing packaging. Loved the quality.",
+        rating:5
+    },
+
+    {
+        name:"Ayesha Khan",
+        review:
+        "The design was elegant and the overall experience was wonderful.",
+        rating:5
+    },
+
+    {
+        name:"Neha Verma",
+        review:
+        "Absolutely loved my purchase. The packaging was so premium.",
+        rating:5
+    }
+
 ];
 
 
-let html="";
-
-
-if(item.type==="video"){
-
-html=`
-
-<video
-
-src="${item.src}"
-
-autoplay
-
-muted
-
-loop
-
-playsinline
-
-controls
-
-></video>
-
-`;
-
-}
-else{
-
-html=`
-
-<img
-
-src="${item.src}"
-
-alt="Anayaluxee Product"
-
->
-
-`;
-
-}
-
-
-container.innerHTML=`
-
-<button
-
-class="gallery-arrow prev"
-
-onclick="changeMedia(-1)"
-
->
-
-<i class="fa-solid fa-chevron-left"></i>
-
-</button>
-
-
-${html}
-
-
-<button
-
-class="gallery-arrow next"
-
-onclick="changeMedia(1)"
-
->
-
-<i class="fa-solid fa-chevron-right"></i>
-
-</button>
-
-`;
-
-}
-
-
-/* =====================================================
-   THUMBNAILS
-===================================================== */
-
-function renderThumbnails(){
-
-const container=
-document.getElementById(
-"thumbnails"
-);
-
-
-container.innerHTML="";
-
-
-currentMedia.forEach(
-function(item,index){
-
-const thumb=
-document.createElement(
-"div"
-);
-
-
-thumb.className=
-"thumb"+
-(
-index===currentIndex
-? " active"
-: ""
-);
-
-
-if(item.type==="video"){
-
-thumb.innerHTML=`
-
-<video
-
-src="${item.src}"
-
-muted
-
-preload="metadata"
-
-></video>
-
-`;
-
-}
-else{
-
-thumb.innerHTML=`
-
-<img
-
-src="${item.src}"
-
-alt=""
-
->
-
-`;
-
-}
-
-
-thumb.onclick=
-function(){
-
-currentIndex=index;
-
-renderMainMedia();
-
-renderThumbnails();
-
-};
-
-
-container.appendChild(
-thumb
-);
-
-});
-
-}
-
-
-/* =====================================================
-   CHANGE MEDIA
-===================================================== */
-
-function changeMedia(direction){
-
-if(!currentMedia.length)
-return;
-
-
-currentIndex+=direction;
-
-
-if(
-currentIndex<0
+function stars(
+    rating
 ){
 
-currentIndex=
-currentMedia.length-1;
+    let output = "";
+
+    for(
+        let i=1;
+        i<=5;
+        i++
+    ){
+
+        output +=
+            i <= rating
+            ? "★"
+            : "☆";
+
+    }
+
+    return output;
 
 }
 
 
-if(
-currentIndex>=
-currentMedia.length
+function renderReviews(){
+
+    const grid =
+        document.getElementById(
+            "reviewsGrid"
+        );
+
+
+    grid.innerHTML = "";
+
+
+    if(
+        !customerReviews.length
+    ){
+
+        grid.innerHTML = `
+
+            <div class="no-data">
+
+                CUSTOMER REVIEWS COMING SOON
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    customerReviews.forEach(
+        review => {
+
+            const card =
+                document.createElement(
+                    "article"
+                );
+
+
+            card.className =
+                "review-card";
+
+
+            card.innerHTML = `
+
+                <div class="review-stars">
+
+                    ${stars(
+                        Math.min(
+                            5,
+                            Math.max(
+                                1,
+                                Number(
+                                    review.rating
+                                )
+                            )
+                        )
+                    )}
+
+                </div>
+
+
+                <div class="review-text">
+
+                    “${review.review}”
+
+                </div>
+
+
+                <div class="review-name">
+
+                    — ${review.name}
+
+                </div>
+
+            `;
+
+
+            grid.appendChild(
+                card
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   PRODUCT MODAL
+========================================================= */
+
+let currentProductMedia = [];
+let currentProductIndex = 0;
+let currentProduct = null;
+let currentProductCategory = "";
+
+
+function openProductModal(
+    product,
+    category,
+    productIndex,
+    mediaIndex = 0
 ){
 
-currentIndex=0;
+    currentProduct =
+        product;
+
+    currentProductCategory =
+        category;
+
+    currentProductMedia =
+        product.media;
+
+    currentProductIndex =
+        mediaIndex;
+
+
+    document
+    .getElementById(
+        "modalNumber"
+    )
+    .textContent =
+        category.toUpperCase() +
+        " " +
+        String(
+            productIndex + 1
+        )
+        .padStart(
+            2,
+            "0"
+        );
+
+
+    document
+    .getElementById(
+        "modalTitle"
+    )
+    .textContent =
+        product.name;
+
+
+    document
+    .getElementById(
+        "modalBuyButton"
+    )
+    .href =
+        createInstagramDM(
+            product,
+            category
+        );
+
+
+    renderModalMedia();
+
+    renderModalThumbnails();
+
+
+    document
+    .getElementById(
+        "productModal"
+    )
+    .classList
+    .add("active");
+
+
+    document.body.style.overflow =
+        "hidden";
 
 }
 
 
-renderMainMedia();
+function closeProductModal(){
 
-renderThumbnails();
+    const modal =
+        document.getElementById(
+            "productModal"
+        );
+
+
+    modal.classList.remove(
+        "active"
+    );
+
+
+    document.body.style.overflow =
+        "";
+
+
+    const video =
+        document.querySelector(
+            "#mainMedia video"
+        );
+
+
+    if(video){
+        video.pause();
+    }
 
 }
 
 
-/* =====================================================
-   CLOSE MODAL OUTSIDE
-===================================================== */
+function renderModalMedia(){
+
+    const container =
+        document.getElementById(
+            "mainMedia"
+        );
+
+
+    const item =
+        currentProductMedia[
+            currentProductIndex
+        ];
+
+
+    let mediaHTML = "";
+
+
+    if(
+        item.type === "video"
+    ){
+
+        mediaHTML = `
+
+            <video
+                src="${item.src}"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls>
+            </video>
+
+        `;
+
+    }
+    else{
+
+        mediaHTML = `
+
+            <img
+                src="${item.src}"
+                alt="${currentProduct.name}">
+
+        `;
+
+    }
+
+
+    container.innerHTML = `
+
+        <button
+            class="gallery-arrow prev"
+            onclick="changeProductMedia(-1)">
+
+            <i class="fa-solid fa-chevron-left"></i>
+
+        </button>
+
+
+        ${mediaHTML}
+
+
+        <button
+            class="gallery-arrow next"
+            onclick="changeProductMedia(1)">
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+        </button>
+
+    `;
+
+}
+
+
+function renderModalThumbnails(){
+
+    const container =
+        document.getElementById(
+            "modalThumbnails"
+        );
+
+
+    container.innerHTML = "";
+
+
+    currentProductMedia
+    .forEach(
+        (item,index) => {
+
+            const thumb =
+                document.createElement(
+                    "div"
+                );
+
+
+            thumb.className =
+                "thumb" +
+                (
+                    index ===
+                    currentProductIndex
+                    ? " active"
+                    : ""
+                );
+
+
+            if(
+                item.type === "video"
+            ){
+
+                thumb.innerHTML = `
+
+                    <video
+                        src="${item.src}"
+                        muted
+                        preload="metadata">
+                    </video>
+
+                `;
+
+            }
+            else{
+
+                thumb.innerHTML = `
+
+                    <img
+                        src="${item.src}"
+                        alt="">
+
+                `;
+
+            }
+
+
+            thumb.onclick = () => {
+
+                currentProductIndex =
+                    index;
+
+                renderModalMedia();
+
+                renderModalThumbnails();
+
+            };
+
+
+            container.appendChild(
+                thumb
+            );
+
+        }
+    );
+
+}
+
+
+function changeProductMedia(
+    direction
+){
+
+    if(
+        !currentProductMedia.length
+    ){
+        return;
+    }
+
+
+    currentProductIndex +=
+        direction;
+
+
+    if(
+        currentProductIndex < 0
+    ){
+
+        currentProductIndex =
+            currentProductMedia.length - 1;
+
+    }
+
+
+    if(
+        currentProductIndex >=
+        currentProductMedia.length
+    ){
+
+        currentProductIndex = 0;
+
+    }
+
+
+    renderModalMedia();
+
+    renderModalThumbnails();
+
+}
+
+
+/* =========================================================
+   MODAL EVENTS
+========================================================= */
 
 document
 .getElementById(
-"productModal"
+    "productModal"
 )
 .addEventListener(
-"click",
-function(event){
+    "click",
+    event => {
 
-if(
-event.target.id===
-"productModal"
-){
+        if(
+            event.target.id ===
+            "productModal"
+        ){
 
-closeModal();
+            closeProductModal();
 
-}
+        }
 
-});
+    }
+);
 
-
-/* =====================================================
-   ESC + ARROWS
-===================================================== */
 
 document.addEventListener(
-"keydown",
-function(event){
+    "keydown",
+    event => {
 
-const modal=
-document.getElementById(
-"productModal"
+        const modal =
+            document.getElementById(
+                "productModal"
+            );
+
+
+        if(
+            event.key === "Escape"
+        ){
+
+            closeProductModal();
+
+        }
+
+
+        if(
+            modal.classList.contains(
+                "active"
+            )
+        ){
+
+            if(
+                event.key ===
+                "ArrowRight"
+            ){
+
+                changeProductMedia(
+                    1
+                );
+
+            }
+
+
+            if(
+                event.key ===
+                "ArrowLeft"
+            ){
+
+                changeProductMedia(
+                    -1
+                );
+
+            }
+
+        }
+
+    }
 );
 
 
-if(event.key==="Escape"){
+/* =========================================================
+   INITIALIZE
+========================================================= */
 
-closeModal();
+renderReviews();
 
-}
+loadCatalog();
 
-
-if(
-modal.classList.contains(
-"active"
-)
-){
-
-if(event.key==="ArrowRight"){
-
-changeMedia(1);
-
-}
-
-if(event.key==="ArrowLeft"){
-
-changeMedia(-1);
-
-}
-
-}
-
-});
+loadPackingVideos();
 
 
-/* =====================================================
-   PAGE VISIBILITY
-===================================================== */
+/* =========================================================
+   VISIBILITY
+========================================================= */
 
 document.addEventListener(
-"visibilitychange",
-function(){
+    "visibilitychange",
+    () => {
 
-if(document.hidden){
+        if(
+            document.hidden
+        ){
 
-desktopVideos.forEach(
-function(video){
+            desktopVideos.forEach(
+                video =>
+                    video.pause()
+            );
 
-video.pause();
+            mobileVideo.pause();
 
-});
+        }
+        else{
 
-mobileVideo.pause();
+            if(
+                isMobile()
+            ){
 
-}
-else{
+                mobileVideo
+                .play()
+                .catch(() => {});
 
-if(isMobileDevice()){
+            }
+            else{
 
-mobileVideo
-.play()
-.catch(function(){});
+                desktopVideos.forEach(
+                    video =>
+                        video
+                        .play()
+                        .catch(
+                            () => {}
+                        )
+                );
 
-}
-else{
+            }
 
-desktopVideos.forEach(
-function(video){
+        }
 
-video
-.play()
-.catch(function(){});
-
-});
-
-}
-
-}
-
-});
-
-
-/* =====================================================
-   INITIALIZE COLLECTIONS
-===================================================== */
-
-loadCategory(
-"jewelry",
-"jewelryGrid",
-"jewelryCount",
-"Jewelry Collection"
+    }
 );
 
 
-loadCategory(
-"suits",
-"suitsGrid",
-"suitsCount",
-"Suit Collection"
-);
+/* =========================================================
+   RESIZE
+========================================================= */
 
-
-/* =====================================================
-   WINDOW RESIZE
-===================================================== */
-
-let previousMobileState=
-isMobileDevice();
+let lastMobileState =
+    isMobile();
 
 
 window.addEventListener(
-"resize",
-function(){
+    "resize",
+    () => {
 
-const currentMobileState=
-isMobileDevice();
-
-
-if(
-currentMobileState !==
-previousMobileState
-){
-
-previousMobileState=
-currentMobileState;
+        const nowMobile =
+            isMobile();
 
 
-if(currentMobileState){
+        if(
+            nowMobile !==
+            lastMobileState
+        ){
 
-mobileCurrent=
-Math.floor(
-Math.random()*
-videoFiles.length
+            lastMobileState =
+                nowMobile;
+
+
+            if(nowMobile){
+
+                mobileCurrent =
+                    Math.floor(
+                        Math.random() *
+                        heroVideos.length
+                    );
+
+                loadMobileHero();
+
+            }
+            else{
+
+                desktopStart = 0;
+
+                loadDesktopHero();
+
+            }
+
+        }
+
+    }
 );
-
-loadMobileVideo();
-
-}
-else{
-
-desktopStart=0;
-
-loadDesktopVideos();
-
-}
-
-}
-
-});
 
 </script>
 
