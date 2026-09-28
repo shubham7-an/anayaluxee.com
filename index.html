@@ -4,16 +4,25 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Anayaluxee | Luxury Jewelry, Designer Suits & Elegant Abayas</title>
 
 <meta name="description"
-content="Luxury jewelry, elegant abayas and designer suits by Anayaluxee.">
+content="Luxury jewelry, designer suits and elegant abayas by Anayaluxee.">
 
-<link rel="icon" type="image/png" href="./logo-brown.png?v=999">
-<link rel="shortcut icon" type="image/png" href="./logo-brown.png?v=999">
-<link rel="apple-touch-icon" href="./logo-brown.png?v=999">
+<link rel="icon"
+type="image/png"
+href="./logo-brown.png?v=999">
+
+<link rel="shortcut icon"
+type="image/png"
+href="./logo-brown.png?v=999">
+
+<link rel="apple-touch-icon"
+href="./logo-brown.png?v=999">
 
 <link
 href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap"
@@ -25,1203 +34,1851 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <style>
 
-/* =========================================================
+/* =====================================================
    GLOBAL
-========================================================= */
+===================================================== */
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 html,
 body{
-    width:100%;
-    overflow-x:hidden;
+width:100%;
+overflow-x:hidden;
 }
 
 body{
-    font-family:'Montserrat',sans-serif;
-    background:#f7efec;
-    color:#2d1d1a;
+font-family:'Montserrat',sans-serif;
+background:#f7efec;
+color:#2d1d1a;
 }
 
 button,
 a{
-    -webkit-tap-highlight-color:transparent;
+font-family:inherit;
 }
 
 
-/* =========================================================
+/* =====================================================
    HEADER
-========================================================= */
+===================================================== */
 
 header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:82px;
-    padding:12px 5%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(247,239,236,.92);
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
-    z-index:9999;
-    border-bottom:1px solid rgba(74,18,13,.08);
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:82px;
+
+padding:12px 5%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(247,239,236,.94);
+
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+
+z-index:9999;
+
+border-bottom:1px solid rgba(74,18,13,.08);
+
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    text-decoration:none;
+
+display:flex;
+align-items:center;
+gap:14px;
+text-decoration:none;
+
 }
 
 .logo img{
-    width:50px;
-    height:auto;
-    display:block;
+
+width:50px;
+height:auto;
+display:block;
+
 }
 
 .logo h1{
-    font-family:'Cormorant Garamond',serif;
-    font-size:2rem;
-    font-weight:500;
-    letter-spacing:2px;
-    color:#4a120d;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+font-weight:500;
+
+letter-spacing:2px;
+
+color:#4a120d;
+
 }
 
 nav{
-    display:flex;
-    align-items:center;
-    gap:30px;
+
+display:flex;
+align-items:center;
+gap:28px;
+
 }
 
 nav a{
-    text-decoration:none;
-    font-size:11px;
-    letter-spacing:2.5px;
-    color:#5c211a;
-    transition:.35s;
+
+text-decoration:none;
+
+font-size:11px;
+
+letter-spacing:2.5px;
+
+color:#5c211a;
+
+transition:.3s;
+
 }
 
 nav a:hover{
-    opacity:.55;
+
+opacity:.5;
+
 }
 
 .menu-toggle{
-    display:none;
-    font-size:1.8rem;
-    color:#4a120d;
-    cursor:pointer;
+
+display:none;
+
+font-size:1.8rem;
+
+color:#4a120d;
+
+cursor:pointer;
+
 }
 
 
-/* =========================================================
+/* =====================================================
    HERO
-========================================================= */
+===================================================== */
 
 .hero-slider{
-    position:relative;
-    width:100%;
-    height:100vh;
-    height:100svh;
-    min-height:600px;
-    overflow:hidden;
-    background:#000;
+
+position:relative;
+
+width:100%;
+
+height:100vh;
+height:100svh;
+
+min-height:600px;
+
+overflow:hidden;
+
+background:#000;
+
 }
 
 .desktop-video-grid{
-    position:absolute;
-    inset:0;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    width:100%;
-    height:100%;
-    background:#000;
+
+position:absolute;
+
+inset:0;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+width:100%;
+height:100%;
+
+background:#000;
+
 }
 
 .desktop-video-item{
-    position:relative;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    background:#000;
+
+position:relative;
+
+width:100%;
+height:100%;
+
+overflow:hidden;
+
+background:#000;
+
 }
 
 .desktop-video-item::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.22);
-    z-index:2;
-    pointer-events:none;
+
+content:"";
+
+position:absolute;
+inset:0;
+
+background:rgba(0,0,0,.22);
+
+z-index:2;
+
+pointer-events:none;
+
 }
 
 .desktop-video-item video{
-    width:100%;
-    height:100%;
-    display:block;
-    object-fit:contain;
-    object-position:center;
-    background:#000;
+
+width:100%;
+height:100%;
+
+display:block;
+
+object-fit:contain;
+
+object-position:center;
+
+background:#000;
+
 }
 
 .mobile-video-slider{
-    display:none;
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    background:#000;
+
+display:none;
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+height:100%;
+
+background:#000;
+
 }
 
 .mobile-slide{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
+
+position:absolute;
+inset:0;
+
+width:100%;
+height:100%;
+
+opacity:0;
+visibility:hidden;
+
+transition:opacity 1s ease;
+
+}
+
+.mobile-slide.active{
+
+opacity:1;
+visibility:visible;
+
 }
 
 .mobile-slide video{
-    width:100%;
-    height:100%;
-    display:block;
-    object-fit:cover;
-    object-position:center;
+
+width:100%;
+height:100%;
+
+display:block;
+
+object-fit:cover;
+
+background:#000;
+
 }
 
 .mobile-slide::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.28);
-    pointer-events:none;
+
+content:"";
+
+position:absolute;
+inset:0;
+
+background:rgba(0,0,0,.28);
+
+pointer-events:none;
+
 }
 
 .hero-content{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    z-index:10;
-    width:90%;
-    max-width:1200px;
-    text-align:center;
-    pointer-events:none;
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+z-index:10;
+
+width:90%;
+max-width:1200px;
+
+text-align:center;
+
+pointer-events:none;
+
 }
 
 .hero-content h1{
-    font-family:'Cormorant Garamond',serif;
-    font-size:8rem;
-    font-weight:400;
-    line-height:.9;
-    color:white;
-    letter-spacing:2px;
-    margin-bottom:25px;
-    text-shadow:0 10px 25px rgba(0,0,0,.45);
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:8rem;
+
+font-weight:400;
+
+line-height:.9;
+
+color:white;
+
+letter-spacing:2px;
+
+margin-bottom:25px;
+
+text-shadow:0 10px 25px rgba(0,0,0,.45);
+
 }
 
 .hero-content p{
-    font-size:14px;
-    letter-spacing:5px;
-    line-height:1.8;
-    color:white;
-    margin-bottom:35px;
-    text-shadow:0 5px 15px rgba(0,0,0,.5);
+
+font-size:14px;
+
+letter-spacing:5px;
+
+line-height:1.8;
+
+color:white;
+
+margin-bottom:35px;
+
+text-shadow:0 5px 15px rgba(0,0,0,.5);
+
 }
 
 .hero-content a{
-    display:inline-block;
-    padding:16px 40px;
-    border:1px solid white;
-    color:white;
-    text-decoration:none;
-    font-size:11px;
-    letter-spacing:3px;
-    transition:.4s;
-    pointer-events:auto;
+
+display:inline-block;
+
+padding:16px 40px;
+
+border:1px solid white;
+
+color:white;
+
+text-decoration:none;
+
+font-size:11px;
+
+letter-spacing:3px;
+
+transition:.4s;
+
+pointer-events:auto;
+
 }
 
 .hero-content a:hover{
-    background:white;
-    color:#2d1d1a;
+
+background:white;
+color:#2d1d1a;
+
 }
 
 
-/* =========================================================
-   COMMON SECTION
-========================================================= */
+/* =====================================================
+   COMMON SECTION TITLE
+===================================================== */
 
-.section-title{
-    text-align:center;
-    padding:0 20px;
-    margin-bottom:55px;
+.section-heading{
+
+text-align:center;
+
+padding:70px 20px 45px;
+
 }
 
-.section-title h5{
-    font-size:10px;
-    letter-spacing:5px;
-    margin-bottom:15px;
-    color:#8b5e57;
+.section-heading small{
+
+display:block;
+
+font-size:10px;
+
+letter-spacing:5px;
+
+color:#8b5e57;
+
+margin-bottom:12px;
+
 }
 
-.section-title h2{
-    font-family:'Cormorant Garamond',serif;
-    font-size:4.3rem;
-    font-weight:400;
-    line-height:1;
-    color:#2d1d1a;
+.section-heading h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:4rem;
+
+font-weight:400;
+
+color:#2d1d1a;
+
 }
 
 
-/* =========================================================
+/* =====================================================
    PACKING VIDEOS
-========================================================= */
+===================================================== */
 
 .packing-section{
-    padding:105px 5% 110px;
-    background:#f7efec;
+
+background:#f7efec;
+
+padding-bottom:55px;
+
 }
 
 .packing-grid{
-    max-width:1400px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:24px;
+
+width:min(1200px,92%);
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:15px;
+
 }
 
 .packing-card{
-    position:relative;
-    aspect-ratio:16/10;
-    overflow:hidden;
-    background:#eee4df;
-    cursor:pointer;
+
+position:relative;
+
+height:240px;
+
+overflow:hidden;
+
+background:#eadeda;
+
+border-radius:3px;
+
 }
 
 .packing-card video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-    transition:.8s;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
 }
 
-.packing-card:hover video{
-    transform:scale(1.04);
+.packing-card::after{
+
+content:"";
+
+position:absolute;
+inset:0;
+
+background:linear-gradient(
+to top,
+rgba(45,29,26,.35),
+transparent 45%
+);
+
+pointer-events:none;
+
 }
 
 .packing-label{
-    position:absolute;
-    left:18px;
-    bottom:18px;
-    padding:8px 13px;
-    background:rgba(255,255,255,.9);
-    color:#4a120d;
-    font-size:9px;
-    letter-spacing:2px;
+
+position:absolute;
+
+bottom:13px;
+left:15px;
+
+z-index:2;
+
+color:white;
+
+font-size:9px;
+
+letter-spacing:2px;
+
 }
 
 
-/* =========================================================
+/* =====================================================
    REVIEWS
-========================================================= */
+===================================================== */
 
 .reviews-section{
-    padding:110px 5%;
-    background:white;
+
+background:#fff;
+
+padding-bottom:65px;
+
 }
 
-.reviews-grid{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+.reviews-wrapper{
+
+width:min(1200px,92%);
+
+margin:auto;
+
+overflow:hidden;
+
+}
+
+.reviews-track{
+
+display:grid;
+
+grid-template-columns:repeat(5,1fr);
+
+gap:14px;
+
 }
 
 .review-card{
-    background:#f8f1ee;
-    padding:35px 30px;
-    text-align:center;
-    border:1px solid rgba(74,18,13,.08);
-    transition:.4s;
+
+background:#f8f2ef;
+
+border:1px solid rgba(74,18,13,.08);
+
+padding:8px;
+
+border-radius:3px;
+
 }
 
-.review-card:hover{
-    transform:translateY(-6px);
+.review-card img{
+
+width:100%;
+
+aspect-ratio:1/1.25;
+
+object-fit:cover;
+
+display:block;
+
 }
 
-.review-stars{
-    color:#9a6b28;
-    font-size:15px;
-    letter-spacing:3px;
-    margin-bottom:20px;
+.review-placeholder{
+
+aspect-ratio:1/1.25;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+padding:15px;
+
+background:#f5ebe7;
+
+color:#6c5752;
+
 }
 
-.review-text{
-    font-family:'Cormorant Garamond',serif;
-    font-size:1.45rem;
-    line-height:1.45;
-    color:#3d2925;
-    margin-bottom:22px;
+.review-placeholder i{
+
+font-size:24px;
+
+margin-bottom:10px;
+
+color:#8b5e57;
+
 }
 
-.review-name{
-    font-size:10px;
-    letter-spacing:3px;
-    color:#8b5e57;
-    text-transform:uppercase;
+.review-placeholder strong{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:20px;
+
+font-weight:500;
+
 }
 
-.no-data{
-    grid-column:1/-1;
-    text-align:center;
-    padding:45px;
-    color:#8b5e57;
-    font-size:11px;
-    letter-spacing:2px;
-}
+.review-placeholder span{
 
+font-size:8px;
 
-/* =========================================================
-   PROMISE
-========================================================= */
+letter-spacing:1px;
 
-.promise{
-    padding:115px 8%;
-    background:#f2ece7;
-    text-align:center;
-}
+margin-top:7px;
 
-.promise h2{
-    font-family:'Cormorant Garamond',serif;
-    font-size:4.8rem;
-    margin-bottom:65px;
-    color:#31413d;
-    font-weight:400;
-}
-
-.promise-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:35px;
-}
-
-.promise-box{
-    padding:25px;
-    transition:.4s;
-}
-
-.promise-box:hover{
-    transform:translateY(-8px);
-}
-
-.promise-box i{
-    font-size:3.5rem;
-    margin-bottom:22px;
-    color:#31413d;
-}
-
-.promise-box h3{
-    font-family:'Cormorant Garamond',serif;
-    font-size:1.8rem;
-    font-weight:500;
-    line-height:1.4;
-    color:#31413d;
 }
 
 
-/* =========================================================
+/* =====================================================
    COLLECTION
-========================================================= */
+===================================================== */
 
 .collection{
-    padding:115px 0 130px;
-    background:white;
+
+background:#fff;
+
+padding:20px 0 100px;
+
+}
+
+.collection .section-heading{
+
+padding-top:20px;
+
 }
 
 .collection-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
 }
 
 .collection-item{
-    height:75vh;
-    min-height:550px;
-    position:relative;
-    overflow:hidden;
-    cursor:pointer;
+
+height:72vh;
+
+min-height:520px;
+
+position:relative;
+
+overflow:hidden;
+
+background:#4a120d;
+
 }
 
 .collection-item img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:1s;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+transition:1s;
+
+display:block;
+
+filter:brightness(.82);
+
 }
 
 .collection-item:hover img{
-    transform:scale(1.06);
+
+transform:scale(1.07);
+
+filter:brightness(.65);
+
 }
 
 .collection-overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        to top,
-        rgba(0,0,0,.65),
-        transparent 55%
-    );
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-    padding:45px;
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+to top,
+rgba(43,10,7,.88),
+rgba(43,10,7,.05) 60%
+);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:flex-end;
+
+padding:45px;
+
 }
 
 .collection-overlay span{
-    color:#e7d4ce;
-    font-size:10px;
-    letter-spacing:4px;
-    margin-bottom:12px;
+
+color:#e7d4ce;
+
+font-size:10px;
+
+letter-spacing:4px;
+
+margin-bottom:12px;
+
 }
 
 .collection-overlay h3{
-    font-family:'Cormorant Garamond',serif;
-    font-size:3.8rem;
-    font-weight:400;
-    color:white;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:4rem;
+
+font-weight:400;
+
+color:white;
+
+margin-bottom:15px;
+
+}
+
+.collection-overlay a{
+
+display:inline-flex;
+
+width:max-content;
+
+padding:11px 20px;
+
+border:1px solid rgba(255,255,255,.7);
+
+color:white;
+
+text-decoration:none;
+
+font-size:9px;
+
+letter-spacing:2px;
+
+transition:.3s;
+
+}
+
+.collection-overlay a:hover{
+
+background:white;
+color:#4a120d;
+
 }
 
 
-/* =========================================================
-   PRODUCT CATALOG
-========================================================= */
+/* =====================================================
+   AUTOMATIC CATALOG
+===================================================== */
 
 .catalog-section{
-    padding:110px 5% 130px;
-    background:#fff;
+
+background:#fff;
+
+padding:70px 5% 100px;
+
 }
 
-.catalog-container{
-    max-width:1400px;
-    margin:auto;
+.catalog-heading{
+
+max-width:1400px;
+
+margin:0 auto 40px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:end;
+
+border-bottom:1px solid rgba(45,29,26,.12);
+
+padding-bottom:18px;
+
 }
 
-.category-block{
-    margin-bottom:100px;
+.catalog-heading h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:3rem;
+
+font-weight:400;
+
 }
 
-.category-heading{
-    display:flex;
-    justify-content:space-between;
-    align-items:end;
-    border-bottom:1px solid rgba(45,29,26,.12);
-    padding-bottom:18px;
-    margin-bottom:38px;
-}
+.catalog-heading span{
 
-.category-heading h3{
-    font-family:'Cormorant Garamond',serif;
-    font-size:2.8rem;
-    font-weight:400;
-}
+font-size:9px;
 
-.category-heading span{
-    font-size:9px;
-    letter-spacing:3px;
-    color:#8b5e57;
+letter-spacing:3px;
+
+color:#8b5e57;
+
 }
 
 .products-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:45px 22px;
+
+max-width:1400px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:45px 22px;
+
 }
 
 .product-card{
-    position:relative;
-    cursor:pointer;
+
+cursor:pointer;
+
 }
 
 .product-media{
-    position:relative;
-    width:100%;
-    aspect-ratio:4/5;
-    overflow:hidden;
-    background:#f5efec;
+
+position:relative;
+
+width:100%;
+
+aspect-ratio:4/5;
+
+overflow:hidden;
+
+background:#f5efec;
+
 }
 
-.product-media > img,
-.product-media > video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-    transition:.8s;
+.product-media>img,
+.product-media>video{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+transition:.8s;
+
 }
 
-.product-card:hover .product-media > img,
-.product-card:hover .product-media > video{
-    transform:scale(1.04);
+.product-card:hover .product-media>img,
+.product-card:hover .product-media>video{
+
+transform:scale(1.035);
+
 }
 
 .product-info{
-    padding:15px 3px 0;
+
+padding:14px 3px 0;
+
 }
 
 .product-number{
-    display:block;
-    font-size:8px;
-    letter-spacing:3px;
-    color:#a07b73;
-    margin-bottom:7px;
+
+display:block;
+
+font-size:8px;
+
+letter-spacing:3px;
+
+color:#a07b73;
+
+margin-bottom:6px;
+
 }
 
 .product-name{
-    font-family:'Cormorant Garamond',serif;
-    font-size:1.5rem;
-    font-weight:500;
-    color:#2d1d1a;
-    line-height:1.1;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:1.55rem;
+
+font-weight:500;
+
+line-height:1.1;
+
+}
+
+.product-buy{
+
+display:inline-flex;
+
+margin-top:10px;
+
+padding:10px 16px;
+
+background:#4a120d;
+
+color:white;
+
+border:none;
+
+font-size:8px;
+
+letter-spacing:2px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.product-buy:hover{
+
+background:#6a2820;
+
 }
 
 
-/* SMALL MEDIA THUMBNAILS */
+/* SMALL MEDIA PREVIEWS */
 
 .product-thumbnails{
-    display:flex;
-    gap:6px;
-    margin-top:11px;
-    overflow-x:auto;
-    scrollbar-width:none;
-}
 
-.product-thumbnails::-webkit-scrollbar{
-    display:none;
+display:flex;
+
+gap:5px;
+
+margin-top:10px;
+
+overflow:hidden;
+
 }
 
 .product-thumb{
-    flex:0 0 42px;
-    width:42px;
-    height:42px;
-    overflow:hidden;
-    border:1px solid rgba(74,18,13,.12);
-    background:#eee;
+
+width:43px;
+height:43px;
+
+flex:none;
+
+overflow:hidden;
+
+background:#eee;
+
+border:1px solid rgba(74,18,13,.08);
+
 }
 
 .product-thumb img,
 .product-thumb video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
 }
 
 
-/* BUY BUTTON */
+/* =====================================================
+   LOADING
+===================================================== */
 
-.buy-now{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    width:100%;
-    margin-top:12px;
-    padding:12px 15px;
-    background:#4a120d;
-    color:white;
-    text-decoration:none;
-    border:0;
-    cursor:pointer;
-    font-family:'Montserrat',sans-serif;
-    font-size:9px;
-    letter-spacing:2px;
-    transition:.35s;
-}
+.loading{
 
-.buy-now:hover{
-    background:#6a2820;
-    transform:translateY(-2px);
+grid-column:1/-1;
+
+text-align:center;
+
+padding:70px 20px;
+
+color:#8b5e57;
+
+font-size:10px;
+
+letter-spacing:3px;
+
 }
 
 
-/* =========================================================
-   PRODUCT MODAL
-========================================================= */
+/* =====================================================
+   FOUNDER
+===================================================== */
+
+.founder{
+
+padding:100px 8%;
+
+background:#f7efec;
+
+}
+
+.founder-box{
+
+max-width:1000px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.founder-box h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:4.5rem;
+
+font-weight:400;
+
+margin-bottom:30px;
+
+}
+
+.founder-box p{
+
+font-size:14px;
+
+line-height:2;
+
+color:#5f504c;
+
+margin-bottom:18px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+background:#2b0a07;
+
+padding:80px 8% 35px;
+
+color:white;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr 1fr;
+
+gap:50px;
+
+}
+
+.footer-logo img{
+
+width:100px;
+
+margin-bottom:18px;
+
+}
+
+.footer-title{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+margin-bottom:20px;
+
+}
+
+.footer-links a{
+
+display:block;
+
+text-decoration:none;
+
+color:white;
+
+margin-bottom:12px;
+
+font-size:13px;
+
+transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+opacity:.65;
+
+transform:translateX(4px);
+
+}
+
+.copyright{
+
+text-align:center;
+
+margin-top:55px;
+
+font-size:11px;
+
+opacity:.65;
+
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
 
 .modal{
-    position:fixed;
-    inset:0;
-    background:rgba(35,18,15,.75);
-    backdrop-filter:blur(8px);
-    z-index:20000;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
+
+position:fixed;
+
+inset:0;
+
+background:rgba(35,18,15,.75);
+
+backdrop-filter:blur(8px);
+
+z-index:10000;
+
+display:none;
+
+align-items:center;
+
+justify-content:center;
+
+padding:20px;
+
 }
 
 .modal.active{
-    display:flex;
+
+display:flex;
+
 }
 
 .modal-box{
-    width:min(1150px,96vw);
-    max-height:94vh;
-    overflow:auto;
-    background:#fdf9f7;
-    display:grid;
-    grid-template-columns:1.15fr .85fr;
-    position:relative;
+
+width:min(1100px,96vw);
+
+max-height:92vh;
+
+overflow:auto;
+
+background:#fdf9f7;
+
+position:relative;
+
+display:grid;
+
+grid-template-columns:1.1fr .9fr;
+
 }
 
 .modal-close{
-    position:absolute;
-    top:16px;
-    right:16px;
-    z-index:20;
-    width:40px;
-    height:40px;
-    border:0;
-    border-radius:50%;
-    background:rgba(255,255,255,.92);
-    color:#4a120d;
-    cursor:pointer;
-    font-size:16px;
+
+position:absolute;
+
+top:15px;
+right:15px;
+
+z-index:20;
+
+width:40px;
+height:40px;
+
+border:0;
+border-radius:50%;
+
+background:white;
+
+color:#4a120d;
+
+cursor:pointer;
+
+font-size:17px;
+
 }
 
 .modal-gallery{
-    background:#f1e9e5;
-    min-height:650px;
-    display:flex;
-    flex-direction:column;
+
+background:#f1e9e5;
+
+min-height:620px;
+
+display:flex;
+
+flex-direction:column;
+
 }
 
 .main-media{
-    flex:1;
-    min-height:560px;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
+
+flex:1;
+
+min-height:520px;
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+overflow:hidden;
+
 }
 
 .main-media img,
 .main-media video{
-    width:100%;
-    height:100%;
-    max-height:650px;
-    object-fit:contain;
-    display:block;
+
+width:100%;
+height:100%;
+
+max-height:620px;
+
+object-fit:contain;
+
+display:block;
+
 }
 
 .gallery-arrow{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    width:42px;
-    height:42px;
-    border:0;
-    border-radius:50%;
-    background:rgba(255,255,255,.9);
-    color:#4a120d;
-    cursor:pointer;
-    z-index:5;
+
+position:absolute;
+
+top:50%;
+
+transform:translateY(-50%);
+
+width:42px;
+height:42px;
+
+border:0;
+border-radius:50%;
+
+background:rgba(255,255,255,.9);
+
+color:#4a120d;
+
+cursor:pointer;
+
+z-index:5;
+
 }
 
 .gallery-arrow.prev{
-    left:18px;
+
+left:15px;
+
 }
 
 .gallery-arrow.next{
-    right:18px;
+
+right:15px;
+
 }
 
 .thumbnails{
-    height:95px;
-    padding:10px;
-    display:flex;
-    gap:9px;
-    overflow-x:auto;
-    background:#fff;
+
+height:95px;
+
+padding:10px;
+
+display:flex;
+
+gap:8px;
+
+overflow-x:auto;
+
+background:white;
+
 }
 
 .thumb{
-    flex:0 0 72px;
-    height:72px;
-    border:1px solid transparent;
-    cursor:pointer;
-    overflow:hidden;
-    background:#eee;
+
+min-width:70px;
+
+height:72px;
+
+overflow:hidden;
+
+cursor:pointer;
+
+border:1px solid transparent;
+
 }
 
 .thumb.active{
-    border-color:#7c4b43;
+
+border-color:#7c4b43;
+
 }
 
 .thumb img,
 .thumb video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
 }
 
 .modal-info{
-    padding:70px 50px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+
+padding:60px 45px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
 }
 
 .modal-info small{
-    color:#9b746c;
-    font-size:9px;
-    letter-spacing:4px;
-    margin-bottom:18px;
+
+color:#9b746c;
+
+font-size:9px;
+
+letter-spacing:4px;
+
+margin-bottom:15px;
+
 }
 
 .modal-info h2{
-    font-family:'Cormorant Garamond',serif;
-    font-size:4rem;
-    font-weight:400;
-    line-height:1;
-    color:#2d1d1a;
-    margin-bottom:25px;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:4rem;
+
+font-weight:400;
+
+line-height:1;
+
+margin-bottom:25px;
+
 }
 
 .modal-divider{
-    width:65px;
-    height:1px;
-    background:#b9938b;
-    margin-bottom:25px;
+
+width:60px;
+
+height:1px;
+
+background:#b9938b;
+
+margin-bottom:25px;
+
 }
 
 .modal-info p{
-    color:#6c5752;
-    font-size:13px;
-    line-height:2;
-    margin-bottom:30px;
+
+font-size:13px;
+
+line-height:2;
+
+color:#6c5752;
+
+margin-bottom:25px;
+
 }
 
-.modal-buy{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    padding:17px 20px;
-    background:#4a120d;
-    color:white;
-    text-decoration:none;
-    font-size:10px;
-    letter-spacing:2px;
+.order-btn{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:10px;
+
+width:100%;
+
+padding:17px;
+
+background:#4a120d;
+
+color:white;
+
+text-decoration:none;
+
+font-size:10px;
+
+letter-spacing:2px;
+
 }
 
 .instagram-note{
-    margin-top:14px;
-    text-align:center;
-    font-size:9px;
-    letter-spacing:2px;
-    color:#8b5e57;
+
+margin-top:12px;
+
+text-align:center;
+
+font-size:8px;
+
+letter-spacing:2px;
+
+color:#8b5e57;
+
 }
 
 
-/* =========================================================
-   FOUNDER
-========================================================= */
-
-.founder{
-    padding:125px 8%;
-    background:#f7efec;
-}
-
-.founder-box{
-    max-width:1000px;
-    margin:auto;
-    text-align:center;
-}
-
-.founder-box h2{
-    font-family:'Cormorant Garamond',serif;
-    font-size:4.8rem;
-    font-weight:400;
-    margin-bottom:35px;
-}
-
-.founder-box p{
-    font-size:15px;
-    line-height:2.1;
-    color:#5f504c;
-    margin-bottom:20px;
-}
-
-
-/* =========================================================
-   CONTACT / FOOTER
-========================================================= */
-
-footer{
-    background:#2b0a07;
-    padding:90px 8% 40px;
-    color:white;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:50px;
-}
-
-.footer-logo img{
-    width:110px;
-    height:auto;
-    margin-bottom:20px;
-}
-
-.footer-title{
-    font-family:'Cormorant Garamond',serif;
-    font-size:2rem;
-    margin-bottom:22px;
-}
-
-.footer-links a{
-    display:block;
-    text-decoration:none;
-    color:white;
-    margin-bottom:13px;
-    transition:.3s;
-    font-size:14px;
-}
-
-.footer-links a:hover{
-    opacity:.7;
-    transform:translateX(4px);
-}
-
-.copyright{
-    text-align:center;
-    margin-top:60px;
-    font-size:12px;
-    opacity:.7;
-}
-
-
-/* =========================================================
+/* =====================================================
    MOBILE
-========================================================= */
+===================================================== */
 
-@media(max-width:1024px){
+@media(max-width:1000px){
 
-    .products-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
+.products-grid{
 
-    .promise-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .reviews-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+grid-template-columns:repeat(3,1fr);
 
 }
+
+.packing-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.reviews-track{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
 
 @media(max-width:768px){
 
-    header{
-        height:70px;
-        padding:10px 5%;
-    }
+header{
 
-    .logo img{
-        width:38px;
-    }
+height:70px;
 
-    .logo h1{
-        font-size:1.45rem;
-        letter-spacing:1.5px;
-    }
-
-    .menu-toggle{
-        display:block;
-        z-index:10001;
-    }
-
-    nav{
-        position:fixed;
-        top:0;
-        right:-100%;
-        width:260px;
-        height:100svh;
-        background:#f7efec;
-        flex-direction:column;
-        justify-content:center;
-        gap:0;
-        transition:.5s;
-        box-shadow:-10px 0 30px rgba(0,0,0,.1);
-    }
-
-    nav.active{
-        right:0;
-    }
-
-    nav a{
-        margin:16px 0;
-        font-size:11px;
-    }
-
-    .desktop-video-grid{
-        display:none;
-    }
-
-    .mobile-video-slider{
-        display:block;
-    }
-
-    .hero-slider{
-        min-height:600px;
-    }
-
-    .hero-content{
-        width:92%;
-    }
-
-    .hero-content h1{
-        font-size:3.7rem;
-        line-height:.95;
-        margin-bottom:20px;
-    }
-
-    .hero-content p{
-        font-size:9px;
-        letter-spacing:2px;
-        line-height:1.8;
-        margin-bottom:28px;
-    }
-
-    .hero-content a{
-        padding:13px 24px;
-        font-size:10px;
-        letter-spacing:2px;
-    }
-
-    .section-title h2{
-        font-size:3rem;
-    }
-
-    .packing-section,
-    .reviews-section,
-    .catalog-section{
-        padding:80px 18px;
-    }
-
-    .packing-grid{
-        grid-template-columns:1fr;
-        gap:15px;
-    }
-
-    .reviews-grid{
-        grid-template-columns:1fr;
-        gap:15px;
-    }
-
-    .review-card{
-        padding:30px 24px;
-    }
-
-    .promise{
-        padding:85px 25px;
-    }
-
-    .promise h2{
-        font-size:3rem;
-        margin-bottom:50px;
-    }
-
-    .promise-grid{
-        grid-template-columns:1fr;
-        gap:5px;
-    }
-
-    .collection{
-        padding:80px 0;
-    }
-
-    .collection-grid{
-        grid-template-columns:1fr;
-    }
-
-    .collection-item{
-        height:75vh;
-        min-height:450px;
-    }
-
-    .collection-overlay{
-        padding:35px;
-    }
-
-    .collection-overlay h3{
-        font-size:3rem;
-    }
-
-    .category-heading{
-        align-items:center;
-    }
-
-    .category-heading h3{
-        font-size:2.3rem;
-    }
-
-    .category-heading span{
-        font-size:7px;
-    }
-
-    .products-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:35px 12px;
-    }
-
-    .product-media{
-        aspect-ratio:3/4;
-    }
-
-    .product-name{
-        font-size:1.25rem;
-    }
-
-    .product-thumb{
-        width:36px;
-        height:36px;
-        flex-basis:36px;
-    }
-
-    .buy-now{
-        padding:11px 8px;
-        font-size:8px;
-    }
-
-    .modal{
-        padding:8px;
-    }
-
-    .modal-box{
-        display:block;
-        max-height:96vh;
-    }
-
-    .modal-gallery{
-        min-height:auto;
-    }
-
-    .main-media{
-        min-height:52vh;
-        height:52vh;
-    }
-
-    .main-media img,
-    .main-media video{
-        max-height:52vh;
-    }
-
-    .thumbnails{
-        height:78px;
-    }
-
-    .thumb{
-        width:58px;
-        height:58px;
-        flex-basis:58px;
-    }
-
-    .modal-info{
-        padding:32px 24px 28px;
-    }
-
-    .modal-info h2{
-        font-size:3rem;
-    }
-
-    .founder{
-        padding:85px 25px;
-    }
-
-    .founder-box h2{
-        font-size:3rem;
-    }
-
-    .founder-box p{
-        font-size:13px;
-        line-height:2;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
-        text-align:center;
-        gap:40px;
-    }
+padding:10px 5%;
 
 }
 
-@media(max-width:400px){
+.logo img{
 
-    .hero-content h1{
-        font-size:3rem;
-    }
+width:38px;
 
-    .products-grid{
-        gap:30px 9px;
-    }
+}
 
-    .product-name{
-        font-size:1.1rem;
-    }
+.logo h1{
+
+font-size:1.4rem;
+
+}
+
+.menu-toggle{
+
+display:block;
+
+z-index:10001;
+
+}
+
+nav{
+
+position:fixed;
+
+top:0;
+right:-100%;
+
+width:270px;
+height:100svh;
+
+background:#f7efec;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+gap:0;
+
+transition:.5s;
+
+box-shadow:-10px 0 30px rgba(0,0,0,.1);
+
+}
+
+nav.active{
+
+right:0;
+
+}
+
+nav a{
+
+font-size:11px;
+
+margin:14px 0;
+
+}
+
+.desktop-video-grid{
+
+display:none;
+
+}
+
+.mobile-video-slider{
+
+display:block;
+
+}
+
+.hero-slider{
+
+height:100svh;
+
+min-height:600px;
+
+}
+
+.hero-content{
+
+width:92%;
+
+}
+
+.hero-content h1{
+
+font-size:3.7rem;
+
+}
+
+.hero-content p{
+
+font-size:8px;
+
+letter-spacing:2px;
+
+line-height:1.8;
+
+}
+
+.hero-content a{
+
+padding:13px 24px;
+
+font-size:9px;
+
+}
+
+.section-heading{
+
+padding:55px 18px 30px;
+
+}
+
+.section-heading h2{
+
+font-size:3rem;
+
+}
+
+.packing-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:8px;
+
+}
+
+.packing-card{
+
+height:170px;
+
+}
+
+.reviews-wrapper{
+
+width:94%;
+
+}
+
+.reviews-track{
+
+display:flex;
+
+overflow-x:auto;
+
+gap:10px;
+
+padding-bottom:5px;
+
+scroll-snap-type:x mandatory;
+
+}
+
+.review-card{
+
+min-width:145px;
+
+scroll-snap-align:start;
+
+}
+
+.collection{
+
+padding-bottom:60px;
+
+}
+
+.collection .section-heading{
+
+padding-top:10px;
+
+}
+
+.collection-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.collection-item{
+
+height:65vh;
+
+min-height:450px;
+
+}
+
+.collection-overlay{
+
+padding:30px;
+
+}
+
+.collection-overlay h3{
+
+font-size:3rem;
+
+}
+
+.catalog-section{
+
+padding:55px 18px 70px;
+
+}
+
+.catalog-heading{
+
+display:block;
+
+}
+
+.catalog-heading h2{
+
+font-size:2.4rem;
+
+margin-bottom:8px;
+
+}
+
+.products-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:35px 10px;
+
+}
+
+.product-media{
+
+aspect-ratio:3/4;
+
+}
+
+.product-name{
+
+font-size:1.25rem;
+
+}
+
+.product-thumb{
+
+width:35px;
+height:35px;
+
+}
+
+.product-buy{
+
+padding:9px 13px;
+
+font-size:7px;
+
+}
+
+.founder{
+
+padding:75px 25px;
+
+}
+
+.founder-box h2{
+
+font-size:3rem;
+
+}
+
+.founder-box p{
+
+font-size:12px;
+
+line-height:2;
+
+}
+
+.modal{
+
+padding:8px;
+
+}
+
+.modal-box{
+
+display:block;
+
+max-height:96vh;
+
+}
+
+.modal-gallery{
+
+min-height:auto;
+
+}
+
+.main-media{
+
+height:55vh;
+
+min-height:400px;
+
+}
+
+.modal-info{
+
+padding:30px 22px;
+
+}
+
+.modal-info h2{
+
+font-size:3rem;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+gap:35px;
+
+}
+
+}
+
+@media(max-width:430px){
+
+.hero-content h1{
+
+font-size:3.2rem;
+
+}
+
+.packing-card{
+
+height:145px;
+
+}
+
+.review-card{
+
+min-width:135px;
+
+}
+
+.collection-item{
+
+height:58vh;
+
+}
+
+.product-name{
+
+font-size:1.1rem;
+
+}
 
 }
 
 
-/* =========================================================
+/* =====================================================
    SCROLLBAR
-========================================================= */
+===================================================== */
 
 ::-webkit-scrollbar{
-    width:7px;
+
+width:7px;
+
 }
 
 ::-webkit-scrollbar-track{
-    background:#f7efec;
+
+background:#f7efec;
+
 }
 
 ::-webkit-scrollbar-thumb{
-    background:#8b5e57;
+
+background:#8b5e57;
+
 }
 
 </style>
 
 </head>
 
+
 <body>
 
 
-<!-- =========================================================
+<!-- =====================================================
      HEADER
-========================================================= -->
+===================================================== -->
 
 <header>
 
 <a href="#home" class="logo">
 
-<img src="logo-brown.png" alt="Anayaluxee">
+<img
+src="logo-brown.png"
+alt="Anayaluxee">
 
 <h1>ANAYALUXEE</h1>
 
 </a>
+
 
 <div
 class="menu-toggle"
@@ -1231,13 +1888,21 @@ onclick="toggleMenu()">
 
 </div>
 
+
 <nav id="navMenu">
 
 <a href="#home">HOME</a>
+
 <a href="#jewelry">JEWELRY</a>
+
 <a href="#suits">SUITS</a>
+
 <a href="#abayas">ABAYAS</a>
+
 <a href="#founder">FOUNDER</a>
+
+<a href="#reviews">REVIEWS</a>
+
 <a href="#contact">CONTACT</a>
 
 </nav>
@@ -1245,45 +1910,53 @@ onclick="toggleMenu()">
 </header>
 
 
-<!-- =========================================================
+<!-- =====================================================
      HERO
-========================================================= -->
+===================================================== -->
 
 <section
 class="hero-slider"
 id="home">
 
-<div
-class="desktop-video-grid"
-id="desktopVideoGrid">
-
-<div class="desktop-video-item">
-<video muted playsinline webkit-playsinline preload="auto"></video>
-</div>
-
-<div class="desktop-video-item">
-<video muted playsinline webkit-playsinline preload="auto"></video>
-</div>
-
-<div class="desktop-video-item">
-<video muted playsinline webkit-playsinline preload="auto"></video>
-</div>
-
-</div>
-
 
 <div
-class="mobile-video-slider"
-id="mobileVideoSlider">
+class="desktop-video-grid">
 
-<div class="mobile-slide">
 
-<video
-muted
-playsinline
-webkit-playsinline
-preload="auto">
-</video>
+<div class="desktop-video-item">
+
+<video muted playsinline
+webkit-playsinline preload="auto"></video>
+
+</div>
+
+
+<div class="desktop-video-item">
+
+<video muted playsinline
+webkit-playsinline preload="auto"></video>
+
+</div>
+
+
+<div class="desktop-video-item">
+
+<video muted playsinline
+webkit-playsinline preload="auto"></video>
+
+</div>
+
+
+</div>
+
+
+<div
+class="mobile-video-slider">
+
+<div class="mobile-slide active">
+
+<video muted playsinline
+webkit-playsinline preload="auto"></video>
 
 </div>
 
@@ -1298,7 +1971,7 @@ preload="auto">
 LUXURY JEWELRY · DESIGNER SUITS · ELEGANT ABAYAS
 </p>
 
-<a href="#jewelry">
+<a href="#collection">
 EXPLORE COLLECTION
 </a>
 
@@ -1307,29 +1980,31 @@ EXPLORE COLLECTION
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      PACKING VIDEOS
-     AUTOMATIC FROM products/packing/
-========================================================= -->
+===================================================== -->
 
 <section
 class="packing-section"
 id="packing">
 
-<div class="section-title">
+<div class="section-heading">
 
-<h5>BEHIND THE BEAUTY</h5>
+<small>OUR PACKAGING</small>
 
-<h2>Our Packing</h2>
+<h2>Packed With Love</h2>
 
 </div>
+
 
 <div
 class="packing-grid"
 id="packingGrid">
 
-<div class="no-data">
-LOADING PACKING VIDEOS...
+<div class="loading">
+
+CURATING OUR PACKAGING...
+
 </div>
 
 </div>
@@ -1337,74 +2012,55 @@ LOADING PACKING VIDEOS...
 </section>
 
 
-<!-- =========================================================
-     CUSTOMER REVIEWS
-========================================================= -->
+<!-- =====================================================
+     REVIEWS
+===================================================== -->
 
 <section
 class="reviews-section"
 id="reviews">
 
-<div class="section-title">
+<div class="section-heading">
 
-<h5>OUR CUSTOMERS</h5>
+<small>OUR CUSTOMERS</small>
 
-<h2>Customer Reviews</h2>
+<h2>What They Say</h2>
 
 </div>
+
+
+<div class="reviews-wrapper">
 
 <div
-class="reviews-grid"
-id="reviewsGrid">
+class="reviews-track"
+id="reviewsTrack">
 
-<div class="no-data">
-LOADING REVIEWS...
-</div>
+<!--
+Instagram review screenshots automatically appear here.
 
-</div>
+Upload:
+review1.jpg
+review2.jpg
+...
+review15.jpg
+to products/reviews/
+-->
 
-</section>
+<div class="review-card">
 
+<div class="review-placeholder">
 
-<!-- =========================================================
-     PROMISE
-========================================================= -->
+<i class="fa-brands fa-instagram"></i>
 
-<section class="promise">
+<strong>Customer Reviews</strong>
 
-<h2>Our Promise</h2>
-
-<div class="promise-grid">
-
-<div class="promise-box">
-
-<i class="fa-solid fa-truck"></i>
-
-<h3>Pan India Shipping</h3>
+<span>
+INSTAGRAM REVIEWS
+</span>
 
 </div>
 
-<div class="promise-box">
-
-<i class="fa-solid fa-gem"></i>
-
-<h3>Premium Skin Friendly Jewelry</h3>
-
 </div>
-
-<div class="promise-box">
-
-<i class="fa-solid fa-shirt"></i>
-
-<h3>High Quality Designer Suits & Abayas</h3>
-
-</div>
-
-<div class="promise-box">
-
-<i class="fa-solid fa-headset"></i>
-
-<h3>24/7 Customer Support</h3>
 
 </div>
 
@@ -1413,28 +2069,38 @@ LOADING REVIEWS...
 </section>
 
 
-<!-- =========================================================
-     COLLECTION VISUAL
-========================================================= -->
+<!-- =====================================================
+     COLLECTION
+===================================================== -->
 
-<section class="collection">
+<section
+class="collection"
+id="collection">
 
-<div class="section-title">
 
-<h5>THE COLLECTION</h5>
+<div class="section-heading">
+
+<small>THE COLLECTION</small>
 
 <h2>Luxury Crafted For Modern Elegance</h2>
 
 </div>
 
+
 <div class="collection-grid">
 
-<a
-href="#jewelry"
-class="collection-item">
 
-<img src="jewelry.jpg"
-alt="Anayaluxee Jewelry">
+<!-- JEWELRY -->
+
+<div
+class="collection-item"
+id="jewelry">
+
+<img
+src="products/jewelry-cover.jpg"
+alt="Anayaluxee Jewelry"
+onerror="this.style.display='none';">
+
 
 <div class="collection-overlay">
 
@@ -1442,17 +2108,26 @@ alt="Anayaluxee Jewelry">
 
 <h3>Jewelry</h3>
 
-</div>
-
+<a href="#jewelryCatalog">
+SHOP JEWELRY
 </a>
 
+</div>
 
-<a
-href="#suits"
-class="collection-item">
+</div>
 
-<img src="suits.jpg"
-alt="Anayaluxee Designer Suits">
+
+<!-- SUITS -->
+
+<div
+class="collection-item"
+id="suits">
+
+<img
+src="products/suits-cover.jpg"
+alt="Anayaluxee Suits"
+onerror="this.style.display='none';">
+
 
 <div class="collection-overlay">
 
@@ -1460,17 +2135,26 @@ alt="Anayaluxee Designer Suits">
 
 <h3>Suits</h3>
 
-</div>
-
+<a href="#suitsCatalog">
+SHOP SUITS
 </a>
 
+</div>
 
-<a
-href="#abayas"
-class="collection-item">
+</div>
 
-<img src="abayas.jpg"
-alt="Anayaluxee Abayas">
+
+<!-- ABAYAS -->
+
+<div
+class="collection-item"
+id="abayas">
+
+<img
+src="products/abayas-cover.jpg"
+alt="Anayaluxee Abayas"
+onerror="this.style.display='none';">
+
 
 <div class="collection-overlay">
 
@@ -1478,29 +2162,43 @@ alt="Anayaluxee Abayas">
 
 <h3>Abayas</h3>
 
-</div>
-
+<a href="#abayasCatalog">
+SHOP ABAYAS
 </a>
 
 </div>
 
+</div>
+
+
+</div>
+
 </section>
 
 
-<!-- =========================================================
-     AUTOMATIC PRODUCT CATALOGS
-========================================================= -->
+<!-- =====================================================
+     JEWELRY CATALOG
+===================================================== -->
 
 <section
 class="catalog-section"
-id="catalog">
+id="jewelryCatalog">
+
+<div class="catalog-heading">
+
+<h2>Jewelry Collection</h2>
+
+<span>ANAYALUXEE JEWELRY</span>
+
+</div>
+
 
 <div
-class="catalog-container"
-id="catalogContainer">
+class="products-grid"
+id="jewelryGrid">
 
-<div class="no-data">
-CURATING YOUR COLLECTION...
+<div class="loading">
+CURATING YOUR JEWELRY...
 </div>
 
 </div>
@@ -1508,9 +2206,69 @@ CURATING YOUR COLLECTION...
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
+     SUITS CATALOG
+===================================================== -->
+
+<section
+class="catalog-section"
+id="suitsCatalog">
+
+<div class="catalog-heading">
+
+<h2>Designer Suits</h2>
+
+<span>ANAYALUXEE SUITS</span>
+
+</div>
+
+
+<div
+class="products-grid"
+id="suitsGrid">
+
+<div class="loading">
+CURATING YOUR SUITS...
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ABAYAS CATALOG
+===================================================== -->
+
+<section
+class="catalog-section"
+id="abayasCatalog">
+
+<div class="catalog-heading">
+
+<h2>Elegant Abayas</h2>
+
+<span>ANAYALUXEE ABAYAS</span>
+
+</div>
+
+
+<div
+class="products-grid"
+id="abayasGrid">
+
+<div class="loading">
+CURATING YOUR ABAYAS...
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
      FOUNDER
-========================================================= -->
+===================================================== -->
 
 <section
 class="founder"
@@ -1520,12 +2278,14 @@ id="founder">
 
 <h2>From Our Founder</h2>
 
+
 <p>
 Anayaluxee was born from a passion
 for timeless elegance, femininity,
 and the desire to make every woman
 feel confident in her own unique style.
 </p>
+
 
 <p>
 What began as a dream soon evolved
@@ -1536,11 +2296,16 @@ abayas and designer ensembles crafted
 for the modern woman.
 </p>
 
+
 <p>
 At Anayaluxee, we believe fashion
 is more than just clothing;
 it is an expression of confidence,
 individuality, and beauty.
+</p>
+
+
+<p>
 Every collection is thoughtfully
 curated with attention to detail,
 fine craftsmanship, and a vision
@@ -1548,20 +2313,12 @@ to bring sophistication into
 everyday style.
 </p>
 
-<p>
-This journey has been filled with
-learning, dedication, faith,
-and hard work.
-None of it would have been possible
-without the love and trust of our
-customers, who continue to inspire
-and support us every day.
-</p>
 
 <p>
 Thank you for being a part
 of the Anayaluxee family.
 </p>
+
 
 <p>
 With Love & Duas,<br>
@@ -1573,17 +2330,118 @@ With Love & Duas,<br>
 </section>
 
 
-<!-- =========================================================
-     CONTACT
-========================================================= -->
+<!-- =====================================================
+     PRODUCT MODAL
+===================================================== -->
+
+<div
+class="modal"
+id="productModal">
+
+
+<div class="modal-box">
+
+
+<button
+class="modal-close"
+onclick="closeModal()">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+
+<div class="modal-gallery">
+
+
+<div
+class="main-media"
+id="mainMedia">
+
+<button
+class="gallery-arrow prev"
+onclick="changeMedia(-1)">
+
+<i class="fa-solid fa-chevron-left"></i>
+
+</button>
+
+
+<button
+class="gallery-arrow next"
+onclick="changeMedia(1)">
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</button>
+
+</div>
+
+
+<div
+class="thumbnails"
+id="thumbnails">
+</div>
+
+</div>
+
+
+<div class="modal-info">
+
+<small id="modalNumber"></small>
+
+<h2 id="modalTitle"></h2>
+
+<div class="modal-divider"></div>
+
+<p>
+A thoughtfully selected piece from
+the Anayaluxee collection.
+For price, availability and details,
+connect with us directly on Instagram.
+</p>
+
+
+<a
+id="instagramOrder"
+class="order-btn"
+href="#"
+target="_blank"
+rel="noopener noreferrer">
+
+<i class="fa-brands fa-instagram"></i>
+
+BUY NOW ON INSTAGRAM
+
+</a>
+
+
+<div class="instagram-note">
+
+@ANAYALUXEE
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer id="contact">
 
 <div class="footer-grid">
 
+
 <div class="footer-logo">
 
-<img src="logo.jpg"
+<img
+src="logo-brown.png"
 alt="Anayaluxee">
 
 <p>
@@ -1603,15 +2461,6 @@ Location
 Lucknow, Uttar Pradesh
 </p>
 
-<br>
-
-<p>
-For orders, collaborations
-and customer support,
-connect with us through
-Instagram or email.
-</p>
-
 </div>
 
 
@@ -1621,53 +2470,78 @@ Instagram or email.
 Connect With Us
 </h3>
 
+
 <div class="footer-links">
 
 <a href="mailto:anayaluxee@gmail.com">
-<i class="fa-regular fa-envelope"></i>
+<i class="fa-solid fa-envelope"></i>
 &nbsp; anayaluxee@gmail.com
 </a>
+
 
 <a
 href="https://www.instagram.com/anayaluxee/"
 target="_blank"
 rel="noopener noreferrer">
-Instagram
+
+<i class="fa-brands fa-instagram"></i>
+&nbsp; Jewelry Instagram
+
 </a>
+
 
 <a
 href="https://www.instagram.com/anayaluxeestudio/"
 target="_blank"
 rel="noopener noreferrer">
-Instagram For Suits
+
+<i class="fa-brands fa-instagram"></i>
+&nbsp; Instagram For Suits
+
 </a>
+
 
 <a
 href="https://www.facebook.com/share/1AVvTNDU7D/?mibextid=wwXIfr"
 target="_blank"
 rel="noopener noreferrer">
-Facebook
+
+<i class="fa-brands fa-facebook"></i>
+&nbsp; Facebook
+
 </a>
+
 
 <a
 href="https://www.facebook.com/people/Anayaluxeestudio/61591221075082/"
 target="_blank"
 rel="noopener noreferrer">
-Facebook For Suits
+
+<i class="fa-brands fa-facebook"></i>
+&nbsp; Facebook For Suits
+
 </a>
+
 
 <a
 href="https://www.pinterest.com/anayaluxee/"
 target="_blank"
 rel="noopener noreferrer">
-Pinterest
+
+<i class="fa-brands fa-pinterest"></i>
+&nbsp; Pinterest
+
 </a>
+
 
 <a
 href="https://www.youtube.com/@Anayaluxee/"
 target="_blank"
 rel="noopener noreferrer">
-YouTube
+
+<i class="fa-brands fa-youtube"></i>
+&nbsp; YouTube
+
 </a>
 
 </div>
@@ -1675,6 +2549,7 @@ YouTube
 </div>
 
 </div>
+
 
 <div class="copyright">
 
@@ -1685,1970 +2560,1307 @@ YouTube
 </footer>
 
 
-<!-- =========================================================
-     PRODUCT MODAL
-========================================================= -->
-
-<div
-class="modal"
-id="productModal">
-
-<div class="modal-box">
-
-<button
-class="modal-close"
-onclick="closeProductModal()">
-
-<i class="fa-solid fa-xmark"></i>
-
-</button>
-
-
-<div class="modal-gallery">
-
-<div
-class="main-media"
-id="mainMedia">
-
-</div>
-
-<div
-class="thumbnails"
-id="modalThumbnails">
-
-</div>
-
-</div>
-
-
-<div class="modal-info">
-
-<small id="modalNumber"></small>
-
-<h2 id="modalTitle"></h2>
-
-<div class="modal-divider"></div>
-
-<p>
-A thoughtfully selected piece from
-the Anayaluxee collection.
-For details, availability and
-ordering, connect with us directly.
-</p>
-
-<a
-href="#"
-id="modalBuyButton"
-class="modal-buy"
-target="_blank"
-rel="noopener noreferrer">
-
-<i class="fa-brands fa-instagram"></i>
-
-BUY NOW ON INSTAGRAM
-
-</a>
-
-<div class="instagram-note">
-@ANAYALUXEE
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
 <script>
 
-/* =========================================================
-   CONFIGURATION
-========================================================= */
-
-const GITHUB_RAW_BASE =
-"https://raw.githubusercontent.com/shubham7-an/anayaluxee.com/main/";
-
-const GITHUB_API_BASE =
-"https://api.github.com/repos/shubham7-an/anayaluxee.com/contents/";
-
-
-const MEDIA_EXTENSIONS = [
-    "jpg",
-    "jpeg",
-    "png",
-    "webp",
-    "mp4",
-    "webm"
-];
-
-const VIDEO_EXTENSIONS = [
-    "mp4",
-    "webm"
-];
-
-
-/*
-   IMPORTANT
-
-   Instagram username
-*/
-const INSTAGRAM_USERNAME =
-"anayaluxee";
-
-
-/* =========================================================
-   HERO VIDEOS
-========================================================= */
-
-const heroVideos = [
-
-    "hero1.mp4",
-    "hero2.mp4",
-    "hero3.mp4",
-    "hero4.mp4",
-    "hero5.mp4",
-    "hero6.mp4",
-    "hero8.mp4",
-    "hero7.mp4",
-    "hero9.mp4"
-
-];
-
-
-/* =========================================================
-   MENU
-========================================================= */
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
 function toggleMenu(){
 
-    document
-    .getElementById("navMenu")
-    .classList
-    .toggle("active");
+document
+.getElementById("navMenu")
+.classList
+.toggle("active");
 
 }
 
-
 document
 .querySelectorAll("#navMenu a")
-.forEach(link => {
+.forEach(link=>{
 
-    link.addEventListener(
-        "click",
-        () => {
+link.addEventListener("click",()=>{
 
-            document
-            .getElementById("navMenu")
-            .classList
-            .remove("active");
+document
+.getElementById("navMenu")
+.classList
+.remove("active");
 
-        }
-    );
+});
 
 });
 
 
-/* =========================================================
-   DEVICE
-========================================================= */
+/* =====================================================
+   HERO VIDEOS
+===================================================== */
 
-function isMobile(){
+const videoFiles=[
 
-    return window.innerWidth <= 768;
+"hero1.mp4",
+"hero2.mp4",
+"hero3.mp4",
+"hero4.mp4",
+"hero5.mp4",
+"hero6.mp4",
+"hero8.mp4",
+"hero7.mp4",
+"hero9.mp4"
+
+];
+
+
+function isMobileDevice(){
+
+return window.innerWidth<=768;
 
 }
 
 
-/* =========================================================
-   HERO DESKTOP
-========================================================= */
-
-const desktopVideos =
+const desktopVideos=
 document.querySelectorAll(
-    ".desktop-video-item video"
+".desktop-video-item video"
 );
 
-let desktopStart = 0;
+let desktopStart=0;
 
 
-function loadDesktopHero(){
+function loadDesktopVideos(){
 
-    if(isMobile()){
-        return;
-    }
+if(isMobileDevice()) return;
 
+for(let i=0;i<3;i++){
 
-    desktopVideos.forEach(
-        (video,index) => {
+const index=
+(desktopStart+i)%videoFiles.length;
 
-            const fileIndex =
-                (desktopStart + index)
-                % heroVideos.length;
+const video=
+desktopVideos[i];
 
-            video.src =
-                heroVideos[fileIndex];
+video.src=videoFiles[index];
 
-            video.muted = true;
-            video.defaultMuted = true;
-            video.volume = 0;
-            video.playsInline = true;
+video.muted=true;
+video.defaultMuted=true;
+video.volume=0;
+video.playsInline=true;
 
-            video.setAttribute(
-                "muted",
-                ""
-            );
+video.setAttribute("muted","");
+video.setAttribute("playsinline","");
+video.setAttribute(
+"webkit-playsinline",""
+);
 
-            video.setAttribute(
-                "playsinline",
-                ""
-            );
+video.load();
 
-            video.setAttribute(
-                "webkit-playsinline",
-                ""
-            );
+video.play().catch(()=>{});
 
-            video.load();
-
-            video.play()
-            .catch(() => {});
-
-        }
-    );
+}
 
 }
 
 
-function nextDesktopHero(){
+function nextDesktopVideos(){
 
-    if(isMobile()){
-        return;
-    }
+if(isMobileDevice()) return;
 
-    desktopStart =
-        (desktopStart + 3)
-        % heroVideos.length;
+desktopStart=
+(desktopStart+3)%videoFiles.length;
 
-    loadDesktopHero();
+loadDesktopVideos();
 
 }
 
 
-loadDesktopHero();
-
+loadDesktopVideos();
 
 setInterval(
-    nextDesktopHero,
-    6000
+nextDesktopVideos,
+6000
 );
 
 
-/* =========================================================
-   HERO MOBILE
-========================================================= */
+/* =====================================================
+   MOBILE HERO
+===================================================== */
 
-const mobileVideo =
+const mobileVideo=
 document.querySelector(
-    ".mobile-slide video"
+".mobile-slide video"
 );
 
-let mobileCurrent =
+let mobileCurrent=
 Math.floor(
-    Math.random() *
-    heroVideos.length
+Math.random()*videoFiles.length
 );
 
 
-function loadMobileHero(){
+function loadMobileVideo(){
 
-    if(!isMobile()){
-        return;
-    }
+if(!isMobileDevice()) return;
 
-    mobileVideo.src =
-        heroVideos[mobileCurrent];
+mobileVideo.src=
+videoFiles[mobileCurrent];
 
-    mobileVideo.muted = true;
-    mobileVideo.defaultMuted = true;
-    mobileVideo.volume = 0;
-    mobileVideo.playsInline = true;
+mobileVideo.muted=true;
+mobileVideo.defaultMuted=true;
+mobileVideo.volume=0;
+mobileVideo.playsInline=true;
 
-    mobileVideo.setAttribute(
-        "muted",
-        ""
-    );
+mobileVideo.setAttribute("muted","");
+mobileVideo.setAttribute("playsinline","");
+mobileVideo.setAttribute(
+"webkit-playsinline",""
+);
 
-    mobileVideo.setAttribute(
-        "playsinline",
-        ""
-    );
+mobileVideo.load();
 
-    mobileVideo.setAttribute(
-        "webkit-playsinline",
-        ""
-    );
+mobileVideo.play().catch(()=>{});
 
-    mobileVideo.load();
+}
 
-    mobileVideo.play()
-    .catch(() => {});
+
+function nextMobileVideo(){
+
+let next;
+
+do{
+
+next=
+Math.floor(
+Math.random()*videoFiles.length
+);
+
+}
+while(
+next===mobileCurrent
+);
+
+mobileCurrent=next;
+
+loadMobileVideo();
 
 }
 
 
 mobileVideo.addEventListener(
-    "ended",
-    () => {
+"ended",
+()=>{
 
-        if(!isMobile()){
-            return;
-        }
+if(isMobileDevice())
+nextMobileVideo();
 
-        let next;
-
-        do{
-
-            next =
-                Math.floor(
-                    Math.random() *
-                    heroVideos.length
-                );
-
-        }
-        while(
-            next === mobileCurrent
-        );
-
-        mobileCurrent = next;
-
-        loadMobileHero();
-
-    }
-);
+});
 
 
-loadMobileHero();
-
-
-/* autoplay fallback */
-
-document.addEventListener(
-    "touchstart",
-    () => {
-
-        if(
-            isMobile() &&
-            mobileVideo.paused
-        ){
-
-            mobileVideo
-            .play()
-            .catch(() => {});
-
-        }
-
-    },
-    {
-        passive:true
-    }
-);
+loadMobileVideo();
 
 
 document.addEventListener(
-    "pointerdown",
-    () => {
+"touchstart",
+()=>{
 
-        if(
-            isMobile() &&
-            mobileVideo.paused
-        ){
+if(isMobileDevice() &&
+mobileVideo.paused){
 
-            mobileVideo
-            .play()
-            .catch(() => {});
-
-        }
-
-    },
-    {
-        passive:true
-    }
-);
-
-
-/* =========================================================
-   GITHUB HELPERS
-========================================================= */
-
-function extensionOf(name){
-
-    return name
-        .split(".")
-        .pop()
-        .toLowerCase();
+mobileVideo.play().catch(()=>{});
 
 }
 
+},
+{
+passive:true,
+once:true
+});
 
-function isMediaFile(name){
 
-    return MEDIA_EXTENSIONS
-        .includes(
-            extensionOf(name)
-        );
+/* =====================================================
+   PRODUCT SYSTEM
+===================================================== */
 
-}
+const REPO_API=
+"https://api.github.com/repos/shubham7-an/anayaluxee.com/contents/";
 
+const RAW_ROOT=
+"https://raw.githubusercontent.com/shubham7-an/anayaluxee.com/main/";
 
-function isVideoFile(name){
 
-    return VIDEO_EXTENSIONS
-        .includes(
-            extensionOf(name)
-        );
+const mediaExtensions=[
 
-}
-
-
-function mediaType(name){
-
-    return isVideoFile(name)
-        ? "video"
-        : "image";
-
-}
-
-
-function rawUrl(
-    folder,
-    filename
-){
-
-    return (
-        GITHUB_RAW_BASE +
-        folder +
-        "/" +
-        encodeURIComponent(filename)
-    );
-
-}
-
-
-/* =========================================================
-   GET GITHUB FOLDER
-========================================================= */
-
-async function getFolderFiles(
-    folder
-){
-
-    const response =
-        await fetch(
-            GITHUB_API_BASE +
-            folder +
-            "?ref=main&cacheBust=" +
-            Date.now(),
-            {
-                headers:{
-                    "Accept":
-                    "application/vnd.github+json"
-                },
-                cache:"no-store"
-            }
-        );
-
-
-    if(!response.ok){
-
-        throw new Error(
-            folder +
-            " folder error: " +
-            response.status
-        );
-
-    }
-
-
-    const data =
-        await response.json();
-
-
-    return data
-
-        .filter(
-            item =>
-                item.type === "file"
-        )
-
-        .filter(
-            item =>
-                isMediaFile(
-                    item.name
-                )
-        )
-
-        .map(
-            item => ({
-
-                name:item.name,
-
-                src:
-                    rawUrl(
-                        folder,
-                        item.name
-                    ),
-
-                type:
-                    mediaType(
-                        item.name
-                    )
-
-            })
-        );
-
-}
-
-
-/* =========================================================
-   PRODUCT BASE NAME
-========================================================= */
-
-function getProductBase(
-    filename
-){
-
-    const clean =
-        filename
-        .replace(
-            /\.[^/.]+$/,
-            ""
-        );
-
-
-    /*
-       Product_1
-       Product_2
-
-       become:
-
-       Product
-    */
-
-    return clean
-        .replace(
-            /_\d+$/,
-            ""
-        );
-
-}
-
-
-/* =========================================================
-   PRODUCT DISPLAY NAME
-========================================================= */
-
-function createProductName(
-    base
-){
-
-    return base
-
-        .replace(
-            /[_-]+/g,
-            " "
-        )
-
-        .replace(
-            /\s+/g,
-            " "
-        )
-
-        .trim()
-
-        .replace(
-            /\b\w/g,
-            letter =>
-                letter.toUpperCase()
-        );
-
-}
-
-
-/* =========================================================
-   SORT MEDIA
-========================================================= */
-
-function mediaNumber(
-    filename
-){
-
-    const match =
-        filename.match(
-            /_(\d+)\.[^.]+$/
-        );
-
-
-    return match
-        ? Number(match[1])
-        : 0;
-
-}
-
-
-/* =========================================================
-   CREATE PRODUCTS
-========================================================= */
-
-function createProducts(
-    files
-){
-
-    const map =
-        new Map();
-
-
-    files.forEach(
-        file => {
-
-            const base =
-                getProductBase(
-                    file.name
-                );
-
-
-            if(
-                !map.has(base)
-            ){
-
-                map.set(
-                    base,
-                    []
-                );
-
-            }
-
-
-            map
-            .get(base)
-            .push(file);
-
-        }
-    );
-
-
-    const products = [];
-
-
-    map.forEach(
-        (media,base) => {
-
-            media.sort(
-                (a,b) =>
-                    mediaNumber(a.name)
-                    -
-                    mediaNumber(b.name)
-            );
-
-
-            products.push({
-
-                base:base,
-
-                name:
-                    createProductName(
-                        base
-                    ),
-
-                media:media
-
-            });
-
-        }
-    );
-
-
-    products.sort(
-        (a,b) =>
-            a.name.localeCompare(
-                b.name
-            )
-    );
-
-
-    return products;
-
-}
-
-
-/* =========================================================
-   PRODUCT LINK
-========================================================= */
-
-function createProductLink(
-    category,
-    product
-){
-
-    const slug =
-        product.base
-        .toLowerCase()
-        .replace(
-            /[^a-z0-9]+/g,
-            "-"
-        )
-        .replace(
-            /^-+|-+$/g,
-            ""
-        );
-
-
-    return (
-        window.location.origin +
-        window.location.pathname +
-        "#" +
-        category +
-        "-" +
-        slug
-    );
-
-}
-
-
-/* =========================================================
-   INSTAGRAM DM LINK
-========================================================= */
-
-function createInstagramDM(
-    product,
-    category
-){
-
-    const productLink =
-        createProductLink(
-            category,
-            product
-        );
-
-
-    const message =
-        "Hi Anayaluxee, I want to buy " +
-        product.name +
-        ". Product link: " +
-        productLink;
-
-
-    return (
-        "https://ig.me/m/" +
-        INSTAGRAM_USERNAME +
-        "?text=" +
-        encodeURIComponent(
-            message
-        )
-    );
-
-}
-
-
-/* =========================================================
-   PRODUCT CARD
-========================================================= */
-
-function createProductCard(
-    product,
-    category,
-    index
-){
-
-    const card =
-        document.createElement(
-            "article"
-        );
-
-
-    card.className =
-        "product-card";
-
-
-    const first =
-        product.media[0];
-
-
-    let mainHTML;
-
-
-    if(
-        first.type === "video"
-    ){
-
-        mainHTML = `
-
-            <video
-                src="${first.src}"
-                muted
-                autoplay
-                loop
-                playsinline
-                preload="metadata">
-            </video>
-
-        `;
-
-    }
-    else{
-
-        mainHTML = `
-
-            <img
-                src="${first.src}"
-                alt="${product.name}"
-                loading="lazy">
-
-        `;
-
-    }
-
-
-    /*
-       SMALL SQUARE MEDIA
-    */
-
-    const thumbsHTML =
-        product.media
-        .map(
-            item => {
-
-                if(
-                    item.type === "video"
-                ){
-
-                    return `
-
-                        <div class="product-thumb">
-
-                            <video
-                                src="${item.src}"
-                                muted
-                                preload="metadata">
-                            </video>
-
-                        </div>
-
-                    `;
-
-                }
-
-
-                return `
-
-                    <div class="product-thumb">
-
-                        <img
-                            src="${item.src}"
-                            alt="${product.name}">
-
-                    </div>
-
-                `;
-
-            }
-        )
-        .join("");
-
-
-    const buyLink =
-        createInstagramDM(
-            product,
-            category
-        );
-
-
-    card.innerHTML = `
-
-        <div class="product-media">
-
-            ${mainHTML}
-
-        </div>
-
-
-        <div class="product-info">
-
-            <span class="product-number">
-
-                ${category.toUpperCase()}
-                ${String(index + 1)
-                    .padStart(2,"0")}
-
-            </span>
-
-
-            <h3 class="product-name">
-
-                ${product.name}
-
-            </h3>
-
-
-            <div class="product-thumbnails">
-
-                ${thumbsHTML}
-
-            </div>
-
-
-            <a
-                class="buy-now"
-                href="${buyLink}"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                <i class="fa-brands fa-instagram"></i>
-
-                BUY NOW
-
-            </a>
-
-        </div>
-
-    `;
-
-
-    /*
-       Clicking image opens product gallery
-    */
-
-    card
-    .querySelector(".product-media")
-    .addEventListener(
-        "click",
-        () => {
-
-            openProductModal(
-                product,
-                category,
-                index
-            );
-
-        }
-    );
-
-
-    /*
-       Thumbnail click
-       opens selected media
-    */
-
-    card
-    .querySelectorAll(".product-thumb")
-    .forEach(
-        (thumb,mediaIndex) => {
-
-            thumb.addEventListener(
-                "click",
-                event => {
-
-                    event.stopPropagation();
-
-                    openProductModal(
-                        product,
-                        category,
-                        index,
-                        mediaIndex
-                    );
-
-                }
-            );
-
-        }
-    );
-
-
-    return card;
-
-}
-
-
-/* =========================================================
-   RENDER CATEGORY
-========================================================= */
-
-function renderCategory(
-    category,
-    files
-){
-
-    const products =
-        createProducts(
-            files
-        );
-
-
-    const block =
-        document.createElement(
-            "section"
-        );
-
-
-    block.className =
-        "category-block";
-
-    block.id =
-        category;
-
-
-    block.innerHTML = `
-
-        <div class="category-heading">
-
-            <h3>
-                ${
-                    category === "jewelry"
-                    ? "Jewelry Collection"
-                    :
-                    category === "suits"
-                    ? "Designer Suits"
-                    :
-                    "Elegant Abayas"
-                }
-            </h3>
-
-            <span>
-                ${
-                    products.length
-                } PRODUCTS · ANAYALUXEE
-            </span>
-
-        </div>
-
-
-        <div class="products-grid"></div>
-
-    `;
-
-
-    const grid =
-        block.querySelector(
-            ".products-grid"
-        );
-
-
-    if(!products.length){
-
-        grid.innerHTML = `
-
-            <div class="no-data">
-
-                NO PRODUCTS FOUND
-
-            </div>
-
-        `;
-
-        return block;
-
-    }
-
-
-    products.forEach(
-        (product,index) => {
-
-            grid.appendChild(
-                createProductCard(
-                    product,
-                    category,
-                    index
-                )
-            );
-
-        }
-    );
-
-
-    return block;
-
-}
-
-
-/* =========================================================
-   LOAD ALL PRODUCTS
-========================================================= */
-
-async function loadCatalog(){
-
-    const container =
-        document.getElementById(
-            "catalogContainer"
-        );
-
-
-    container.innerHTML = "";
-
-
-    const categories = [
-        "jewelry",
-        "suits",
-        "abayas"
-    ];
-
-
-    for(
-        const category
-        of categories
-    ){
-
-        try{
-
-            const files =
-                await getFolderFiles(
-                    "products/" +
-                    category
-                );
-
-
-            const block =
-                renderCategory(
-                    category,
-                    files
-                );
-
-
-            container.appendChild(
-                block
-            );
-
-
-        }
-        catch(error){
-
-            console.error(
-                category,
-                error
-            );
-
-
-            const block =
-                document.createElement(
-                    "section"
-                );
-
-
-            block.className =
-                "category-block";
-
-            block.id =
-                category;
-
-
-            block.innerHTML = `
-
-                <div class="category-heading">
-
-                    <h3>
-                        ${
-                            category === "jewelry"
-                            ? "Jewelry Collection"
-                            :
-                            category === "suits"
-                            ? "Designer Suits"
-                            :
-                            "Elegant Abayas"
-                        }
-                    </h3>
-
-                </div>
-
-
-                <div class="no-data">
-
-                    COLLECTION COULD NOT BE LOADED
-
-                </div>
-
-            `;
-
-
-            container.appendChild(
-                block
-            );
-
-        }
-
-    }
-
-}
-
-
-/* =========================================================
-   PACKING VIDEOS
-========================================================= */
-
-async function loadPackingVideos(){
-
-    const grid =
-        document.getElementById(
-            "packingGrid"
-        );
-
-
-    try{
-
-        const files =
-            await getFolderFiles(
-                "products/packing"
-            );
-
-
-        grid.innerHTML = "";
-
-
-        if(!files.length){
-
-            grid.innerHTML = `
-
-                <div class="no-data">
-
-                    NO PACKING VIDEOS YET
-
-                </div>
-
-            `;
-
-            return;
-
-        }
-
-
-        files
-        .filter(
-            file =>
-                file.type === "video"
-        )
-        .forEach(
-            (file,index) => {
-
-                const card =
-                    document.createElement(
-                        "div"
-                    );
-
-
-                card.className =
-                    "packing-card";
-
-
-                card.innerHTML = `
-
-                    <video
-                        src="${file.src}"
-                        muted
-                        autoplay
-                        loop
-                        playsinline
-                        preload="metadata">
-                    </video>
-
-                    <div class="packing-label">
-
-                        PACKING
-                        ${
-                            String(index+1)
-                            .padStart(2,"0")
-                        }
-
-                    </div>
-
-                `;
-
-
-                grid.appendChild(
-                    card
-                );
-
-            }
-        );
-
-
-    }
-    catch(error){
-
-        console.error(
-            "Packing videos:",
-            error
-        );
-
-
-        grid.innerHTML = `
-
-            <div class="no-data">
-
-                PACKING VIDEOS COULD NOT BE LOADED
-
-            </div>
-
-        `;
-
-    }
-
-}
-
-
-/* =========================================================
-   CUSTOMER REVIEWS
-========================================================= */
-
-/*
-   Future reviews:
-
-   Just add a new object here.
-
-   Example:
-
-   {
-       name:"Priya Sharma",
-       review:"Beautiful jewelry!",
-       rating:5
-   }
-*/
-
-const customerReviews = [
-
-    {
-        name:"Priya Sharma",
-        review:
-        "Beautiful jewelry and amazing packaging. Loved the quality.",
-        rating:5
-    },
-
-    {
-        name:"Ayesha Khan",
-        review:
-        "The design was elegant and the overall experience was wonderful.",
-        rating:5
-    },
-
-    {
-        name:"Neha Verma",
-        review:
-        "Absolutely loved my purchase. The packaging was so premium.",
-        rating:5
-    }
+"jpg",
+"jpeg",
+"png",
+"webp",
+"mp4",
+"webm"
 
 ];
 
 
-function stars(
-    rating
-){
-
-    let output = "";
-
-    for(
-        let i=1;
-        i<=5;
-        i++
-    ){
-
-        output +=
-            i <= rating
-            ? "★"
-            : "☆";
-
-    }
-
-    return output;
-
-}
-
-
-function renderReviews(){
-
-    const grid =
-        document.getElementById(
-            "reviewsGrid"
-        );
-
-
-    grid.innerHTML = "";
-
-
-    if(
-        !customerReviews.length
-    ){
-
-        grid.innerHTML = `
-
-            <div class="no-data">
-
-                CUSTOMER REVIEWS COMING SOON
-
-            </div>
-
-        `;
-
-        return;
-
-    }
-
-
-    customerReviews.forEach(
-        review => {
-
-            const card =
-                document.createElement(
-                    "article"
-                );
-
-
-            card.className =
-                "review-card";
-
-
-            card.innerHTML = `
-
-                <div class="review-stars">
-
-                    ${stars(
-                        Math.min(
-                            5,
-                            Math.max(
-                                1,
-                                Number(
-                                    review.rating
-                                )
-                            )
-                        )
-                    )}
-
-                </div>
-
-
-                <div class="review-text">
-
-                    “${review.review}”
-
-                </div>
-
-
-                <div class="review-name">
-
-                    — ${review.name}
-
-                </div>
-
-            `;
-
-
-            grid.appendChild(
-                card
-            );
-
-        }
-    );
-
-}
-
-
-/* =========================================================
-   PRODUCT MODAL
-========================================================= */
-
-let currentProductMedia = [];
-let currentProductIndex = 0;
-let currentProduct = null;
-let currentProductCategory = "";
-
-
-function openProductModal(
-    product,
-    category,
-    productIndex,
-    mediaIndex = 0
-){
-
-    currentProduct =
-        product;
-
-    currentProductCategory =
-        category;
-
-    currentProductMedia =
-        product.media;
-
-    currentProductIndex =
-        mediaIndex;
-
-
-    document
-    .getElementById(
-        "modalNumber"
-    )
-    .textContent =
-        category.toUpperCase() +
-        " " +
-        String(
-            productIndex + 1
-        )
-        .padStart(
-            2,
-            "0"
-        );
-
-
-    document
-    .getElementById(
-        "modalTitle"
-    )
-    .textContent =
-        product.name;
-
-
-    document
-    .getElementById(
-        "modalBuyButton"
-    )
-    .href =
-        createInstagramDM(
-            product,
-            category
-        );
-
-
-    renderModalMedia();
-
-    renderModalThumbnails();
-
-
-    document
-    .getElementById(
-        "productModal"
-    )
-    .classList
-    .add("active");
-
-
-    document.body.style.overflow =
-        "hidden";
-
-}
-
-
-function closeProductModal(){
-
-    const modal =
-        document.getElementById(
-            "productModal"
-        );
-
-
-    modal.classList.remove(
-        "active"
-    );
-
-
-    document.body.style.overflow =
-        "";
-
-
-    const video =
-        document.querySelector(
-            "#mainMedia video"
-        );
-
-
-    if(video){
-        video.pause();
-    }
-
-}
-
-
-function renderModalMedia(){
-
-    const container =
-        document.getElementById(
-            "mainMedia"
-        );
-
-
-    const item =
-        currentProductMedia[
-            currentProductIndex
-        ];
-
-
-    let mediaHTML = "";
-
-
-    if(
-        item.type === "video"
-    ){
-
-        mediaHTML = `
-
-            <video
-                src="${item.src}"
-                autoplay
-                muted
-                loop
-                playsinline
-                controls>
-            </video>
-
-        `;
-
-    }
-    else{
-
-        mediaHTML = `
-
-            <img
-                src="${item.src}"
-                alt="${currentProduct.name}">
-
-        `;
-
-    }
-
-
-    container.innerHTML = `
-
-        <button
-            class="gallery-arrow prev"
-            onclick="changeProductMedia(-1)">
-
-            <i class="fa-solid fa-chevron-left"></i>
-
-        </button>
-
-
-        ${mediaHTML}
-
-
-        <button
-            class="gallery-arrow next"
-            onclick="changeProductMedia(1)">
-
-            <i class="fa-solid fa-chevron-right"></i>
-
-        </button>
-
-    `;
-
-}
-
-
-function renderModalThumbnails(){
-
-    const container =
-        document.getElementById(
-            "modalThumbnails"
-        );
-
-
-    container.innerHTML = "";
-
-
-    currentProductMedia
-    .forEach(
-        (item,index) => {
-
-            const thumb =
-                document.createElement(
-                    "div"
-                );
-
-
-            thumb.className =
-                "thumb" +
-                (
-                    index ===
-                    currentProductIndex
-                    ? " active"
-                    : ""
-                );
-
-
-            if(
-                item.type === "video"
-            ){
-
-                thumb.innerHTML = `
-
-                    <video
-                        src="${item.src}"
-                        muted
-                        preload="metadata">
-                    </video>
-
-                `;
-
-            }
-            else{
-
-                thumb.innerHTML = `
-
-                    <img
-                        src="${item.src}"
-                        alt="">
-
-                `;
-
-            }
-
-
-            thumb.onclick = () => {
-
-                currentProductIndex =
-                    index;
-
-                renderModalMedia();
-
-                renderModalThumbnails();
-
-            };
-
-
-            container.appendChild(
-                thumb
-            );
-
-        }
-    );
-
-}
-
-
-function changeProductMedia(
-    direction
-){
-
-    if(
-        !currentProductMedia.length
-    ){
-        return;
-    }
-
-
-    currentProductIndex +=
-        direction;
-
-
-    if(
-        currentProductIndex < 0
-    ){
-
-        currentProductIndex =
-            currentProductMedia.length - 1;
-
-    }
-
-
-    if(
-        currentProductIndex >=
-        currentProductMedia.length
-    ){
-
-        currentProductIndex = 0;
-
-    }
-
-
-    renderModalMedia();
-
-    renderModalThumbnails();
-
-}
-
-
-/* =========================================================
-   MODAL EVENTS
-========================================================= */
-
-document
-.getElementById(
-    "productModal"
+function getMediaType(name){
+
+const ext=
+name
+.split(".")
+.pop()
+.toLowerCase();
+
+return(
+ext==="mp4" ||
+ext==="webm"
 )
+?"video"
+:"image";
+
+}
+
+
+function getBaseName(name){
+
+const clean=
+name.replace(
+/\.[^/.]+$/,
+""
+);
+
+return clean.replace(
+/_\d+$/,
+""
+);
+
+}
+
+
+function createProductName(base){
+
+return base
+.replace(/_/g," ")
+.replace(/\s+/g," ")
+.trim()
+.replace(
+/\b\w/g,
+letter=>letter.toUpperCase()
+);
+
+}
+
+
+async function getFolderFiles(folder){
+
+const url=
+REPO_API+
+folder+
+"?ref=main&v="+
+Date.now();
+
+const response=
+await fetch(
+url,
+{
+headers:{
+"Accept":
+"application/vnd.github+json"
+},
+cache:"no-store"
+}
+);
+
+if(!response.ok){
+
+throw new Error(
+"GitHub folder error: "+
+folder+
+" "+
+response.status
+);
+
+}
+
+const data=
+await response.json();
+
+return data
+
+.filter(item=>
+item.type==="file"
+)
+
+.filter(item=>{
+
+const ext=
+item.name
+.split(".")
+.pop()
+.toLowerCase();
+
+return mediaExtensions.includes(ext);
+
+})
+
+.map(item=>({
+
+name:item.name,
+
+src:
+RAW_ROOT+
+folder+
+"/"+
+encodeURIComponent(item.name),
+
+type:
+getMediaType(item.name)
+
+}));
+
+}
+
+
+function createProducts(files){
+
+const map=new Map();
+
+
+files.forEach(file=>{
+
+const base=
+getBaseName(file.name);
+
+if(!map.has(base)){
+
+map.set(base,[]);
+
+}
+
+map.get(base).push(file);
+
+});
+
+
+const products=[];
+
+
+map.forEach((media,base)=>{
+
+media.sort((a,b)=>{
+
+function num(name){
+
+const match=
+name.match(
+/_(\d+)\.[^.]+$/
+);
+
+return match
+?Number(match[1])
+:0;
+
+}
+
+return num(a.name)-num(b.name);
+
+});
+
+
+products.push({
+
+base,
+name:createProductName(base),
+media
+
+});
+
+});
+
+
+products.sort(
+(a,b)=>
+a.name.localeCompare(b.name)
+);
+
+
+return products;
+
+}
+
+
+/* =====================================================
+   PRODUCT URL
+===================================================== */
+
+function getCurrentProductLink(product){
+
+const url=
+window.location.href
+.split("#")[0];
+
+return(
+url+
+"#"+product.base
+);
+
+}
+
+
+/* =====================================================
+   INSTAGRAM BUY LINK
+===================================================== */
+
+function getInstagramLink(product){
+
+const productLink=
+getCurrentProductLink(product);
+
+const message=
+`Hello Anayaluxee, I want to buy "${product.name}". Product link: ${productLink}`;
+
+return(
+"https://ig.me/m/anayaluxee?text="+
+encodeURIComponent(message)
+);
+
+}
+
+
+/* =====================================================
+   BUILD CATALOG
+===================================================== */
+
+async function loadCatalog(
+folder,
+gridId,
+label
+){
+
+const grid=
+document.getElementById(gridId);
+
+try{
+
+const files=
+await getFolderFiles(folder);
+
+const products=
+createProducts(files);
+
+grid.innerHTML="";
+
+
+if(!products.length){
+
+grid.innerHTML=`
+
+<div class="loading">
+
+NO ${label.toUpperCase()} FOUND YET
+
+</div>
+
+`;
+
+return;
+
+}
+
+
+products.forEach(
+(product,index)=>{
+
+const card=
+document.createElement("div");
+
+card.className=
+"product-card";
+
+
+const first=
+product.media[0];
+
+
+let firstHTML="";
+
+
+if(first.type==="video"){
+
+firstHTML=`
+
+<video
+src="${first.src}"
+muted
+autoplay
+loop
+playsinline
+preload="metadata">
+</video>
+
+`;
+
+}else{
+
+firstHTML=`
+
+<img
+src="${first.src}"
+alt="${product.name}"
+loading="lazy">
+
+`;
+
+}
+
+
+let thumbs="";
+
+
+product.media.forEach(
+(item)=>{
+
+if(item.type==="video"){
+
+thumbs+=`
+
+<div class="product-thumb">
+
+<video
+src="${item.src}"
+muted
+preload="metadata">
+</video>
+
+</div>
+
+`;
+
+}else{
+
+thumbs+=`
+
+<div class="product-thumb">
+
+<img
+src="${item.src}"
+alt="">
+
+</div>
+
+`;
+
+}
+
+});
+
+
+card.innerHTML=`
+
+<div class="product-media">
+
+${firstHTML}
+
+</div>
+
+
+<div class="product-info">
+
+<span class="product-number">
+
+${label.toUpperCase()}
+${String(index+1).padStart(2,"0")}
+
+</span>
+
+
+<h3 class="product-name">
+
+${product.name}
+
+</h3>
+
+
+<div class="product-thumbnails">
+
+${thumbs}
+
+</div>
+
+
+<button
+class="product-buy"
+type="button">
+
+BUY NOW
+
+&nbsp;
+
+<i class="fa-brands fa-instagram"></i>
+
+</button>
+
+</div>
+
+`;
+
+
+card
+.querySelector(".product-buy")
 .addEventListener(
-    "click",
-    event => {
+"click",
+event=>{
 
-        if(
-            event.target.id ===
-            "productModal"
-        ){
+event.stopPropagation();
 
-            closeProductModal();
+openProduct(
+product,
+product.media,
+index
+);
 
-        }
+});
 
-    }
+card.addEventListener(
+"click",
+()=>{
+
+openProduct(
+product,
+product.media,
+index
+);
+
+});
+
+
+grid.appendChild(card);
+
+});
+
+}
+catch(error){
+
+console.error(
+label,
+error
+);
+
+grid.innerHTML=`
+
+<div class="loading">
+
+CATALOG COULD NOT BE LOADED
+
+</div>
+
+`;
+
+}
+
+}
+
+
+/* =====================================================
+   LOAD ALL CATALOGS
+===================================================== */
+
+loadCatalog(
+"products/jewelry",
+"jewelryGrid",
+"Jewelry"
 );
 
 
-document.addEventListener(
-    "keydown",
-    event => {
-
-        const modal =
-            document.getElementById(
-                "productModal"
-            );
-
-
-        if(
-            event.key === "Escape"
-        ){
-
-            closeProductModal();
-
-        }
-
-
-        if(
-            modal.classList.contains(
-                "active"
-            )
-        ){
-
-            if(
-                event.key ===
-                "ArrowRight"
-            ){
-
-                changeProductMedia(
-                    1
-                );
-
-            }
-
-
-            if(
-                event.key ===
-                "ArrowLeft"
-            ){
-
-                changeProductMedia(
-                    -1
-                );
-
-            }
-
-        }
-
-    }
+loadCatalog(
+"products/suits",
+"suitsGrid",
+"Suits"
 );
 
 
-/* =========================================================
-   INITIALIZE
-========================================================= */
+loadCatalog(
+"products/abayas",
+"abayasGrid",
+"Abayas"
+);
 
-renderReviews();
 
-loadCatalog();
+/* =====================================================
+   PACKING VIDEOS
+===================================================== */
+
+async function loadPackingVideos(){
+
+const grid=
+document.getElementById(
+"packingGrid"
+);
+
+try{
+
+const files=
+await getFolderFiles(
+"products/packing"
+);
+
+const videos=
+files.filter(
+file=>file.type==="video"
+);
+
+grid.innerHTML="";
+
+
+if(!videos.length){
+
+grid.innerHTML=`
+
+<div class="loading">
+
+PACKING VIDEOS COMING SOON
+
+</div>
+
+`;
+
+return;
+
+}
+
+
+videos
+.slice(0,8)
+.forEach(
+(video,index)=>{
+
+const card=
+document.createElement("div");
+
+card.className=
+"packing-card";
+
+card.innerHTML=`
+
+<video
+
+src="${video.src}"
+
+muted
+autoplay
+loop
+playsinline
+preload="metadata">
+
+</video>
+
+
+<div class="packing-label">
+
+ANAYALUXEE PACKING
+${String(index+1).padStart(2,"0")}
+
+</div>
+
+`;
+
+grid.appendChild(card);
+
+});
+
+}
+catch(error){
+
+console.error(
+"Packing videos:",
+error
+);
+
+grid.innerHTML=`
+
+<div class="loading">
+
+PACKING VIDEOS COULD NOT BE LOADED
+
+</div>
+
+`;
+
+}
+
+}
 
 loadPackingVideos();
 
 
-/* =========================================================
-   VISIBILITY
-========================================================= */
+/* =====================================================
+   REVIEWS
+===================================================== */
 
-document.addEventListener(
-    "visibilitychange",
-    () => {
+async function loadReviews(){
 
-        if(
-            document.hidden
-        ){
+const track=
+document.getElementById(
+"reviewsTrack"
+);
 
-            desktopVideos.forEach(
-                video =>
-                    video.pause()
-            );
+try{
 
-            mobileVideo.pause();
+const files=
+await getFolderFiles(
+"products/reviews"
+);
 
-        }
-        else{
-
-            if(
-                isMobile()
-            ){
-
-                mobileVideo
-                .play()
-                .catch(() => {});
-
-            }
-            else{
-
-                desktopVideos.forEach(
-                    video =>
-                        video
-                        .play()
-                        .catch(
-                            () => {}
-                        )
-                );
-
-            }
-
-        }
-
-    }
+const reviews=
+files.filter(
+file=>file.type==="image"
 );
 
 
-/* =========================================================
-   RESIZE
-========================================================= */
+if(!reviews.length){
 
-let lastMobileState =
-    isMobile();
+return;
+
+}
+
+track.innerHTML="";
+
+
+reviews
+.slice(0,15)
+.forEach(
+(file,index)=>{
+
+const card=
+document.createElement("div");
+
+card.className=
+"review-card";
+
+card.innerHTML=`
+
+<img
+src="${file.src}"
+alt="Anayaluxee Customer Review ${index+1}"
+loading="lazy">
+
+`;
+
+track.appendChild(card);
+
+});
+
+}
+catch(error){
+
+console.error(
+"Reviews:",
+error
+);
+
+}
+
+}
+
+loadReviews();
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+let currentMedia=[];
+let currentIndex=0;
+let currentProduct=null;
+
+
+function openProduct(
+product,
+media,
+index
+){
+
+currentProduct=product;
+
+currentMedia=media;
+
+currentIndex=0;
+
+
+document
+.getElementById("modalNumber")
+.textContent=
+`PRODUCT ${String(index+1).padStart(2,"0")}`;
+
+
+document
+.getElementById("modalTitle")
+.textContent=
+product.name;
+
+
+document
+.getElementById("instagramOrder")
+.href=
+getInstagramLink(product);
+
+
+renderMainMedia();
+
+renderThumbnails();
+
+
+document
+.getElementById("productModal")
+.classList
+.add("active");
+
+
+document.body.style.overflow=
+"hidden";
+
+}
+
+
+function closeModal(){
+
+document
+.getElementById("productModal")
+.classList
+.remove("active");
+
+document.body.style.overflow="";
+
+const video=
+document.querySelector(
+"#mainMedia video"
+);
+
+if(video){
+
+video.pause();
+
+}
+
+}
+
+
+function renderMainMedia(){
+
+const container=
+document.getElementById(
+"mainMedia"
+);
+
+const item=
+currentMedia[currentIndex];
+
+
+let html="";
+
+
+if(item.type==="video"){
+
+html=`
+
+<video
+
+src="${item.src}"
+
+autoplay
+muted
+loop
+playsinline
+controls>
+
+</video>
+
+`;
+
+}else{
+
+html=`
+
+<img
+src="${item.src}"
+alt="Anayaluxee Product">
+
+`;
+
+}
+
+
+container.innerHTML=`
+
+<button
+class="gallery-arrow prev"
+onclick="changeMedia(-1)">
+
+<i class="fa-solid fa-chevron-left"></i>
+
+</button>
+
+
+${html}
+
+
+<button
+class="gallery-arrow next"
+onclick="changeMedia(1)">
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</button>
+
+`;
+
+}
+
+
+function renderThumbnails(){
+
+const container=
+document.getElementById(
+"thumbnails"
+);
+
+container.innerHTML="";
+
+
+currentMedia.forEach(
+(item,index)=>{
+
+const thumb=
+document.createElement(
+"div"
+);
+
+thumb.className=
+"thumb"+
+(
+index===currentIndex
+?" active"
+:""
+);
+
+
+if(item.type==="video"){
+
+thumb.innerHTML=`
+
+<video
+src="${item.src}"
+muted
+preload="metadata">
+</video>
+
+`;
+
+}else{
+
+thumb.innerHTML=`
+
+<img
+src="${item.src}"
+alt="">
+
+`;
+
+}
+
+
+thumb.onclick=()=>{
+
+currentIndex=index;
+
+renderMainMedia();
+
+renderThumbnails();
+
+};
+
+
+container.appendChild(
+thumb
+);
+
+});
+
+}
+
+
+function changeMedia(direction){
+
+if(!currentMedia.length)
+return;
+
+currentIndex+=direction;
+
+
+if(currentIndex<0){
+
+currentIndex=
+currentMedia.length-1;
+
+}
+
+
+if(
+currentIndex>=
+currentMedia.length
+){
+
+currentIndex=0;
+
+}
+
+
+renderMainMedia();
+
+renderThumbnails();
+
+}
+
+
+/* =====================================================
+   MODAL OUTSIDE CLICK
+===================================================== */
+
+document
+.getElementById("productModal")
+.addEventListener(
+"click",
+event=>{
+
+if(
+event.target.id===
+"productModal"
+){
+
+closeModal();
+
+}
+
+});
+
+
+/* =====================================================
+   ESC + ARROWS
+===================================================== */
+
+document.addEventListener(
+"keydown",
+event=>{
+
+if(event.key==="Escape"){
+
+closeModal();
+
+}
+
+if(
+document
+.getElementById("productModal")
+.classList
+.contains("active")
+){
+
+if(event.key==="ArrowRight"){
+
+changeMedia(1);
+
+}
+
+if(event.key==="ArrowLeft"){
+
+changeMedia(-1);
+
+}
+
+}
+
+});
+
+
+/* =====================================================
+   RESIZE
+===================================================== */
+
+let previousMobile=
+isMobileDevice();
 
 
 window.addEventListener(
-    "resize",
-    () => {
+"resize",
+()=>{
 
-        const nowMobile =
-            isMobile();
-
-
-        if(
-            nowMobile !==
-            lastMobileState
-        ){
-
-            lastMobileState =
-                nowMobile;
+const currentMobile=
+isMobileDevice();
 
 
-            if(nowMobile){
+if(
+currentMobile!==
+previousMobile
+){
 
-                mobileCurrent =
-                    Math.floor(
-                        Math.random() *
-                        heroVideos.length
-                    );
+previousMobile=
+currentMobile;
 
-                loadMobileHero();
 
-            }
-            else{
+if(currentMobile){
 
-                desktopStart = 0;
-
-                loadDesktopHero();
-
-            }
-
-        }
-
-    }
+mobileCurrent=
+Math.floor(
+Math.random()*
+videoFiles.length
 );
+
+loadMobileVideo();
+
+}else{
+
+desktopStart=0;
+
+loadDesktopVideos();
+
+}
+
+}
+
+});
+
+
+/* =====================================================
+   PAGE VISIBILITY
+===================================================== */
+
+document.addEventListener(
+"visibilitychange",
+()=>{
+
+if(document.hidden){
+
+desktopVideos.forEach(
+video=>video.pause()
+);
+
+mobileVideo.pause();
+
+}else{
+
+if(isMobileDevice()){
+
+mobileVideo
+.play()
+.catch(()=>{});
+
+}else{
+
+desktopVideos.forEach(
+video=>
+video.play()
+.catch(()=>{})
+);
+
+}
+
+}
+
+});
+
 
 </script>
 
