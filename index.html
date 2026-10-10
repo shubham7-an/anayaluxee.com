@@ -1248,6 +1248,128 @@ footer{
     background:#8b5e57;
 }
 
+
+
+/* =========================================================
+   RESPONSIVE ALIGNMENT + COMPACT MOBILE CATALOG FIX
+========================================================= */
+html, body { max-width:100%; }
+body { margin:0; }
+img, video, iframe { max-width:100%; }
+section, header, footer, main, .catalog-container, .category-block { min-width:0; }
+
+@media (max-width:768px) {
+  body { width:100%; overflow-x:hidden; }
+  header { left:0; right:0; width:100%; }
+  .hero-content, .section-title, .promise, .collection,
+  .packing-section, .reviews-section, .founder, footer,
+  .catalog-section { max-width:100%; }
+  .section-title, .hero-content, .founder-box { text-align:center; }
+  .catalog-section { padding:76px 10px 70px !important; }
+  .catalog-container { width:100%; max-width:100%; margin:0 auto; }
+  .category-block { width:100%; margin:0 auto 48px; }
+  .category-heading {
+    width:100%; gap:8px; flex-wrap:wrap; justify-content:center;
+    align-items:center; text-align:center; padding:0 2px 12px; margin-bottom:16px;
+  }
+  .category-heading h3 { font-size:clamp(1.45rem, 5vw, 2rem); line-height:1.1; }
+  .category-heading span { font-size:7px; letter-spacing:1.3px; white-space:normal; }
+  .products-grid {
+    width:100%; grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+    gap:18px 7px !important; align-items:start;
+  }
+  .product-card { width:100%; min-width:0; overflow:hidden; }
+  .product-media {
+    width:100%; aspect-ratio:3/4 !important; height:auto; border-radius:2px;
+  }
+  .product-media > img, .product-media > video {
+    width:100%; height:100%; object-fit:cover; object-position:center;
+  }
+  .product-info { min-width:0; padding:7px 2px 0 !important; text-align:center; }
+  .product-number { font-size:6px; letter-spacing:1px; margin-bottom:4px; }
+  .product-name {
+    font-size:clamp(10px, 3vw, 13px) !important; line-height:1.15;
+    overflow-wrap:anywhere; word-break:normal;
+  }
+  .product-thumbnails { gap:3px; margin-top:6px; justify-content:center; }
+  .product-thumb { flex:0 0 23px; width:23px; height:23px; }
+  .buy-now {
+    width:100%; min-width:0; margin-top:7px; padding:8px 2px !important;
+    gap:3px; font-size:6px !important; letter-spacing:.5px !important;
+    white-space:normal; line-height:1.2;
+  }
+  .collection { padding-left:10px !important; padding-right:10px !important; }
+  .collection-grid { width:100%; grid-template-columns:repeat(3,minmax(0,1fr)) !important; gap:6px !important; }
+  .collection-item { min-width:0; padding:10px 3px !important; }
+  .collection-overlay span { font-size:6px; letter-spacing:.5px; }
+  .collection-overlay h3 { font-size:clamp(12px,3.5vw,17px) !important; }
+  .promise-grid { width:100%; grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+  .promise-box { min-width:0; overflow-wrap:anywhere; }
+  .footer-grid { width:100%; grid-template-columns:1fr !important; text-align:center !important; }
+  .modal { width:100%; max-width:100%; }
+}
+
+@media (max-width:360px) {
+  .products-grid { gap:14px 5px !important; }
+  .product-name { font-size:10px !important; }
+  .buy-now { font-size:5.5px !important; }
+  .category-heading h3 { font-size:1.35rem; }
+}
+
+
+
+/* =========================================================
+   DESKTOP + TABLET CENTER ALIGNMENT FIX
+   Keeps every major section centered on wide screens too.
+========================================================= */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: clip;
+}
+body > section,
+body > footer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-content,
+.section-title,
+.packing-grid,
+.reviews-grid,
+.promise-grid,
+.collection-grid,
+.catalog-container,
+.founder-box,
+.footer-grid {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+.packing-grid { width: 100%; max-width: 1400px; }
+.reviews-grid { width: 100%; max-width: 1200px; }
+.promise-grid { width: 100%; max-width: 1400px; }
+.collection-grid { width: 100%; max-width: 1200px; }
+.catalog-container { width: 100%; max-width: 1400px; }
+.founder-box { width: 100%; max-width: 1000px; }
+.footer-grid { width: 100%; max-width: 1400px; }
+.section-title { width: 100%; text-align: center; }
+.category-heading { width: 100%; }
+.products-grid { width: 100%; min-width: 0; }
+.product-card, .product-info, .product-media { min-width: 0; }
+
+@media (min-width: 769px) {
+  .packing-section, .reviews-section, .promise, .collection,
+  .catalog-section, .founder, footer {
+    padding-left: clamp(24px, 5vw, 80px);
+    padding-right: clamp(24px, 5vw, 80px);
+  }
+  .promise-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .collection-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .catalog-container { padding-left: 0; padding-right: 0; }
+}
+
 </style>
 
 </head>
