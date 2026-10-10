@@ -510,6 +510,7 @@ nav a:hover{
     white-space:nowrap;
 }
 
+
 /* =========================================================
    PRODUCT CATALOG
 ========================================================= */
@@ -1249,10 +1250,10 @@ footer{
 }
 
 
-
 /* =========================================================
    RESPONSIVE ALIGNMENT + COMPACT MOBILE CATALOG FIX
 ========================================================= */
+
 html, body { max-width:100%; }
 body { margin:0; }
 img, video, iframe { max-width:100%; }
@@ -1317,11 +1318,10 @@ section, header, footer, main, .catalog-container, .category-block { min-width:0
 }
 
 
-
 /* =========================================================
    DESKTOP + TABLET CENTER ALIGNMENT FIX
-   Keeps every major section centered on wide screens too.
 ========================================================= */
+
 html, body {
   width: 100%;
   max-width: 100%;
@@ -1477,7 +1477,6 @@ EXPLORE COLLECTION
 
 <!-- =========================================================
      PACKING VIDEOS
-     AUTOMATIC FROM products/packing/
 ========================================================= -->
 
 <section
@@ -1973,10 +1972,9 @@ const VIDEO_EXTENSIONS = [
 
 
 /*
-   IMPORTANT
-
    Instagram username
 */
+
 const INSTAGRAM_USERNAME =
 "anayaluxee";
 
@@ -2320,76 +2318,146 @@ function rawUrl(
 
 
 /* =========================================================
-   GET GITHUB FOLDER
+   GET GITHUB FOLDER — FIXED LOADER
+   Supports files inside folders and subfolders.
+   Loads the GitHub file list once and reuses it.
 ========================================================= */
 
-async function getFolderFiles(
-    folder
-){
+let githubMediaTree = null;
 
-    const response =
-        await fetch(
-            GITHUB_API_BASE +
-            folder +
-            "?ref=main&cacheBust=" +
-            Date.now(),
+async function getFolderFiles(folder){
+
+    const owner = "shubham7-an";
+    const repo = "anayaluxee.com";
+    const branch = "main";
+
+    /*
+       Get the complete repository file list.
+       Cache it so products and packing videos
+       do not make separate GitHub API requests.
+    */
+
+    if(!githubMediaTree){
+
+        const apiURL =
+            `https://api.github.com/repos/${owner}/${repo}/git/trees/${branch}?recursive=1`;
+
+        const response = await fetch(
+            apiURL,
             {
                 headers:{
-                    "Accept":
-                    "application/vnd.github+json"
+                    "Accept":"application/vnd.github+json"
                 },
                 cache:"no-store"
             }
         );
 
+        if(!response.ok){
 
-    if(!response.ok){
+            throw new Error(
+                `GitHub file list error: ${response.status}. ` +
+                `Check the repository, branch, or API rate limit.`
+            );
 
-        throw new Error(
-            folder +
-            " folder error: " +
-            response.status
-        );
+        }
+
+        const data = await response.json();
+
+        if(!Array.isArray(data.tree)){
+
+            throw new Error(
+                "GitHub did not return the repository file list."
+            );
+
+        }
+
+        if(data.truncated){
+
+            throw new Error(
+                "GitHub returned an incomplete repository file list."
+            );
+
+        }
+
+        githubMediaTree = data.tree
+            .filter(item => item.type === "blob")
+            .map(item => item.path);
 
     }
 
 
-    const data =
-        await response.json();
+    /*
+       Normalize folder path.
+       Example: products/jewelry
+    */
+
+    const normalFolder = folder
+        .replace(/^\/+|\/+$/g,"")
+        .toLowerCase();
 
 
-    return data
+    /*
+       Match the folder and all its subfolders.
+       Only supported image/video formats are returned.
+    */
 
-        .filter(
-            item =>
-                item.type === "file"
-        )
+    const files = githubMediaTree
 
-        .filter(
-            item =>
-                isMediaFile(
-                    item.name
-                )
-        )
+        .filter(path => {
 
-        .map(
-            item => ({
+            const normalPath = path.toLowerCase();
 
-                name:item.name,
+            return normalPath.startsWith(
+                normalFolder + "/"
+            );
 
-                src:
-                    rawUrl(
-                        folder,
-                        item.name
-                    ),
+        })
 
-                type:
-                    mediaType(
-                        item.name
-                    )
+        .filter(path => {
 
-            })
-        );
+            const filename = path.split("/").pop();
+
+            return isMediaFile(filename);
+
+        })
+
+        .map(path => {
+
+            const filename = path.split("/").pop();
+
+            /*
+               Encode each path segment separately
+               so spaces and special characters work.
+            */
+
+            const encodedPath = path
+                .split("/")
+                .map(segment => encodeURIComponent(segment))
+                .join("/");
+
+            return {
+                name: filename,
+                src: GITHUB_RAW_BASE + encodedPath,
+                type: mediaType(filename)
+            };
+
+        })
+
+        .sort((a,b) => {
+
+            return a.name.localeCompare(
+                b.name,
+                undefined,
+                {
+                    numeric:true,
+                    sensitivity:"base"
+                }
+            );
+
+        });
+
+
+    return files;
 
 }
 
@@ -3086,7 +3154,12 @@ async function loadPackingVideos(){
         grid.innerHTML = "";
 
 
-        if(!files.length){
+        const videos = files.filter(
+            file => file.type === "video"
+        );
+
+
+        if(!videos.length){
 
             grid.innerHTML = `
 
@@ -3103,12 +3176,7 @@ async function loadPackingVideos(){
         }
 
 
-        files
-        .filter(
-            file =>
-                file.type === "video"
-        )
-        .forEach(
+        videos.forEach(
             (file,index) => {
 
                 const card =
@@ -3180,20 +3248,6 @@ async function loadPackingVideos(){
 /* =========================================================
    CUSTOMER REVIEWS
 ========================================================= */
-
-/*
-   Future reviews:
-
-   Just add a new object here.
-
-   Example:
-
-   {
-       name:"Priya Sharma",
-       review:"Beautiful jewelry!",
-       rating:5
-   }
-*/
 
 const customerReviews = [
 
